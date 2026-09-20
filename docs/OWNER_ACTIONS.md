@@ -1,7 +1,7 @@
 # Owner actions and maintenance
 
 ## Deployment status
-Both GitHub repositories were published. Cloudflare reported successful deployments for both sites, and GitHub validation workflows passed. No Cloudflare setup action is currently indicated by those deployment results. The browser could not directly render the production domains in this session.
+Both GitHub repositories were published. Cloudflare reported successful deployments for both sites, and GitHub validation workflows passed. The initial publish-directory mismatch was corrected in `wrangler.toml`. A GitHub-hosted HTTP check subsequently passed all seven tested production routes across both domains. No Cloudflare setup action is required for the deployed version. Visual and interactive browser verification remains incomplete because the browser could not open the production domains. Static checks, JSON checks, JavaScript syntax and Python unit tests passed; these are not a substitute for a full device/browser QA pass.
 
 ## Cloudflare Pages: recovery settings only
 Use these steps only if the deployed site does not serve the expected content or a later build fails. The dashboard was held at a security-verification screen in the connected browser.
@@ -46,7 +46,19 @@ Client acceptance, evidence verification, risk decisions, employment eligibility
 ## LinkedIn consistency
 Headline: Compliance Analyst | GRC & Security Compliance | Audit Readiness, SOC 2, ISO 27001 & TPRM | AI Governance
 
-Use the personal hub as the primary website and feature audit readiness, vendor risk and AI governance. Keep education in progress and portfolio work identified accurately. Do not imply senior employment or paid clients that have not occurred.
+The headline, About section and contact website URLs were updated. Use the personal hub as the primary website and feature audit readiness, vendor risk and AI governance. Keep education in progress and portfolio work identified accurately. Do not imply senior employment or paid clients that have not occurred.
 
 ## Recovery
 Use Cloudflare's previous successful deployment for immediate rollback. Revert the corresponding Git commit to restore source. Keep the old v17/v18 sites available until the new sites are verified, then optionally redirect those legacy sites; this delivery does not delete the old sites.
+
+## Final verification checklist
+1. Open both sites on a phone and a desktop. Check that text is readable and no content overflows horizontally.
+2. Switch light/dark themes, refresh, and confirm the preference remains.
+3. On the portfolio, combine a search with domain and format filters; clear them and verify all ten projects return.
+4. Follow audit readiness, vendor risk and AI governance links; confirm the back-to-hub links return correctly.
+5. Use vendor triage with missing evidence, then complete the evidence assertions; check both recommendations.
+6. Prepare a contact brief and confirm your email application opens. The website itself does not send email.
+7. Use Tab to navigate and confirm visible focus. Enable reduced motion and confirm animations stop.
+8. Print the professional profile to PDF and inspect the page breaks.
+
+These visual and interaction checks remain owner verification items; automated HTTP checks cannot establish their outcome.
