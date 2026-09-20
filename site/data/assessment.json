@@ -1,0 +1,386 @@
+{
+  "assessment_id": "AAO-DEMO-2026-001",
+  "generated_at": "2026-09-20T10:37:23.261667Z",
+  "scope": {
+    "organization": {
+      "name": "Example AI SaaS Ltd",
+      "saas_provider": true,
+      "security_program": true,
+      "security_management_system": true,
+      "essential_or_important_entity": false
+    },
+    "selected_frameworks": [
+      "COSO-ERM",
+      "EU-AI-ACT",
+      "GDPR",
+      "ISO-22301",
+      "ISO-27001-2022",
+      "ISO-42001-2023",
+      "NIST-AI-RMF-1.0",
+      "NIST-CSF-2.0",
+      "SOC2"
+    ]
+  },
+  "framework_decisions": [
+    {
+      "framework_id": "NIST-CSF-2.0",
+      "name": "NIST Cybersecurity Framework",
+      "version": "2.0",
+      "selected": true,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "The organization operates or is assessing a cybersecurity program"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.nist.gov/cyberframework"
+    },
+    {
+      "framework_id": "SOC2",
+      "name": "AICPA Trust Services Criteria / SOC 2",
+      "version": "current owner-approved criteria",
+      "selected": true,
+      "confidence": "HIGH",
+      "rationale": [
+        "The entity provides a service for customer data or operations",
+        "Customer assurance is in scope"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2"
+    },
+    {
+      "framework_id": "ISO-27001-2022",
+      "name": "ISO/IEC 27001",
+      "version": "2022",
+      "selected": true,
+      "confidence": "HIGH",
+      "rationale": [
+        "An information security management system is in scope",
+        "A contractual ISO/IEC 27001 requirement exists"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/27001"
+    },
+    {
+      "framework_id": "ISO-22301",
+      "name": "ISO 22301",
+      "version": "2019",
+      "selected": true,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "Business continuity and resilience are in scope"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/75106.html"
+    },
+    {
+      "framework_id": "NIST-AI-RMF-1.0",
+      "name": "NIST AI Risk Management Framework",
+      "version": "1.0 (revision in progress)",
+      "selected": true,
+      "confidence": "HIGH",
+      "rationale": [
+        "AI is used in organizational processes",
+        "The organization provides an AI-enabled product or service"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "framework_id": "ISO-42001-2023",
+      "name": "ISO/IEC 42001",
+      "version": "2023",
+      "selected": true,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "An AI management system is in scope"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/81230.html"
+    },
+    {
+      "framework_id": "EU-AI-ACT",
+      "name": "Regulation (EU) 2024/1689 (AI Act)",
+      "version": "consolidated 2026-07-27",
+      "selected": true,
+      "confidence": "HIGH",
+      "rationale": [
+        "EU or EEA operations are declared",
+        "The AI system is placed on or used in the EU market"
+      ],
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng"
+    },
+    {
+      "framework_id": "GDPR",
+      "name": "Regulation (EU) 2016/679 (GDPR)",
+      "version": "current consolidated text",
+      "selected": true,
+      "confidence": "HIGH",
+      "rationale": [
+        "EU personal data processing is declared",
+        "EU or EEA operations are declared"
+      ],
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    },
+    {
+      "framework_id": "PCI-DSS-4.0.1",
+      "name": "PCI DSS",
+      "version": "4.0.1",
+      "selected": false,
+      "confidence": "LOW",
+      "rationale": [
+        "No configured applicability signal matched"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+    },
+    {
+      "framework_id": "HIPAA-SECURITY",
+      "name": "HIPAA Security Rule",
+      "version": "current e-CFR",
+      "selected": false,
+      "confidence": "LOW",
+      "rationale": [
+        "No configured applicability signal matched"
+      ],
+      "legal_review_required": true,
+      "source_url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+    },
+    {
+      "framework_id": "DORA",
+      "name": "Regulation (EU) 2022/2554 (DORA)",
+      "version": "current consolidated text",
+      "selected": false,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "EU or EEA operations are declared"
+      ],
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+    },
+    {
+      "framework_id": "NIS2",
+      "name": "Directive (EU) 2022/2555 (NIS2)",
+      "version": "current",
+      "selected": false,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "EU or EEA operations are declared"
+      ],
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+    },
+    {
+      "framework_id": "COSO-ERM",
+      "name": "COSO Enterprise Risk Management",
+      "version": "2017",
+      "selected": true,
+      "confidence": "MEDIUM",
+      "rationale": [
+        "Enterprise risk management is in scope"
+      ],
+      "legal_review_required": false,
+      "source_url": "https://www.coso.org/enterprise-risk-management"
+    },
+    {
+      "framework_id": "CUSTOM",
+      "name": "Organization-defined controls and contractual mandates",
+      "version": "assessment supplied",
+      "selected": false,
+      "confidence": "LOW",
+      "rationale": [
+        "No configured applicability signal matched"
+      ],
+      "legal_review_required": false,
+      "source_url": ""
+    }
+  ],
+  "summary": {
+    "counts": {
+      "PASS": 6,
+      "FAIL": 3,
+      "NOT_CONFIGURED": 0,
+      "ERROR": 0,
+      "NOT_APPLICABLE": 0,
+      "MANUAL_REVIEW": 1
+    },
+    "effectiveness_score": 66.7,
+    "scoring_note": "Score uses PASS/(PASS+FAIL); excluded states remain visible and are never silently treated as passes."
+  },
+  "results": [
+    {
+      "control_id": "IAM-001",
+      "title": "Administrative access requires MFA",
+      "state": "PASS",
+      "risk": "HIGH",
+      "reason": "All observed administrative identities are protected by MFA",
+      "frameworks": [
+        "SOC2",
+        "ISO-27001-2022",
+        "NIST-CSF-2.0"
+      ],
+      "evidence_ids": [],
+      "owner": "Identity and Access Management",
+      "remediation": "Require phishing-resistant MFA for all administrative identities and retest coverage.",
+      "due_days": 7,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "IAM-002",
+      "title": "Wildcard administrative grants are prohibited",
+      "state": "PASS",
+      "risk": "CRITICAL",
+      "reason": "No wildcard administrative grant was detected",
+      "frameworks": [
+        "SOC2",
+        "ISO-27001-2022",
+        "NIST-CSF-2.0"
+      ],
+      "evidence_ids": [],
+      "owner": "Cloud Security",
+      "remediation": "Replace wildcard grants with least-privilege actions and scoped resources.",
+      "due_days": 3,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "EVD-001",
+      "title": "Control evidence remains within the freshness SLA",
+      "state": "PASS",
+      "risk": "MODERATE",
+      "reason": "Evidence is within the configured 30-day freshness SLA",
+      "frameworks": [
+        "SOC2",
+        "ISO-27001-2022",
+        "NIST-CSF-2.0",
+        "ISO-42001-2023"
+      ],
+      "evidence_ids": [],
+      "owner": "GRC Operations",
+      "remediation": "Refresh expired evidence and document an approved exception where automation is unavailable.",
+      "due_days": 14,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "AI-001",
+      "title": "AI systems have an accountable owner",
+      "state": "FAIL",
+      "risk": "HIGH",
+      "reason": "At least one AI system lacks an accountable owner",
+      "frameworks": [
+        "NIST-AI-RMF-1.0",
+        "ISO-42001-2023",
+        "EU-AI-ACT"
+      ],
+      "evidence_ids": [],
+      "owner": "AI Governance",
+      "remediation": "Assign a business owner and technical owner to every in-scope AI system.",
+      "due_days": 14,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "AI-050-1",
+      "title": "Direct AI interaction disclosure",
+      "state": "PASS",
+      "risk": "HIGH",
+      "reason": "The product exposes the configured AI-interaction disclosure",
+      "frameworks": [
+        "EU-AI-ACT"
+      ],
+      "evidence_ids": [],
+      "owner": "Product and Legal",
+      "remediation": "Add context-appropriate disclosure before or at the first direct AI interaction.",
+      "due_days": 7,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "AI-050-2",
+      "title": "Synthetic output marking is machine-readable and detectable",
+      "state": "FAIL",
+      "risk": "HIGH",
+      "reason": "Machine-readable marking was not demonstrated",
+      "frameworks": [
+        "EU-AI-ACT"
+      ],
+      "evidence_ids": [],
+      "owner": "AI Platform",
+      "remediation": "Implement interoperable provenance metadata or watermarking and retain detection-test evidence.",
+      "due_days": 14,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "TPRM-001",
+      "title": "Critical vendors have current assurance evidence",
+      "state": "FAIL",
+      "risk": "HIGH",
+      "reason": "At least one critical vendor lacks current assurance evidence",
+      "frameworks": [
+        "SOC2",
+        "ISO-27001-2022",
+        "DORA",
+        "NIS2",
+        "GDPR"
+      ],
+      "evidence_ids": [],
+      "owner": "Third-Party Risk",
+      "remediation": "Request current assurance evidence or approve a time-bound risk exception.",
+      "due_days": 14,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "GDPR-28-1",
+      "title": "Processor agreement and subprocessor terms require legal review",
+      "state": "MANUAL_REVIEW",
+      "risk": "HIGH",
+      "reason": "Contract terms, controller/processor roles, transfer mechanisms, and Article 28 sufficiency require qualified legal review.",
+      "frameworks": [
+        "GDPR"
+      ],
+      "evidence_ids": [],
+      "owner": "Privacy and Legal",
+      "remediation": "Review the executed DPA, subprocessor authorization mechanism, transfer basis, and flow-down terms.",
+      "due_days": 14,
+      "test_type": "manual"
+    },
+    {
+      "control_id": "DLP-001",
+      "title": "Sensitive prompt egress is blocked or approved",
+      "state": "PASS",
+      "risk": "CRITICAL",
+      "reason": "No unapproved sensitive-data egress event was observed",
+      "frameworks": [
+        "NIST-AI-RMF-1.0",
+        "ISO-42001-2023",
+        "ISO-27001-2022"
+      ],
+      "evidence_ids": [],
+      "owner": "Security Engineering",
+      "remediation": "Block the destination, rotate exposed secrets where applicable, and route business exceptions for approval.",
+      "due_days": 3,
+      "test_type": "automated"
+    },
+    {
+      "control_id": "REM-001",
+      "title": "Critical findings meet remediation SLA",
+      "state": "PASS",
+      "risk": "CRITICAL",
+      "reason": "No critical finding is overdue",
+      "frameworks": [
+        "NIST-CSF-2.0",
+        "SOC2",
+        "ISO-27001-2022",
+        "ISO-42001-2023"
+      ],
+      "evidence_ids": [],
+      "owner": "Risk Owners",
+      "remediation": "Escalate overdue critical findings, document the decision, and schedule evidence-backed retesting.",
+      "due_days": 3,
+      "test_type": "automated"
+    }
+  ],
+  "limitations": [
+    "This reference engine scopes and tests configured controls; it does not issue certification, audit opinions, or legal advice.",
+    "Legal applicability and subjective effectiveness judgments are routed to MANUAL_REVIEW."
+  ],
+  "evidence_basis": "Synthetic portfolio sample; not client telemetry"
+}

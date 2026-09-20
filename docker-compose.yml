@@ -1,0 +1,27 @@
+services:
+  opa:
+    image: openpolicyagent/opa:1.20.2-static
+    command: ["run", "--server", "--addr=0.0.0.0:8181", "/policies"]
+    ports: ["127.0.0.1:8181:8181"]
+    volumes:
+      - ./policies/opa:/policies:ro
+    read_only: true
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "/opa", "eval", "1+1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  mcp:
+    build:
+      context: .
+      dockerfile: services/mcp-server/Dockerfile
+    environment:
+      MCP_TRANSPORT: streamable-http
+    ports:
+      - "127.0.0.1:8000:8000"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt: ["no-new-privileges:true"]

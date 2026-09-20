@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio Project Manifest",
+  "type": "object",
+  "required": ["project_id", "name", "purpose", "framework_candidates", "capabilities", "telemetry_sources", "outputs", "guardrails"],
+  "properties": {
+    "project_id": {"type": "string", "pattern": "^P(0[1-9]|10)$"},
+    "name": {"type": "string"},
+    "purpose": {"type": "string"},
+    "framework_candidates": {"type": "array", "items": {"type": "string"}},
+    "capabilities": {"type": "array", "items": {"type": "string"}},
+    "telemetry_sources": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "guardrails": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

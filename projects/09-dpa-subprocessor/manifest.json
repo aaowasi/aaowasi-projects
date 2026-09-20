@@ -1,0 +1,12 @@
+{
+  "project_id": "P09",
+  "name": "GDPR Article 28 DPA & Subprocessor Governance Engine",
+  "purpose": "Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph.",
+  "discard": ["Single DPA checklist", "Flat subprocessor spreadsheet", "Untracked notice and objection windows"],
+  "framework_candidates": ["GDPR", "ISO-27001-2022", "DORA"],
+  "capabilities": ["Role and processing graph", "DPA clause evidence map", "Subprocessor authorization workflow", "Transfer-mechanism record", "Change notice timer", "Flow-down gap detection"],
+  "telemetry_sources": ["Executed DPA metadata", "Processing records", "Subprocessor registry", "Transfer assessments", "Change notices"],
+  "outputs": ["processor-obligation-graph.json", "dpa-gap-review.json", "subprocessor-change-queue.json", "transfer-register.json"],
+  "kpis": ["Processors with executed DPA %", "Unreviewed subprocessor changes", "Missing transfer records", "Overdue objections"],
+  "guardrails": ["Contract interpretation remains legal review", "Do not expose confidential agreements publicly", "Record evidence and reviewer rationale for every conclusion"]
+}

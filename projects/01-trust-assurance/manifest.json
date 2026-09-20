@@ -1,0 +1,12 @@
+{
+  "project_id": "P01",
+  "name": "Enterprise Trust & Customer Assurance Architecture",
+  "purpose": "Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states.",
+  "discard": ["Static trust packs", "Unversioned evidence links", "Duplicate framework spreadsheets"],
+  "framework_candidates": ["SOC2", "ISO-27001-2022", "GDPR", "ISO-42001-2023"],
+  "capabilities": ["Context-aware assurance scope", "Claim-to-control graph", "Evidence freshness", "Approved exception workflow", "Evidence-backed response export"],
+  "telemetry_sources": ["GitHub branch and workflow APIs", "Cloud identity exports", "Ticket approvals", "Signed policy records"],
+  "outputs": ["assurance-packet.json", "trust-status.json", "claim-evidence-graph.json", "evidence-expiry-queue.json"],
+  "kpis": ["Claims with current evidence %", "Median response lead time", "Open assurance exceptions"],
+  "guardrails": ["Never claim certification or an audit opinion", "Redact confidential evidence from public outputs", "Route contractual interpretation to MANUAL_REVIEW"]
+}

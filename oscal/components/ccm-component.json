@@ -1,0 +1,30 @@
+{
+  "component-definition": {
+    "uuid": "7fd9cc47-ef73-4af5-a0f3-9fe7ab265fb0",
+    "metadata": {
+      "title": "Adaptive GRC and AI Assurance Engine",
+      "published": "2026-09-17T00:00:00Z",
+      "last-modified": "2026-09-17T00:00:00Z",
+      "version": "2.0.0",
+      "oscal-version": "1.2.3",
+      "roles": [{"id": "provider", "title": "Control Service Provider"}],
+      "parties": [{"uuid": "141ce2c2-e112-4e16-8e2a-d86a33f428ef", "type": "organization", "name": "Portfolio Reference Implementation"}]
+    },
+    "components": [{
+      "uuid": "05a14611-e743-44ab-ad87-68566521e59f",
+      "type": "software",
+      "title": "Adaptive GRC and AI Assurance Engine",
+      "description": "Context scoping, automated collectors, deterministic tests, OPA policies, six-state decisions, and integrity-protected evidence packaging.",
+      "responsible-roles": [{"role-id":"provider","party-uuids":["141ce2c2-e112-4e16-8e2a-d86a33f428ef"]}],
+      "control-implementations": [{
+        "uuid": "9f816022-68ae-4be3-9465-cbc75b7cd73c",
+        "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+        "description": "Reference implementation statements for automated monitoring.",
+        "implemented-requirements": [
+          {"uuid":"0d903e45-495c-4b28-aa9f-155510161f11","control-id":"ca-7","description":"Collectors execute on a scheduled cadence, calculate control status, and publish sanitized telemetry for continuous monitoring."},
+          {"uuid":"a351985b-b2ac-4f40-a78d-d09c7a9228bc","control-id":"au-12","description":"Control executions produce timestamped evidence records and SHA-256 digests; raw records are packaged into immutable GitHub Releases."}
+        ]
+      }]
+    }]
+  }
+}

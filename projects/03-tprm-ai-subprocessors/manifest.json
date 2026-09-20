@@ -1,0 +1,12 @@
+{
+  "project_id": "P03",
+  "name": "Enterprise Third-Party Risk & AI Subprocessor Decision Engine",
+  "purpose": "Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context.",
+  "discard": ["Universal 200-question forms", "Risk scores without decision criteria", "Annual-only vendor review"],
+  "framework_candidates": ["ISO-27001-2022", "SOC2", "GDPR", "DORA", "NIS2", "NIST-AI-RMF-1.0"],
+  "capabilities": ["Inherent-risk tiering", "Adaptive evidence request", "Fourth-party concentration", "AI supplier due diligence", "Residual-risk decision", "Continuous change monitoring"],
+  "telemetry_sources": ["Vendor intake", "SOC reports", "Security advisories", "Subprocessor notices", "Service health and concentration data"],
+  "outputs": ["vendor-scope.json", "evidence-request.json", "risk-decision.json", "monitoring-obligations.json"],
+  "kpis": ["Critical vendors with current evidence %", "Median review cycle time", "Overdue vendor treatments", "Single-provider concentration"],
+  "guardrails": ["No approval based only on an LLM summary", "Evidence confidence must be explicit", "Critical decisions require named human approval"]
+}

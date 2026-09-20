@@ -1,0 +1,12 @@
+{
+  "project_id": "P08",
+  "name": "Enterprise Security Questionnaire & Procurement Triage Automation",
+  "purpose": "Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval.",
+  "discard": ["Copy-paste answer libraries", "LLM-generated unsupported yes answers", "Email-only approval trails"],
+  "framework_candidates": ["SOC2", "ISO-27001-2022", "NIST-CSF-2.0", "GDPR", "CUSTOM"],
+  "capabilities": ["Question intent normalization", "Claim-control retrieval", "Evidence freshness test", "Confidence state", "Human approval", "Answer provenance"],
+  "telemetry_sources": ["Questionnaire import", "Control library", "Evidence graph", "Exception register", "Approval log"],
+  "outputs": ["normalized-questions.json", "draft-responses.json", "unsupported-claims.json", "approval-record.json"],
+  "kpis": ["Evidence-supported answers %", "Median turnaround time", "Manual review rate", "Stale answer reuse prevented"],
+  "guardrails": ["Never fabricate a control or certification", "NO_CURRENT_EVIDENCE is an acceptable result", "Legal and contractual claims require approval"]
+}

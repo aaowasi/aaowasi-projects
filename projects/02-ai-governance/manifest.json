@@ -1,0 +1,12 @@
+{
+  "project_id": "P02",
+  "name": "AI Governance Operating System",
+  "purpose": "Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement.",
+  "discard": ["Policy-only AI governance", "Inventory without owners", "One-time risk scoring"],
+  "framework_candidates": ["NIST-AI-RMF-1.0", "ISO-42001-2023", "EU-AI-ACT", "CUSTOM"],
+  "capabilities": ["AI inventory", "Use-case and impact classification", "Model and supplier provenance", "Human oversight records", "TEVV evidence", "MCP tool authorization", "Post-deployment monitoring"],
+  "telemetry_sources": ["Model registry", "Evaluation runs", "Prompt gateway", "Incident records", "MCP audit events"],
+  "outputs": ["ai-system-card.json", "risk-impact-assessment.json", "deployment-decision.json", "monitoring-plan.json"],
+  "kpis": ["AI systems with accountable owner %", "High-risk systems with current evaluation %", "Unapproved AI use cases"],
+  "guardrails": ["AI may assist drafting but cannot approve its own deployment", "Legal classification remains reviewable", "Material model changes require reassessment"]
+}

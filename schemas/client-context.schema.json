@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/client-context.schema.json",
+  "title": "Adaptive Assurance Client Context",
+  "type": "object",
+  "required": ["assessment_id", "organization", "jurisdictions", "industries", "data", "ai"],
+  "properties": {
+    "assessment_id": {"type": "string", "minLength": 3},
+    "organization": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string"},
+        "saas_provider": {"type": "boolean", "default": false},
+        "security_program": {"type": "boolean", "default": true},
+        "security_management_system": {"type": "boolean", "default": false},
+        "essential_or_important_entity": {"type": "boolean", "default": false}
+      },
+      "additionalProperties": true
+    },
+    "jurisdictions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "industries": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "data": {
+      "type": "object",
+      "properties": {
+        "eu_personal_data": {"type": "boolean", "default": false},
+        "payment_card_data": {"type": "boolean", "default": false},
+        "phi": {"type": "boolean", "default": false}
+      },
+      "additionalProperties": true
+    },
+    "ai": {
+      "type": "object",
+      "properties": {
+        "uses_ai": {"type": "boolean", "default": false},
+        "provides_ai": {"type": "boolean", "default": false},
+        "eu_market": {"type": "boolean", "default": false},
+        "ai_management_system": {"type": "boolean", "default": false},
+        "generates_synthetic_content": {"type": "boolean", "default": false}
+      },
+      "additionalProperties": true
+    },
+    "contracts": {"type": "object", "additionalProperties": true},
+    "operations": {"type": "object", "additionalProperties": true},
+    "assurance": {"type": "object", "additionalProperties": true},
+    "requested_frameworks": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "custom_requirements": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true
+}

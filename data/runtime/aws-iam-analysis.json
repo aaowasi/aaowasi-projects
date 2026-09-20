@@ -1,0 +1,12 @@
+{
+  "source": "data/source/aws_iam.json",
+  "policy_count": 1,
+  "wildcard_admin_count": 0,
+  "violations": [],
+  "control_mappings": [
+    "SOC2-CC6.1",
+    "ISO27001-A.5.15",
+    "ISO27001-A.8.2",
+    "NIST-CSF-PR.AA"
+  ]
+}

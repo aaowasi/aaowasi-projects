@@ -1,0 +1,168 @@
+{
+  "registry_version": "2026-09-17",
+  "design_note": "Identifiers and applicability signals only. Proprietary standard text is not reproduced.",
+  "frameworks": [
+    {
+      "id": "NIST-CSF-2.0",
+      "name": "NIST Cybersecurity Framework",
+      "version": "2.0",
+      "legal_review_required": false,
+      "source_url": "https://www.nist.gov/cyberframework",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "organization.security_program", "equals": true, "reason": "The organization operates or is assessing a cybersecurity program"}
+      ]
+    },
+    {
+      "id": "SOC2",
+      "name": "AICPA Trust Services Criteria / SOC 2",
+      "version": "current owner-approved criteria",
+      "legal_review_required": false,
+      "source_url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "organization.saas_provider", "equals": true, "reason": "The entity provides a service for customer data or operations"},
+        {"field": "assurance.customer_assurance", "equals": true, "reason": "Customer assurance is in scope"}
+      ]
+    },
+    {
+      "id": "ISO-27001-2022",
+      "name": "ISO/IEC 27001",
+      "version": "2022",
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/27001",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "organization.security_management_system", "equals": true, "reason": "An information security management system is in scope"},
+        {"field": "contracts.iso27001_required", "equals": true, "reason": "A contractual ISO/IEC 27001 requirement exists"}
+      ]
+    },
+    {
+      "id": "ISO-22301",
+      "name": "ISO 22301",
+      "version": "2019",
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/75106.html",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "operations.business_continuity_required", "equals": true, "reason": "Business continuity and resilience are in scope"}
+      ]
+    },
+    {
+      "id": "NIST-AI-RMF-1.0",
+      "name": "NIST AI Risk Management Framework",
+      "version": "1.0 (revision in progress)",
+      "legal_review_required": false,
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "ai.uses_ai", "equals": true, "reason": "AI is used in organizational processes"},
+        {"field": "ai.provides_ai", "equals": true, "reason": "The organization provides an AI-enabled product or service"}
+      ]
+    },
+    {
+      "id": "ISO-42001-2023",
+      "name": "ISO/IEC 42001",
+      "version": "2023",
+      "legal_review_required": false,
+      "source_url": "https://www.iso.org/standard/81230.html",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "ai.ai_management_system", "equals": true, "reason": "An AI management system is in scope"},
+        {"field": "contracts.iso42001_required", "equals": true, "reason": "A contractual ISO/IEC 42001 requirement exists"}
+      ]
+    },
+    {
+      "id": "EU-AI-ACT",
+      "name": "Regulation (EU) 2024/1689 (AI Act)",
+      "version": "consolidated 2026-07-27",
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "jurisdictions", "contains_any": ["EU", "EEA"], "reason": "EU or EEA operations are declared"},
+        {"field": "ai.eu_market", "equals": true, "reason": "The AI system is placed on or used in the EU market"}
+      ]
+    },
+    {
+      "id": "GDPR",
+      "name": "Regulation (EU) 2016/679 (GDPR)",
+      "version": "current consolidated text",
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "data.eu_personal_data", "equals": true, "reason": "EU personal data processing is declared"},
+        {"field": "jurisdictions", "contains_any": ["EU", "EEA"], "reason": "EU or EEA operations are declared"}
+      ]
+    },
+    {
+      "id": "PCI-DSS-4.0.1",
+      "name": "PCI DSS",
+      "version": "4.0.1",
+      "legal_review_required": false,
+      "source_url": "https://www.pcisecuritystandards.org/standards/pci-dss/",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "data.payment_card_data", "equals": true, "reason": "Payment card account data is processed or stored"}
+      ]
+    },
+    {
+      "id": "HIPAA-SECURITY",
+      "name": "HIPAA Security Rule",
+      "version": "current e-CFR",
+      "legal_review_required": true,
+      "source_url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "data.phi", "equals": true, "reason": "Protected health information is declared"}
+      ]
+    },
+    {
+      "id": "DORA",
+      "name": "Regulation (EU) 2022/2554 (DORA)",
+      "version": "current consolidated text",
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "minimum_matches": 2,
+      "applicability": [
+        {"field": "jurisdictions", "contains_any": ["EU", "EEA"], "reason": "EU or EEA operations are declared"},
+        {"field": "industries", "contains_any": ["financial-services", "insurance", "banking"], "reason": "A financial-sector industry is declared"}
+      ]
+    },
+    {
+      "id": "NIS2",
+      "name": "Directive (EU) 2022/2555 (NIS2)",
+      "version": "current",
+      "legal_review_required": true,
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+      "minimum_matches": 2,
+      "applicability": [
+        {"field": "jurisdictions", "contains_any": ["EU", "EEA"], "reason": "EU or EEA operations are declared"},
+        {"field": "organization.essential_or_important_entity", "equals": true, "reason": "The entity identifies as potentially essential or important"}
+      ]
+    },
+    {
+      "id": "COSO-ERM",
+      "name": "COSO Enterprise Risk Management",
+      "version": "2017",
+      "legal_review_required": false,
+      "source_url": "https://www.coso.org/enterprise-risk-management",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "assurance.enterprise_risk", "equals": true, "reason": "Enterprise risk management is in scope"}
+      ]
+    },
+    {
+      "id": "CUSTOM",
+      "name": "Organization-defined controls and contractual mandates",
+      "version": "assessment supplied",
+      "legal_review_required": false,
+      "source_url": "",
+      "minimum_matches": 1,
+      "applicability": [
+        {"field": "custom_requirements", "present": true, "reason": "Organization-defined requirements were supplied"}
+      ]
+    }
+  ]
+}

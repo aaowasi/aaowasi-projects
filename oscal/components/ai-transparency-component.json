@@ -1,0 +1,30 @@
+{
+  "component-definition": {
+    "uuid": "91e4dd42-a8d9-4c33-8b94-30fd86f234ca",
+    "metadata": {
+      "title": "AI Transparency Control Component",
+      "published": "2026-09-17T00:00:00Z",
+      "last-modified": "2026-09-17T00:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.2.3",
+      "roles": [{"id": "owner", "title": "AI Transparency Control Owner"}],
+      "parties": [{"uuid": "2e6328f9-0135-4d6f-b8aa-f0ea13f770c2", "type": "organization", "name": "Portfolio Reference Implementation"}]
+    },
+    "components": [{
+      "uuid": "6f228b28-7ca1-4dad-af65-f1d864df1e35",
+      "type": "software",
+      "title": "Article 50 Product Gate",
+      "description": "Evaluates configured AI-interaction disclosure and machine-readable synthetic-content marking evidence while routing legal applicability to a qualified reviewer.",
+      "responsible-roles": [{"role-id": "owner", "party-uuids": ["2e6328f9-0135-4d6f-b8aa-f0ea13f770c2"]}],
+      "control-implementations": [{
+        "uuid": "60e25435-37ca-4ded-87e8-c9ecb375b4f5",
+        "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+        "description": "Organization-defined control identifiers referencing EU AI Act Article 50 obligations.",
+        "implemented-requirements": [
+          {"uuid": "f78a38fb-7e1e-4db4-b158-71569881103c", "control-id": "ai-050-1", "description": "Test that the configured direct-interaction disclosure is present, timely, accessible, and evidenced."},
+          {"uuid": "88317d0b-9889-4b97-a80d-8334c339bd9a", "control-id": "ai-050-2", "description": "Test that in-scope synthetic outputs carry machine-readable marking and that detectability evidence is retained."}
+        ]
+      }]
+    }]
+  }
+}

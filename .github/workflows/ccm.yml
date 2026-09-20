@@ -1,0 +1,24 @@
+name: Continuous Assurance Snapshot
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect actual repository observations
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python services/evidence-ingestor/ccm.py
+      - name: Preserve assessment for owner review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assurance-review
+          path: reports/assurance-report.md
+          retention-days: 14

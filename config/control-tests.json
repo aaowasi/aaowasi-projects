@@ -1,0 +1,64 @@
+{
+  "control_test_version": "2.0.0",
+  "controls": [
+    {
+      "id": "IAM-001", "title": "Administrative access requires MFA", "frameworks": ["SOC2", "ISO-27001-2022", "NIST-CSF-2.0"],
+      "evidence_path": "iam.admin_mfa_coverage", "operator": "greater_than_or_equal", "expected": 1.0, "risk": "HIGH",
+      "owner": "Identity and Access Management", "due_days": 7, "remediation": "Require phishing-resistant MFA for all administrative identities and retest coverage.",
+      "pass_reason": "All observed administrative identities are protected by MFA", "fail_reason": "One or more administrative identities are not protected by MFA"
+    },
+    {
+      "id": "IAM-002", "title": "Wildcard administrative grants are prohibited", "frameworks": ["SOC2", "ISO-27001-2022", "NIST-CSF-2.0"],
+      "evidence_path": "iam.wildcard_admin_count", "operator": "equals", "expected": 0, "risk": "CRITICAL",
+      "owner": "Cloud Security", "due_days": 3, "remediation": "Replace wildcard grants with least-privilege actions and scoped resources.",
+      "pass_reason": "No wildcard administrative grant was detected", "fail_reason": "At least one wildcard administrative grant was detected"
+    },
+    {
+      "id": "EVD-001", "title": "Control evidence remains within the freshness SLA", "frameworks": ["SOC2", "ISO-27001-2022", "NIST-CSF-2.0", "ISO-42001-2023"],
+      "evidence_path": "evidence.max_age_days", "operator": "less_than_or_equal", "expected": 30, "risk": "MODERATE",
+      "owner": "GRC Operations", "due_days": 14, "remediation": "Refresh expired evidence and document an approved exception where automation is unavailable.",
+      "pass_reason": "Evidence is within the configured 30-day freshness SLA", "fail_reason": "Evidence exceeds the configured 30-day freshness SLA"
+    },
+    {
+      "id": "AI-001", "title": "AI systems have an accountable owner", "frameworks": ["NIST-AI-RMF-1.0", "ISO-42001-2023", "EU-AI-ACT"],
+      "evidence_path": "ai.inventory_owner_coverage", "operator": "greater_than_or_equal", "expected": 1.0, "risk": "HIGH",
+      "owner": "AI Governance", "due_days": 14, "remediation": "Assign a business owner and technical owner to every in-scope AI system.",
+      "pass_reason": "Every inventoried AI system has an accountable owner", "fail_reason": "At least one AI system lacks an accountable owner"
+    },
+    {
+      "id": "AI-050-1", "title": "Direct AI interaction disclosure", "frameworks": ["EU-AI-ACT"],
+      "evidence_path": "ai.article50.interaction_disclosure", "operator": "equals", "expected": true, "risk": "HIGH",
+      "owner": "Product and Legal", "due_days": 7, "remediation": "Add context-appropriate disclosure before or at the first direct AI interaction.",
+      "pass_reason": "The product exposes the configured AI-interaction disclosure", "fail_reason": "The configured AI-interaction disclosure was not observed"
+    },
+    {
+      "id": "AI-050-2", "title": "Synthetic output marking is machine-readable and detectable", "frameworks": ["EU-AI-ACT"],
+      "evidence_path": "ai.article50.machine_readable_marking", "operator": "equals", "expected": true, "risk": "HIGH",
+      "owner": "AI Platform", "due_days": 14, "remediation": "Implement interoperable provenance metadata or watermarking and retain detection-test evidence.",
+      "pass_reason": "Machine-readable marking is enabled for in-scope synthetic outputs", "fail_reason": "Machine-readable marking was not demonstrated"
+    },
+    {
+      "id": "TPRM-001", "title": "Critical vendors have current assurance evidence", "frameworks": ["SOC2", "ISO-27001-2022", "DORA", "NIS2", "GDPR"],
+      "evidence_path": "tprm.critical_vendor_current_evidence_coverage", "operator": "greater_than_or_equal", "expected": 1.0, "risk": "HIGH",
+      "owner": "Third-Party Risk", "due_days": 14, "remediation": "Request current assurance evidence or approve a time-bound risk exception.",
+      "pass_reason": "All critical vendors have current assurance evidence", "fail_reason": "At least one critical vendor lacks current assurance evidence"
+    },
+    {
+      "id": "GDPR-28-1", "title": "Processor agreement and subprocessor terms require legal review", "frameworks": ["GDPR"],
+      "manual_review": true, "manual_reason": "Contract terms, controller/processor roles, transfer mechanisms, and Article 28 sufficiency require qualified legal review.",
+      "risk": "HIGH", "owner": "Privacy and Legal", "due_days": 14, "remediation": "Review the executed DPA, subprocessor authorization mechanism, transfer basis, and flow-down terms."
+    },
+    {
+      "id": "DLP-001", "title": "Sensitive prompt egress is blocked or approved", "frameworks": ["NIST-AI-RMF-1.0", "ISO-42001-2023", "ISO-27001-2022"],
+      "evidence_path": "shadow_ai.unapproved_sensitive_egress_count", "operator": "equals", "expected": 0, "risk": "CRITICAL",
+      "owner": "Security Engineering", "due_days": 3, "remediation": "Block the destination, rotate exposed secrets where applicable, and route business exceptions for approval.",
+      "pass_reason": "No unapproved sensitive-data egress event was observed", "fail_reason": "Unapproved sensitive-data egress was observed"
+    },
+    {
+      "id": "REM-001", "title": "Critical findings meet remediation SLA", "frameworks": ["NIST-CSF-2.0", "SOC2", "ISO-27001-2022", "ISO-42001-2023"],
+      "evidence_path": "remediation.overdue_critical_count", "operator": "equals", "expected": 0, "risk": "CRITICAL",
+      "owner": "Risk Owners", "due_days": 3, "remediation": "Escalate overdue critical findings, document the decision, and schedule evidence-backed retesting.",
+      "pass_reason": "No critical finding is overdue", "fail_reason": "At least one critical finding is overdue"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "assessment_id": "AAO-DEMO-2026-001",
+  "organization": {
+    "name": "Example AI SaaS Ltd",
+    "saas_provider": true,
+    "security_program": true,
+    "security_management_system": true,
+    "essential_or_important_entity": false
+  },
+  "jurisdictions": ["EU", "US"],
+  "industries": ["technology"],
+  "data": {
+    "eu_personal_data": true,
+    "payment_card_data": false,
+    "phi": false
+  },
+  "ai": {
+    "uses_ai": true,
+    "provides_ai": true,
+    "eu_market": true,
+    "ai_management_system": true,
+    "generates_synthetic_content": true
+  },
+  "contracts": {
+    "iso27001_required": true,
+    "iso42001_required": false
+  },
+  "operations": {
+    "business_continuity_required": true
+  },
+  "assurance": {
+    "customer_assurance": true,
+    "enterprise_risk": true
+  },
+  "requested_frameworks": []
+}

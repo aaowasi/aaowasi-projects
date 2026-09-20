@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+.evidence-staging/
+.evidence-dist/
+node_modules/

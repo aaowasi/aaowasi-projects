@@ -1,0 +1,12 @@
+{
+  "project_id": "P06",
+  "name": "EU AI Act Article 50 Transparency & Synthetic Content Governance System",
+  "purpose": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
+  "discard": ["Article 50 checklist PDFs", "Disclosure copy without runtime evidence", "Watermark claims without detection tests"],
+  "framework_candidates": ["EU-AI-ACT", "NIST-AI-RMF-1.0", "ISO-42001-2023"],
+  "capabilities": ["Applicability decision tree", "Disclosure UI test", "Machine-readable marking test", "Detector interoperability test", "Exception record", "Release gate"],
+  "telemetry_sources": ["Product configuration", "Rendered UI checks", "Output metadata", "Provenance verifier", "Deployment manifest"],
+  "outputs": ["article50-decision.json", "transparency-test-results.json", "release-gate.json", "exception-review.json"],
+  "kpis": ["In-scope surfaces with verified disclosure %", "Marked synthetic outputs %", "Detection success rate", "Open exceptions"],
+  "guardrails": ["Applicability and exceptions require legal review", "Technical marking must be tested, not asserted", "Accessibility is part of disclosure effectiveness"]
+}

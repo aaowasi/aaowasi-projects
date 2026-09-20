@@ -1,0 +1,12 @@
+{
+  "project_id": "P10",
+  "name": "Continuous Control Monitoring, Audit Operations & Remediation System",
+  "purpose": "Orchestrate collectors, evidence normalization, policy decisions, drift, finding lifecycle, SLA, retest, and immutable snapshots across the other nine modules.",
+  "discard": ["Manual recurring screenshots", "FAIL and collector error conflation", "Findings without retest evidence"],
+  "framework_candidates": ["NIST-CSF-2.0", "SOC2", "ISO-27001-2022", "ISO-42001-2023", "CUSTOM"],
+  "capabilities": ["Scheduled collectors", "Six-state decisions", "Drift detection", "Finding deduplication", "Risk enrichment", "Owner and SLA routing", "Evidence-backed retest", "Release snapshot"],
+  "telemetry_sources": ["All approved collectors", "OPA decisions", "Issue tracker", "Exception register", "Evidence manifest"],
+  "outputs": ["control-status.json", "findings.json", "remediation-sla.json", "assessment-results.json", "release-manifest.json"],
+  "kpis": ["Automated control coverage %", "Control pass rate", "Collector reliability", "Critical SLA attainment", "Mean time to verified remediation"],
+  "guardrails": ["ERROR is never treated as FAIL or PASS", "Evidence is hashed before release", "Public telemetry is sanitized", "Automatic code rewriting is prohibited in production"]
+}

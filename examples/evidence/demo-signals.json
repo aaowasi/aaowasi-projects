@@ -1,0 +1,25 @@
+{
+  "iam": {
+    "admin_mfa_coverage": 1.0,
+    "wildcard_admin_count": 0
+  },
+  "evidence": {
+    "max_age_days": 12
+  },
+  "ai": {
+    "inventory_owner_coverage": 0.8,
+    "article50": {
+      "interaction_disclosure": true,
+      "machine_readable_marking": false
+    }
+  },
+  "tprm": {
+    "critical_vendor_current_evidence_coverage": 0.75
+  },
+  "shadow_ai": {
+    "unapproved_sensitive_egress_count": 0
+  },
+  "remediation": {
+    "overdue_critical_count": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "project_id": "P04",
+  "name": "SOC 2 + ISO/IEC 27001 Control-to-Evidence & Audit Readiness System",
+  "purpose": "Execute repeatable test procedures and preserve observations, hashes, results, exceptions, and POA&M records in machine-readable form.",
+  "discard": ["Control-to-filename spreadsheets", "Manual evidence screenshots without provenance", "Binary ready/not-ready scoring"],
+  "framework_candidates": ["SOC2", "ISO-27001-2022", "NIST-CSF-2.0", "CUSTOM"],
+  "capabilities": ["Control crosswalk", "Test procedure registry", "Collector binding", "Design and operating effectiveness states", "OSCAL assessment results", "POA&M generation"],
+  "telemetry_sources": ["Cloud configuration", "GitHub APIs", "Identity exports", "Ticketing evidence", "Signed approvals"],
+  "outputs": ["assessment-plan.json", "assessment-results.json", "poam.json", "evidence-manifest.json"],
+  "kpis": ["Controls with current evidence %", "Automated test coverage %", "Open high-risk exceptions", "Retest pass rate"],
+  "guardrails": ["Automation does not replace the independent auditor", "Failures and collection errors are distinct", "Evidence custody and timestamps must be preserved"]
+}

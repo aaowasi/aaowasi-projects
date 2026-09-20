@@ -1,0 +1,43 @@
+{
+  "status": "ACTION_REQUIRED",
+  "checks": [
+    {
+      "check": "valid_json:config/framework-registry.json",
+      "status": "PASS",
+      "remediation": ""
+    },
+    {
+      "check": "valid_json:config/control-tests.json",
+      "status": "PASS",
+      "remediation": ""
+    },
+    {
+      "check": "valid_json:schemas/client-context.schema.json",
+      "status": "PASS",
+      "remediation": ""
+    },
+    {
+      "check": "python>=3.11",
+      "status": "PASS",
+      "remediation": ""
+    },
+    {
+      "check": "opa_available",
+      "status": "FAIL",
+      "remediation": "Install OPA 1.20.2 or run it through Docker Compose"
+    },
+    {
+      "check": "mcp_sdk_available",
+      "status": "FAIL",
+      "remediation": "Install optional dependency: pip install 'mcp>=2,<3'"
+    }
+  ],
+  "operations_permission_action_brief": {
+    "blocked_capability": "One or more optional or required runtime checks failed",
+    "owner_action": [
+      "Install OPA 1.20.2 or run it through Docker Compose",
+      "Install optional dependency: pip install 'mcp>=2,<3'"
+    ],
+    "resume_command": "python -m engine.cli diagnostics"
+  }
+}

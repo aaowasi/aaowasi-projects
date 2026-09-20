@@ -1,0 +1,5 @@
+[
+  {"id":"R-001","title":"Agent executes destructive GRC action without approval","likelihood":3,"impact":5,"owner":"AI Governance","status":"mitigating","treatment":"OPA approval gate + scoped MCP permissions"},
+  {"id":"R-002","title":"Privileged access drifts outside approved role design","likelihood":3,"impact":5,"owner":"IAM","status":"monitoring","treatment":"scheduled entitlement diff + access review"},
+  {"id":"R-003","title":"Critical evidence becomes stale before audit period close","likelihood":2,"impact":4,"owner":"GRC Engineering","status":"monitoring","treatment":"freshness SLO + automated collection"}
+]

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Normalized Evidence Bundle",
+  "type": "object",
+  "required": ["bundle_id", "generated_at", "records", "signals"],
+  "properties": {
+    "bundle_id": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "records": {"type": "array", "items": {"type": "object", "required": ["evidence_id", "sha256", "source_type", "source_ref"]}},
+    "signals": {"type": "object"}
+  }
+}

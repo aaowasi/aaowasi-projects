@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio project",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "type",
+    "domain",
+    "summary"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "evidenceBasis": {
+      "type": "string"
+    },
+    "sourcePath": {
+      "type": "string"
+    },
+    "liveUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "caseStudyUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "downloadUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "codeUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "featuredOrder": {
+      "type": "integer"
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

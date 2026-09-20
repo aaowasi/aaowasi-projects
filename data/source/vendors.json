@@ -1,0 +1,4 @@
+[
+  {"id":"V-001","name":"Reference Cloud Provider","criticality":"critical","country":"US","fourth_parties":["Identity Provider","CDN Provider"],"residual_risk":8},
+  {"id":"V-002","name":"Reference AI Provider","criticality":"high","country":"US","fourth_parties":["Cloud Provider"],"residual_risk":10}
+]

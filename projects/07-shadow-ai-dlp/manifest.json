@@ -1,0 +1,12 @@
+{
+  "project_id": "P07",
+  "name": "Enterprise Shadow AI, Prompt DLP & AI Data-Egress Governance",
+  "purpose": "Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions.",
+  "discard": ["Annual AI-use survey", "Blocklists without data context", "Prompt logs containing unnecessary sensitive content"],
+  "framework_candidates": ["ISO-27001-2022", "ISO-42001-2023", "NIST-AI-RMF-1.0", "GDPR"],
+  "capabilities": ["AI destination discovery", "Approved-tool registry", "Prompt data classification", "Allow-block-review decision", "MCP audit correlation", "Privacy-preserving event storage"],
+  "telemetry_sources": ["Secure web gateway", "CASB", "Endpoint DNS", "Prompt gateway", "MCP access log"],
+  "outputs": ["ai-destination-inventory.json", "egress-decisions.json", "exception-queue.json", "trend-series.json"],
+  "kpis": ["Unapproved AI destinations", "Sensitive egress events", "Mean exception age", "Approved tool adoption"],
+  "guardrails": ["Do not retain raw prompts by default", "Use data minimization and access controls", "Employee monitoring requires privacy and labor-law review"]
+}
