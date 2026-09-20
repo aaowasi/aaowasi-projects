@@ -62,3 +62,13 @@ Use Cloudflare's previous successful deployment for immediate rollback. Revert t
 8. Print the professional profile to PDF and inspect the page breaks.
 
 These visual and interaction checks remain owner verification items; automated HTTP checks cannot establish their outcome.
+
+## LinkedIn Featured: one remaining platform action
+LinkedIn could not generate a preview for either the portfolio URL or the GitHub projects URL, leaving Save disabled. No Featured item was added or deleted. The headline, About and contact links were saved successfully.
+
+When LinkedIn preview generation is working again:
+1. Open your profile → Featured → plus/overflow menu → Add a link.
+2. Enter `https://aaowasi.pages.dev/work/` and choose Add.
+3. Title: `Compliance, Controls & AI Governance — Selected Work`.
+4. Description: `Explore audit-readiness, vendor-risk and AI-governance work samples with inspectable methods, evidence requirements and decision rationale.`
+5. Save, then place the new item first. Keep the legacy Linktree item until the new entry works.
