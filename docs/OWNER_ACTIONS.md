@@ -1,7 +1,10 @@
 # Owner actions and maintenance
 
-## Cloudflare Pages: one-time verification
-The connected browser could not pass Cloudflare's security verification. GitHub publishing can proceed, but the account's Pages settings must be verified separately if the Git push does not deploy.
+## Deployment status
+Both GitHub repositories were published. Cloudflare reported successful deployments for both sites, and GitHub validation workflows passed. No Cloudflare setup action is currently indicated by those deployment results. The browser could not directly render the production domains in this session.
+
+## Cloudflare Pages: recovery settings only
+Use these steps only if the deployed site does not serve the expected content or a later build fails. The dashboard was held at a security-verification screen in the connected browser.
 
 1. Open your Cloudflare dashboard → Workers & Pages.
 2. Open `aaowasi`. Confirm its Git repository is `aaowasi/aaowasi` and production branch is `main`.
