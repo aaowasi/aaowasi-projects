@@ -36,3 +36,9 @@ Cloudflare Pages: production branch `main`, build `python3 scripts/build_site.py
 CI validates the site and Python engine. The manually triggered assurance workflow stores a review artifact; it does not publish raw evidence or create releases. OPA, optional MCP and container runtime validation require their own installed runtimes and have not been validated by the static-site checks.
 
 See `docs/ARCHITECTURE.md` and `docs/OWNER_ACTIONS.md`.
+
+## Decision-oriented governance delivery
+
+The portfolio connects ten disciplines through a versioned 30-field contract: supplier facts become AI reviews, processor gaps, executive priorities and evidence-backed response drafts. The workspace supports 250 records and 10 MB imports, with 13 JavaScript core tests and five existing Python engine tests.
+
+Explore scoped AI governance, supplier/assurance sprints and recurring review deliverables through the [professional profile](https://aaowasi.pages.dev/profile/). Scenario economics remain modeled inputs; no client savings or production deployment is implied.
