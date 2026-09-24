@@ -1,52 +1,14 @@
 [
   {
-    "id": "P01",
-    "slug": "customer-assurance",
-    "title": "Customer assurance",
-    "type": "Case study",
-    "domain": "Assurance",
-    "summary": "Customer security requests lack a consistent, evidence-backed answer.",
-    "outcome": "Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "SOC2",
-      "ISO-27001-2022",
-      "GDPR",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Context-aware assurance scope",
-      "Claim-to-control graph",
-      "Evidence freshness",
-      "Approved exception workflow",
-      "Evidence-backed response export"
-    ],
-    "outputs": [
-      "assurance-packet.json",
-      "trust-status.json",
-      "claim-evidence-graph.json",
-      "evidence-expiry-queue.json"
-    ],
-    "guardrails": [
-      "Never claim certification or an audit opinion",
-      "Redact confidential evidence from public outputs",
-      "Route contractual interpretation to MANUAL_REVIEW"
-    ],
-    "sourcePath": "projects/01-trust-assurance/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/customer-assurance/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/01-trust-assurance"
-  },
-  {
     "id": "P02",
     "slug": "ai-governance",
     "title": "AI governance",
-    "type": "Case study",
+    "type": "Interactive work sample",
     "domain": "AI governance",
     "summary": "AI use cases need accountable owners, review criteria and documented oversight.",
     "outcome": "Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement.",
     "featured": true,
-    "evidenceBasis": "Independent work sample",
+    "evidenceBasis": "Synthesized enterprise scenario",
     "frameworks": [
       "NIST-AI-RMF-1.0",
       "ISO-42001-2023",
@@ -74,20 +36,147 @@
       "Material model changes require reassessment"
     ],
     "sourcePath": "projects/02-ai-governance/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/ai-governance/",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=ai-governance",
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/02-ai-governance",
-    "featuredOrder": 2
+    "featuredOrder": 0,
+    "tier": 1,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-governance/"
+  },
+  {
+    "id": "P05",
+    "slug": "executive-risk",
+    "title": "Executive risk",
+    "type": "Interactive work sample",
+    "domain": "Technology risk",
+    "summary": "Risk registers need to support decisions, not just record concerns.",
+    "outcome": "Convert traceable assurance signals into appetite breaches, KRI trends, treatment decisions, and board-ready accountability.",
+    "featured": true,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "COSO-ERM",
+      "NIST-CSF-2.0",
+      "ISO-27001-2022",
+      "ISO-42001-2023"
+    ],
+    "capabilities": [
+      "Risk aggregation",
+      "Appetite and tolerance tests",
+      "KRI trend and velocity",
+      "Scenario analysis",
+      "Decision and acceptance log",
+      "Drill-down to evidence"
+    ],
+    "outputs": [
+      "board-risk-pack.json",
+      "kri-series.json",
+      "appetite-breaches.json",
+      "decision-log.json"
+    ],
+    "guardrails": [
+      "No fake precision in risk scoring",
+      "Every metric links to a source and definition",
+      "Board decisions remain human-owned"
+    ],
+    "sourcePath": "projects/05-executive-risk/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=executive-risk",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/05-executive-risk",
+    "tier": 1,
+    "featuredOrder": 1,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/executive-risk/"
+  },
+  {
+    "id": "P06",
+    "slug": "ai-transparency",
+    "title": "AI transparency",
+    "type": "Interactive work sample",
+    "domain": "AI governance",
+    "summary": "AI transparency duties need a documented applicability and evidence review.",
+    "outcome": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "EU-AI-ACT",
+      "NIST-AI-RMF-1.0",
+      "ISO-42001-2023"
+    ],
+    "capabilities": [
+      "Applicability decision tree",
+      "Disclosure UI test",
+      "Machine-readable marking test",
+      "Detector interoperability test",
+      "Exception record",
+      "Release gate"
+    ],
+    "outputs": [
+      "article50-decision.json",
+      "transparency-test-results.json",
+      "release-gate.json",
+      "exception-review.json"
+    ],
+    "guardrails": [
+      "Applicability and exceptions require legal review",
+      "Technical marking must be tested, not asserted",
+      "Accessibility is part of disclosure effectiveness"
+    ],
+    "sourcePath": "projects/06-eu-ai-transparency/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=ai-transparency",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/06-eu-ai-transparency",
+    "tier": 1,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-transparency/"
+  },
+  {
+    "id": "P07",
+    "slug": "shadow-ai",
+    "title": "Shadow AI governance",
+    "type": "Interactive work sample",
+    "domain": "AI governance",
+    "summary": "Unapproved AI use can expose sensitive business information.",
+    "outcome": "Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions.",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "ISO-27001-2022",
+      "ISO-42001-2023",
+      "NIST-AI-RMF-1.0",
+      "GDPR"
+    ],
+    "capabilities": [
+      "AI destination discovery",
+      "Approved-tool registry",
+      "Prompt data classification",
+      "Allow-block-review decision",
+      "MCP audit correlation",
+      "Privacy-preserving event storage"
+    ],
+    "outputs": [
+      "ai-destination-inventory.json",
+      "egress-decisions.json",
+      "exception-queue.json",
+      "trend-series.json"
+    ],
+    "guardrails": [
+      "Do not retain raw prompts by default",
+      "Use data minimization and access controls",
+      "Employee monitoring requires privacy and labor-law review"
+    ],
+    "sourcePath": "projects/07-shadow-ai-dlp/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=shadow-ai",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/07-shadow-ai-dlp",
+    "tier": 1,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/shadow-ai/"
   },
   {
     "id": "P03",
     "slug": "vendor-risk",
     "title": "Third-party risk",
-    "type": "Case study",
+    "type": "Interactive work sample",
     "domain": "Third-party risk",
     "summary": "A vendor decision needs more than a completed questionnaire.",
     "outcome": "Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context.",
     "featured": true,
-    "evidenceBasis": "Independent work sample",
+    "evidenceBasis": "Synthesized enterprise scenario",
     "frameworks": [
       "ISO-27001-2022",
       "SOC2",
@@ -116,20 +205,63 @@
       "Critical decisions require named human approval"
     ],
     "sourcePath": "projects/03-tprm-ai-subprocessors/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/vendor-risk/",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=vendor-risk",
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/03-tprm-ai-subprocessors",
-    "featuredOrder": 1
+    "featuredOrder": 2,
+    "tier": 2,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/vendor-risk/"
+  },
+  {
+    "id": "P09",
+    "slug": "processor-governance",
+    "title": "Processor governance",
+    "type": "Interactive work sample",
+    "domain": "Privacy",
+    "summary": "Processor relationships require contract and subprocessor oversight.",
+    "outcome": "Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph.",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "GDPR",
+      "ISO-27001-2022",
+      "DORA"
+    ],
+    "capabilities": [
+      "Role and processing graph",
+      "DPA clause evidence map",
+      "Subprocessor authorization workflow",
+      "Transfer-mechanism record",
+      "Change notice timer",
+      "Flow-down gap detection"
+    ],
+    "outputs": [
+      "processor-obligation-graph.json",
+      "dpa-gap-review.json",
+      "subprocessor-change-queue.json",
+      "transfer-register.json"
+    ],
+    "guardrails": [
+      "Contract interpretation remains legal review",
+      "Do not expose confidential agreements publicly",
+      "Record evidence and reviewer rationale for every conclusion"
+    ],
+    "sourcePath": "projects/09-dpa-subprocessor/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=processor-governance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/09-dpa-subprocessor",
+    "tier": 2,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/processor-governance/"
   },
   {
     "id": "P04",
     "slug": "audit-readiness",
     "title": "Audit readiness",
-    "type": "Case study",
+    "type": "Interactive work sample",
     "domain": "Assurance",
     "summary": "Controls, evidence and remediation need a single traceable assessment.",
     "outcome": "Execute repeatable test procedures and preserve observations, hashes, results, exceptions, and POA&M records in machine-readable form.",
-    "featured": true,
-    "evidenceBasis": "Independent work sample",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
     "frameworks": [
       "SOC2",
       "ISO-27001-2022",
@@ -156,214 +288,22 @@
       "Evidence custody and timestamps must be preserved"
     ],
     "sourcePath": "projects/04-audit-readiness/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/audit-readiness/",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=audit-readiness",
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/04-audit-readiness",
-    "featuredOrder": 0
-  },
-  {
-    "id": "P05",
-    "slug": "executive-risk",
-    "title": "Executive risk",
-    "type": "Case study",
-    "domain": "Technology risk",
-    "summary": "Risk registers need to support decisions, not just record concerns.",
-    "outcome": "Convert traceable assurance signals into appetite breaches, KRI trends, treatment decisions, and board-ready accountability.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "COSO-ERM",
-      "NIST-CSF-2.0",
-      "ISO-27001-2022",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Risk aggregation",
-      "Appetite and tolerance tests",
-      "KRI trend and velocity",
-      "Scenario analysis",
-      "Decision and acceptance log",
-      "Drill-down to evidence"
-    ],
-    "outputs": [
-      "board-risk-pack.json",
-      "kri-series.json",
-      "appetite-breaches.json",
-      "decision-log.json"
-    ],
-    "guardrails": [
-      "No fake precision in risk scoring",
-      "Every metric links to a source and definition",
-      "Board decisions remain human-owned"
-    ],
-    "sourcePath": "projects/05-executive-risk/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/executive-risk/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/05-executive-risk"
-  },
-  {
-    "id": "P06",
-    "slug": "ai-transparency",
-    "title": "AI transparency",
-    "type": "Case study",
-    "domain": "AI governance",
-    "summary": "AI transparency duties need a documented applicability and evidence review.",
-    "outcome": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "EU-AI-ACT",
-      "NIST-AI-RMF-1.0",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Applicability decision tree",
-      "Disclosure UI test",
-      "Machine-readable marking test",
-      "Detector interoperability test",
-      "Exception record",
-      "Release gate"
-    ],
-    "outputs": [
-      "article50-decision.json",
-      "transparency-test-results.json",
-      "release-gate.json",
-      "exception-review.json"
-    ],
-    "guardrails": [
-      "Applicability and exceptions require legal review",
-      "Technical marking must be tested, not asserted",
-      "Accessibility is part of disclosure effectiveness"
-    ],
-    "sourcePath": "projects/06-eu-ai-transparency/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/ai-transparency/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/06-eu-ai-transparency"
-  },
-  {
-    "id": "P07",
-    "slug": "shadow-ai",
-    "title": "Shadow AI governance",
-    "type": "Case study",
-    "domain": "AI governance",
-    "summary": "Unapproved AI use can expose sensitive business information.",
-    "outcome": "Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "ISO-27001-2022",
-      "ISO-42001-2023",
-      "NIST-AI-RMF-1.0",
-      "GDPR"
-    ],
-    "capabilities": [
-      "AI destination discovery",
-      "Approved-tool registry",
-      "Prompt data classification",
-      "Allow-block-review decision",
-      "MCP audit correlation",
-      "Privacy-preserving event storage"
-    ],
-    "outputs": [
-      "ai-destination-inventory.json",
-      "egress-decisions.json",
-      "exception-queue.json",
-      "trend-series.json"
-    ],
-    "guardrails": [
-      "Do not retain raw prompts by default",
-      "Use data minimization and access controls",
-      "Employee monitoring requires privacy and labor-law review"
-    ],
-    "sourcePath": "projects/07-shadow-ai-dlp/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/shadow-ai/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/07-shadow-ai-dlp"
-  },
-  {
-    "id": "P08",
-    "slug": "questionnaires",
-    "title": "Security questionnaires",
-    "type": "Case study",
-    "domain": "Assurance",
-    "summary": "Procurement questions need accurate answers linked to approved evidence.",
-    "outcome": "Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "SOC2",
-      "ISO-27001-2022",
-      "NIST-CSF-2.0",
-      "GDPR",
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Question intent normalization",
-      "Claim-control retrieval",
-      "Evidence freshness test",
-      "Confidence state",
-      "Human approval",
-      "Answer provenance"
-    ],
-    "outputs": [
-      "normalized-questions.json",
-      "draft-responses.json",
-      "unsupported-claims.json",
-      "approval-record.json"
-    ],
-    "guardrails": [
-      "Never fabricate a control or certification",
-      "NO_CURRENT_EVIDENCE is an acceptable result",
-      "Legal and contractual claims require approval"
-    ],
-    "sourcePath": "projects/08-questionnaire-procurement/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/questionnaires/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/08-questionnaire-procurement"
-  },
-  {
-    "id": "P09",
-    "slug": "processor-governance",
-    "title": "Processor governance",
-    "type": "Case study",
-    "domain": "Privacy",
-    "summary": "Processor relationships require contract and subprocessor oversight.",
-    "outcome": "Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph.",
-    "featured": false,
-    "evidenceBasis": "Independent work sample",
-    "frameworks": [
-      "GDPR",
-      "ISO-27001-2022",
-      "DORA"
-    ],
-    "capabilities": [
-      "Role and processing graph",
-      "DPA clause evidence map",
-      "Subprocessor authorization workflow",
-      "Transfer-mechanism record",
-      "Change notice timer",
-      "Flow-down gap detection"
-    ],
-    "outputs": [
-      "processor-obligation-graph.json",
-      "dpa-gap-review.json",
-      "subprocessor-change-queue.json",
-      "transfer-register.json"
-    ],
-    "guardrails": [
-      "Contract interpretation remains legal review",
-      "Do not expose confidential agreements publicly",
-      "Record evidence and reviewer rationale for every conclusion"
-    ],
-    "sourcePath": "projects/09-dpa-subprocessor/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/processor-governance/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/09-dpa-subprocessor"
+    "featuredOrder": 99,
+    "tier": 3,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/audit-readiness/"
   },
   {
     "id": "P10",
     "slug": "continuous-assurance",
     "title": "Continuous assurance",
-    "type": "Case study",
+    "type": "Interactive work sample",
     "domain": "Assurance",
     "summary": "Control evidence ages, exceptions accumulate and follow-ups lose ownership.",
     "outcome": "Orchestrate collectors, evidence normalization, policy decisions, drift, finding lifecycle, SLA, retest, and immutable snapshots across the other nine modules.",
     "featured": false,
-    "evidenceBasis": "Independent work sample",
+    "evidenceBasis": "Synthesized enterprise scenario",
     "frameworks": [
       "NIST-CSF-2.0",
       "SOC2",
@@ -395,7 +335,94 @@
       "Automatic code rewriting is prohibited in production"
     ],
     "sourcePath": "projects/10-ccm-remediation/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/work/continuous-assurance/",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/10-ccm-remediation"
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=continuous-assurance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/10-ccm-remediation",
+    "tier": 3,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/continuous-assurance/"
+  },
+  {
+    "id": "P01",
+    "slug": "customer-assurance",
+    "title": "Customer assurance",
+    "type": "Interactive work sample",
+    "domain": "Assurance",
+    "summary": "Customer security requests lack a consistent, evidence-backed answer.",
+    "outcome": "Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states.",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "SOC2",
+      "ISO-27001-2022",
+      "GDPR",
+      "ISO-42001-2023"
+    ],
+    "capabilities": [
+      "Context-aware assurance scope",
+      "Claim-to-control graph",
+      "Evidence freshness",
+      "Approved exception workflow",
+      "Evidence-backed response export"
+    ],
+    "outputs": [
+      "assurance-packet.json",
+      "trust-status.json",
+      "claim-evidence-graph.json",
+      "evidence-expiry-queue.json"
+    ],
+    "guardrails": [
+      "Never claim certification or an audit opinion",
+      "Redact confidential evidence from public outputs",
+      "Route contractual interpretation to MANUAL_REVIEW"
+    ],
+    "sourcePath": "projects/01-trust-assurance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=customer-assurance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/01-trust-assurance",
+    "tier": 3,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/customer-assurance/"
+  },
+  {
+    "id": "P08",
+    "slug": "questionnaires",
+    "title": "Security questionnaires",
+    "type": "Interactive work sample",
+    "domain": "Assurance",
+    "summary": "Procurement questions need accurate answers linked to approved evidence.",
+    "outcome": "Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval.",
+    "featured": false,
+    "evidenceBasis": "Synthesized enterprise scenario",
+    "frameworks": [
+      "SOC2",
+      "ISO-27001-2022",
+      "NIST-CSF-2.0",
+      "GDPR",
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Question intent normalization",
+      "Claim-control retrieval",
+      "Evidence freshness test",
+      "Confidence state",
+      "Human approval",
+      "Answer provenance"
+    ],
+    "outputs": [
+      "normalized-questions.json",
+      "draft-responses.json",
+      "unsupported-claims.json",
+      "approval-record.json"
+    ],
+    "guardrails": [
+      "Never fabricate a control or certification",
+      "NO_CURRENT_EVIDENCE is an acceptable result",
+      "Legal and contractual claims require approval"
+    ],
+    "sourcePath": "projects/08-questionnaire-procurement/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=questionnaires",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/08-questionnaire-procurement",
+    "tier": 3,
+    "featuredOrder": 99,
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/questionnaires/"
   }
 ]

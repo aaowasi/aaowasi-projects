@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AAO browser-local workspace v1.0",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "provenance": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "assumptions": {
+      "type": "object",
+      "required": [
+        "manualMinutes",
+        "assistedMinutes",
+        "hourlyCost",
+        "setupCost"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "manualMinutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "assistedMinutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "hourlyCost": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "setupCost": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000000
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 250,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "owner",
+          "service",
+          "criticality",
+          "dataSensitivity",
+          "ai",
+          "approved",
+          "processor",
+          "region",
+          "dpa",
+          "transfer",
+          "disclosure",
+          "oversight",
+          "evidence",
+          "likelihood",
+          "impact",
+          "treatment",
+          "reviewer",
+          "rationale",
+          "parentVendorId",
+          "controlId",
+          "evidenceRef",
+          "testOutcome",
+          "evidenceReviewedAt",
+          "evidenceExpiresAt",
+          "question",
+          "aiEvalTotal",
+          "aiEvalFailed",
+          "techniqueId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,40}$"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 300,
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "maxLength": 300,
+            "minLength": 1
+          },
+          "service": {
+            "type": "string",
+            "maxLength": 300,
+            "minLength": 1
+          },
+          "criticality": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "dataSensitivity": {
+            "type": "string",
+            "enum": [
+              "public",
+              "internal",
+              "personal",
+              "sensitive"
+            ]
+          },
+          "ai": {
+            "type": "boolean"
+          },
+          "approved": {
+            "type": "boolean"
+          },
+          "processor": {
+            "type": "boolean"
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "EEA",
+              "UK",
+              "US",
+              "Other"
+            ]
+          },
+          "dpa": {
+            "type": "boolean"
+          },
+          "transfer": {
+            "type": "boolean"
+          },
+          "disclosure": {
+            "type": "string",
+            "enum": [
+              "unreviewed",
+              "tested",
+              "gap"
+            ]
+          },
+          "oversight": {
+            "type": "string",
+            "enum": [
+              "unreviewed",
+              "assigned",
+              "tested"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "enum": [
+              "missing",
+              "current",
+              "stale",
+              "failed",
+              "error"
+            ]
+          },
+          "likelihood": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "impact": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "treatment": {
+            "type": "string",
+            "enum": [
+              "unreviewed",
+              "mitigate",
+              "accept",
+              "avoid"
+            ]
+          },
+          "reviewer": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "rationale": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "parentVendorId": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "controlId": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "evidenceRef": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "testOutcome": {
+            "type": "string",
+            "enum": [
+              "not-tested",
+              "pass",
+              "fail",
+              "error"
+            ]
+          },
+          "evidenceReviewedAt": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "evidenceExpiresAt": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "question": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "aiEvalTotal": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "aiEvalFailed": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "techniqueId": {
+            "enum": [
+              "",
+              "AML.T0051",
+              "AML.T0051.000",
+              "AML.T0051.001",
+              "AML.T0054",
+              "AML.T0020"
+            ]
+          }
+        }
+      }
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date",
+      "description": "Explicit snapshot date, used for evidence expiry. Must be real YYYY-MM-DD."
+    }
+  },
+  "$comment": "Runtime additionally validates unique IDs, real dates, dependency acyclicity and references, failures <= total, acceptance rationale and current-evidence metadata requirements. USD is the fixed scenario currency."
+}

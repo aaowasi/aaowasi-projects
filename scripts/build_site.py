@@ -5,6 +5,7 @@ import json, re, shutil
 ROOT=Path(__file__).resolve().parents[1]
 IS_PROJECT=ROOT.name=='aaowasi-projects' or (ROOT/'engine').exists()
 data=json.loads((ROOT/'content/projects.json').read_text())
+plans=json.loads((ROOT/'content/enterprise-plans.json').read_text())
 seen=set()
 def safe_url(value):
  if not value:return ''
@@ -32,7 +33,10 @@ for p in data:
  if IS_PROJECT and p.get('sourcePath'):
   manifest=json.loads((ROOT/p['sourcePath']).read_text())
   template=(ROOT/'templates/project.html').read_text()
-  values={'TITLE':e(p['title']),'ID':e(p['id']),'DOMAIN':e(p['domain']),'SUMMARY':e(p['summary']),'PURPOSE':e(p['outcome']),'BASIS':e(p.get('evidenceBasis','Work sample')),'CODE':e(safe_url(p.get('codeUrl',''))),'SLUG':p['slug'],'SOURCE':e(p['sourcePath']), 'CAPABILITIES':''.join('<li>'+e(x)+'</li>' for x in manifest['capabilities']),'OUTPUTS':''.join('<li>'+e(x)+'</li>' for x in manifest['outputs']),'GUARDRAILS':''.join('<li>'+e(x)+'</li>' for x in manifest['guardrails'])}
+  plan=plans[p['id']]
+  plan_html=''.join('<section class="section case-plan"><span class="eyebrow">'+str(i+1).zfill(2)+'</span><div><h2>'+e(s['title'].split(' / ',1)[1])+'</h2><p>'+e(s['body'])+'</p></div></section>' for i,s in enumerate(plan['sections']))
+  plan_html+='<section class="section content source-list"><h2>Primary sources</h2><ul>'+''.join('<li><a href="'+e(safe_url(s['url']),quote=True)+'">'+e(s['title'])+' ↗</a></li>' for s in plan['sources'])+'</ul><p>References checked 24 September 2026. Public framework concepts only; no reproduction of paid ISO control text. Taxonomy references are not observed client outcomes.</p><a href="/data/workspace-schema.json">Inspect the exact schema ↗</a></section>'
+  values={'PLAN_SECTIONS':plan_html,'TIER':str(plan['tier']),'TITLE':e(p['title']),'ID':e(p['id']),'DOMAIN':e(p['domain']),'SUMMARY':e(p['summary']),'PURPOSE':e(p['outcome']),'BASIS':e(p.get('evidenceBasis','Work sample')),'CODE':e(safe_url(p.get('codeUrl',''))),'SLUG':p['slug'],'SOURCE':e(p['sourcePath']), 'CAPABILITIES':''.join('<li>'+e(x)+'</li>' for x in manifest['capabilities']),'OUTPUTS':''.join('<li>'+e(x)+'</li>' for x in manifest['outputs']),'GUARDRAILS':''.join('<li>'+e(x)+'</li>' for x in manifest['guardrails'])}
   for k,v in values.items():template=template.replace('{{'+k+'}}',v)
   target=ROOT/'site/work'/p['slug']/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(template)
 text=(ROOT/'templates/gallery.html').read_text().replace('{{PROJECT_CARDS}}',''.join(cards))

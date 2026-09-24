@@ -1,0 +1,30 @@
+{
+  "source": "https://github.com/mitre-atlas/atlas-data/blob/main/dist/ATLAS-latest.yaml",
+  "retrievedAt": "2026-09-24",
+  "sourceSha256": "935efa93e28294432d3e2f537eb94991ef8d1f8c58341cd360ea3321ddb66688",
+  "formatVersion": "6.0.0",
+  "contentVersion": "2026.09",
+  "attribution": "MITRE ATLAS, \u00a92021\u20132026 The MITRE Corporation. Technique identifiers and names only.",
+  "techniques": [
+    {
+      "id": "AML.T0051",
+      "name": "LLM Prompt Injection"
+    },
+    {
+      "id": "AML.T0051.000",
+      "name": "Direct"
+    },
+    {
+      "id": "AML.T0051.001",
+      "name": "Indirect"
+    },
+    {
+      "id": "AML.T0054",
+      "name": "LLM Jailbreak"
+    },
+    {
+      "id": "AML.T0020",
+      "name": "Training Data Poisoning"
+    }
+  ]
+}

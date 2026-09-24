@@ -1,0 +1,472 @@
+{
+  "P01": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Customer assurance \u2014 Tier 3. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Customer assurance & claims. Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional customer asks whether current evidence supports each contracted service. Sales needs an answer bounded by evidence state and reviewer ownership instead of a broad compliance claim. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "Unexpired current evidence, a recorded passing control test and a named reviewer enables a supported draft. A change to stale/error immediately withdraws that support across customer assurance and questionnaires. No external message is sent."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Service-to-evidence register with supported-draft status and human reviewer, followed by an internal decision memo. Claims remain limited to the metadata, without certification or audit-opinion language. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Supported draft rate = records with unexpired current evidence, passing test and nonempty reviewer / all records \u00d7 100. This is drafting coverage, not customer trust improvement, revenue won or certification. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Agree customer scope; identify approved claim wording; locate control evidence; verify dates and ownership outside the demo; record reviewer; redact confidential details; approve each external response in the client\u2019s process. Alternative: publish approved artifacts in a client-managed trust center. Catch: audience-specific access, redaction, contract interpretation and evidence freshness dates require production controls; the public portfolio contains no private artifacts. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "AICPA SOC suite overview",
+        "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "GDPR, Regulation (EU) 2016/679",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    ]
+  },
+  "P02": {
+    "tier": 1,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "AI governance \u2014 Tier 1. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "AI lifecycle & evaluation governance. Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional customer-support AI supplier handles personal data while an analytics assistant has approved oversight. The AI register must establish purpose, owner, provenance and evaluation responsibilities before model deployment. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, oversight, disclosure, evidence, dataSensitivity. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "AI-flagged supplier records become the AI inventory. Missing approval, tested oversight or tested disclosure creates a review; changing evidence also recalculates executive priority. Current implementation records evaluation readiness, not model inference or attack execution."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "AI inventory table \u2192 oversight and disclosure editor \u2192 linked evidence \u2192 release-review memo. Use the public MITRE ATLAS reference AML.T0051 (prompt injection), AML.T0054 (jailbreak) and AML.T0020 (poisoning) as evaluation-planning categories; no benchmark pass rates are asserted. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes. The register exposes technique ID, total/failed evaluation counts and failure rate = failed / total \u00d7 100, with N/A for zero cases. Counts are synthetic; no model benchmark was run."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "AI review rate = unresolved AI reviews / AI-flagged records \u00d7 100; N/A with no AI records. Technical gate rate = AI records with approved tool + tested disclosure + tested oversight + unexpired current evidence + passing control test + at least one evaluation case with zero recorded failures / AI records. Neither is a legal clearance. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Inventory one supplier and its model purpose; assign lifecycle owner; define task-specific safety, accuracy and red-team evaluation acceptance criteria; run controlled offline tests in a separately approved environment; record evidence and seek independent deployment authorization. Alternative: use an existing model registry and client-managed AI governance platform. Catch: model/version-specific evaluation results, bias/fairness assessment and post-deployment monitoring need real measurements; this prototype contains no fabricated runs. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NIST AI RMF 1.0",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "title": "NIST AI 600-1 Generative AI Profile",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+      },
+      {
+        "title": "MITRE ATLAS public techniques, 2026.09",
+        "url": "https://github.com/mitre-atlas/atlas-data"
+      },
+      {
+        "title": "OWASP Top 10 for LLM Applications 2025",
+        "url": "https://genai.owasp.org/llm-top-10/"
+      },
+      {
+        "title": "ISO/IEC 42001 public overview",
+        "url": "https://www.iso.org/standard/42001"
+      }
+    ]
+  },
+  "P03": {
+    "tier": 2,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Third-party risk \u2014 Tier 2. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Third-party lifecycle & concentration risk. Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional service estate includes hosting, payroll, analytics and AI support vendors. Procurement needs a reusable intake that escalates critical and AI-enabled suppliers before contract approval. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: criticality, dataSensitivity, ai, processor, region, evidence. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "One vendor row becomes the common source for AI inventory, processor contract triage, ERM scoring and assurance evidence. Toggle Uses AI, save, then switch to P02 and P05 to observe propagation."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Supplier intake table, criticality/data/AI flags, evidence-state editor and decision export. DORA register concepts inform service/relationship metadata, but the custom CSV is not an official DORA filing. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes. The dependency graph is represented by parentVendorId edges; direct dependant counts expose shared-supplier concentration without inventing multi-hop percentages."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Review coverage = records with current evidence / all suppliers \u00d7 100. Priority exposes ordinal assumptions; criticality is shown as context rather than silently assigned an unvalidated multiplier. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Set intake scope and critical-service criteria; load supplier metadata; flag AI and processing relationships; request evidence proportionate to service and data; assign reviewer; decide treatment; schedule periodic reassessment. Alternative: feed this documented schema into a client-managed TPRM platform. Catch: multi-parent or multi-hop fourth-party concentration, contractual SLAs, exit planning and continuous vendor feeds need relationship and historical records not included in this minimum schema. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "EBA DORA register of information resources",
+        "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "NIST AI RMF 1.0",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  },
+  "P04": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Audit readiness \u2014 Tier 3. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Control assurance, cloud & audit readiness. Execute repeatable test procedures and preserve observations, hashes, results, exceptions, and POA&M records in machine-readable form. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional hosting control produces a collection error while payroll evidence is marked current. Internal assurance must separate evidence availability from whether cloud, access and continuity controls actually operate. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, reviewer, service, rationale. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "Evidence states feed portfolio coverage, risk credit, assurance drafts and the P10 exception queue. Collection error never becomes fail or pass automatically; a reviewer must inspect and update the source record."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Evidence register, explicit missing/current/stale/failed/error selector, assigned owner and reviewer. The custom workspace schema maps to assessment concepts; it is not OSCAL-conformant output. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes. Control IDs, evidence references, separate test outcomes and review/expiry dates support traceability; change the snapshot date to observe expiration. A state distribution reports missing/current/stale/failed/error counts."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Evidence coverage = current evidence records / all records \u00d7 100. Error count and failed count remain distinct. This measures evidence status only, not control effectiveness, ISO certification or audit readiness as a percentage. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Define test scope and cloud/BCDR controls; identify evidence owner and collection period; sample access, backup restore and configuration evidence outside the demo; distinguish collector failure from failed test; record observations; route remediation; retest with independent review. Alternative: use the existing Python assessment engine and client-approved collectors, then map outputs into a formal OSCAL assessment-results model. Catch: this browser does not execute cloud checks or establish chain of custody for uploaded evidence. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NIST OSCAL assessment-results v1.1.3",
+        "url": "https://pages.nist.gov/OSCAL-Reference/models/v1.1.3/assessment-results/"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "AICPA SOC suite overview",
+        "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+      }
+    ]
+  },
+  "P05": {
+    "tier": 1,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Executive risk \u2014 Tier 1. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Enterprise risk, policy & advisory. Convert traceable assurance signals into appetite breaches, KRI trends, treatment decisions, and board-ready accountability. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional risk committee needs a single register spanning AI, cloud suppliers, privacy and control exceptions, with explicit appetite and accountable risk treatment. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: likelihood, impact, treatment, reviewer, rationale, evidence. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "All supplier signals feed the ERM register. AI approval and processor gaps add transparent points; unexpired current evidence with a passing control test earns a small policy credit. Named acceptance requires a rationale; evidence or vendor edits immediately change the executive view."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Board-priority table with inherent score, additive flags, evidence credit and final priority; inline treatment decision; scenario economics; exportable internal committee memo. Policy governance and internal-assurance scope appear as reviewer decisions, not automatic approvals. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes. A keyboard-accessible 5\u00d75 inherent-risk heatmap shows likelihood/impact counts; selecting a cell filters the register."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "High-priority exposure = count(priority \u226516) / all records \u00d7 100. Inherent = likelihood \u00d7 impact; priority = clamp(inherent + flags \u2212 credit, 1, 25). No annualized loss, risk probability or causal risk reduction is inferred. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Agree committee scope and appetite; calibrate ordinal likelihood/impact descriptions with owners; import one register; challenge high-priority items; approve treatment with rationale; review drift on a scheduled cadence outside the demo. Alternative: export to the client\u2019s risk register or ServiceNow workflow. Catch: true risk aggregation, policy attestations, audit-committee approvals and financial loss models require governance and data beyond ordinal scores. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "NIST AI RMF 1.0",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  },
+  "P06": {
+    "tier": 1,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "AI transparency \u2014 Tier 1. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "AI transparency & regulatory change. Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional product release combines an AI customer interaction and AI-generated marketing copy. Product and legal teams need an applicability review, disclosure test and accountable release decision. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, disclosure, oversight, approved, evidence. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "AI systems from vendor intake populate transparency gates. A gap holds technical readiness; tested disclosure alone cannot clear a system without oversight, approval and evidence. ERM remains connected to evidence and supplier flags."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Disclosure-state table, technical gate indicator, source-record editor and a manual-review memo. The Commission Article 50 FAQ is a dated review input; no universal applicability or deadline is automatically assigned. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Technical readiness rate = technically ready AI records / AI records \u00d7 100. Readiness requires tool approval, tested disclosure and oversight, unexpired current evidence, a passing control test and a nonempty evaluation set with zero failures and is not an Article 50 compliance percentage. Missing AI denominator returns N/A. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Confirm provider/deployer role and scope with counsel; monitor the official FAQ for regulatory changes; document applicability and exceptions; test notice accessibility and any required marking; retain test references; authorize release manually. Alternative: embed a transparency checklist in the existing release-management system. Catch: actual UI disclosures, machine-readable marking interoperability and applicability analysis must be tested on the real product; they are not performed by this page. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "European Commission Article 50 transparency FAQ",
+        "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+      },
+      {
+        "title": "NIST AI RMF 1.0",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "title": "ISO/IEC 42001 public overview",
+        "url": "https://www.iso.org/standard/42001"
+      }
+    ]
+  },
+  "P07": {
+    "tier": 1,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Shadow AI governance \u2014 Tier 1. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Shadow AI, ethics & acceptable use. Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional marketing tool is unapproved but processes public content; a support assistant is unapproved and handles personal data. Different data contexts need proportionate review without collecting employees\u2019 prompts. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, dataSensitivity, owner, treatment. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "Approved-tool status and classification generate allow/review/block candidates. The same unapproved AI flag opens an AI governance review and increases ERM priority. A block candidate is not enforced network traffic control."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Destination inventory, data-classification selector, transparent candidate decision and owner editor. Only metadata is stored in memory; acceptable-use exceptions belong in reviewer rationale. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Review burden = unapproved AI destinations / AI destinations \u00d7 100. Sensitive block candidates = unapproved AI records with personal or sensitive classification. This is a record count, not measured incidents prevented. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Agree acceptable-use and ethical boundaries; conduct privacy and labor-law review before employee monitoring; inventory tool metadata; assign classifications and approvals; evaluate false positives with users; connect approved enforcement tooling only in a later controlled phase. Alternative: client-managed CASB/SSE discovery with privacy-preserving aggregation. Catch: no SIEM ingestion, endpoint sensor, prompt inspection or live blocking is implemented; exceptions require expiry and oversight in production. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NIST AI RMF 1.0",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "title": "NIST AI 600-1 Generative AI Profile",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+      },
+      {
+        "title": "OWASP Top 10 for LLM Applications 2025",
+        "url": "https://genai.owasp.org/llm-top-10/"
+      },
+      {
+        "title": "GDPR, Regulation (EU) 2016/679",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    ]
+  },
+  "P08": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Security questionnaires \u2014 Tier 3. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Procurement questionnaires & response governance. Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional procurement team reviews control-specific procurement questions across six supplier services. An editable question and reusable bounded control-status draft can reduce retyping while refusing unsupported claims. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "The same current-evidence and reviewer gate drives P01 and P08. Changed evidence invalidates supported drafts immediately. Question text is editable. A deterministic control-status draft cites control ID, evidence reference, recorded outcome and validity dates; the reviewer must decide whether those facts answer the particular question. There is no semantic question answering or model retrieval."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Questionnaire response table with editable procurement question context, per-service bounded draft, evidence state and reviewer. Unsupported rows show NO_CURRENT_EVIDENCE or missing-reviewer state rather than an invented answer. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Supported answer coverage = supported drafts / all records \u00d7 100. Model economics must use measured minutes from a future timed pilot before any achieved productivity claim is made. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Select a repeatable evidence-availability question; map each service to approved evidence; generate bounded drafts; check scope and validity manually; approve before sending; run a timed pilot and replace illustrative economics inputs. Alternative: import a client\u2019s approved answer library into existing questionnaire software. Catch: bulk questionnaire document parsing, semantic retrieval, document parsing and external submission are not implemented here. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "AICPA SOC suite overview",
+        "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "GDPR, Regulation (EU) 2016/679",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    ]
+  },
+  "P09": {
+    "tier": 2,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Processor governance \u2014 Tier 2. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Privacy, processor contracts & transfers. Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional processor estate has missing DPAs and incomplete transfer-review references. Privacy operations must surface gaps without converting a checkbox into a legal finding. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: processor, dpa, region, transfer, reviewer, rationale. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "Processor flags filter a contract/transfer queue. Missing DPA or unresolved non-EEA/UK transfer review increases priority in ERM. Vendor AI metadata still flows into AI governance; legal classification stays manual."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Processor relationship table with DPA/transfer confirmations, region and gap indicators; reviewer rationale and internal decision memo. The transfer region grouping is explicitly a demo heuristic. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Processor gap rate = processor records missing DPA or required demo transfer review / processor records \u00d7 100; N/A if none. It measures metadata gaps, not GDPR compliance or transfer lawfulness. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Confirm controller/processor roles; map purposes and data categories; review Article 28 obligations and contracts; assess transfer mechanisms and onward processors with counsel; log regulatory change applicability; request missing evidence and obtain authorization. Alternative: maintain the legal records in an existing privacy platform and import minimized status metadata. Catch: no agreement text is interpreted; fourth-party authorization trees, change-notice timers and legal transfer assessments remain a documented next phase. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "GDPR, Regulation (EU) 2016/679",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      {
+        "title": "EBA DORA register of information resources",
+        "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      }
+    ]
+  },
+  "P10": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Title & commercial priority",
+        "body": "Continuous assurance \u2014 Tier 3. This is the requested portfolio delivery priority, not independently verified market profitability. Independent, synthesized work sample; no client outcome or professional title is implied."
+      },
+      {
+        "title": "02 / Domain & service scope",
+        "body": "Continuous assurance & remediation. Orchestrate collectors, evidence normalization, policy decisions, drift, finding lifecycle, SLA, retest, and immutable snapshots across the other nine modules. The implemented browser slice and the production extension are distinguished below."
+      },
+      {
+        "title": "03 / Enterprise scenario, exact schema & sources",
+        "body": "A fictional control-evidence backlog mixes stale documents, missing evidence, a failed record and a collection error. Assurance operations need distinct owner actions and repeatable retest decisions. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, treatment, reviewer, rationale. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected. Sample suppliers are invented. The MITRE subset is real public taxonomy, not client telemetry or benchmark results. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Evaluation counts are synthesized user inputs, not executed model tests. Test outcome and evidence reference are distinct from evidence availability."
+      },
+      {
+        "title": "04 / Interconnected enterprise mechanics",
+        "body": "The exception queue is a live filter of non-current evidence. Update a record to current after manual review and it leaves this queue, changes coverage and risk priority, and may enable a supported assurance draft."
+      },
+      {
+        "title": "05 / Working UI & decision layout",
+        "body": "Exception table grouped by visible evidence state, owner and treatment; edit-and-recalculate workflow; memo export. Continuity and cloud gaps are treated as service context, not live health telemetry. Module navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes. Control IDs, evidence references, separate test outcomes and review/expiry dates support traceability; change the snapshot date to observe expiration. A state distribution reports missing/current/stale/failed/error counts."
+      },
+      {
+        "title": "06 / Calculated outcome & ROI contract",
+        "body": "Backlog = records whose evidence state is not current. Closure scenario = prior backlog \u2212 current backlog, only if a separately retained baseline exists. The demo does not invent historical trend data or SLA attainment. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Default illustrative inputs: 90 manual minutes, 35 assisted minutes, 80 USD/hour, 1,200 USD setup. Six fictional records yield 5.5 hours, 440 USD gross, \u2212760 USD net and \u221263.3% modeled ROI. No measured efficiency gain is claimed; replace inputs with timed pilot results before making a business case."
+      },
+      {
+        "title": "07 / Fast-track implementation, alternative & catch",
+        "body": "Agree evidence freshness policy and remediation SLA; assign current backlog; troubleshoot collection errors separately; request evidence; execute authorized retests outside the browser; update status with rationale; export a review snapshot. Alternative: connect a client-managed ticketing workflow and scheduled collector service. Catch: no background jobs, immutable event timestamps, audit log or alert integration runs in the browser; those require authenticated services. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing. The public browser prototype implements none of those service guarantees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NIST OSCAL assessment-results v1.1.3",
+        "url": "https://pages.nist.gov/OSCAL-Reference/models/v1.1.3/assessment-results/"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

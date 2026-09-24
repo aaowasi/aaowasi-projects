@@ -3,6 +3,6 @@
   "private": true,
   "scripts": {
     "build": "python3 scripts/build_site.py",
-    "test": "python3 scripts/check_site.py"
+    "test": "python3 scripts/check_site.py && node --test tests/browser/*.test.mjs"
   }
 }
