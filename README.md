@@ -4,16 +4,26 @@ Ten connected work samples in compliance, controls, third-party risk and AI gove
 
 [Project workspace](https://aaowasi-projects.pages.dev/) · [Personal hub](https://aaowasi.pages.dev/) · [Portfolio](https://aaowasi.pages.dev/work/)
 
-## Start here
-1. Audit readiness: `projects/04-audit-readiness/manifest.json`
-2. Vendor risk: `projects/03-tprm-ai-subprocessors/manifest.json`
-3. AI governance: `projects/02-ai-governance/manifest.json`
+## Interactive decision workspace
+
+[Launch the ten-module workspace](https://aaowasi-projects.pages.dev/workspace/).
+
+| Priority | Modules |
+|---|---|
+| AI governance and advisory | AI governance, executive risk, transparency, shadow AI |
+| Supplier risk | Vendor risk, processor and dependency governance |
+| Enterprise assurance | Audit readiness, continuous assurance, customer assurance, questionnaires |
+
+Import CSV/JSON metadata, edit a supplier, inspect downstream AI and executive risk signals, review dated evidence, filter the risk heatmap and export a decision memo. One browser session connects all ten modules. Export JSON before leaving to preserve your work.
+
+[Architecture and operating limits](docs/CONNECTED-WORKSPACE.md) · [Ten detailed case plans](docs/enterprise-cases/)
 
 ## Run
+
 ```bash
+npm run build
+npm test
 python3 -m unittest discover -s tests -v
-python3 scripts/build_site.py
-python3 scripts/check_site.py
 python3 -m http.server 8000 --directory site
 ```
 
