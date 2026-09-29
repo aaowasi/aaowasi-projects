@@ -15,7 +15,7 @@ function render(){
 function edit(record){editing=record?.id||null;const type=record?.type||$('entity').value;$('entity').value=type;$('entity').disabled=!!record;$('fields').replaceChildren();
  for(const [name,kind]of Object.entries(catalog.entities[type])){const label=node('label',name.replace(/([A-Z])/g,' $1'));let input;
   if(Array.isArray(kind)||kind==='boolean'||kind.startsWith?.('ref:')){input=node('select');const options=Array.isArray(kind)?kind:kind==='boolean'?['','true','false']:['',...state.records.filter(r=>r.type===kind.slice(4)&&r.id!==editing).map(r=>r.id)];for(const val of options){const o=node('option',val||'Not set');o.value=val;input.append(o);}}
-  else{input=node(name==='notes'?'textarea':'input');input.type=['number','score','percent'].includes(kind)?'number':kind==='date'?'date':kind==='url'?'url':'text';if(input.type==='number'){input.min=kind==='score'?'1':'0';input.step=kind==='score'?'1':'any';if(kind==='score')input.max='5';if(kind==='percent')input.max='100';}}
+  else{input=node(name==='notes'?'textarea':'input');if(name!=='notes')input.type=['number','score','percent'].includes(kind)?'number':kind==='date'?'date':kind==='url'?'url':'text';if(input.type==='number'){input.min=kind==='score'?'1':'0';input.step=kind==='score'?'1':'any';if(kind==='score')input.max='5';if(kind==='percent')input.max='100';}}
   input.name=name;input.value=record?.[name]??'';input.required=['id','title'].includes(name);if(name==='id'&&record)input.readOnly=true;label.append(input);$('fields').append(label);
  }
  $('delete').hidden=!editing;$('editor-title').textContent=editing?'Edit '+editing:'Add '+type;$('editor').hidden=false;render();
