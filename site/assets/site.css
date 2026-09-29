@@ -729,3 +729,5 @@ th {
     width: 100%;
   }
 }
+
+.case-plan p{max-width:75ch;line-height:1.8;margin:0 0 1.35rem}.case-plan h2{margin-bottom:1.25rem}.case-plan>div{min-width:0;overflow-wrap:anywhere}

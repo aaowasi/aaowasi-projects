@@ -42,3 +42,11 @@ See `docs/ARCHITECTURE.md` and `docs/OWNER_ACTIONS.md`.
 The portfolio connects ten disciplines through a versioned 30-field contract: supplier facts become AI reviews, processor gaps, executive priorities and evidence-backed response drafts. The workspace supports 250 records and 10 MB imports, with 13 JavaScript core tests and five existing Python engine tests.
 
 Explore scoped AI governance, supplier/assurance sprints and recurring review deliverables through the [professional profile](https://aaowasi.pages.dev/profile/). Scenario economics remain modeled inputs; no client savings or production deployment is implied.
+
+## Recorded delivery evidence
+
+[Inspect actual GitHub Actions records](https://aaowasi-projects.pages.dev/results/): three observed workflow checks at pinned commits, with source links and timestamps. Workflow elapsed time includes queue/lifecycle time; it is not audit duration or client ROI. The page uses a checked-in snapshot rather than claiming live status.
+
+
+## Continuous GRC suite
+[Open the connected GRC suite](https://aaowasi-projects.pages.dev/suite/): 13 domains, 16 typed registers and103 named views with editable records, validated links, calculated coverage, risks and review dates. [Operating guide](https://github.com/aaowasi/aaowasi-projects/blob/main/docs/CONTINUOUS-GRC-SUITE.md).

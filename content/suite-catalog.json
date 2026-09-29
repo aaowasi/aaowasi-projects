@@ -1,0 +1,987 @@
+{
+  "entities": {
+    "obligation": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "framework": "text",
+      "requirement": "text",
+      "effectiveDate": "date"
+    },
+    "control": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "obligationId": "ref:obligation",
+      "riskId": "ref:risk",
+      "classification": "text",
+      "effectiveness": [
+        "Untested",
+        "Effective",
+        "Partial",
+        "Ineffective"
+      ]
+    },
+    "risk": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "category": "text",
+      "likelihood": "score",
+      "impact": "score",
+      "residualLikelihood": "score",
+      "residualImpact": "score",
+      "velocityDays": "number",
+      "exposureUSD": "number",
+      "dependencyId": "ref:risk",
+      "vendorId": "ref:vendor",
+      "aiId": "ref:ai",
+      "treatment": [
+        "Avoid",
+        "Reduce",
+        "Transfer",
+        "Accept"
+      ],
+      "decisionId": "ref:decision"
+    },
+    "issue": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "category": "text",
+      "severity": [
+        "Low",
+        "Medium",
+        "High",
+        "Critical"
+      ],
+      "controlId": "ref:control",
+      "riskId": "ref:risk",
+      "openedDate": "date",
+      "closedDate": "date",
+      "correctiveAction": "text"
+    },
+    "test": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "controlId": "ref:control",
+      "result": [
+        "Not tested",
+        "Pass",
+        "Fail"
+      ],
+      "evidenceURL": "url",
+      "testedDate": "date",
+      "expiresDate": "date",
+      "reviewer": "text"
+    },
+    "asset": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "criticality": "score",
+      "vendorId": "ref:vendor",
+      "vulnerability": "text",
+      "patchStatus": [
+        "Unknown",
+        "Pending",
+        "Applied",
+        "Exception"
+      ],
+      "riskId": "ref:risk"
+    },
+    "vendor": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "service": "text",
+      "criticality": "score",
+      "parentVendorId": "ref:vendor",
+      "usesAI": "boolean",
+      "reviewOutcome": [
+        "Pending",
+        "Approve",
+        "Conditional",
+        "Reject"
+      ],
+      "riskId": "ref:risk"
+    },
+    "decision": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "accountable": "text",
+      "responsible": "text",
+      "consulted": "text",
+      "informed": "text",
+      "authorityLimitUSD": "number",
+      "rationale": "text"
+    },
+    "policy": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "version": "text",
+      "approver": "text",
+      "approvalDate": "date",
+      "attested": "number",
+      "requiredAttestations": "number",
+      "exceptionRationale": "text"
+    },
+    "contract": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "vendorId": "ref:vendor",
+      "clause": "text",
+      "slaTarget": "number",
+      "slaActual": "number",
+      "direction": [
+        "At least",
+        "At most"
+      ],
+      "unit": "text"
+    },
+    "audit": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "scope": "text",
+      "riskId": "ref:risk",
+      "plannedHours": "number",
+      "actualHours": "number",
+      "populationSize": "number",
+      "testedCount": "number",
+      "selectionMethod": "text"
+    },
+    "metric": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "definition": "text",
+      "value": "number",
+      "threshold": "number",
+      "direction": [
+        "At least",
+        "At most"
+      ],
+      "unit": "text",
+      "measuredDate": "date",
+      "riskId": "ref:risk"
+    },
+    "processing": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "purpose": "text",
+      "lawfulBasis": "text",
+      "dataCategories": "text",
+      "vendorId": "ref:vendor",
+      "retentionDays": "number",
+      "transferMechanism": "text",
+      "riskId": "ref:risk"
+    },
+    "initiative": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "objective": "text",
+      "budgetUSD": "number",
+      "spentUSD": "number",
+      "progressPercent": "percent",
+      "riskId": "ref:risk"
+    },
+    "assessment": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "dimension": "text",
+      "currentLevel": "score",
+      "targetLevel": "score",
+      "rationale": "text"
+    },
+    "ai": {
+      "id": "text",
+      "title": "text",
+      "owner": "text",
+      "status": [
+        "Open",
+        "In review",
+        "Approved",
+        "Closed"
+      ],
+      "reviewDate": "date",
+      "notes": "text",
+      "purpose": "text",
+      "vendorId": "ref:vendor",
+      "riskId": "ref:risk",
+      "oversightOwner": "text",
+      "classification": [
+        "Unassessed",
+        "Prohibited concern",
+        "High risk concern",
+        "Transparency review",
+        "Other"
+      ],
+      "evaluationTotal": "number",
+      "evaluationFailed": "number",
+      "releaseDecision": [
+        "Hold",
+        "Review",
+        "Approve"
+      ],
+      "transparencyEvidence": "url"
+    }
+  },
+  "views": [
+    {
+      "id": "view-001",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Compliance Calendar Enterprise"
+    },
+    {
+      "id": "view-002",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Compliance Obligations Register"
+    },
+    {
+      "id": "view-003",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Compliance Status Dashboard"
+    },
+    {
+      "id": "view-004",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Internal Compliance Checklist"
+    },
+    {
+      "id": "view-005",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Regulatory Change Log"
+    },
+    {
+      "id": "view-006",
+      "domain": "Compliance",
+      "entity": "obligation",
+      "title": "Regulatory Crosswalk Matrix"
+    },
+    {
+      "id": "view-007",
+      "domain": "Compliance",
+      "entity": "issue",
+      "title": "Compliance Remediation Tracker"
+    },
+    {
+      "id": "view-008",
+      "domain": "Compliance",
+      "entity": "issue",
+      "title": "Corrective Action Register"
+    },
+    {
+      "id": "view-009",
+      "domain": "Compliance",
+      "entity": "issue",
+      "title": "Non Compliance Incident Tracker"
+    },
+    {
+      "id": "view-010",
+      "domain": "Compliance",
+      "entity": "test",
+      "title": "Compliance Testing Log"
+    },
+    {
+      "id": "view-011",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Control Classification Matrix"
+    },
+    {
+      "id": "view-012",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Control Inventory Template"
+    },
+    {
+      "id": "view-013",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Control Ownership Matrix"
+    },
+    {
+      "id": "view-014",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Control-to-Regulation Mapping Sheet"
+    },
+    {
+      "id": "view-015",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Enterprise Control Library"
+    },
+    {
+      "id": "view-016",
+      "domain": "Control Management",
+      "entity": "control",
+      "title": "Risk-to-Control Mapping Sheet"
+    },
+    {
+      "id": "view-017",
+      "domain": "Cybersecurity GRC",
+      "entity": "asset",
+      "title": "Asset Criticality Register"
+    },
+    {
+      "id": "view-018",
+      "domain": "Cybersecurity GRC",
+      "entity": "asset",
+      "title": "Patch Management Tracker"
+    },
+    {
+      "id": "view-019",
+      "domain": "Cybersecurity GRC",
+      "entity": "asset",
+      "title": "Vulnerability Prioritization Matrix"
+    },
+    {
+      "id": "view-020",
+      "domain": "Cybersecurity GRC",
+      "entity": "risk",
+      "title": "Cyber Risk Register"
+    },
+    {
+      "id": "view-021",
+      "domain": "Cybersecurity GRC",
+      "entity": "risk",
+      "title": "Threat Landscape Monitoring Log"
+    },
+    {
+      "id": "view-022",
+      "domain": "Cybersecurity GRC",
+      "entity": "control",
+      "title": "Control Gap Assessment Template"
+    },
+    {
+      "id": "view-023",
+      "domain": "Cybersecurity GRC",
+      "entity": "assessment",
+      "title": "Security Maturity Assessment Model"
+    },
+    {
+      "id": "view-024",
+      "domain": "Cybersecurity GRC",
+      "entity": "assessment",
+      "title": "Security Maturity Assessment Model v2"
+    },
+    {
+      "id": "view-025",
+      "domain": "Cybersecurity GRC",
+      "entity": "vendor",
+      "title": "Third-Party Risk Scoring Sheet"
+    },
+    {
+      "id": "view-026",
+      "domain": "Cybersecurity GRC",
+      "entity": "vendor",
+      "title": "Vendor Compliance Checklist"
+    },
+    {
+      "id": "view-027",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Board Reporting Dashboard"
+    },
+    {
+      "id": "view-028",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Compliance Dashboard"
+    },
+    {
+      "id": "view-029",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Enterprise Risk Dashboard"
+    },
+    {
+      "id": "view-030",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "GRC Overview Dashboard"
+    },
+    {
+      "id": "view-031",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Issue & Incident Dashboard"
+    },
+    {
+      "id": "view-032",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "KPI KRI Monitoring Panel"
+    },
+    {
+      "id": "view-033",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Risk Exposure Summary Panel"
+    },
+    {
+      "id": "view-034",
+      "domain": "Dashboards & Analytics",
+      "entity": "all",
+      "title": "Risk Trend Analysis Sheet"
+    },
+    {
+      "id": "view-035",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Emerging Risk Log"
+    },
+    {
+      "id": "view-036",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Enterprise Risk Register"
+    },
+    {
+      "id": "view-037",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Inherent vs Residual Risk Model"
+    },
+    {
+      "id": "view-038",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Residual Risk Calculator"
+    },
+    {
+      "id": "view-039",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Categorization Matrix"
+    },
+    {
+      "id": "view-040",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Dependency Mapping"
+    },
+    {
+      "id": "view-041",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Heatmap Generator"
+    },
+    {
+      "id": "view-042",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Impact Scoring Model"
+    },
+    {
+      "id": "view-043",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Reporting Dashboard"
+    },
+    {
+      "id": "view-044",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Risk Velocity Tracker"
+    },
+    {
+      "id": "view-045",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Scenario Analysis Sheet"
+    },
+    {
+      "id": "view-046",
+      "domain": "Enterprise Risk Management",
+      "entity": "risk",
+      "title": "Strategic Risk Register"
+    },
+    {
+      "id": "view-047",
+      "domain": "Governance",
+      "entity": "decision",
+      "title": "Delegation of Authority Matrix"
+    },
+    {
+      "id": "view-048",
+      "domain": "Governance",
+      "entity": "decision",
+      "title": "Governance Decision Log"
+    },
+    {
+      "id": "view-049",
+      "domain": "Governance",
+      "entity": "decision",
+      "title": "Governance RACI Matrix"
+    },
+    {
+      "id": "view-050",
+      "domain": "Governance",
+      "entity": "metric",
+      "title": "Governance KPI Dashboard"
+    },
+    {
+      "id": "view-051",
+      "domain": "Governance",
+      "entity": "metric",
+      "title": "Governance Performance Scorecard"
+    },
+    {
+      "id": "view-052",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Approval Workflow"
+    },
+    {
+      "id": "view-053",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Attestation Tracker"
+    },
+    {
+      "id": "view-054",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Exception Register"
+    },
+    {
+      "id": "view-055",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Lifecycle Tracker"
+    },
+    {
+      "id": "view-056",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Repository Index"
+    },
+    {
+      "id": "view-057",
+      "domain": "Governance",
+      "entity": "policy",
+      "title": "Policy Review Calendar"
+    },
+    {
+      "id": "view-058",
+      "domain": "Incident & Issue Management",
+      "entity": "issue",
+      "title": "CAPA Log"
+    },
+    {
+      "id": "view-059",
+      "domain": "Incident & Issue Management",
+      "entity": "issue",
+      "title": "Enterprise Issue Log"
+    },
+    {
+      "id": "view-060",
+      "domain": "Incident & Issue Management",
+      "entity": "issue",
+      "title": "Incident Classification Matrix"
+    },
+    {
+      "id": "view-061",
+      "domain": "Incident & Issue Management",
+      "entity": "issue",
+      "title": "Issue Closure Tracker"
+    },
+    {
+      "id": "view-062",
+      "domain": "Incident & Issue Management",
+      "entity": "issue",
+      "title": "Issue Severity Matrix"
+    },
+    {
+      "id": "view-063",
+      "domain": "Incident & Issue Management",
+      "entity": "contract",
+      "title": "Contract Compliance Tracker"
+    },
+    {
+      "id": "view-064",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Audit KPI Dashboard"
+    },
+    {
+      "id": "view-065",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Audit Resource Allocation Sheet"
+    },
+    {
+      "id": "view-066",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Audit Universe Builder"
+    },
+    {
+      "id": "view-067",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Fieldwork Tracker"
+    },
+    {
+      "id": "view-068",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Risk-Based Audit Scoring Model"
+    },
+    {
+      "id": "view-069",
+      "domain": "Internal Audit",
+      "entity": "audit",
+      "title": "Sampling Methodology Sheet"
+    },
+    {
+      "id": "view-070",
+      "domain": "Internal Audit",
+      "entity": "issue",
+      "title": "Audit Findings Register"
+    },
+    {
+      "id": "view-071",
+      "domain": "Internal Audit",
+      "entity": "issue",
+      "title": "Issue Aging Dashboard"
+    },
+    {
+      "id": "view-072",
+      "domain": "Internal Audit",
+      "entity": "issue",
+      "title": "Management Action Plan Tracker"
+    },
+    {
+      "id": "view-073",
+      "domain": "Internal Audit",
+      "entity": "test",
+      "title": "Control Testing Sheet"
+    },
+    {
+      "id": "view-074",
+      "domain": "Internal Audit",
+      "entity": "test",
+      "title": "Evidence Collection Log"
+    },
+    {
+      "id": "view-075",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "Balanced Scorecard Template"
+    },
+    {
+      "id": "view-076",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "GRC-KPI Library"
+    },
+    {
+      "id": "view-077",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "KPI/KRI Mapping Sheet"
+    },
+    {
+      "id": "view-078",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "KRI Definition Register"
+    },
+    {
+      "id": "view-079",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "KRI Register"
+    },
+    {
+      "id": "view-080",
+      "domain": "KPI / KRI Management",
+      "entity": "metric",
+      "title": "Performance Monitoring Dashboard"
+    },
+    {
+      "id": "view-081",
+      "domain": "KPI / KRI Management",
+      "entity": "initiative",
+      "title": "Continuous Improvement Tracker"
+    },
+    {
+      "id": "view-082",
+      "domain": "Privacy",
+      "entity": "issue",
+      "title": "Data Breach Incident Log"
+    },
+    {
+      "id": "view-083",
+      "domain": "Privacy",
+      "entity": "processing",
+      "title": "Data Processing Inventory"
+    },
+    {
+      "id": "view-084",
+      "domain": "Privacy",
+      "entity": "processing",
+      "title": "Data Retention Schedule"
+    },
+    {
+      "id": "view-085",
+      "domain": "Privacy",
+      "entity": "risk",
+      "title": "Privacy Risk Register"
+    },
+    {
+      "id": "view-086",
+      "domain": "Program Management",
+      "entity": "assessment",
+      "title": "GRC Capability Framework"
+    },
+    {
+      "id": "view-087",
+      "domain": "Program Management",
+      "entity": "assessment",
+      "title": "GRC Maturity Assessment Model"
+    },
+    {
+      "id": "view-088",
+      "domain": "Program Management",
+      "entity": "initiative",
+      "title": "GRC Initiative Tracker"
+    },
+    {
+      "id": "view-089",
+      "domain": "Program Management",
+      "entity": "initiative",
+      "title": "GRC Roadmap Planner"
+    },
+    {
+      "id": "view-090",
+      "domain": "Third-Party Risk",
+      "entity": "vendor",
+      "title": "Concentration Risk Analyzer"
+    },
+    {
+      "id": "view-091",
+      "domain": "Third-Party Risk",
+      "entity": "vendor",
+      "title": "Supplier Risk Scoring Matrix"
+    },
+    {
+      "id": "view-092",
+      "domain": "Third-Party Risk",
+      "entity": "vendor",
+      "title": "Third-Party Risk Register"
+    },
+    {
+      "id": "view-093",
+      "domain": "Third-Party Risk",
+      "entity": "vendor",
+      "title": "Vendor Risk Assessment Template"
+    },
+    {
+      "id": "view-094",
+      "domain": "Third-Party Risk",
+      "entity": "contract",
+      "title": "Contract Compliance Tracker"
+    },
+    {
+      "id": "view-095",
+      "domain": "Third-Party Risk",
+      "entity": "contract",
+      "title": "Service-Level Monitoring Dashboard"
+    },
+    {
+      "id": "view-096",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI System Inventory"
+    },
+    {
+      "id": "view-097",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI Impact Assessment"
+    },
+    {
+      "id": "view-098",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI Lifecycle Review"
+    },
+    {
+      "id": "view-099",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "Human Oversight Register"
+    },
+    {
+      "id": "view-100",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI Evaluation Monitoring"
+    },
+    {
+      "id": "view-101",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI Vendor Governance"
+    },
+    {
+      "id": "view-102",
+      "domain": "AI Governance",
+      "entity": "ai",
+      "title": "AI Transparency Review"
+    },
+    {
+      "id": "view-103",
+      "domain": "AI Governance",
+      "entity": "policy",
+      "title": "AI Acceptable Use & Exceptions"
+    }
+  ],
+  "sources": [
+    {
+      "name": "NIST Cybersecurity Framework 2.0",
+      "url": "https://www.nist.gov/cyberframework"
+    },
+    {
+      "name": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    }
+  ]
+}

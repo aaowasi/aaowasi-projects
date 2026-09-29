@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://aaowasi-projects.pages.dev/sitemap.xml
