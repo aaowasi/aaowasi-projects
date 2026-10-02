@@ -734,3 +734,19 @@ th {
 
 /* Engagement flow polish */
 .reveal{animation-duration:200ms}.hero-bottom>*,.split>*,.workspace-callout>*{min-width:0}.contact-form a,.content p a{text-decoration:underline;text-underline-offset:3px}.contact-form button{margin:0 .5rem .75rem 0}.nav a,.theme{min-height:44px;display:inline-flex;align-items:center}input,textarea,select{border-color:var(--muted)}.primary:focus-visible{outline-offset:4px}@media(max-width:380px){h1{font-size:3.4rem}.brand{letter-spacing:0}.actions{gap:1rem}}
+
+
+/* Enterprise lead-generation polish: restrained proof, hierarchy and conversion focus */
+.header{position:sticky;top:0;z-index:40;background:var(--bg)}
+.header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--line)}
+.hero .actions{margin-top:.75rem}
+.button,.nav a,.actions a{transition:color 180ms ease,background 180ms ease,border-color 180ms ease,transform 180ms ease}
+.button:hover{transform:translateY(-1px)}
+.proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:2rem 0 3rem}
+.proof-strip>div{padding:1.5rem 1.25rem;border-right:1px solid var(--line);min-width:0}
+.proof-strip>div:last-child{border-right:0}
+.proof-strip strong{display:block;font:clamp(2rem,4vw,3.4rem)/1 'Libre Caslon Display',Georgia,serif;font-weight:400;letter-spacing:-.035em}
+.proof-strip span{display:block;margin-top:.55rem;color:var(--muted);font-size:12px;line-height:1.4;text-transform:uppercase;letter-spacing:.08em}
+.section p,.workspace-callout p{max-width:68ch}
+@media(max-width:760px){.header{position:relative}.proof-strip{grid-template-columns:repeat(2,1fr)}.proof-strip>div:nth-child(2){border-right:0}.proof-strip>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:430px){.proof-strip{grid-template-columns:1fr}.proof-strip>div{border-right:0;border-bottom:1px solid var(--line)}.proof-strip>div:last-child{border-bottom:0}}
