@@ -731,3 +731,6 @@ th {
 }
 
 .case-plan p{max-width:75ch;line-height:1.8;margin:0 0 1.35rem}.case-plan h2{margin-bottom:1.25rem}.case-plan>div{min-width:0;overflow-wrap:anywhere}
+
+/* Engagement flow polish */
+.reveal{animation-duration:200ms}.hero-bottom>*,.split>*,.workspace-callout>*{min-width:0}.contact-form a,.content p a{text-decoration:underline;text-underline-offset:3px}.contact-form button{margin:0 .5rem .75rem 0}.nav a,.theme{min-height:44px;display:inline-flex;align-items:center}input,textarea,select{border-color:var(--muted)}.primary:focus-visible{outline-offset:4px}@media(max-width:380px){h1{font-size:3.4rem}.brand{letter-spacing:0}.actions{gap:1rem}}
