@@ -1,8 +1,8 @@
 # Connected Governance Workspace
 
-A public, inspectable GRC and AI governance portfolio by Abdullah Al Owasi.
+An inspectable connected GRC operating workspace for AI governance, third-party AI/LLM risk, audit readiness and continuous assurance.
 
-[Live workspace](https://aaowasi-projects.pages.dev/workspace/) · [Continuous GRC suite](https://aaowasi-projects.pages.dev/suite/) · [Recorded delivery evidence](https://aaowasi-projects.pages.dev/results/) · [Personal hub](https://aaowasi.pages.dev/)
+[Live workspace](https://aaowasi-projects.pages.dev/workspace/) · [Recorded delivery evidence](https://aaowasi-projects.pages.dev/results/) · [Decision brief](https://aaowasi.pages.dev/contact/) · [Continuous GRC suite](https://aaowasi-projects.pages.dev/suite/)
 
 ## What this repository demonstrates
 
@@ -15,7 +15,7 @@ A public, inspectable GRC and AI governance portfolio by Abdullah Al Owasi.
 ## Start with the live systems
 
 ### Connected risk workspace
-Change supplier, AI, privacy and evidence metadata once, then follow how the same facts affect risk priorities, evidence coverage, review queues and decision outputs across ten modules.
+Change AI inventory, SaaS/LLM vendor, privacy and evidence metadata once, then follow how the same facts affect risk priorities, drift/change signals, evidence coverage, review queues and decision outputs across ten modules.
 
 [Open connected workspace →](https://aaowasi-projects.pages.dev/workspace/)
 
@@ -28,9 +28,9 @@ Work across obligations, controls, suppliers, risks, evidence, incidents, privac
 
 | Area | Demonstrated mechanics |
 |---|---|
-| AI governance | AI inventory, NIST AI RMF / NIST AI 600-1 mapping, evaluation evidence, human oversight, release gates and post-deployment change review |
-| Third-party & AI vendor risk | SaaS / LLM intake, data use, subprocessors, assurance evidence, dependency risk and treatment decisions |
-| Audit & continuous assurance | Evidence freshness, control-test state, exceptions, remediation ownership and retest |
+| AI governance | AI inventory, NIST AI RMF / NIST AI 600-1 mapping, evaluation evidence, human oversight, release gates and post-deployment drift/change review |
+| Third-party & AI vendor risk | SaaS / LLM intake, data-use and training/retention terms, subprocessors, assurance evidence, dependency risk and treatment decisions |
+| Audit & continuous assurance | Drift detection, evidence freshness, control-test state, exceptions, remediation ownership and retest |
 | Privacy & processor governance | DPA / processor relationships, transfer-review gaps, subprocessor changes and reviewer rationale |
 | Executive technology risk | Likelihood/impact signals, appetite/tolerance views, KRIs and accountable treatment decisions |
 
