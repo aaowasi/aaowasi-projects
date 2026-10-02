@@ -1,24 +1,40 @@
-# Governance project workspace
+# Connected Governance Workspace
 
-Ten connected work samples in compliance, controls, third-party risk and AI governance, by Abdullah Al Owasi.
+A public, inspectable GRC and AI governance portfolio by Abdullah Al Owasi.
 
-[Project workspace](https://aaowasi-projects.pages.dev/) · [Personal hub](https://aaowasi.pages.dev/) · [Portfolio](https://aaowasi.pages.dev/work/)
+[Live workspace](https://aaowasi-projects.pages.dev/workspace/) · [Continuous GRC suite](https://aaowasi-projects.pages.dev/suite/) · [Recorded delivery evidence](https://aaowasi-projects.pages.dev/results/) · [Personal hub](https://aaowasi.pages.dev/)
 
-## Interactive decision workspace
+## What this repository demonstrates
 
-[Launch the ten-module workspace](https://aaowasi-projects.pages.dev/workspace/).
+- **10 connected governance modules** across AI governance, third-party risk, audit readiness, privacy, technology risk and assurance.
+- **13 GRC operating domains**, **16 shared record types** and **103 register/reporting views** in the continuous GRC suite.
+- Browser-local editable records, explicit evidence states, transparent scoring and human review gates.
+- Exportable decision memos, JSON round trips and CSV source records.
+- Versioned manifests, schemas, tests, workflow validation and recorded delivery checks.
 
-| Priority | Modules |
+## Start with the live systems
+
+### Connected risk workspace
+Change supplier, AI, privacy and evidence metadata once, then follow how the same facts affect risk priorities, evidence coverage, review queues and decision outputs across ten modules.
+
+[Open connected workspace →](https://aaowasi-projects.pages.dev/workspace/)
+
+### Continuous GRC operating suite
+Work across obligations, controls, suppliers, risks, evidence, incidents, privacy and AI governance in one operating surface.
+
+[Open continuous GRC suite →](https://aaowasi-projects.pages.dev/suite/)
+
+## Primary governance areas
+
+| Area | Demonstrated mechanics |
 |---|---|
-| AI governance and advisory | AI governance, executive risk, transparency, shadow AI |
-| Supplier risk | Vendor risk, processor and dependency governance |
-| Enterprise assurance | Audit readiness, continuous assurance, customer assurance, questionnaires |
+| AI governance | AI inventory, NIST AI RMF / NIST AI 600-1 mapping, evaluation evidence, human oversight, release gates and post-deployment change review |
+| Third-party & AI vendor risk | SaaS / LLM intake, data use, subprocessors, assurance evidence, dependency risk and treatment decisions |
+| Audit & continuous assurance | Evidence freshness, control-test state, exceptions, remediation ownership and retest |
+| Privacy & processor governance | DPA / processor relationships, transfer-review gaps, subprocessor changes and reviewer rationale |
+| Executive technology risk | Likelihood/impact signals, appetite/tolerance views, KRIs and accountable treatment decisions |
 
-Import CSV/JSON metadata, edit a supplier, inspect downstream AI and executive risk signals, review dated evidence, filter the risk heatmap and export a decision memo. One browser session connects all ten modules. Export JSON before leaving to preserve your work.
-
-[Architecture and operating limits](docs/CONNECTED-WORKSPACE.md) · [Ten detailed case plans](docs/enterprise-cases/)
-
-## Run
+## Run locally
 
 ```bash
 npm run build
@@ -27,26 +43,14 @@ python3 -m unittest discover -s tests -v
 python3 -m http.server 8000 --directory site
 ```
 
-## Evidence model
-The public assessment is explicitly synthetic. The private-use collector starts with empty evidence; missing evidence remains NOT_CONFIGURED. Public pages do not claim live client telemetry. Project manifests describe scope and expected outputs; they do not certify completion of every listed capability.
+## Evidence boundaries
 
-## Publishing
-Cloudflare Pages: production branch `main`, build `python3 scripts/build_site.py`, output `site`. No server, paid API or database is needed for the public sites. Optional engine services run separately and are not deployed as static pages.
+The public interfaces use synthetic scenario data and browser-local records so the mechanics can be inspected safely. They do not claim client telemetry, certification, an audit opinion or legal advice. Unsupported evidence remains visible as missing, stale, failed or manual-review state rather than being auto-approved.
 
-CI validates the site and Python engine. The manually triggered assurance workflow stores a review artifact; it does not publish raw evidence or create releases. OPA, optional MCP and container runtime validation require their own installed runtimes and have not been validated by the static-site checks.
+## Framework focus
 
-See `docs/ARCHITECTURE.md` and `docs/OWNER_ACTIONS.md`.
+NIST AI RMF 1.0 · NIST AI 600-1 Generative AI Profile · ISO/IEC 42001:2023 · ISO/IEC 27001:2022 · SOC 2 · NIST CSF 2.0 · GDPR processor governance · EU AI Act transparency
 
-## Decision-oriented governance delivery
+## For a scoped review
 
-The portfolio connects ten disciplines through a versioned 30-field contract: supplier facts become AI reviews, processor gaps, executive priorities and evidence-backed response drafts. The workspace supports 250 records and 10 MB imports, with 13 JavaScript core tests and five existing Python engine tests.
-
-Explore scoped AI governance, supplier/assurance sprints and recurring review deliverables through the [professional profile](https://aaowasi.pages.dev/profile/). Scenario economics remain modeled inputs; no client savings or production deployment is implied.
-
-## Recorded delivery evidence
-
-[Inspect actual GitHub Actions records](https://aaowasi-projects.pages.dev/results/): three observed workflow checks at pinned commits, with source links and timestamps. Workflow elapsed time includes queue/lifecycle time; it is not audit duration or client ROI. The page uses a checked-in snapshot rather than claiming live status.
-
-
-## Continuous GRC suite
-[Open the connected GRC suite](https://aaowasi-projects.pages.dev/suite/): 13 domains, 16 typed registers and103 named views with editable records, validated links, calculated coverage, risks and review dates. [Operating guide](https://github.com/aaowasi/aaowasi-projects/blob/main/docs/CONTINUOUS-GRC-SUITE.md).
+If you have one AI use case, vendor set or assurance backlog, [send a decision brief](https://aaowasi.pages.dev/contact/) with the records in scope, evidence available and target date.
