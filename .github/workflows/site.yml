@@ -1,22 +1,36 @@
-name: Validate public site
+name: Validate and synchronize public site
 on:
   push:
   pull_request:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/build_site.py
-      - run: python scripts/check_site.py
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python scripts/build_site.py
+      - run: python scripts/check_site.py
       - run: node --check site/assets/site.js
       - run: node --test tests/browser/*.test.mjs
+      - name: Synchronize generated public site
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+        run: |
+          if git diff --quiet -- site; then
+            echo "Generated site is already synchronized."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site
+            git commit -m "chore: synchronize generated public site"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
