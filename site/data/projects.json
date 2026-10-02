@@ -5,12 +5,13 @@
     "title": "AI governance",
     "type": "Interactive work sample",
     "domain": "AI governance",
-    "summary": "Connect AI inventories, NIST AI RMF mapping, evaluation evidence and human review gates to release decisions and follow-up actions.",
+    "summary": "Connect AI inventories, NIST AI RMF and Generative AI Profile mapping, evaluation evidence, human review gates and post-deployment change review to release decisions.",
     "outcome": "Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement.",
     "featured": true,
     "evidenceBasis": "Method, source records & decision outputs",
     "frameworks": [
       "NIST-AI-RMF-1.0",
+      "NIST-AI-600-1",
       "ISO-42001-2023",
       "EU-AI-ACT",
       "CUSTOM"
@@ -22,7 +23,7 @@
       "Human oversight records",
       "TEVV evidence",
       "MCP tool authorization",
-      "Post-deployment monitoring"
+      "Post-deployment monitoring & change/drift review"
     ],
     "outputs": [
       "ai-system-card.json",
@@ -90,7 +91,7 @@
     "title": "AI transparency",
     "type": "Interactive work sample",
     "domain": "AI governance",
-    "summary": "Review disclosure and oversight evidence against explicit technical readiness gates and manual legal review.",
+    "summary": "Review EU AI Act Article 50 disclosure, synthetic-content marking and oversight evidence against explicit technical readiness gates and manual legal review.",
     "outcome": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
     "featured": false,
     "evidenceBasis": "Method, source records & decision outputs",
@@ -173,7 +174,7 @@
     "title": "Third-party risk",
     "type": "Interactive work sample",
     "domain": "Third-party risk",
-    "summary": "Vet SaaS and external AI vendors: connect intake, data handling, upstream dependencies and assurance evidence to documented risk decisions.",
+    "summary": "Vet SaaS, LLM and external AI vendors: connect intake, data handling, subprocessors, upstream dependencies and assurance evidence to documented risk decisions.",
     "outcome": "Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context.",
     "featured": true,
     "evidenceBasis": "Method, source records & decision outputs",

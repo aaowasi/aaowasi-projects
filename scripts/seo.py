@@ -11,13 +11,13 @@ def apply_seo(root):
     project=(root/'engine').exists()
     origin='https://aaowasi-projects.pages.dev' if project else 'https://aaowasi.pages.dev'
     descriptions={
-        '/':'Connected AI governance, supplier risk and assurance workflows by Abdullah Al Owasi. Inspect project mechanics, source evidence and scoped review outputs.' if project else 'Evidence-led AI governance, supplier risk and assurance delivery by Abdullah Al Owasi. Inspect the work and scope a governance review.',
+        '/':'Connected AI governance, third-party AI risk, technology risk and assurance workflows by Abdullah Al Owasi. Inspect live mechanics, evidence boundaries and decision outputs.' if project else 'Evidence-led AI governance, supplier risk and assurance delivery by Abdullah Al Owasi. Inspect the work and scope a governance review.',
         '/profile/':'Abdullah Al Owasi: governance strategy and delivery, AI risk, supplier assurance and control evidence. Read the executive bio, competencies and resume.',
         '/services/':'Scope an AI governance sprint, supplier and assurance sprint or recurring governance review with defined evidence, responsibilities and decision outputs.',
         '/contact/':'Prepare a bounded AI, supplier-risk or assurance review brief: decision needed, available evidence, target date and agreed outputs.',
-        '/results/':'Actual public GitHub Actions observations with source timestamps, exact commits and workflow outcomes. Bounded delivery evidence for the AAO portfolio.',
-        '/workspace/':'Try ten connected browser-local governance modules with validated metadata imports, risk review, dated evidence and decision exports.',
-        '/work/':'Explore ten connected AI governance, supplier risk and assurance projects, their implementation mechanics and primary sources.'
+        '/results/':'Recorded GitHub Actions observations with exact commits, timestamps and source runs for the AAO governance portfolio. Inspect what the checks prove and what they do not.',
+        '/workspace/':'Change AI, supplier, privacy and evidence metadata across ten connected governance modules; inspect risk priorities, reviewer gates and decision exports.',
+        '/work/':'Explore ten connected AI governance, third-party risk, technology-risk and assurance projects with implementation mechanics, primary sources and human review boundaries.'
     }
     urls=[]
     script_hashes=set()
