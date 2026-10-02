@@ -750,3 +750,15 @@ th {
 .section p,.workspace-callout p{max-width:68ch}
 @media(max-width:760px){.header{position:relative}.proof-strip{grid-template-columns:repeat(2,1fr)}.proof-strip>div:nth-child(2){border-right:0}.proof-strip>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media(max-width:430px){.proof-strip{grid-template-columns:1fr}.proof-strip>div{border-right:0;border-bottom:1px solid var(--line)}.proof-strip>div:last-child{border-bottom:0}}
+
+
+/* Decision-route segmentation */
+.route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.route-card{border:1px solid var(--line);padding:1.5rem;display:flex;flex-direction:column;min-width:0;min-height:100%}
+.route-card h3{font:2rem/1.15 'Libre Caslon Display',Georgia,serif;margin:.65rem 0 1rem}
+.route-card p:not(.eyebrow){color:var(--muted);max-width:44ch}
+.route-card>span{margin-top:auto;padding-top:1rem}
+a.route-card:hover{color:inherit;background:var(--soft);transform:translateY(-1px)}
+.decision-routes{padding-top:4rem;padding-bottom:4rem}
+.trust-note{border-left:2px solid var(--accent);padding:.85rem 1rem;margin:1.5rem 0 2.5rem;background:var(--soft);max-width:78ch}
+@media(max-width:900px){.route-grid{grid-template-columns:1fr}.route-card{min-height:auto}}
