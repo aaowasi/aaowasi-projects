@@ -16,8 +16,8 @@ def apply_seo(root):
         '/services/':'Scope an AI governance sprint, supplier and assurance sprint or recurring governance review with defined evidence, responsibilities and decision outputs.',
         '/contact/':'Prepare a bounded AI, supplier-risk or assurance review brief: decision needed, available evidence, target date and agreed outputs.',
         '/results/':'Recorded GitHub Actions observations with exact commits, timestamps and source runs for the AAO governance portfolio. Inspect what the checks prove and what they do not.',
-        '/workspace/':'Change AI, supplier, privacy and evidence metadata across ten connected governance modules; inspect risk priorities, reviewer gates and decision exports.',
-        '/work/':'Explore ten connected AI governance, third-party risk, technology-risk and assurance projects with implementation mechanics, primary sources and human review boundaries.'
+        '/workspace/':'Change AI, supplier, privacy and evidence metadata across connected governance modules; inspect risk priorities, reviewer gates and decision exports.',
+        '/work/':'Explore connected AI governance, third-party risk, technology-risk and assurance projects with implementation mechanics, primary sources and human review boundaries.'
     }
     urls=[]
     script_hashes=set()

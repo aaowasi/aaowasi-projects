@@ -1,0 +1,36 @@
+{
+  "project_id": "P19",
+  "name": "Privacy lifecycle & processing oversight",
+  "purpose": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks.",
+  "framework_candidates": [
+    "CUSTOM"
+  ],
+  "capabilities": [
+    "Shared processing register",
+    "Named ownership and review dates",
+    "Linked source records",
+    "Review and decision trail"
+  ],
+  "telemetry_sources": [
+    "User-maintained suite records",
+    "Linked evidence references"
+  ],
+  "outputs": [
+    "grc-suite.json",
+    "Reviewed decision rationale in linked decision records"
+  ],
+  "guardrails": [
+    "Evidence and assumptions remain explicit",
+    "Material decisions require accountable review",
+    "Suite records are linked by IDs; no external collection is implied"
+  ],
+  "related_projects": [
+    "processor-governance",
+    "vendor-risk",
+    "ai-governance"
+  ],
+  "record_types": [
+    "processing"
+  ],
+  "implementation": "Shared suite register and calculated relationships"
+}

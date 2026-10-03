@@ -1,0 +1,36 @@
+{
+  "project_id": "P15",
+  "name": "Cyber control & asset assurance",
+  "purpose": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews.",
+  "framework_candidates": [
+    "CUSTOM"
+  ],
+  "capabilities": [
+    "Shared asset register",
+    "Named ownership and review dates",
+    "Linked source records",
+    "Review and decision trail"
+  ],
+  "telemetry_sources": [
+    "User-maintained suite records",
+    "Linked evidence references"
+  ],
+  "outputs": [
+    "grc-suite.json",
+    "Reviewed decision rationale in linked decision records"
+  ],
+  "guardrails": [
+    "Evidence and assumptions remain explicit",
+    "Material decisions require accountable review",
+    "Suite records are linked by IDs; no external collection is implied"
+  ],
+  "related_projects": [
+    "audit-readiness",
+    "vendor-risk",
+    "remediation"
+  ],
+  "record_types": [
+    "asset"
+  ],
+  "implementation": "Shared suite register and calculated relationships"
+}

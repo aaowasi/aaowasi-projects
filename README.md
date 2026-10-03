@@ -6,7 +6,7 @@ An inspectable connected GRC operating workspace for AI governance, third-party 
 
 ## What this repository demonstrates
 
-- **10 connected governance modules** across AI governance, third-party risk, audit readiness, privacy, technology risk and assurance.
+- **20 connected governance modules** across AI governance, third-party risk, audit readiness, privacy, technology risk and assurance.
 - **13 GRC operating domains**, **16 shared record types** and **103 register/reporting views** in the continuous GRC suite.
 - Browser-local editable records, explicit evidence states, transparent scoring and human review gates.
 - Exportable decision memos, JSON round trips and CSV source records.
@@ -54,3 +54,7 @@ NIST AI RMF 1.0 · NIST AI 600-1 Generative AI Profile · ISO/IEC 42001:2023 · 
 ## For a scoped review
 
 If you have one AI use case, vendor set or assurance backlog, [send a decision brief](https://aaowasi.pages.dev/contact/) with the records in scope, evidence available and target date.
+
+## Extended governance workflows
+
+Twenty catalogue workflows connect specialist decisions with shared suite registers. Each project has a dedicated overview, focused section pages and onward links. Suite and specialist workspace datasets retain distinct schemas; transfer requires explicit reconciliation.

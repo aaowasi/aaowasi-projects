@@ -1,0 +1,36 @@
+{
+  "project_id": "P20",
+  "name": "Control design & effectiveness",
+  "purpose": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness.",
+  "framework_candidates": [
+    "CUSTOM"
+  ],
+  "capabilities": [
+    "Shared control register",
+    "Named ownership and review dates",
+    "Linked source records",
+    "Review and decision trail"
+  ],
+  "telemetry_sources": [
+    "User-maintained suite records",
+    "Linked evidence references"
+  ],
+  "outputs": [
+    "control-management-register.json",
+    "decision-memo.json"
+  ],
+  "guardrails": [
+    "Evidence and assumptions remain explicit",
+    "Material decisions require accountable review",
+    "Suite records are linked by IDs; no external collection is implied"
+  ],
+  "related_projects": [
+    "regulatory-obligations",
+    "audit-readiness",
+    "continuous-assurance"
+  ],
+  "record_types": [
+    "control"
+  ],
+  "implementation": "Shared suite register and calculated relationships"
+}

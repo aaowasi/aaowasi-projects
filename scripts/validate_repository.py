@@ -23,14 +23,16 @@ for path in json_files:
         errors.append(f"invalid JSON {path.relative_to(ROOT)}: {exc}")
 
 manifests = sorted((ROOT / "projects").glob("*/manifest.json"))
-require(len(manifests) == 10, f"expected 10 project manifests, found {len(manifests)}")
+catalogue = json.loads((ROOT / "content/projects.json").read_text())
+require(len(manifests) == len(catalogue), "manifest/catalogue count mismatch")
 ids = []
 for path in manifests:
     item = json.loads(path.read_text(encoding="utf-8"))
     ids.append(item.get("project_id"))
     for key in ["name", "purpose", "framework_candidates", "capabilities", "telemetry_sources", "outputs", "guardrails"]:
         require(bool(item.get(key)), f"{path.relative_to(ROOT)} missing {key}")
-require(ids == [f"P{i:02d}" for i in range(1, 11)], f"project IDs are not P01-P10 in order: {ids}")
+require(set(ids) == {p["id"] for p in catalogue}, "manifest/catalogue IDs mismatch")
+require(len(ids) == len(set(ids)), "duplicate manifest IDs")
 
 for path in (ROOT / "oscal").rglob("*.json"):
     data = json.loads(path.read_text(encoding="utf-8"))

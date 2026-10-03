@@ -1,0 +1,36 @@
+{
+  "project_id": "P18",
+  "name": "Governance program & maturity",
+  "purpose": "Track objectives, budget, progress and maturity assessments against prioritized governance risks.",
+  "framework_candidates": [
+    "CUSTOM"
+  ],
+  "capabilities": [
+    "Shared initiative register",
+    "Named ownership and review dates",
+    "Linked source records",
+    "Review and decision trail"
+  ],
+  "telemetry_sources": [
+    "User-maintained suite records",
+    "Linked evidence references"
+  ],
+  "outputs": [
+    "grc-suite.json",
+    "Reviewed decision rationale in linked decision records"
+  ],
+  "guardrails": [
+    "Evidence and assumptions remain explicit",
+    "Material decisions require accountable review",
+    "Suite records are linked by IDs; no external collection is implied"
+  ],
+  "related_projects": [
+    "policy-governance",
+    "regulatory-obligations",
+    "executive-risk"
+  ],
+  "record_types": [
+    "initiative"
+  ],
+  "implementation": "Shared suite register and calculated relationships"
+}

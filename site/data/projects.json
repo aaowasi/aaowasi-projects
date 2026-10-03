@@ -3,7 +3,7 @@
     "id": "P02",
     "slug": "ai-governance",
     "title": "AI governance",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "AI governance",
     "summary": "Connect AI inventories, NIST AI RMF and Generative AI Profile mapping, evaluation evidence, human review gates and post-deployment drift/change review to release decisions.",
     "outcome": "Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement.",
@@ -41,13 +41,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/02-ai-governance",
     "featuredOrder": 0,
     "tier": 1,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-governance/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-governance/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P05",
     "slug": "executive-risk",
     "title": "Executive risk",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Technology risk",
     "summary": "Trace executive priorities through likelihood, impact, source flags and accountable treatment decisions.",
     "outcome": "Convert traceable assurance signals into appetite breaches, KRI trends, treatment decisions, and board-ready accountability.",
@@ -83,13 +88,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/05-executive-risk",
     "tier": 1,
     "featuredOrder": 1,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/executive-risk/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/executive-risk/",
+    "relatedProjects": [
+      "kri-reporting",
+      "resilience",
+      "governance-program"
+    ]
   },
   {
     "id": "P06",
     "slug": "ai-transparency",
     "title": "AI transparency",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "AI governance",
     "summary": "Review EU AI Act Article 50 disclosure, synthetic-content marking and oversight evidence against explicit technical readiness gates and manual legal review.",
     "outcome": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
@@ -124,13 +134,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/06-eu-ai-transparency",
     "tier": 1,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-transparency/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-transparency/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P07",
     "slug": "shadow-ai",
     "title": "Shadow AI governance",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "AI governance",
     "summary": "Triage AI destinations using approval and data-classification metadata with transparent policy candidates.",
     "outcome": "Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions.",
@@ -166,13 +181,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/07-shadow-ai-dlp",
     "tier": 1,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/shadow-ai/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/shadow-ai/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P03",
     "slug": "vendor-risk",
     "title": "Third-party risk",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Third-party risk",
     "summary": "Vet SaaS, LLM and external AI vendors: connect intake, data-use and training/retention terms, subprocessors, upstream dependencies and assurance evidence to documented risk decisions.",
     "outcome": "Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context.",
@@ -210,13 +230,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/03-tprm-ai-subprocessors",
     "featuredOrder": 2,
     "tier": 2,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/vendor-risk/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/vendor-risk/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P09",
     "slug": "processor-governance",
     "title": "Processor governance",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Privacy",
     "summary": "Surface processor DPA and transfer-review gaps alongside dependency records and human rationale.",
     "outcome": "Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph.",
@@ -251,13 +276,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/09-dpa-subprocessor",
     "tier": 2,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/processor-governance/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/processor-governance/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P04",
     "slug": "audit-readiness",
     "title": "Audit readiness",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Assurance",
     "summary": "Separate evidence availability, expiry and recorded control-test outcomes in one reviewable register.",
     "outcome": "Execute repeatable test procedures and preserve observations, hashes, results, exceptions, and POA&M records in machine-readable form.",
@@ -293,13 +323,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/04-audit-readiness",
     "featuredOrder": 99,
     "tier": 3,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/audit-readiness/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/audit-readiness/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P10",
     "slug": "continuous-assurance",
     "title": "Continuous assurance",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Assurance",
     "summary": "Track control drift, evidence exceptions, expiry and retest ownership across the connected governance workspace.",
     "outcome": "Orchestrate collectors, evidence normalization, policy decisions, drift, finding lifecycle, SLA, retest, and immutable snapshots across the other nine modules.",
@@ -340,13 +375,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/10-ccm-remediation",
     "tier": 3,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/continuous-assurance/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/continuous-assurance/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P01",
     "slug": "customer-assurance",
     "title": "Customer assurance",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Assurance",
     "summary": "Connect customer claims to control IDs, dated evidence and named reviewers before drafting an assurance response.",
     "outcome": "Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states.",
@@ -381,13 +421,18 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/01-trust-assurance",
     "tier": 3,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/customer-assurance/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/customer-assurance/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
   },
   {
     "id": "P08",
     "slug": "questionnaires",
     "title": "Security questionnaires",
-    "type": "Interactive work sample",
+    "type": "Connected governance workflow",
     "domain": "Assurance",
     "summary": "Pair editable procurement questions with bounded control-status drafts and evidence provenance.",
     "outcome": "Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval.",
@@ -424,6 +469,411 @@
     "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/08-questionnaire-procurement",
     "tier": 3,
     "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/questionnaires/"
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/questionnaires/",
+    "relatedProjects": [
+      "control-management",
+      "regulatory-obligations",
+      "remediation"
+    ]
+  },
+  {
+    "id": "P11",
+    "slug": "regulatory-obligations",
+    "title": "Regulatory obligations & change",
+    "type": "Connected governance workflow",
+    "domain": "Compliance",
+    "summary": "Translate requirements into owned obligations, review dates, linked controls and change decisions.",
+    "outcome": "Translate requirements into owned obligations, review dates, linked controls and change decisions.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared obligation register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "regulatory-obligations-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/11-regulatory-obligations/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-001",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/11-regulatory-obligations",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/regulatory-obligations/",
+    "relatedProjects": [
+      "audit-readiness",
+      "policy-governance",
+      "executive-risk"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P12",
+    "slug": "policy-governance",
+    "title": "Policy, authority & exceptions",
+    "type": "Connected governance workflow",
+    "domain": "Governance",
+    "summary": "Connect versioned policies, approval responsibilities, attestations and justified exceptions to accountable decisions.",
+    "outcome": "Connect versioned policies, approval responsibilities, attestations and justified exceptions to accountable decisions.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared policy register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "policy-governance-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/12-policy-governance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-052",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/12-policy-governance",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/policy-governance/",
+    "relatedProjects": [
+      "regulatory-obligations",
+      "executive-risk",
+      "continuous-assurance"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P13",
+    "slug": "internal-audit",
+    "title": "Internal audit & assurance planning",
+    "type": "Connected governance workflow",
+    "domain": "Internal Audit",
+    "summary": "Plan risk-based audit scopes, document sampling and effort, and route observations to owned corrective actions.",
+    "outcome": "Plan risk-based audit scopes, document sampling and effort, and route observations to owned corrective actions.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared audit register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "internal-audit-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/13-internal-audit/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-064",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/13-internal-audit",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/internal-audit/",
+    "relatedProjects": [
+      "audit-readiness",
+      "remediation",
+      "executive-risk"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P14",
+    "slug": "remediation",
+    "title": "Issue, incident & remediation oversight",
+    "type": "Connected governance workflow",
+    "domain": "Incident & Issue Management",
+    "summary": "Connect findings to risks and controls, corrective actions, closure evidence and management review.",
+    "outcome": "Connect findings to risks and controls, corrective actions, closure evidence and management review.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared issue register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "remediation-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/14-remediation/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-007",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/14-remediation",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/remediation/",
+    "relatedProjects": [
+      "continuous-assurance",
+      "internal-audit",
+      "executive-risk"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P15",
+    "slug": "cyber-controls",
+    "title": "Cyber control & asset assurance",
+    "type": "Connected governance workflow",
+    "domain": "Cybersecurity GRC",
+    "summary": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews.",
+    "outcome": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared asset register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "cyber-controls-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/15-cyber-controls/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-017",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/15-cyber-controls",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/cyber-controls/",
+    "relatedProjects": [
+      "audit-readiness",
+      "vendor-risk",
+      "remediation"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P16",
+    "slug": "resilience",
+    "title": "Operational resilience & dependency risk",
+    "type": "Connected governance workflow",
+    "domain": "Technology risk",
+    "summary": "Review critical-service dependencies, disruption scenarios, appetite thresholds and accountable recovery actions.",
+    "outcome": "Review critical-service dependencies, disruption scenarios, appetite thresholds and accountable recovery actions.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared risk register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "resilience-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/16-resilience/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-020",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/16-resilience",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/resilience/",
+    "relatedProjects": [
+      "vendor-risk",
+      "cyber-controls",
+      "executive-risk"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P17",
+    "slug": "kri-reporting",
+    "title": "KRI, appetite & management reporting",
+    "type": "Connected governance workflow",
+    "domain": "KPI / KRI Management",
+    "summary": "Connect defined indicators, measurement dates and threshold direction to risk owners and escalation decisions.",
+    "outcome": "Connect defined indicators, measurement dates and threshold direction to risk owners and escalation decisions.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared metric register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "kri-reporting-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/17-kri-reporting/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-050",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/17-kri-reporting",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/kri-reporting/",
+    "relatedProjects": [
+      "executive-risk",
+      "continuous-assurance",
+      "remediation"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P18",
+    "slug": "governance-program",
+    "title": "Governance program & maturity",
+    "type": "Connected governance workflow",
+    "domain": "Program Management",
+    "summary": "Track objectives, budget, progress and maturity assessments against prioritized governance risks.",
+    "outcome": "Track objectives, budget, progress and maturity assessments against prioritized governance risks.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared initiative register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "governance-program-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/18-governance-program/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-081",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/18-governance-program",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/governance-program/",
+    "relatedProjects": [
+      "policy-governance",
+      "regulatory-obligations",
+      "executive-risk"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P19",
+    "slug": "privacy-lifecycle",
+    "title": "Privacy lifecycle & processing oversight",
+    "type": "Connected governance workflow",
+    "domain": "Privacy",
+    "summary": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks.",
+    "outcome": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared processing register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "privacy-lifecycle-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/19-privacy-lifecycle/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-083",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/19-privacy-lifecycle",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/privacy-lifecycle/",
+    "relatedProjects": [
+      "processor-governance",
+      "vendor-risk",
+      "ai-governance"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
+  },
+  {
+    "id": "P20",
+    "slug": "control-management",
+    "title": "Control design & effectiveness",
+    "type": "Connected governance workflow",
+    "domain": "Control Management",
+    "summary": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness.",
+    "outcome": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness.",
+    "featured": false,
+    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "frameworks": [
+      "CUSTOM"
+    ],
+    "capabilities": [
+      "Shared control register",
+      "Named ownership and review dates",
+      "Linked source records",
+      "Review and decision trail"
+    ],
+    "outputs": [
+      "control-management-register.json",
+      "decision-memo.json"
+    ],
+    "guardrails": [
+      "Evidence and assumptions remain explicit",
+      "Material decisions require accountable review",
+      "Suite records are linked by IDs; no external collection is implied"
+    ],
+    "sourcePath": "projects/20-control-management/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-011",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/20-control-management",
+    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/control-management/",
+    "relatedProjects": [
+      "regulatory-obligations",
+      "audit-readiness",
+      "continuous-assurance"
+    ],
+    "tier": 3,
+    "featuredOrder": 99
   }
 ]

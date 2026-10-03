@@ -9,3 +9,7 @@ Deploy the `site` directory. Existing paths, form field names, legal/privacy cop
 Public scenarios are synthetic. Counts describe portfolio scope, not client outcomes. Add testimonials, client logos or delivery savings only when verified and authorized.
 
 For new projects, follow the existing catalogue fields and manifest structure. Keep a Git commit before each update to allow rollback. Support duration and maintenance terms are agreed per engagement; this site does not promise an unstaffed support window.
+
+## Connected portfolio and display settings
+
+Project sections are generated as focused routes by `scripts/page_sections.py` in the project repository. Add related project slugs in the catalogue to maintain onward paths. Appearance controls preserve theme, text size and spacing in the visitor browser. The connected scenario can be loaded explicitly from the suite and provides 16 linked, illustrative record types.

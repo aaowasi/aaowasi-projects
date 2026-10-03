@@ -4,7 +4,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Customer assurance — Tier 3."
+        "body": "Customer assurance \u2014 Tier 3."
       },
       {
         "title": "02 / Domain & service scope",
@@ -12,7 +12,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a customer asks whether current evidence supports each contracted service. Sales needs an answer bounded by evidence state and reviewer ownership instead of a broad compliance claim.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a customer asks whether current evidence supports each contracted service. Sales needs an answer bounded by evidence state and reviewer ownership instead of a broad compliance claim.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -24,11 +24,11 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Supported draft rate = records with unexpired current evidence, passing test and nonempty reviewer / all records × 100. This is drafting coverage, not customer trust improvement, revenue won or certification.\n\nShared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
+        "body": "Supported draft rate = records with unexpired current evidence, passing test and nonempty reviewer / all records \u00d7 100. This is drafting coverage, not customer trust improvement, revenue won or certification.\n\nShared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
-        "body": "Agree customer scope; identify approved claim wording; locate control evidence; verify dates and ownership in the approved review process; record reviewer; redact confidential details; approve each external response in the client’s process. Alternative: publish approved artifacts in a client-managed trust center.\n\nCatch: audience-specific access, redaction, contract interpretation and evidence freshness dates require production controls; the public portfolio contains no private artifacts. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
+        "body": "Agree customer scope; identify approved claim wording; locate control evidence; verify dates and ownership in the approved review process; record reviewer; redact confidential details; approve each external response in the client\u2019s process. Alternative: publish approved artifacts in a client-managed trust center.\n\nCatch: audience-specific access, redaction, contract interpretation and evidence freshness dates require production controls; the public portfolio contains no private artifacts. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
       }
     ],
     "sources": [
@@ -51,7 +51,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "AI governance — Tier 1."
+        "body": "AI governance \u2014 Tier 1."
       },
       {
         "title": "02 / Domain & service scope",
@@ -59,7 +59,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a customer-support AI supplier handles personal data while an analytics assistant has approved oversight. The AI register must establish purpose, owner, provenance and evaluation responsibilities before model deployment.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, oversight, disclosure, evidence, dataSensitivity.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a customer-support AI supplier handles personal data while an analytics assistant has approved oversight. The AI register must establish purpose, owner, provenance and evaluation responsibilities before model deployment.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, oversight, disclosure, evidence, dataSensitivity.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -67,11 +67,11 @@
       },
       {
         "title": "05 / Working UI & decision layout",
-        "body": "AI inventory table → oversight and disclosure editor → linked evidence → release-review memo. Use the public MITRE ATLAS reference AML.T0051 (prompt injection), AML.T0054 (jailbreak) and AML.T0020 (poisoning) as evaluation-planning categories; link each evaluation result to its test report.\n\nModule navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes.\n\nThe register exposes technique ID, total/failed evaluation counts and failure rate = failed / total × 100, with N/A for zero cases. Evaluation rates calculate from imported test totals and failures."
+        "body": "AI inventory table \u2192 oversight and disclosure editor \u2192 linked evidence \u2192 release-review memo. Use the public MITRE ATLAS reference AML.T0051 (prompt injection), AML.T0054 (jailbreak) and AML.T0020 (poisoning) as evaluation-planning categories; link each evaluation result to its test report.\n\nModule navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes.\n\nThe register exposes technique ID, total/failed evaluation counts and failure rate = failed / total \u00d7 100, with N/A for zero cases. Evaluation rates calculate from imported test totals and failures."
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "AI review rate = unresolved AI reviews / AI-flagged records × 100; N/A with no AI records. Technical gate rate = AI records with approved tool + tested disclosure + tested oversight + unexpired current evidence + passing control test + at least one evaluation case with zero recorded failures / AI records.\n\nNeither is a legal clearance. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "AI review rate = unresolved AI reviews / AI-flagged records \u00d7 100; N/A with no AI records. Technical gate rate = AI records with approved tool + tested disclosure + tested oversight + unexpired current evidence + passing control test + at least one evaluation case with zero recorded failures / AI records.\n\nNeither is a legal clearance. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -106,7 +106,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Third-party risk — Tier 2."
+        "body": "Third-party risk \u2014 Tier 2."
       },
       {
         "title": "02 / Domain & service scope",
@@ -114,7 +114,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a service estate includes hosting, payroll, analytics and AI support vendors. Procurement needs a reusable intake that escalates critical and AI-enabled suppliers before contract approval.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: criticality, dataSensitivity, ai, processor, region, evidence.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a service estate includes hosting, payroll, analytics and AI support vendors. Procurement needs a reusable intake that escalates critical and AI-enabled suppliers before contract approval.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: criticality, dataSensitivity, ai, processor, region, evidence.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -126,7 +126,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Review coverage = records with current evidence / all suppliers × 100. Priority exposes ordinal assumptions; criticality is shown as context rather than silently assigned an unvalidated multiplier.\n\nShared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
+        "body": "Review coverage = records with current evidence / all suppliers \u00d7 100. Priority exposes ordinal assumptions; criticality is shown as context rather than silently assigned an unvalidated multiplier.\n\nShared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -153,7 +153,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Audit readiness — Tier 3."
+        "body": "Audit readiness \u2014 Tier 3."
       },
       {
         "title": "02 / Domain & service scope",
@@ -161,7 +161,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a hosting control produces a collection error while payroll evidence is marked current. Internal assurance must separate evidence availability from whether cloud, access and continuity controls actually operate.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, reviewer, service, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a hosting control produces a collection error while payroll evidence is marked current. Internal assurance must separate evidence availability from whether cloud, access and continuity controls actually operate.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, reviewer, service, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -173,7 +173,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Evidence coverage = current evidence records / all records × 100. Error count and failed count remain distinct.\n\nThis measures evidence status only, not control effectiveness, ISO certification or audit readiness as a percentage. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "Evidence coverage = current evidence records / all records \u00d7 100. Error count and failed count remain distinct.\n\nThis measures evidence status only, not control effectiveness, ISO certification or audit readiness as a percentage. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -200,7 +200,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Executive risk — Tier 1."
+        "body": "Executive risk \u2014 Tier 1."
       },
       {
         "title": "02 / Domain & service scope",
@@ -208,7 +208,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a risk committee needs a single register spanning AI, cloud suppliers, privacy and control exceptions, with explicit appetite and accountable risk treatment. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId.\n\nFocus fields for this module: likelihood, impact, treatment, reviewer, rationale, evidence. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5.\n\nJSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected.\n\nReference taxonomy: MITRE ATLAS. Import organizational records with their source and assessment date.\n\nSnapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected.\n\nEnter evaluation counts from completed model tests and link the supporting evidence. Test outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a risk committee needs a single register spanning AI, cloud suppliers, privacy and control exceptions, with explicit appetite and accountable risk treatment. The shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId.\n\nFocus fields for this module: likelihood, impact, treatment, reviewer, rationale, evidence. CSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135.\n\nJSON also carries provenance and editable assumptions. Limit: 250 records / 10 MB; unknown record fields are rejected.\n\nReference taxonomy: MITRE ATLAS. Import organizational records with their source and assessment date.\n\nSnapshot asOf (YYYY-MM-DD) anchors expiry calculations. A parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected.\n\nEnter evaluation counts from completed model tests and link the supporting evidence. Test outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -216,15 +216,15 @@
       },
       {
         "title": "05 / Working UI & decision layout",
-        "body": "Board-priority table with inherent score, additive flags, evidence credit and final priority; inline treatment decision; scenario economics; exportable internal committee memo. Policy governance and internal-assurance scope appear as reviewer decisions, not automatic approvals.\n\nModule navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes.\n\nA keyboard-accessible 5×5 inherent-risk heatmap shows likelihood/impact counts; selecting a cell filters the register."
+        "body": "Board-priority table with inherent score, additive flags, evidence credit and final priority; inline treatment decision; scenario economics; exportable internal committee memo. Policy governance and internal-assurance scope appear as reviewer decisions, not automatic approvals.\n\nModule navigation preserves one in-memory session; case-study navigation/reload does not. Export JSON to preserve changes.\n\nA keyboard-accessible 5\u00d75 inherent-risk heatmap shows likelihood/impact counts; selecting a cell filters the register."
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "High-priority exposure = count(priority ≥16) / all records × 100. Inherent = likelihood × impact; priority = clamp(inherent + flags − credit, 1, 25).\n\nNo annualized loss, risk probability or causal risk reduction is inferred. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "High-priority exposure = count(priority \u226516) / all records \u00d7 100. Inherent = likelihood \u00d7 impact; priority = clamp(inherent + flags \u2212 credit, 1, 25).\n\nNo annualized loss, risk probability or causal risk reduction is inferred. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
-        "body": "Agree committee scope and appetite; calibrate ordinal likelihood/impact descriptions with owners; import one register; challenge high-priority items; approve treatment with rationale; review drift on a scheduled cadence in the approved review process. Alternative: export to the client’s risk register or ServiceNow workflow.\n\nCatch: true risk aggregation, policy attestations, audit-committee approvals and financial loss models require governance and data beyond ordinal scores. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
+        "body": "Agree committee scope and appetite; calibrate ordinal likelihood/impact descriptions with owners; import one register; challenge high-priority items; approve treatment with rationale; review drift on a scheduled cadence in the approved review process. Alternative: export to the client\u2019s risk register or ServiceNow workflow.\n\nCatch: true risk aggregation, policy attestations, audit-committee approvals and financial loss models require governance and data beyond ordinal scores. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
       }
     ],
     "sources": [
@@ -243,7 +243,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "AI transparency — Tier 1."
+        "body": "AI transparency \u2014 Tier 1."
       },
       {
         "title": "02 / Domain & service scope",
@@ -251,7 +251,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a product release combines an AI customer interaction and AI-generated marketing copy. Product and legal teams need an applicability review, disclosure test and accountable release decision.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, disclosure, oversight, approved, evidence.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a product release combines an AI customer interaction and AI-generated marketing copy. Product and legal teams need an applicability review, disclosure test and accountable release decision.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, disclosure, oversight, approved, evidence.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -263,7 +263,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Technical readiness rate = technically ready AI records / AI records × 100. Readiness requires tool approval, tested disclosure and oversight, unexpired current evidence, a passing control test and a nonempty evaluation set with zero failures and is not an Article 50 compliance percentage.\n\nMissing AI denominator returns N/A. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "Technical readiness rate = technically ready AI records / AI records \u00d7 100. Readiness requires tool approval, tested disclosure and oversight, unexpired current evidence, a passing control test and a nonempty evaluation set with zero failures and is not an Article 50 compliance percentage.\n\nMissing AI denominator returns N/A. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -290,7 +290,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Shadow AI governance — Tier 1."
+        "body": "Shadow AI governance \u2014 Tier 1."
       },
       {
         "title": "02 / Domain & service scope",
@@ -298,7 +298,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a marketing tool is unapproved but processes public content; a support assistant is unapproved and handles personal data. Different data contexts need proportionate review without collecting employees’ prompts.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, dataSensitivity, owner, treatment.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a marketing tool is unapproved but processes public content; a support assistant is unapproved and handles personal data. Different data contexts need proportionate review without collecting employees\u2019 prompts.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: ai, approved, dataSensitivity, owner, treatment.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -310,7 +310,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Review burden = unapproved AI destinations / AI destinations × 100. Sensitive block candidates = unapproved AI records with personal or sensitive classification.\n\nThis is a record count, not measured incidents prevented. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "Review burden = unapproved AI destinations / AI destinations \u00d7 100. Sensitive block candidates = unapproved AI records with personal or sensitive classification.\n\nThis is a record count, not measured incidents prevented. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -341,7 +341,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Security questionnaires — Tier 3."
+        "body": "Security questionnaires \u2014 Tier 3."
       },
       {
         "title": "02 / Domain & service scope",
@@ -349,7 +349,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a procurement team reviews control-specific procurement questions across six supplier services. An editable question and reusable bounded control-status draft can reduce retyping while refusing unsupported claims.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a procurement team reviews control-specific procurement questions across six supplier services. An editable question and reusable bounded control-status draft can reduce retyping while refusing unsupported claims.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: service, evidence, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -361,11 +361,11 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Supported answer coverage = supported drafts / all records × 100. Model economics must use measured minutes from a future timed pilot before any achieved productivity claim is made.\n\nShared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
+        "body": "Supported answer coverage = supported drafts / all records \u00d7 100. Model economics must use measured minutes from a future timed pilot before any achieved productivity claim is made.\n\nShared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
-        "body": "Select a repeatable evidence-availability question; map each service to approved evidence; generate bounded drafts; check scope and validity manually; approve before sending; run a timed pilot and replace illustrative economics inputs. Alternative: import a client’s approved answer library into existing questionnaire software.\n\nCatch: bulk questionnaire document parsing, semantic retrieval, document parsing and external submission are not implemented here. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
+        "body": "Select a repeatable evidence-availability question; map each service to approved evidence; generate bounded drafts; check scope and validity manually; approve before sending; run a timed pilot and replace illustrative economics inputs. Alternative: import a client\u2019s approved answer library into existing questionnaire software.\n\nCatch: bulk questionnaire document parsing, semantic retrieval, document parsing and external submission are not implemented here. Production roadmap: authenticated identity and reviewer authorization, tenant-scoped storage, server-side validation, encryption, evidence access/retention controls, immutable event history, versioned integrations and independent security testing.\n\nDeploy those services before using the workspace for shared client operations."
       }
     ],
     "sources": [
@@ -388,7 +388,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Processor governance — Tier 2."
+        "body": "Processor governance \u2014 Tier 2."
       },
       {
         "title": "02 / Domain & service scope",
@@ -396,7 +396,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a processor estate has missing DPAs and incomplete transfer-review references. Privacy operations must surface gaps without converting a checkbox into a legal finding.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: processor, dpa, region, transfer, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a processor estate has missing DPAs and incomplete transfer-review references. Privacy operations must surface gaps without converting a checkbox into a legal finding.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: processor, dpa, region, transfer, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -408,7 +408,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Processor gap rate = processor records missing DPA or required transfer review / processor records × 100; N/A if none. It measures metadata gaps, not GDPR compliance or transfer lawfulness.\n\nShared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
+        "body": "Processor gap rate = processor records missing DPA or required transfer review / processor records \u00d7 100; N/A if none. It measures metadata gaps, not GDPR compliance or transfer lawfulness.\n\nShared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero). Enter review timings and delivery costs to calculate the business case.\n\nValidate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -431,7 +431,7 @@
     "sections": [
       {
         "title": "01 / Title & commercial priority",
-        "body": "Continuous assurance — Tier 3."
+        "body": "Continuous assurance \u2014 Tier 3."
       },
       {
         "title": "02 / Domain & service scope",
@@ -439,7 +439,7 @@
       },
       {
         "title": "03 / Enterprise scenario, exact schema & sources",
-        "body": "Use case: a control-evidence backlog mixes stale documents, missing evidence, a failed record and a collection error. Assurance operations need distinct owner actions and repeatable retest decisions.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, treatment, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1–5. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
+        "body": "Use case: a control-evidence backlog mixes stale documents, missing evidence, a failed record and a collection error. Assurance operations need distinct owner actions and repeatable retest decisions.\n\nThe shared import contract is schemaVersion 1.0 with records containing exactly: id, name, owner, service, criticality, dataSensitivity, ai, approved, processor, region, dpa, transfer, disclosure, oversight, evidence, likelihood, impact, treatment, reviewer, rationale, parentVendorId, controlId, evidenceRef, testOutcome, evidenceReviewedAt, evidenceExpiresAt, question, aiEvalTotal, aiEvalFailed, techniqueId. Focus fields for this module: evidence, owner, treatment, reviewer, rationale.\n\nCSV uses these field names as headers; booleans are true/false, likelihood and impact are integers 1\u20135. JSON also carries provenance and editable assumptions.\n\nLimit: 250 records / 10 MB; unknown record fields are rejected. Reference taxonomy: MITRE ATLAS.\n\nImport organizational records with their source and assessment date. Snapshot asOf (YYYY-MM-DD) anchors expiry calculations.\n\nA parentVendorId links a record to one upstream dependency; dangling links and cycles are rejected. Enter evaluation counts from completed model tests and link the supporting evidence.\n\nTest outcome and evidence reference are distinct from evidence availability."
       },
       {
         "title": "04 / Interconnected enterprise mechanics",
@@ -451,7 +451,7 @@
       },
       {
         "title": "06 / Calculated outcome & ROI contract",
-        "body": "Backlog = records whose evidence state is not current. Closure scenario = prior backlog − current backlog, only if a separately retained baseline exists.\n\nRetain dated baselines to calculate trends and SLA attainment. Shared model: hours = record count × (manual minutes − assisted minutes) / 60; gross = hours × hourly cost; net = gross − setup cost (USD); ROI = net / setup cost (USD) × 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
+        "body": "Backlog = records whose evidence state is not current. Closure scenario = prior backlog \u2212 current backlog, only if a separately retained baseline exists.\n\nRetain dated baselines to calculate trends and SLA attainment. Shared model: hours = record count \u00d7 (manual minutes \u2212 assisted minutes) / 60; gross = hours \u00d7 hourly cost; net = gross \u2212 setup cost (USD); ROI = net / setup cost (USD) \u00d7 100 (N/A when setup is zero).\n\nEnter review timings and delivery costs to calculate the business case. Validate the result against the next completed review cycle."
       },
       {
         "title": "07 / Fast-track implementation, alternative & catch",
@@ -466,6 +466,276 @@
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "url": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  },
+  "P11": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Translate requirements into owned obligations, review dates, linked controls and change decisions."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared obligation register. Fields: id, title, owner, status, reviewDate, notes, framework, requirement, effectiveDate. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: audit-readiness, policy-governance, executive-risk. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P12": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Connect versioned policies, approval responsibilities, attestations and justified exceptions to accountable decisions."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared policy register. Fields: id, title, owner, status, reviewDate, notes, version, approver, approvalDate, attested, requiredAttestations, exceptionRationale. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: regulatory-obligations, executive-risk, continuous-assurance. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P13": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Plan risk-based audit scopes, document sampling and effort, and route observations to owned corrective actions."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared audit register. Fields: id, title, owner, status, reviewDate, notes, scope, riskId, plannedHours, actualHours, populationSize, testedCount, selectionMethod. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: audit-readiness, remediation, executive-risk. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P14": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Connect findings to risks and controls, corrective actions, closure evidence and management review."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared issue register. Fields: id, title, owner, status, reviewDate, notes, category, severity, controlId, riskId, openedDate, closedDate, correctiveAction. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: continuous-assurance, internal-audit, executive-risk. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P15": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared asset register. Fields: id, title, owner, status, reviewDate, notes, criticality, vendorId, vulnerability, patchStatus, riskId. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: audit-readiness, vendor-risk, remediation. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P16": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Review critical-service dependencies, disruption scenarios, appetite thresholds and accountable recovery actions."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared risk register. Fields: id, title, owner, status, reviewDate, notes, category, likelihood, impact, residualLikelihood, residualImpact, velocityDays, exposureUSD, dependencyId, vendorId, aiId, treatment, decisionId. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: vendor-risk, cyber-controls, executive-risk. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P17": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Connect defined indicators, measurement dates and threshold direction to risk owners and escalation decisions."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared metric register. Fields: id, title, owner, status, reviewDate, notes, definition, value, threshold, direction, unit, measuredDate, riskId. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: executive-risk, continuous-assurance, remediation. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P18": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Track objectives, budget, progress and maturity assessments against prioritized governance risks."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared initiative register. Fields: id, title, owner, status, reviewDate, notes, objective, budgetUSD, spentUSD, progressPercent, riskId. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: policy-governance, regulatory-obligations, executive-risk. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P19": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared processing register. Fields: id, title, owner, status, reviewDate, notes, purpose, lawfulBasis, dataCategories, vendorId, retentionDays, transferMechanism, riskId. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: processor-governance, vendor-risk, ai-governance. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
+      }
+    ]
+  },
+  "P20": {
+    "tier": 3,
+    "sections": [
+      {
+        "title": "01 / Decision scope",
+        "body": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness."
+      },
+      {
+        "title": "02 / Records & review",
+        "body": "Use the shared control register. Fields: id, title, owner, status, reviewDate, notes, obligationId, riskId, classification, effectiveness. Records link by ID to related entities. Validate inputs, assign an owner and set a review date."
+      },
+      {
+        "title": "03 / Connected workflow",
+        "body": "Related workflows: regulatory-obligations, audit-readiness, continuous-assurance. Reuse linked records in suite views rather than duplicating facts. The suite and specialist workspace use distinct import formats; export and reconcile records explicitly when crossing between them."
+      },
+      {
+        "title": "04 / Acceptance & handover",
+        "body": "Review required fields, supporting evidence, relationships and decision rationale. Export the suite JSON dataset for handover. This workflow organizes oversight metadata; external collection, recovery testing and regulatory interpretation require separately verified evidence."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Shared suite schema and views",
+        "url": "https://aaowasi-projects.pages.dev/data/suite-catalog.json"
       }
     ]
   }

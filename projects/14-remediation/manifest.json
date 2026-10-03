@@ -1,0 +1,36 @@
+{
+  "project_id": "P14",
+  "name": "Issue, incident & remediation oversight",
+  "purpose": "Connect findings to risks and controls, corrective actions, closure evidence and management review.",
+  "framework_candidates": [
+    "CUSTOM"
+  ],
+  "capabilities": [
+    "Shared issue register",
+    "Named ownership and review dates",
+    "Linked source records",
+    "Review and decision trail"
+  ],
+  "telemetry_sources": [
+    "User-maintained suite records",
+    "Linked evidence references"
+  ],
+  "outputs": [
+    "grc-suite.json",
+    "Reviewed decision rationale in linked decision records"
+  ],
+  "guardrails": [
+    "Evidence and assumptions remain explicit",
+    "Material decisions require accountable review",
+    "Suite records are linked by IDs; no external collection is implied"
+  ],
+  "related_projects": [
+    "continuous-assurance",
+    "internal-audit",
+    "executive-risk"
+  ],
+  "record_types": [
+    "issue"
+  ],
+  "implementation": "Shared suite register and calculated relationships"
+}

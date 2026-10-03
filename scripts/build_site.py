@@ -36,6 +36,8 @@ for p in data:
   plan=plans[p['id']]
   plan_html=''.join('<section class="section case-plan"><span class="eyebrow">'+str(i+1).zfill(2)+'</span><div><h2>'+e(s['title'].split(' / ',1)[1])+'</h2><p>'+'</p><p>'.join(e(part) for part in s['body'].split('\n\n'))+'</p></div></section>' for i,s in enumerate(plan['sections']))
   plan_html+='<section class="section content source-list"><h2>Primary sources</h2><ul>'+''.join('<li><a href="'+e(safe_url(s['url']),quote=True)+'">'+e(s['title'])+' ↗</a></li>' for s in plan['sources'])+'</ul><p>Source register · reviewed 24 September 2026. Use the linked publications to verify framework scope and applicability.</p><a href="/data/workspace-schema.json">Inspect the exact schema ↗</a></section>'
+  related=p.get('relatedProjects',[])
+  plan_html+='<section class="section content"><h2>Connected decisions</h2><div class="actions">'+''.join('<a href="/work/'+e(slug)+'/">'+e(next(x['title'] for x in data if x['slug']==slug))+' →</a>' for slug in related)+'</div></section>'
   values={'PLAN_SECTIONS':plan_html,'TIER':str(plan['tier']),'TITLE':e(p['title']),'ID':e(p['id']),'DOMAIN':e(p['domain']),'SUMMARY':e(p['summary']),'PURPOSE':e(p['outcome']),'BASIS':e(p.get('evidenceBasis','Work sample')),'CODE':e(safe_url(p.get('codeUrl',''))),'SLUG':p['slug'],'SOURCE':e(p['sourcePath']), 'CAPABILITIES':''.join('<li>'+e(x)+'</li>' for x in manifest['capabilities']),'OUTPUTS':''.join('<li>'+e(x)+'</li>' for x in manifest['outputs']),'GUARDRAILS':''.join('<li>'+e(x)+'</li>' for x in manifest['guardrails'])}
   for k,v in values.items():template=template.replace('{{'+k+'}}',v)
   target=ROOT/'site/work'/p['slug']/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(template)
@@ -66,6 +68,9 @@ shutil.copyfile(ROOT/'content/verified-delivery.json',ROOT/'site/data/verified-d
 (ROOT/'site/suite').mkdir(exist_ok=True)
 (ROOT/'site/suite/index.html').write_text((ROOT/'templates/suite.html').read_text())
 shutil.copyfile(ROOT/'content/suite-catalog.json', ROOT/'site/data/suite-catalog.json')
+
+from page_sections import split_projects
+split_projects(ROOT)
 
 from seo import apply_seo
 apply_seo(ROOT)
