@@ -1,0 +1,16 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {identity,input,report,ready} from '../../server/evaluation-runtime.mjs';
+const issuer='https://team.cloudflareaccess.com/';
+const b64=v=>Buffer.from(v).toString('base64url');
+async function fixture(overrides={}){
+ const keys=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
+ const jwk=await crypto.subtle.exportKey('jwk',keys.publicKey);jwk.kid='key';const now=Math.floor(Date.now()/1000);
+ const payload={iss:issuer,aud:['application'],sub:'verified-user',exp:now+300,...overrides};const h=b64(JSON.stringify({alg:'RS256',kid:'key'})),p=b64(JSON.stringify(payload));const sig=await crypto.subtle.sign('RSASSA-PKCS1-v1_5',keys.privateKey,new TextEncoder().encode(h+'.'+p));
+ return {token:h+'.'+p+'.'+b64(sig),fetcher:async()=>new Response(JSON.stringify({keys:[jwk]})),env:{ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'application',GRC_DB:{prepare:()=>({bind:()=>({first:async()=>({tenant_id:'tenant-1',name:'Provisioned organization',allowance:2})})})}}};
+}
+test('verified token maps subject to provisioned tenant, never an email domain',async()=>{const f=await fixture();const r=new Request('https://example.test/api/account',{headers:{'Cf-Access-Jwt-Assertion':f.token}});assert.equal((await identity(r,f.env,f.fetcher)).tenant_id,'tenant-1');});
+test('wrong audience and expired identity are rejected',async()=>{for(const overrides of [{aud:['wrong']},{exp:1}]){const f=await fixture(overrides);await assert.rejects(identity(new Request('https://example.test',{headers:{'Cf-Access-Jwt-Assertion':f.token}}),f.env,f.fetcher),e=>e.status===401);}});
+test('unsigned or tampered tenant assertions do not grant access',async()=>{const f=await fixture();const pieces=f.token.split('.');pieces[1]=b64(JSON.stringify({iss:issuer,aud:['application'],sub:'other-user',exp:Math.floor(Date.now()/1000)+300}));await assert.rejects(identity(new Request('https://example.test',{headers:{'Cf-Access-Jwt-Assertion':pieces.join('.')}}),f.env,f.fetcher),e=>e.status===401);});
+test('valid identity without provisioned membership is rejected',async()=>{const f=await fixture();f.env.GRC_DB={prepare:()=>({bind:()=>({first:async()=>null})})};await assert.rejects(identity(new Request('https://example.test',{headers:{'Cf-Access-Jwt-Assertion':f.token}}),f.env,f.fetcher),e=>e.status===403);});
+test('authorization, domain and context boundaries precede provider calls',()=>{assert.throws(()=>input({context:'x'.repeat(30),scope:'AI',domains:['AI'],authorized:false}));assert.throws(()=>input({context:'x'.repeat(4001),scope:'AI',domains:['AI'],authorized:true}));assert.deepEqual(input({context:'x'.repeat(30),scope:'AI',domains:['AI','AI','Custom sector'],authorized:true}).domains,['AI','Custom sector']);});
+test('reports expose only bounded findings and native advisory action',()=>{assert.throws(()=>report({findings:[{domain:'AI'}]}));const f={domain:'AI',finding:'Evidence gap',evidenceNeeded:'Dated review',nextAction:'Assign owner',owner:'Risk reviewer',secret:'discard'};assert.equal(report({findings:[f]}).findings[0].secret,undefined);assert.match(report({findings:[f]}).contact,/contact/);assert.equal(ready({}),false);});

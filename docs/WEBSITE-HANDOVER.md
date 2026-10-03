@@ -12,4 +12,4 @@ For new projects, follow the existing catalogue fields and manifest structure. K
 
 ## Connected portfolio and display settings
 
-Project sections are generated as focused routes by `scripts/page_sections.py` in the project repository. Add related project slugs in the catalogue to maintain onward paths. Appearance controls preserve theme, text size and spacing in the visitor browser. The connected scenario can be loaded explicitly from the suite and provides 16 linked, illustrative record types.
+Project sections are consolidated into in-page disclosures by `scripts/page_sections.py` in the project repository. Former section URLs redirect to the corresponding anchors on Cloudflare Pages and Vercel. Add related project slugs in the catalogue to maintain onward paths. Appearance controls preserve theme, text size and spacing in the visitor browser. The connected scenario can be loaded explicitly from the suite and provides 16 linked, illustrative record types.

@@ -496,8 +496,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "regulatory-obligations-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -536,8 +536,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "policy-governance-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -576,8 +576,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "internal-audit-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -616,8 +616,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "remediation-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -656,8 +656,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "cyber-controls-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -696,8 +696,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "resilience-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -736,8 +736,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "kri-reporting-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -776,8 +776,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "governance-program-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -816,8 +816,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "privacy-lifecycle-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",
@@ -856,8 +856,8 @@
       "Review and decision trail"
     ],
     "outputs": [
-      "control-management-register.json",
-      "decision-memo.json"
+      "grc-suite.json",
+      "Reviewed decision rationale in linked decision records"
     ],
     "guardrails": [
       "Evidence and assumptions remain explicit",

@@ -57,4 +57,8 @@ If you have one AI use case, vendor set or assurance backlog, [send a decision b
 
 ## Extended governance workflows
 
-Twenty catalogue workflows connect specialist decisions with shared suite registers. Each project has a dedicated overview, focused section pages and onward links. Suite and specialist workspace datasets retain distinct schemas; transfer requires explicit reconciliation.
+Twenty catalogue workflows connect specialist decisions with shared suite registers. Each project has a complete project page, expandable technical details and onward links. Suite and specialist workspace datasets retain distinct schemas; transfer requires explicit reconciliation.
+
+## Organization evaluation service
+
+An optional Cloudflare Pages Functions backend provides verified-member access and a two-run tenant allowance using D1. API/provider settings and data-processing terms must be configured before activation. No billing provider is connected. See [deployment requirements](docs/ORGANIZATION-EVALUATIONS.md).

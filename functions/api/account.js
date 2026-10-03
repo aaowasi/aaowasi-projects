@@ -1,0 +1,2 @@
+import {identity,json} from '../../server/evaluation-runtime.mjs';
+export async function onRequestGet({request,env}){try{const t=await identity(request,env);const usage=await env.GRC_DB.prepare("SELECT COUNT(*) AS used FROM evaluations WHERE tenant_id=? AND status IN ('pending','complete')").bind(t.tenant_id).first();return json({organization:t.name,remaining:Math.max(0,t.allowance-usage.used)});}catch(e){return json({error:e.status?e.message:'Account access is temporarily unavailable.'},e.status||503);}}

@@ -1,5 +1,857 @@
 {
   "version": 2,
   "outputDirectory": "site",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/work/ai-governance/calculated-outcome-roi-contract/",
+      "destination": "/work/ai-governance/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/connected-decisions/",
+      "destination": "/work/ai-governance/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/domain-service-scope/",
+      "destination": "/work/ai-governance/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/ai-governance/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/fast-track-implementation-alternative-catch/",
+      "destination": "/work/ai-governance/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/ai-governance/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/interconnected-enterprise-mechanics/",
+      "destination": "/work/ai-governance/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/primary-sources/",
+      "destination": "/work/ai-governance/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/title-commercial-priority/",
+      "destination": "/work/ai-governance/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-governance/working-ui-decision-layout/",
+      "destination": "/work/ai-governance/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/calculated-outcome-roi-contract/",
+      "destination": "/work/ai-transparency/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/connected-decisions/",
+      "destination": "/work/ai-transparency/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/domain-service-scope/",
+      "destination": "/work/ai-transparency/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/ai-transparency/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/fast-track-implementation-alternative-catch/",
+      "destination": "/work/ai-transparency/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/ai-transparency/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/interconnected-enterprise-mechanics/",
+      "destination": "/work/ai-transparency/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/primary-sources/",
+      "destination": "/work/ai-transparency/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/title-commercial-priority/",
+      "destination": "/work/ai-transparency/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/ai-transparency/working-ui-decision-layout/",
+      "destination": "/work/ai-transparency/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/calculated-outcome-roi-contract/",
+      "destination": "/work/audit-readiness/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/connected-decisions/",
+      "destination": "/work/audit-readiness/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/domain-service-scope/",
+      "destination": "/work/audit-readiness/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/audit-readiness/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/fast-track-implementation-alternative-catch/",
+      "destination": "/work/audit-readiness/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/audit-readiness/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/interconnected-enterprise-mechanics/",
+      "destination": "/work/audit-readiness/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/primary-sources/",
+      "destination": "/work/audit-readiness/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/title-commercial-priority/",
+      "destination": "/work/audit-readiness/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/audit-readiness/working-ui-decision-layout/",
+      "destination": "/work/audit-readiness/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/calculated-outcome-roi-contract/",
+      "destination": "/work/continuous-assurance/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/connected-decisions/",
+      "destination": "/work/continuous-assurance/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/domain-service-scope/",
+      "destination": "/work/continuous-assurance/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/continuous-assurance/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/fast-track-implementation-alternative-catch/",
+      "destination": "/work/continuous-assurance/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/continuous-assurance/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/interconnected-enterprise-mechanics/",
+      "destination": "/work/continuous-assurance/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/primary-sources/",
+      "destination": "/work/continuous-assurance/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/title-commercial-priority/",
+      "destination": "/work/continuous-assurance/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/continuous-assurance/working-ui-decision-layout/",
+      "destination": "/work/continuous-assurance/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/acceptance-handover/",
+      "destination": "/work/control-management/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/connected-decisions/",
+      "destination": "/work/control-management/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/connected-workflow/",
+      "destination": "/work/control-management/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/decision-scope/",
+      "destination": "/work/control-management/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/control-management/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/primary-sources/",
+      "destination": "/work/control-management/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/control-management/records-review/",
+      "destination": "/work/control-management/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/calculated-outcome-roi-contract/",
+      "destination": "/work/customer-assurance/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/connected-decisions/",
+      "destination": "/work/customer-assurance/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/domain-service-scope/",
+      "destination": "/work/customer-assurance/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/customer-assurance/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/fast-track-implementation-alternative-catch/",
+      "destination": "/work/customer-assurance/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/customer-assurance/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/interconnected-enterprise-mechanics/",
+      "destination": "/work/customer-assurance/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/primary-sources/",
+      "destination": "/work/customer-assurance/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/title-commercial-priority/",
+      "destination": "/work/customer-assurance/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/customer-assurance/working-ui-decision-layout/",
+      "destination": "/work/customer-assurance/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/acceptance-handover/",
+      "destination": "/work/cyber-controls/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/connected-decisions/",
+      "destination": "/work/cyber-controls/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/connected-workflow/",
+      "destination": "/work/cyber-controls/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/decision-scope/",
+      "destination": "/work/cyber-controls/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/cyber-controls/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/primary-sources/",
+      "destination": "/work/cyber-controls/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/cyber-controls/records-review/",
+      "destination": "/work/cyber-controls/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/calculated-outcome-roi-contract/",
+      "destination": "/work/executive-risk/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/connected-decisions/",
+      "destination": "/work/executive-risk/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/domain-service-scope/",
+      "destination": "/work/executive-risk/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/executive-risk/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/fast-track-implementation-alternative-catch/",
+      "destination": "/work/executive-risk/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/executive-risk/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/interconnected-enterprise-mechanics/",
+      "destination": "/work/executive-risk/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/primary-sources/",
+      "destination": "/work/executive-risk/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/title-commercial-priority/",
+      "destination": "/work/executive-risk/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/executive-risk/working-ui-decision-layout/",
+      "destination": "/work/executive-risk/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/acceptance-handover/",
+      "destination": "/work/governance-program/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/connected-decisions/",
+      "destination": "/work/governance-program/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/connected-workflow/",
+      "destination": "/work/governance-program/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/decision-scope/",
+      "destination": "/work/governance-program/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/governance-program/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/primary-sources/",
+      "destination": "/work/governance-program/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/governance-program/records-review/",
+      "destination": "/work/governance-program/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/acceptance-handover/",
+      "destination": "/work/internal-audit/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/connected-decisions/",
+      "destination": "/work/internal-audit/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/connected-workflow/",
+      "destination": "/work/internal-audit/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/decision-scope/",
+      "destination": "/work/internal-audit/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/internal-audit/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/primary-sources/",
+      "destination": "/work/internal-audit/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/internal-audit/records-review/",
+      "destination": "/work/internal-audit/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/acceptance-handover/",
+      "destination": "/work/kri-reporting/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/connected-decisions/",
+      "destination": "/work/kri-reporting/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/connected-workflow/",
+      "destination": "/work/kri-reporting/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/decision-scope/",
+      "destination": "/work/kri-reporting/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/kri-reporting/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/primary-sources/",
+      "destination": "/work/kri-reporting/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/kri-reporting/records-review/",
+      "destination": "/work/kri-reporting/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/acceptance-handover/",
+      "destination": "/work/policy-governance/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/connected-decisions/",
+      "destination": "/work/policy-governance/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/connected-workflow/",
+      "destination": "/work/policy-governance/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/decision-scope/",
+      "destination": "/work/policy-governance/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/policy-governance/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/primary-sources/",
+      "destination": "/work/policy-governance/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/policy-governance/records-review/",
+      "destination": "/work/policy-governance/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/acceptance-handover/",
+      "destination": "/work/privacy-lifecycle/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/connected-decisions/",
+      "destination": "/work/privacy-lifecycle/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/connected-workflow/",
+      "destination": "/work/privacy-lifecycle/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/decision-scope/",
+      "destination": "/work/privacy-lifecycle/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/privacy-lifecycle/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/primary-sources/",
+      "destination": "/work/privacy-lifecycle/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/privacy-lifecycle/records-review/",
+      "destination": "/work/privacy-lifecycle/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/calculated-outcome-roi-contract/",
+      "destination": "/work/processor-governance/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/connected-decisions/",
+      "destination": "/work/processor-governance/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/domain-service-scope/",
+      "destination": "/work/processor-governance/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/processor-governance/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/fast-track-implementation-alternative-catch/",
+      "destination": "/work/processor-governance/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/processor-governance/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/interconnected-enterprise-mechanics/",
+      "destination": "/work/processor-governance/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/primary-sources/",
+      "destination": "/work/processor-governance/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/title-commercial-priority/",
+      "destination": "/work/processor-governance/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/processor-governance/working-ui-decision-layout/",
+      "destination": "/work/processor-governance/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/calculated-outcome-roi-contract/",
+      "destination": "/work/questionnaires/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/connected-decisions/",
+      "destination": "/work/questionnaires/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/domain-service-scope/",
+      "destination": "/work/questionnaires/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/questionnaires/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/fast-track-implementation-alternative-catch/",
+      "destination": "/work/questionnaires/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/questionnaires/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/interconnected-enterprise-mechanics/",
+      "destination": "/work/questionnaires/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/primary-sources/",
+      "destination": "/work/questionnaires/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/title-commercial-priority/",
+      "destination": "/work/questionnaires/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/questionnaires/working-ui-decision-layout/",
+      "destination": "/work/questionnaires/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/acceptance-handover/",
+      "destination": "/work/regulatory-obligations/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/connected-decisions/",
+      "destination": "/work/regulatory-obligations/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/connected-workflow/",
+      "destination": "/work/regulatory-obligations/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/decision-scope/",
+      "destination": "/work/regulatory-obligations/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/regulatory-obligations/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/primary-sources/",
+      "destination": "/work/regulatory-obligations/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/regulatory-obligations/records-review/",
+      "destination": "/work/regulatory-obligations/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/acceptance-handover/",
+      "destination": "/work/remediation/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/connected-decisions/",
+      "destination": "/work/remediation/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/connected-workflow/",
+      "destination": "/work/remediation/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/decision-scope/",
+      "destination": "/work/remediation/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/remediation/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/primary-sources/",
+      "destination": "/work/remediation/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/remediation/records-review/",
+      "destination": "/work/remediation/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/acceptance-handover/",
+      "destination": "/work/resilience/#acceptance-handover",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/connected-decisions/",
+      "destination": "/work/resilience/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/connected-workflow/",
+      "destination": "/work/resilience/#connected-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/decision-scope/",
+      "destination": "/work/resilience/#decision-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/resilience/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/primary-sources/",
+      "destination": "/work/resilience/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/resilience/records-review/",
+      "destination": "/work/resilience/#records-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/calculated-outcome-roi-contract/",
+      "destination": "/work/shadow-ai/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/connected-decisions/",
+      "destination": "/work/shadow-ai/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/domain-service-scope/",
+      "destination": "/work/shadow-ai/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/shadow-ai/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/fast-track-implementation-alternative-catch/",
+      "destination": "/work/shadow-ai/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/shadow-ai/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/interconnected-enterprise-mechanics/",
+      "destination": "/work/shadow-ai/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/primary-sources/",
+      "destination": "/work/shadow-ai/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/title-commercial-priority/",
+      "destination": "/work/shadow-ai/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/shadow-ai/working-ui-decision-layout/",
+      "destination": "/work/shadow-ai/#working-ui-decision-layout",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/calculated-outcome-roi-contract/",
+      "destination": "/work/vendor-risk/#calculated-outcome-roi-contract",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/connected-decisions/",
+      "destination": "/work/vendor-risk/#connected-decisions",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/domain-service-scope/",
+      "destination": "/work/vendor-risk/#domain-service-scope",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/enterprise-scenario-exact-schema-sources/",
+      "destination": "/work/vendor-risk/#enterprise-scenario-exact-schema-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/fast-track-implementation-alternative-catch/",
+      "destination": "/work/vendor-risk/#fast-track-implementation-alternative-catch",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/from-portfolio-logic-to-a-bounded-review/",
+      "destination": "/work/vendor-risk/#from-portfolio-logic-to-a-bounded-review",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/interconnected-enterprise-mechanics/",
+      "destination": "/work/vendor-risk/#interconnected-enterprise-mechanics",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/primary-sources/",
+      "destination": "/work/vendor-risk/#primary-sources",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/title-commercial-priority/",
+      "destination": "/work/vendor-risk/#title-commercial-priority",
+      "permanent": true
+    },
+    {
+      "source": "/work/vendor-risk/working-ui-decision-layout/",
+      "destination": "/work/vendor-risk/#working-ui-decision-layout",
+      "permanent": true
+    }
+  ]
 }

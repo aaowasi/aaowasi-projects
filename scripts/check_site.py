@@ -22,7 +22,8 @@ for p in ROOT.rglob('*.html'):
   path=ROOT/unquote(u.path).lstrip('/') if u.path.startswith('/') else p.parent/unquote(u.path)
   if not u.path:continue
   if path.is_dir():path=path/'index.html'
-  if not path.exists():errors.append(str(p)+': missing '+link)
+  function=ROOT.parent/'functions'/(unquote(u.path).lstrip('/')+'.js')
+  if not path.exists() and not function.exists():errors.append(str(p)+': missing '+link)
  for token in ['{{PROJECT','{{TITLE','{{FEATURED']:
   if token in p.read_text():errors.append(str(p)+': unresolved template')
 assert not errors,'\n'.join(errors)
