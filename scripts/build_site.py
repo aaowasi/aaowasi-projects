@@ -75,5 +75,9 @@ shutil.copyfile(ROOT/'templates/evaluate.html',ROOT/'site/evaluate/index.html')
 from page_sections import split_projects
 split_projects(ROOT)
 
+(ROOT/'site/architecture').mkdir(exist_ok=True)
+shutil.copyfile(ROOT/'templates/architecture.html',ROOT/'site/architecture/index.html')
+shutil.copyfile(ROOT/'content/domain-matrix.json',ROOT/'site/data/domain-matrix.json')
+
 from seo import apply_seo
 apply_seo(ROOT)
