@@ -1,0 +1,685 @@
+[
+  {
+    "slug": "governance-program",
+    "title": "Corporate governance & accountability",
+    "entity": "decision",
+    "frameworks": [
+      "ISO/IEC 27001 clauses 4\u20136",
+      "NIST SP 800-53 PM"
+    ],
+    "checks": [
+      "Board mandate and delegated authority recorded",
+      "Named accountable owners assigned",
+      "Decision rationale and review cadence approved"
+    ],
+    "output": "Named owners, decisions and review dates",
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "processor-governance",
+      "ai-transparency",
+      "shadow-ai",
+      "resilience",
+      "remediation",
+      "financial-conduct"
+    ],
+    "downstream": [
+      "executive-risk",
+      "policy-governance",
+      "ai-governance",
+      "financial-conduct"
+    ]
+  },
+  {
+    "slug": "executive-risk",
+    "title": "Enterprise risk & appetite",
+    "entity": "risk",
+    "frameworks": [
+      "NIST SP 800-53 RA",
+      "ISO/IEC 27001 clause 6"
+    ],
+    "checks": [
+      "Risk appetite and tolerance documented",
+      "Inherent and residual assessments recorded",
+      "Treatment and escalation owner assigned"
+    ],
+    "output": "Likelihood, impact, treatment and acceptance",
+    "upstream": [
+      "governance-program",
+      "sector-assurance"
+    ],
+    "downstream": [
+      "governance-program",
+      "control-management"
+    ]
+  },
+  {
+    "slug": "regulatory-obligations",
+    "title": "Regulatory applicability & change",
+    "entity": "obligation",
+    "frameworks": [
+      "GDPR",
+      "EU AI Act",
+      "NIST SP 800-53 PL"
+    ],
+    "checks": [
+      "Jurisdiction and applicability determined",
+      "Obligation-to-control mappings reviewed",
+      "Regulatory change owner and review date assigned"
+    ],
+    "output": "Jurisdiction, applicable requirement and effective date",
+    "upstream": [
+      "sector-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program",
+      "policy-governance",
+      "control-management",
+      "privacy-lifecycle",
+      "ai-transparency",
+      "sector-assurance"
+    ]
+  },
+  {
+    "slug": "policy-governance",
+    "title": "Policy lifecycle",
+    "entity": "policy",
+    "frameworks": [
+      "ISO/IEC 27001 clause 7",
+      "NIST SP 800-53 PL"
+    ],
+    "checks": [
+      "Policy scope and approval owner recorded",
+      "Version and effective date controlled",
+      "Attestations and exceptions reviewed"
+    ],
+    "output": "Version, ownership and attestation",
+    "upstream": [
+      "governance-program",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "control-management",
+      "data-governance",
+      "shadow-ai",
+      "workforce-security"
+    ]
+  },
+  {
+    "slug": "control-management",
+    "title": "Control implementation & ownership",
+    "entity": "control",
+    "frameworks": [
+      "NIST SP 800-53",
+      "ISO/IEC 27001 Annex A",
+      "SOC 2 TSC"
+    ],
+    "checks": [
+      "Implementation and control owner recorded",
+      "Operating evidence and test procedure linked",
+      "Exceptions and compensating controls reviewed"
+    ],
+    "output": "Requirement \u2192 control \u2192 owner",
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "policy-governance"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness"
+    ]
+  },
+  {
+    "slug": "internal-audit",
+    "title": "Internal audit & independence",
+    "entity": "audit",
+    "frameworks": [
+      "ISO/IEC 27001 clause 9",
+      "NIST SP 800-53 CA"
+    ],
+    "checks": [
+      "Audit independence and mandate documented",
+      "Risk-based scope and sampling approved",
+      "Findings and management actions assigned"
+    ],
+    "output": "Plan, finding and corrective action",
+    "upstream": [
+      "control-management",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "audit-readiness",
+      "financial-conduct"
+    ]
+  },
+  {
+    "slug": "audit-readiness",
+    "title": "External audit & certification readiness",
+    "entity": "test",
+    "frameworks": [
+      "SOC 2 TSC",
+      "ISO/IEC 27001 clauses 9\u201310"
+    ],
+    "checks": [
+      "Audit scope and reporting period agreed",
+      "Control evidence and reviewer recorded",
+      "Readiness gaps and retest dates assigned"
+    ],
+    "output": "Reviewed tests and dated evidence",
+    "upstream": [
+      "internal-audit",
+      "evidence-integrity",
+      "control-management"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "ongoing-authorization"
+    ]
+  },
+  {
+    "slug": "continuous-assurance",
+    "title": "Continuous assurance & remediation",
+    "entity": "issue",
+    "frameworks": [
+      "NIST SP 800-53 CA-7",
+      "SOC 2 CC4"
+    ],
+    "checks": [
+      "Monitoring criteria and frequency defined",
+      "Failed or expired evidence routed to an owner",
+      "Closure evidence and retest decision reviewed"
+    ],
+    "output": "Evidence expiry, failed tests and treatment",
+    "upstream": [
+      "ongoing-authorization",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "remediation",
+      "ongoing-authorization"
+    ]
+  },
+  {
+    "slug": "vendor-risk",
+    "title": "Supplier lifecycle & concentration",
+    "entity": "vendor",
+    "frameworks": [
+      "NIST SP 800-53 SR",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "checks": [
+      "Supplier criticality and concentration assessed",
+      "Due diligence and contractual evidence reviewed",
+      "Exit plan and reassessment triggers documented"
+    ],
+    "output": "Tier, dependencies and exit conditions",
+    "upstream": [
+      "customer-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "processor-governance",
+      "ai-governance",
+      "resilience",
+      "security-boundary",
+      "threat-supply-chain"
+    ]
+  },
+  {
+    "slug": "customer-assurance",
+    "title": "Procurement & customer assurance",
+    "entity": "contract",
+    "frameworks": [
+      "SOC 2 CC9",
+      "NIST SP 800-53 SR"
+    ],
+    "checks": [
+      "Customer requirement and disclosure scope agreed",
+      "Each response linked to approved evidence",
+      "External response approved by accountable reviewer"
+    ],
+    "output": "Requirements and evidence-backed answers",
+    "upstream": [
+      "vendor-risk",
+      "audit-readiness"
+    ],
+    "downstream": [
+      "vendor-risk",
+      "sector-assurance"
+    ]
+  },
+  {
+    "slug": "privacy-lifecycle",
+    "title": "Privacy & individual rights",
+    "entity": "processing",
+    "frameworks": [
+      "GDPR Articles 5, 12\u201322, 25, 35"
+    ],
+    "checks": [
+      "Purpose and lawful basis documented",
+      "Rights handling and retention process reviewed",
+      "DPIA applicability and privacy owner recorded"
+    ],
+    "output": "Purpose, retention and impact review",
+    "upstream": [
+      "data-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "regulatory-obligations",
+      "vendor-risk",
+      "processor-governance"
+    ]
+  },
+  {
+    "slug": "processor-governance",
+    "title": "Processors & cross-border transfers",
+    "entity": "contract",
+    "frameworks": [
+      "GDPR Articles 28, 30, 44\u201349"
+    ],
+    "checks": [
+      "Processor agreement and subprocessors reviewed",
+      "Transfer mechanism and jurisdiction assessed",
+      "Changes and ongoing processor reviews assigned"
+    ],
+    "output": "DPA, subprocessors and transfer mechanism",
+    "upstream": [
+      "vendor-risk",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "data-governance",
+    "title": "Data classification & retention",
+    "entity": "processing",
+    "frameworks": [
+      "GDPR Article 5",
+      "NIST SP 800-53 MP, PT"
+    ],
+    "checks": [
+      "Data classification and inventory recorded",
+      "Retention and deletion rules documented",
+      "Access and disposal evidence reviewed"
+    ],
+    "output": "Data owner, classification and deletion review",
+    "upstream": [
+      "security-boundary",
+      "policy-governance"
+    ],
+    "downstream": [
+      "privacy-lifecycle",
+      "ai-governance",
+      "security-boundary"
+    ]
+  },
+  {
+    "slug": "ai-governance",
+    "title": "AI inventory & lifecycle authorization",
+    "entity": "ai",
+    "frameworks": [
+      "NIST AI RMF",
+      "ISO/IEC 42001"
+    ],
+    "checks": [
+      "AI purpose and system inventory recorded",
+      "Impact assessment and deployment boundary reviewed",
+      "Release owner and human oversight assigned"
+    ],
+    "output": "Inventory, evaluation and deployment decision",
+    "upstream": [
+      "vendor-risk",
+      "data-governance",
+      "governance-program"
+    ],
+    "downstream": [
+      "ai-safety",
+      "ai-transparency",
+      "agent-authorization"
+    ]
+  },
+  {
+    "slug": "ai-safety",
+    "title": "AI fairness, safety & oversight",
+    "entity": "ai",
+    "frameworks": [
+      "NIST AI RMF MEASURE/MANAGE",
+      "ISO/IEC 42001"
+    ],
+    "checks": [
+      "Evaluation methodology and test population recorded",
+      "Fairness and safety failures assigned treatments",
+      "Human intervention and escalation tested"
+    ],
+    "output": "Evaluation findings and human review gates",
+    "upstream": [
+      "ai-governance",
+      "threat-supply-chain"
+    ],
+    "downstream": [
+      "ongoing-authorization"
+    ]
+  },
+  {
+    "slug": "ai-transparency",
+    "title": "AI transparency & content provenance",
+    "entity": "ai",
+    "frameworks": [
+      "EU AI Act Article 50"
+    ],
+    "checks": [
+      "AI transparency applicability determined",
+      "Disclosure and content provenance tested",
+      "Release approval and evidence retained"
+    ],
+    "output": "Disclosure decision and evidence",
+    "upstream": [
+      "ai-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "shadow-ai",
+    "title": "Shadow AI & acceptable use",
+    "entity": "ai",
+    "frameworks": [
+      "NIST AI RMF",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "checks": [
+      "Approved tools and acceptable use policy recorded",
+      "Data egress and sensitive-use boundaries reviewed",
+      "Exceptions and remediation owners assigned"
+    ],
+    "output": "Use-case intake and egress review",
+    "upstream": [
+      "policy-governance",
+      "agent-authorization"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "resilience",
+    "title": "Continuity, recovery & crisis readiness",
+    "entity": "asset",
+    "frameworks": [
+      "NIST SP 800-53 CP",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "checks": [
+      "Critical services and recovery objectives recorded",
+      "Recovery exercise evidence reviewed",
+      "Dependency and crisis escalation owners assigned"
+    ],
+    "output": "Critical services, recovery objectives and exercise evidence",
+    "upstream": [
+      "security-boundary",
+      "vendor-risk"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "remediation",
+    "title": "Incident governance & reporting",
+    "entity": "issue",
+    "frameworks": [
+      "NIST SP 800-53 IR",
+      "GDPR Articles 33\u201334"
+    ],
+    "checks": [
+      "Incident classification and escalation documented",
+      "Notification applicability and deadlines assessed",
+      "Containment and post-incident actions assigned"
+    ],
+    "output": "Incident owner, escalation and corrective action",
+    "upstream": [
+      "threat-supply-chain",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "workforce-security",
+    "title": "Workforce, physical & organizational security",
+    "entity": "policy",
+    "frameworks": [
+      "NIST SP 800-53 AT, PS, PE",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "checks": [
+      "Joiner mover leaver responsibilities documented",
+      "Security training and access reviews evidenced",
+      "Physical access and personnel exceptions reviewed"
+    ],
+    "output": "Control and review records; specialist assessment required",
+    "upstream": [
+      "policy-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "identity-authorization"
+    ]
+  },
+  {
+    "slug": "financial-conduct",
+    "title": "Financial, fraud & ethical conduct risk",
+    "entity": "risk",
+    "frameworks": [
+      "NIST SP 800-53 PM, RA"
+    ],
+    "checks": [
+      "Financial approval limits and segregation defined",
+      "Fraud and conflict-of-interest controls reviewed",
+      "Escalation and investigation ownership assigned"
+    ],
+    "output": "Exposure and risk decisions; specialist assessment required",
+    "upstream": [
+      "governance-program",
+      "internal-audit"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
+  },
+  {
+    "slug": "sector-assurance",
+    "title": "Sector, market & contractual obligations",
+    "entity": "obligation",
+    "frameworks": [
+      "FedRAMP Rev5 when in scope"
+    ],
+    "checks": [
+      "Sector and contractual applicability recorded",
+      "Baseline and market-entry requirements mapped",
+      "Exceptions and evidence requests assigned"
+    ],
+    "output": "Applicability review; sector-specific controls require scoping",
+    "upstream": [
+      "regulatory-obligations",
+      "customer-assurance"
+    ],
+    "downstream": [
+      "executive-risk",
+      "regulatory-obligations"
+    ]
+  },
+  {
+    "slug": "security-boundary",
+    "title": "Security scope & authorization boundary",
+    "entity": "asset",
+    "frameworks": [
+      "NIST RMF",
+      "NIST SP 800-53 PL-2, CA-3"
+    ],
+    "checks": [
+      "System assets data flows and interfaces inventoried",
+      "Trust boundaries and excluded scope documented",
+      "Authorization owner and boundary changes reviewed"
+    ],
+    "output": "Asset scope and system boundary; deployment architecture review",
+    "upstream": [
+      "vendor-risk",
+      "data-governance"
+    ],
+    "downstream": [
+      "data-governance",
+      "resilience",
+      "identity-authorization",
+      "cloud-change"
+    ]
+  },
+  {
+    "slug": "identity-authorization",
+    "title": "Identity, least privilege & segregation",
+    "entity": "control",
+    "frameworks": [
+      "NIST SP 800-53 AC, IA",
+      "SOC 2 CC6"
+    ],
+    "checks": [
+      "Identity and privilege inventory recorded",
+      "Least privilege and segregation reviewed",
+      "Access recertification and revocation evidenced"
+    ],
+    "output": "IAM evidence and authorization policy source",
+    "upstream": [
+      "security-boundary",
+      "workforce-security"
+    ],
+    "downstream": [
+      "workforce-security",
+      "cloud-change",
+      "evidence-integrity",
+      "agent-authorization"
+    ]
+  },
+  {
+    "slug": "cloud-change",
+    "title": "Cloud configuration & change",
+    "entity": "asset",
+    "frameworks": [
+      "NIST SP 800-53 CM",
+      "SOC 2 CC8"
+    ],
+    "checks": [
+      "Configuration baseline and change owner recorded",
+      "Change impact and rollback evidence reviewed",
+      "Drift and unauthorized changes routed to review"
+    ],
+    "output": "Configuration events and control decisions",
+    "upstream": [
+      "security-boundary",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "threat-supply-chain",
+      "evidence-integrity"
+    ]
+  },
+  {
+    "slug": "threat-supply-chain",
+    "title": "Threat, vulnerability & supply-chain assurance",
+    "entity": "asset",
+    "frameworks": [
+      "NIST SP 800-53 RA-5, SI-2, SR"
+    ],
+    "checks": [
+      "Threat and vulnerability inventory recorded",
+      "Supplier dependencies and patch priorities assessed",
+      "Remediation and retest evidence reviewed"
+    ],
+    "output": "Alert normalization and remediation priorities",
+    "upstream": [
+      "vendor-risk",
+      "cloud-change"
+    ],
+    "downstream": [
+      "ai-safety",
+      "remediation"
+    ]
+  },
+  {
+    "slug": "evidence-integrity",
+    "title": "Logging, evidence integrity & provenance",
+    "entity": "test",
+    "frameworks": [
+      "NIST SP 800-53 AU",
+      "SOC 2 CC7"
+    ],
+    "checks": [
+      "Log sources timestamps and retention defined",
+      "Evidence integrity and provenance verified",
+      "Evidence access and custody ownership assigned"
+    ],
+    "output": "Source timestamps and evidence validation",
+    "upstream": [
+      "cloud-change",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness",
+      "continuous-assurance"
+    ]
+  },
+  {
+    "slug": "agent-authorization",
+    "title": "Agent, tool & data authorization",
+    "entity": "decision",
+    "frameworks": [
+      "NIST SP 800-53 AC",
+      "NIST AI RMF"
+    ],
+    "checks": [
+      "Agent identity tools and data permissions scoped",
+      "Tool actions and human approval gates defined",
+      "Revocation and decision logging tested"
+    ],
+    "output": "Agent/tool authorization policies and human escalation",
+    "upstream": [
+      "ai-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "shadow-ai"
+    ]
+  },
+  {
+    "slug": "ongoing-authorization",
+    "title": "Assessment, authorization & ongoing monitoring",
+    "entity": "decision",
+    "frameworks": [
+      "NIST SP 800-53 CA-2, CA-6, CA-7",
+      "FedRAMP Rev5"
+    ],
+    "checks": [
+      "Assessment scope and authorization package recorded",
+      "Authority decision and exceptions documented",
+      "Monitoring cadence and reauthorization triggers assigned"
+    ],
+    "output": "Review packages; authorization remains with designated authority",
+    "upstream": [
+      "audit-readiness",
+      "ai-safety",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "continuous-assurance"
+    ]
+  }
+]

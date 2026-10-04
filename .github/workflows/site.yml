@@ -20,17 +20,18 @@ jobs:
           node-version: '22'
       - run: python scripts/build_site.py
       - run: python scripts/check_site.py
+      - run: python scripts/check_contract.py
       - run: node --check site/assets/site.js
       - run: node --test tests/browser/*.test.mjs
       - name: Synchronize generated public site
         if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
         run: |
-          if git diff --quiet -- site; then
+          if git diff --quiet -- site README.md DOCS.md docs-sync.json; then
             echo "Generated site is already synchronized."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add site
+            git add site README.md DOCS.md docs-sync.json
             git commit -m "chore: synchronize generated public site"
             git push origin HEAD:${GITHUB_REF_NAME}
           fi

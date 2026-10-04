@@ -29,9 +29,9 @@ export function validate(data, catalog) {
  for(const key of ['parentVendorId','dependencyId']){const done=new Set();for(const r of data.records){if(done.has(r.id))continue;const active=new Set();let n=r;while(n&&!done.has(n.id)){if(active.has(n.id))throw Error('Circular dependency.');active.add(n.id);n=n[key]?byId.get(n[key]):null;}for(const id of active)done.add(id);}}
  return structuredClone(data);
 }
-export function metrics(records,asOf){
+export function metrics(records,asOf,linkedRecords=records){
  const risk=records.filter(x=>x.type==='risk'),controls=records.filter(x=>x.type==='control');
- const currentPass=records.filter(x=>x.type==='test'&&x.result==='Pass'&&x.testedDate<=asOf&&x.expiresDate&&x.expiresDate>=asOf);
+ const currentPass=linkedRecords.filter(x=>x.type==='test'&&x.result==='Pass'&&x.testedDate<=asOf&&x.expiresDate&&x.expiresDate>=asOf);
  const covered=controls.filter(c=>currentPass.some(t=>t.controlId===c.id)).length;
  return {total:records.length,overdue:records.filter(x=>x.reviewDate&&x.reviewDate<asOf&&x.status!=='Closed').length,openIssues:records.filter(x=>x.type==='issue'&&x.status!=='Closed').length,coverage:controls.length?Math.round(100*covered/controls.length):null,covered,controls:controls.length,highRisk:risk.filter(x=>x.likelihood*x.impact>=15).length,heat:Array.from({length:25},(_,i)=>risk.filter(x=>x.likelihood===Math.floor(i/5)+1&&x.impact===i%5+1).length)};
 }

@@ -11,10 +11,10 @@ Use primary sources for technical and regulatory claims. Recheck versions before
 | ISO/IEC 42001 | https://www.iso.org/standard/81230.html | Project 2 maps AI management-system capabilities without claiming certification |
 | EU AI Act consolidated text | https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng | Project 6 treats Article 50 disclosure and marking as product release evidence, with legal review |
 | MCP specification | https://modelcontextprotocol.io/specification/2026-07-28 | MCP uses the current stateless-core specification and narrow tool contracts |
-| MCP Python SDK | https://github.com/modelcontextprotocol/python-sdk | Service pins the stable v2 major range |
-| Open Policy Agent | https://github.com/open-policy-agent/opa/releases | Compose pins OPA 1.20.2 and uses Rego v1 syntax |
-| GitHub Actions checkout | https://github.com/actions/checkout/releases | Workflows use checkout v7 |
-| GitHub Actions setup-python | https://github.com/actions/setup-python/releases | Workflows use setup-python v7 |
+| MCP Python SDK | https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md | Service pins the stable v2 major range |
+| Open Policy Agent | https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md | Compose pins OPA 1.20.2 and uses Rego v1 syntax |
+| GitHub Actions checkout | https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md | Workflows use checkout v7 |
+| GitHub Actions setup-python | https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md | Workflows use setup-python v7 |
 | GitHub immutable releases | https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases | Evidence workflow uses draft, upload, publish and never edits history |
 | Cloudflare Pages limits | https://developers.cloudflare.com/pages/platform/limits/ | Static portal fits the free Pages deployment model |
 | Cloudflare Workers limits | https://developers.cloudflare.com/workers/platform/limits/ | Optional facade must fit free request and CPU limits; static hosting remains the default |

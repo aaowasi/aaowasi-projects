@@ -3,6 +3,7 @@ import json,shutil
 ROOT=Path(__file__).resolve().parents[1]
 from domain_build import render_domains
 render_domains(ROOT)
+shutil.copyfile(ROOT/'content/domain-reviews.json',ROOT/'site/data/domain-reviews.json')
 
 from build_delivery import render as render_delivery
 snapshot=json.loads((ROOT/'content/verified-delivery.json').read_text())
@@ -29,5 +30,7 @@ shutil.copyfile(ROOT/'content/domain-matrix.json',ROOT/'site/data/domain-matrix.
 # Keep all domain counts sourced from catalogue data.
 for page in (ROOT/'site').rglob('*.html'):
  page.write_text(page.read_text().replace('{{DOMAIN_COUNT}}',str(len(json.loads((ROOT/'content/projects.json').read_text())))))
+from build_docs import generate
+generate(ROOT)
 from seo import apply_seo
 apply_seo(ROOT)

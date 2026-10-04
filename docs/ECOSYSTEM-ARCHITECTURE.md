@@ -44,7 +44,7 @@ The following 22 enterprise and seven technical review areas are an extensible t
 
 ## Reference architecture
 
-Reviewed relevantGRC/grc-suite as a reference for separation of policies, controls, metrics and audit artifacts. No code copied or integration affiliation implied.
+Reviewed native governance architecture as a reference for separation of policies, controls, metrics and audit artifacts. No code copied or integration affiliation implied.
 
 ## Deployment and customization
 

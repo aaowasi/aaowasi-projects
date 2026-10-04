@@ -4,4 +4,4 @@ content/domain-matrix.json and content/projects.json define dedicated domain pro
 
 The upstream/downstream links describe review dependencies, including monitoring feedback. They do not imply automatic legal approval or production telemetry.
 
-Reference architecture: https://github.com/relevantGRC/grc-suite. Reviewed its separation of policies, controls, metrics and audit artifacts. No source code copied and no affiliation implied.
+Reference architecture: https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md Reviewed its separation of policies, controls, metrics and audit artifacts. No source code copied and no affiliation implied.

@@ -60,6 +60,6 @@ Deploy those services before using the workspace for shared client operations.
 
 - [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - [NIST AI 600-1 Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
-- [MITRE ATLAS public techniques, 2026.09](https://github.com/mitre-atlas/atlas-data)
+- [MITRE ATLAS public techniques, 2026.09](https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md
 - [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
 - [ISO/IEC 42001 public overview](https://www.iso.org/standard/42001)
