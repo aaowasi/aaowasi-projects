@@ -76,7 +76,8 @@ from page_sections import split_projects
 split_projects(ROOT)
 
 (ROOT/'site/architecture').mkdir(exist_ok=True)
-shutil.copyfile(ROOT/'templates/architecture.html',ROOT/'site/architecture/index.html')
+from build_architecture import render_architecture
+(ROOT/'site/architecture/index.html').write_text(render_architecture(ROOT))
 shutil.copyfile(ROOT/'content/domain-matrix.json',ROOT/'site/data/domain-matrix.json')
 
 from seo import apply_seo
