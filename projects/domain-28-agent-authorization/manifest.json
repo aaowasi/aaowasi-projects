@@ -30,5 +30,9 @@
   ],
   "downstream": [
     "shadow-ai"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 AC",
+    "NIST AI RMF"
   ]
 }

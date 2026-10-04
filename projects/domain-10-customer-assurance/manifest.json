@@ -31,5 +31,9 @@
   "downstream": [
     "vendor-risk",
     "sector-assurance"
+  ],
+  "frameworks": [
+    "SOC 2 CC9",
+    "NIST SP 800-53 SR"
   ]
 }

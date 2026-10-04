@@ -1310,7 +1310,7 @@
     {
       "group": "enterprise",
       "domain": "Corporate governance & accountability",
-      "framework": "ISO/IEC 27001 clauses 4\u20136; NIST PM",
+      "framework": "ISO/IEC 27001 clauses 4\u20136; NIST SP 800-53 PM",
       "workflow": "/work/governance-program/",
       "output": "Named owners, decisions and review dates",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1337,7 +1337,7 @@
     {
       "group": "enterprise",
       "domain": "Enterprise risk & appetite",
-      "framework": "NIST RA; ISO/IEC 27001 clause 6",
+      "framework": "NIST SP 800-53 RA; ISO/IEC 27001 clause 6",
       "workflow": "/work/executive-risk/",
       "output": "Likelihood, impact, treatment and acceptance",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1356,7 +1356,7 @@
     {
       "group": "enterprise",
       "domain": "Regulatory applicability & change",
-      "framework": "GDPR; EU AI Act; NIST PL",
+      "framework": "GDPR; EU AI Act; NIST SP 800-53 PL",
       "workflow": "/work/regulatory-obligations/",
       "output": "Jurisdiction, applicable requirement and effective date",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1379,7 +1379,7 @@
     {
       "group": "enterprise",
       "domain": "Policy lifecycle",
-      "framework": "ISO/IEC 27001 clause 7; NIST PL",
+      "framework": "ISO/IEC 27001 clause 7; NIST SP 800-53 PL",
       "workflow": "/work/policy-governance/",
       "output": "Version, ownership and attestation",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1420,7 +1420,7 @@
     {
       "group": "enterprise",
       "domain": "Internal audit & independence",
-      "framework": "ISO/IEC 27001 clause 9; NIST CA",
+      "framework": "ISO/IEC 27001 clause 9; NIST SP 800-53 CA",
       "workflow": "/work/internal-audit/",
       "output": "Plan, finding and corrective action",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1459,7 +1459,7 @@
     {
       "group": "enterprise",
       "domain": "Continuous assurance & remediation",
-      "framework": "NIST CA-7; SOC 2 CC4",
+      "framework": "NIST SP 800-53 CA-7; SOC 2 CC4",
       "workflow": "/work/continuous-assurance/",
       "output": "Evidence expiry, failed tests and treatment",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1478,7 +1478,7 @@
     {
       "group": "enterprise",
       "domain": "Supplier lifecycle & concentration",
-      "framework": "NIST SR; ISO/IEC 27001 Annex A",
+      "framework": "NIST SP 800-53 SR; ISO/IEC 27001 Annex A",
       "workflow": "/work/vendor-risk/",
       "output": "Tier, dependencies and exit conditions",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1501,7 +1501,7 @@
     {
       "group": "enterprise",
       "domain": "Procurement & customer assurance",
-      "framework": "SOC 2 CC9; NIST SR",
+      "framework": "SOC 2 CC9; NIST SP 800-53 SR",
       "workflow": "/work/customer-assurance/",
       "output": "Requirements and evidence-backed answers",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1558,7 +1558,7 @@
     {
       "group": "enterprise",
       "domain": "Data classification & retention",
-      "framework": "GDPR Article 5; NIST MP, PT",
+      "framework": "GDPR Article 5; NIST SP 800-53 MP, PT",
       "workflow": "/work/data-governance/",
       "output": "Data owner, classification and deletion review",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1653,7 +1653,7 @@
     {
       "group": "enterprise",
       "domain": "Continuity, recovery & crisis readiness",
-      "framework": "NIST CP; ISO/IEC 27001 Annex A",
+      "framework": "NIST SP 800-53 CP; ISO/IEC 27001 Annex A",
       "workflow": "/work/resilience/",
       "output": "Critical services, recovery objectives and exercise evidence",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1671,7 +1671,7 @@
     {
       "group": "enterprise",
       "domain": "Incident governance & reporting",
-      "framework": "NIST IR; GDPR Articles 33\u201334",
+      "framework": "NIST SP 800-53 IR; GDPR Articles 33\u201334",
       "workflow": "/work/remediation/",
       "output": "Incident owner, escalation and corrective action",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1689,7 +1689,7 @@
     {
       "group": "enterprise",
       "domain": "Workforce, physical & organizational security",
-      "framework": "NIST AT, PS, PE; ISO/IEC 27001 Annex A",
+      "framework": "NIST SP 800-53 AT, PS, PE; ISO/IEC 27001 Annex A",
       "workflow": "/work/workforce-security/",
       "output": "Control and review records; specialist assessment required",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1707,7 +1707,7 @@
     {
       "group": "enterprise",
       "domain": "Financial, fraud & ethical conduct risk",
-      "framework": "NIST PM, RA; organization-specific legal obligations",
+      "framework": "NIST SP 800-53 PM, RA",
       "workflow": "/work/financial-conduct/",
       "output": "Exposure and risk decisions; specialist assessment required",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1725,7 +1725,7 @@
     {
       "group": "enterprise",
       "domain": "Sector, market & contractual obligations",
-      "framework": "Applicable sector rules; FedRAMP Rev5 when in scope",
+      "framework": "FedRAMP Rev5 when in scope",
       "workflow": "/work/sector-assurance/",
       "output": "Applicability review; sector-specific controls require scoping",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1744,7 +1744,7 @@
     {
       "group": "technical",
       "domain": "Security scope & authorization boundary",
-      "framework": "NIST RMF; NIST PL-2, CA-3",
+      "framework": "NIST RMF; NIST SP 800-53 PL-2, CA-3",
       "workflow": "/work/security-boundary/",
       "output": "Asset scope and system boundary; deployment architecture review",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1765,7 +1765,7 @@
     {
       "group": "technical",
       "domain": "Identity, least privilege & segregation",
-      "framework": "NIST AC, IA; SOC 2 CC6",
+      "framework": "NIST SP 800-53 AC, IA; SOC 2 CC6",
       "workflow": "/work/identity-authorization/",
       "output": "IAM evidence and authorization policy source",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1786,7 +1786,7 @@
     {
       "group": "technical",
       "domain": "Cloud configuration & change",
-      "framework": "NIST CM; SOC 2 CC8",
+      "framework": "NIST SP 800-53 CM; SOC 2 CC8",
       "workflow": "/work/cloud-change/",
       "output": "Configuration events and control decisions",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1805,7 +1805,7 @@
     {
       "group": "technical",
       "domain": "Threat, vulnerability & supply-chain assurance",
-      "framework": "NIST RA-5, SI-2, SR",
+      "framework": "NIST SP 800-53 RA-5, SI-2, SR",
       "workflow": "/work/threat-supply-chain/",
       "output": "Alert normalization and remediation priorities",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1824,7 +1824,7 @@
     {
       "group": "technical",
       "domain": "Logging, evidence integrity & provenance",
-      "framework": "NIST AU; SOC 2 CC7",
+      "framework": "NIST SP 800-53 AU; SOC 2 CC7",
       "workflow": "/work/evidence-integrity/",
       "output": "Source timestamps and evidence validation",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1844,7 +1844,7 @@
     {
       "group": "technical",
       "domain": "Agent, tool & data authorization",
-      "framework": "NIST AC; NIST AI RMF",
+      "framework": "NIST SP 800-53 AC; NIST AI RMF",
       "workflow": "/work/agent-authorization/",
       "output": "Agent/tool authorization policies and human escalation",
       "status": "Inspectable workflow; client-specific mapping required",
@@ -1862,7 +1862,7 @@
     {
       "group": "technical",
       "domain": "Assessment, authorization & ongoing monitoring",
-      "framework": "NIST CA-2, CA-6, CA-7; FedRAMP Rev5",
+      "framework": "NIST SP 800-53 CA-2, CA-6, CA-7; FedRAMP Rev5",
       "workflow": "/work/ongoing-authorization/",
       "output": "Review packages; authorization remains with designated authority",
       "status": "Inspectable workflow; client-specific mapping required",

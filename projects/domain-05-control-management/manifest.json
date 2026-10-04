@@ -33,5 +33,10 @@
   "downstream": [
     "internal-audit",
     "audit-readiness"
+  ],
+  "frameworks": [
+    "NIST SP 800-53",
+    "ISO/IEC 27001 Annex A",
+    "SOC 2 TSC"
   ]
 }

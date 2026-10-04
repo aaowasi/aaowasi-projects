@@ -31,5 +31,8 @@
     "regulatory-obligations",
     "vendor-risk",
     "processor-governance"
+  ],
+  "frameworks": [
+    "GDPR Articles 5, 12\u201322, 25, 35"
   ]
 }

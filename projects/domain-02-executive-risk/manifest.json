@@ -31,5 +31,9 @@
   "downstream": [
     "governance-program",
     "control-management"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 RA",
+    "ISO/IEC 27001 clause 6"
   ]
 }

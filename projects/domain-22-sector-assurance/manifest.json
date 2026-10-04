@@ -31,5 +31,8 @@
   "downstream": [
     "executive-risk",
     "regulatory-obligations"
+  ],
+  "frameworks": [
+    "FedRAMP Rev5 when in scope"
   ]
 }

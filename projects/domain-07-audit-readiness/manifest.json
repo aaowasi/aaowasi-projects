@@ -32,5 +32,9 @@
   "downstream": [
     "customer-assurance",
     "ongoing-authorization"
+  ],
+  "frameworks": [
+    "SOC 2 TSC",
+    "ISO/IEC 27001 clauses 9\u201310"
   ]
 }

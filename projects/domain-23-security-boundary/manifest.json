@@ -33,5 +33,9 @@
     "resilience",
     "identity-authorization",
     "cloud-change"
+  ],
+  "frameworks": [
+    "NIST RMF",
+    "NIST SP 800-53 PL-2, CA-3"
   ]
 }

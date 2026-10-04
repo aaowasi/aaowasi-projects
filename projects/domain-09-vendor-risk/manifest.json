@@ -35,5 +35,9 @@
     "resilience",
     "security-boundary",
     "threat-supply-chain"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 SR",
+    "ISO/IEC 27001 Annex A"
   ]
 }

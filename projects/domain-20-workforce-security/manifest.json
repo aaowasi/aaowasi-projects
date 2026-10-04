@@ -30,5 +30,9 @@
   ],
   "downstream": [
     "identity-authorization"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 AT, PS, PE",
+    "ISO/IEC 27001 Annex A"
   ]
 }

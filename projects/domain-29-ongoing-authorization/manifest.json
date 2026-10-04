@@ -31,5 +31,9 @@
   ],
   "downstream": [
     "continuous-assurance"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 CA-2, CA-6, CA-7",
+    "FedRAMP Rev5"
   ]
 }

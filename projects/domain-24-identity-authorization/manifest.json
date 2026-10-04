@@ -33,5 +33,9 @@
     "cloud-change",
     "evidence-integrity",
     "agent-authorization"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 AC, IA",
+    "SOC 2 CC6"
   ]
 }

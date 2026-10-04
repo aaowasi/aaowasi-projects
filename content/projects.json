@@ -13,7 +13,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "ISO/IEC 27001 clauses 4\u20136",
-      "NIST PM"
+      "NIST SP 800-53 PM"
     ],
     "capabilities": [
       "Named owners, decisions and review dates",
@@ -71,7 +71,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST RA",
+      "NIST SP 800-53 RA",
       "ISO/IEC 27001 clause 6"
     ],
     "capabilities": [
@@ -122,7 +122,7 @@
     "frameworks": [
       "GDPR",
       "EU AI Act",
-      "NIST PL"
+      "NIST SP 800-53 PL"
     ],
     "capabilities": [
       "Jurisdiction, applicable requirement and effective date",
@@ -179,7 +179,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "ISO/IEC 27001 clause 7",
-      "NIST PL"
+      "NIST SP 800-53 PL"
     ],
     "capabilities": [
       "Version, ownership and attestation",
@@ -284,7 +284,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "ISO/IEC 27001 clause 9",
-      "NIST CA"
+      "NIST SP 800-53 CA"
     ],
     "capabilities": [
       "Plan, finding and corrective action",
@@ -383,7 +383,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST CA-7",
+      "NIST SP 800-53 CA-7",
       "SOC 2 CC4"
     ],
     "capabilities": [
@@ -432,7 +432,7 @@
     "featuredOrder": 2,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST SR",
+      "NIST SP 800-53 SR",
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
@@ -490,7 +490,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "SOC 2 CC9",
-      "NIST SR"
+      "NIST SP 800-53 SR"
     ],
     "capabilities": [
       "Requirements and evidence-backed answers",
@@ -634,7 +634,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "GDPR Article 5",
-      "NIST MP, PT"
+      "NIST SP 800-53 MP, PT"
     ],
     "capabilities": [
       "Data owner, classification and deletion review",
@@ -875,7 +875,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST CP",
+      "NIST SP 800-53 CP",
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
@@ -921,7 +921,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST IR",
+      "NIST SP 800-53 IR",
       "GDPR Articles 33\u201334"
     ],
     "capabilities": [
@@ -967,7 +967,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST AT, PS, PE",
+      "NIST SP 800-53 AT, PS, PE",
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
@@ -1014,8 +1014,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST PM, RA",
-      "organization-specific legal obligations"
+      "NIST SP 800-53 PM, RA"
     ],
     "capabilities": [
       "Exposure and risk decisions; specialist assessment required",
@@ -1060,7 +1059,6 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "Applicable sector rules",
       "FedRAMP Rev5 when in scope"
     ],
     "capabilities": [
@@ -1110,7 +1108,7 @@
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
       "NIST RMF",
-      "NIST PL-2, CA-3"
+      "NIST SP 800-53 PL-2, CA-3"
     ],
     "capabilities": [
       "Asset scope and system boundary; deployment architecture review",
@@ -1162,7 +1160,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST AC, IA",
+      "NIST SP 800-53 AC, IA",
       "SOC 2 CC6"
     ],
     "capabilities": [
@@ -1215,7 +1213,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST CM",
+      "NIST SP 800-53 CM",
       "SOC 2 CC8"
     ],
     "capabilities": [
@@ -1264,7 +1262,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST RA-5, SI-2, SR"
+      "NIST SP 800-53 RA-5, SI-2, SR"
     ],
     "capabilities": [
       "Alert normalization and remediation priorities",
@@ -1312,7 +1310,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST AU",
+      "NIST SP 800-53 AU",
       "SOC 2 CC7"
     ],
     "capabilities": [
@@ -1363,7 +1361,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST AC",
+      "NIST SP 800-53 AC",
       "NIST AI RMF"
     ],
     "capabilities": [
@@ -1410,7 +1408,7 @@
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "NIST CA-2, CA-6, CA-7",
+      "NIST SP 800-53 CA-2, CA-6, CA-7",
       "FedRAMP Rev5"
     ],
     "capabilities": [

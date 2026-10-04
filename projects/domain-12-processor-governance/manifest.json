@@ -29,5 +29,8 @@
   ],
   "downstream": [
     "governance-program"
+  ],
+  "frameworks": [
+    "GDPR Articles 28, 30, 44\u201349"
   ]
 }

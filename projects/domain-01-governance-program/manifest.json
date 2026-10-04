@@ -39,5 +39,9 @@
     "policy-governance",
     "ai-governance",
     "financial-conduct"
+  ],
+  "frameworks": [
+    "ISO/IEC 27001 clauses 4\u20136",
+    "NIST SP 800-53 PM"
   ]
 }

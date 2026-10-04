@@ -29,5 +29,8 @@
   ],
   "downstream": [
     "governance-program"
+  ],
+  "frameworks": [
+    "EU AI Act Article 50"
   ]
 }

@@ -36,5 +36,10 @@
     "privacy-lifecycle",
     "ai-transparency",
     "sector-assurance"
+  ],
+  "frameworks": [
+    "GDPR",
+    "EU AI Act",
+    "NIST SP 800-53 PL"
   ]
 }

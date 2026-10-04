@@ -33,5 +33,9 @@
     "data-governance",
     "shadow-ai",
     "workforce-security"
+  ],
+  "frameworks": [
+    "ISO/IEC 27001 clause 7",
+    "NIST SP 800-53 PL"
   ]
 }

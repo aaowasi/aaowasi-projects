@@ -33,5 +33,9 @@
     "ai-safety",
     "ai-transparency",
     "agent-authorization"
+  ],
+  "frameworks": [
+    "NIST AI RMF",
+    "ISO/IEC 42001"
   ]
 }

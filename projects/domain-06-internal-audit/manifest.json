@@ -31,5 +31,9 @@
   "downstream": [
     "audit-readiness",
     "financial-conduct"
+  ],
+  "frameworks": [
+    "ISO/IEC 27001 clause 9",
+    "NIST SP 800-53 CA"
   ]
 }

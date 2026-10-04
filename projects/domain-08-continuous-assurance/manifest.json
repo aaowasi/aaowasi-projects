@@ -31,5 +31,9 @@
   "downstream": [
     "remediation",
     "ongoing-authorization"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 CA-7",
+    "SOC 2 CC4"
   ]
 }

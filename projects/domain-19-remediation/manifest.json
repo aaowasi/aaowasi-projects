@@ -30,5 +30,9 @@
   ],
   "downstream": [
     "governance-program"
+  ],
+  "frameworks": [
+    "NIST SP 800-53 IR",
+    "GDPR Articles 33\u201334"
   ]
 }
