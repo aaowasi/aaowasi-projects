@@ -17,22 +17,24 @@ def split_projects(root):
     if depth==0:start=token.start()
     depth+=1
   if len(sections)<2:continue
+  inspector=next((section for section in sections if 'data-review-inspector' in section),'')
   routes=[]
   for i,section in enumerate(sections[1:],1):
+   if 'data-review-inspector' in section:continue
    heading=re.search(r'<h2[^>]*>(.*?)</h2>',section,re.S)
    title=unescape(re.sub('<[^>]+>',' ',heading.group(1))).strip() if heading else 'Decision details'
    slug=re.sub('[^a-z0-9]+','-',title.lower()).strip('-') or f'details-{i}'
    if any(x[0]==slug for x in routes):slug+=f'-{i}'
    routes.append((slug,title,section,heading))
   prefix='/work/'+page.parent.name+'/'
-  nav='<nav class="project-index" aria-label="Project contents">'+''.join('<a href="#'+slug+'">'+escape(title)+'</a>' for slug,title,_,_ in routes)+'</nav>'
+  nav='<nav class="project-index" aria-label="Project contents">'+('<a href="#readiness-review">Readiness review</a>' if inspector else '')+''.join('<a href="#'+slug+'">'+escape(title)+'</a>' for slug,title,_,_ in routes)+'</nav>'
   details=[]
   for slug,title,section,heading in routes:
    inside=re.sub(r'^<section\b[^>]*>|</section>$','',section)
    if heading:inside=inside.replace(heading.group(0),'',1)
    inside=re.sub(r'<span class="eyebrow">\d+</span>','',inside)
    details.append('<details '+('open ' if not details else '')+'class="project-detail" id="'+slug+'"><summary>'+escape(title)+'</summary><div>'+inside+'</div></details>')
-  page.write_text(source[:main.start(1)]+sections[0]+nav+''.join(details)+source[main.end(1):])
+  page.write_text(source[:main.start(1)]+sections[0]+inspector+nav+''.join(details)+source[main.end(1):])
   for child in page.parent.iterdir():
    if child.is_dir() and (child/'index.html').exists():
     target=prefix+'#'+child.name

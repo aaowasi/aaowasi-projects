@@ -14,5 +14,9 @@ for page in (root/'site').rglob('*.html'):
  assert not re.search(r'20\s*</strong>\s*<span>connected workflows|13 GRC operating domains',s),str(page)+' stale count'
  if not (root/'engine').exists():continue
  for href in re.findall(r'href="(/work/[^"#?]+/)',s):assert (root/'site'/href.strip('/')/'index.html').exists(),str(page)+' retired route '+href
+if (root/'engine').exists():
+ for p in projects:
+  html=(root/'site/work'/p['slug']/'index.html').read_text()
+  assert 'data-review-inspector' in html and 'data-review-domain="'+p['slug']+'"' in html,'Readiness inspector hook missing: '+p['slug']
 for file in ['LICENSE','TERMS_AND_CONDITIONS.md','DOCS.md']:assert (root/file).exists()
 print('PASS: source/docs synchronization, native routes, project review contracts and licensing files')
