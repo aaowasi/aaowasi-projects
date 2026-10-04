@@ -1,0 +1,35 @@
+{
+  "project_id": "D25",
+  "name": "Cloud configuration & change",
+  "purpose": "Support a documented cloud configuration & change decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST CM",
+    "SOC 2 CC8"
+  ],
+  "capabilities": [
+    "Configuration events and control decisions",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized asset records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "security-boundary",
+    "identity-authorization"
+  ],
+  "downstream": [
+    "threat-supply-chain",
+    "evidence-integrity"
+  ]
+}

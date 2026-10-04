@@ -38,5 +38,10 @@ def split_projects(root):
     target=prefix+'#'+child.name
     redirects[prefix+child.name+'/']=target
     shutil.rmtree(child)
+ for route,target in list(redirects.items()):
+  base,_,fragment=target.partition('#');page=root/'site'/base.strip('/')/'index.html'
+  if not page.exists():base='/work/governance-program/';fragment=''
+  elif fragment and not re.search(r'id=[\"\']'+re.escape(fragment)+r'[\"\']',page.read_text()):fragment=''
+  redirects[route]=base+('#'+fragment if fragment else '')
  redirects_path.write_text(json.dumps(redirects,indent=2)+'\n')
  (root/'site/_redirects').write_text('\n'.join(path+' '+target+' 301' for path,target in sorted(redirects.items()))+'\n')

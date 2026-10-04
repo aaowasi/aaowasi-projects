@@ -1,0 +1,37 @@
+{
+  "project_id": "D24",
+  "name": "Identity, least privilege & segregation",
+  "purpose": "Support a documented identity, least privilege & segregation decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST AC, IA",
+    "SOC 2 CC6"
+  ],
+  "capabilities": [
+    "IAM evidence and authorization policy source",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized control records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "security-boundary",
+    "workforce-security"
+  ],
+  "downstream": [
+    "workforce-security",
+    "cloud-change",
+    "evidence-integrity",
+    "agent-authorization"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "project_id": "D04",
+  "name": "Policy lifecycle",
+  "purpose": "Support a documented policy lifecycle decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "ISO/IEC 27001 clause 7",
+    "NIST PL"
+  ],
+  "capabilities": [
+    "Version, ownership and attestation",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized policy records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "governance-program",
+    "regulatory-obligations"
+  ],
+  "downstream": [
+    "control-management",
+    "data-governance",
+    "shadow-ai",
+    "workforce-security"
+  ]
+}

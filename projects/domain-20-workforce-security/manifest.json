@@ -1,0 +1,34 @@
+{
+  "project_id": "D20",
+  "name": "Workforce, physical & organizational security",
+  "purpose": "Support a documented workforce, physical & organizational security decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST AT, PS, PE",
+    "ISO/IEC 27001 Annex A"
+  ],
+  "capabilities": [
+    "Control and review records; specialist assessment required",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized policy records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "policy-governance",
+    "identity-authorization"
+  ],
+  "downstream": [
+    "identity-authorization"
+  ]
+}

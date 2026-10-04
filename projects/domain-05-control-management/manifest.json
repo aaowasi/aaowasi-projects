@@ -1,0 +1,37 @@
+{
+  "project_id": "D05",
+  "name": "Control implementation & ownership",
+  "purpose": "Support a documented control implementation & ownership decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST SP 800-53",
+    "ISO/IEC 27001 Annex A",
+    "SOC 2 TSC"
+  ],
+  "capabilities": [
+    "Requirement \u2192 control \u2192 owner",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized control records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "regulatory-obligations",
+    "executive-risk",
+    "policy-governance"
+  ],
+  "downstream": [
+    "internal-audit",
+    "audit-readiness"
+  ]
+}

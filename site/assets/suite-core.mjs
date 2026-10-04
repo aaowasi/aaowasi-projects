@@ -5,6 +5,7 @@ export function validate(data, catalog) {
  if(new TextEncoder().encode(JSON.stringify(data)).length>20*1024*1024)throw Error('Dataset exceeds the 20 MB capacity.');
  const ids=new Set();
  for(const r of data.records){
+  if(r.domainSlug&&catalog.domains&&!catalog.domains.some(d=>d.slug===r.domainSlug))throw Error('Unknown governance domain.');
   const fields=catalog.entities[r.type]; if(!fields)throw Error('Unknown record type.');
   if(typeof r.id!=='string'||!/^[A-Za-z0-9_-]{1,64}$/.test(r.id)||ids.has(r.id))throw Error('IDs must be unique and contain letters, numbers, underscores or hyphens.');ids.add(r.id);
   if(typeof r.title!=='string'||!r.title.trim())throw Error('Every record needs a title.');

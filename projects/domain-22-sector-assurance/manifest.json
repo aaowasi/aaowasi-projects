@@ -1,0 +1,35 @@
+{
+  "project_id": "D22",
+  "name": "Sector, market & contractual obligations",
+  "purpose": "Support a documented sector, market & contractual obligations decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "Applicable sector rules",
+    "FedRAMP Rev5 when in scope"
+  ],
+  "capabilities": [
+    "Applicability review; sector-specific controls require scoping",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized obligation records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "regulatory-obligations",
+    "customer-assurance"
+  ],
+  "downstream": [
+    "executive-risk",
+    "regulatory-obligations"
+  ]
+}

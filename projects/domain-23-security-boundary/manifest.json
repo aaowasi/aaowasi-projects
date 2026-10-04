@@ -1,0 +1,37 @@
+{
+  "project_id": "D23",
+  "name": "Security scope & authorization boundary",
+  "purpose": "Support a documented security scope & authorization boundary decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST RMF",
+    "NIST PL-2, CA-3"
+  ],
+  "capabilities": [
+    "Asset scope and system boundary; deployment architecture review",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized asset records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "vendor-risk",
+    "data-governance"
+  ],
+  "downstream": [
+    "data-governance",
+    "resilience",
+    "identity-authorization",
+    "cloud-change"
+  ]
+}

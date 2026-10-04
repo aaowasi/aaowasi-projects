@@ -1,0 +1,36 @@
+{
+  "project_id": "D13",
+  "name": "Data classification & retention",
+  "purpose": "Support a documented data classification & retention decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "GDPR Article 5",
+    "NIST MP, PT"
+  ],
+  "capabilities": [
+    "Data owner, classification and deletion review",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized processing records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "security-boundary",
+    "policy-governance"
+  ],
+  "downstream": [
+    "privacy-lifecycle",
+    "ai-governance",
+    "security-boundary"
+  ]
+}

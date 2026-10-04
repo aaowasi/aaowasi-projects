@@ -1,0 +1,36 @@
+{
+  "project_id": "D27",
+  "name": "Logging, evidence integrity & provenance",
+  "purpose": "Support a documented logging, evidence integrity & provenance decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST AU",
+    "SOC 2 CC7"
+  ],
+  "capabilities": [
+    "Source timestamps and evidence validation",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized test records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "cloud-change",
+    "identity-authorization"
+  ],
+  "downstream": [
+    "internal-audit",
+    "audit-readiness",
+    "continuous-assurance"
+  ]
+}

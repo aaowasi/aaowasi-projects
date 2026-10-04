@@ -1,0 +1,33 @@
+{
+  "project_id": "D12",
+  "name": "Processors & cross-border transfers",
+  "purpose": "Support a documented processors & cross-border transfers decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "GDPR Articles 28, 30, 44\u201349"
+  ],
+  "capabilities": [
+    "DPA, subprocessors and transfer mechanism",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized contract records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "vendor-risk",
+    "privacy-lifecycle"
+  ],
+  "downstream": [
+    "governance-program"
+  ]
+}

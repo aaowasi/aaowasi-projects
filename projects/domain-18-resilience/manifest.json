@@ -1,0 +1,34 @@
+{
+  "project_id": "D18",
+  "name": "Continuity, recovery & crisis readiness",
+  "purpose": "Support a documented continuity, recovery & crisis readiness decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST CP",
+    "ISO/IEC 27001 Annex A"
+  ],
+  "capabilities": [
+    "Critical services, recovery objectives and exercise evidence",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized asset records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "security-boundary",
+    "vendor-risk"
+  ],
+  "downstream": [
+    "governance-program"
+  ]
+}

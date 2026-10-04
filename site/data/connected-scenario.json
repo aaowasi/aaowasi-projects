@@ -11,7 +11,8 @@
       "title": "AI supplier approval gate",
       "accountable": "Risk owner",
       "responsible": "Control owner",
-      "rationale": "Hold until retention evidence is reviewed"
+      "rationale": "Hold until retention evidence is reviewed",
+      "domainSlug": "governance-program"
     },
     {
       "owner": "Governance reviewer",
@@ -24,7 +25,8 @@
       "criticality": 4,
       "usesAI": true,
       "reviewOutcome": "Pending",
-      "riskId": "R1"
+      "riskId": "R1",
+      "domainSlug": "vendor-risk"
     },
     {
       "owner": "Governance reviewer",
@@ -42,7 +44,8 @@
       "vendorId": "V1",
       "aiId": "AI1",
       "decisionId": "D1",
-      "treatment": "Reduce"
+      "treatment": "Reduce",
+      "domainSlug": "executive-risk"
     },
     {
       "owner": "Governance reviewer",
@@ -53,7 +56,8 @@
       "id": "O1",
       "title": "Review supplier processing terms",
       "framework": "Organizational requirement",
-      "requirement": "Confirm approved retention and processing scope"
+      "requirement": "Confirm approved retention and processing scope",
+      "domainSlug": "regulatory-obligations"
     },
     {
       "owner": "Governance reviewer",
@@ -65,7 +69,8 @@
       "title": "Supplier contract evidence review",
       "obligationId": "O1",
       "riskId": "R1",
-      "effectiveness": "Untested"
+      "effectiveness": "Untested",
+      "domainSlug": "control-management"
     },
     {
       "owner": "Governance reviewer",
@@ -77,7 +82,8 @@
       "title": "Review retention evidence",
       "controlId": "C1",
       "result": "Not tested",
-      "reviewer": "Privacy reviewer"
+      "reviewer": "Privacy reviewer",
+      "domainSlug": "audit-readiness"
     },
     {
       "owner": "Governance reviewer",
@@ -91,7 +97,8 @@
       "riskId": "R1",
       "severity": "High",
       "openedDate": "2026-10-03",
-      "correctiveAction": "Request dated retention terms and review against processing purpose"
+      "correctiveAction": "Request dated retention terms and review against processing purpose",
+      "domainSlug": "continuous-assurance"
     },
     {
       "owner": "Governance reviewer",
@@ -104,7 +111,8 @@
       "criticality": 4,
       "vendorId": "V1",
       "riskId": "R1",
-      "patchStatus": "Unknown"
+      "patchStatus": "Unknown",
+      "domainSlug": "resilience"
     },
     {
       "owner": "Governance reviewer",
@@ -117,7 +125,8 @@
       "version": "1.0",
       "approver": "Risk owner",
       "attested": 8,
-      "requiredAttestations": 10
+      "requiredAttestations": 10,
+      "domainSlug": "policy-governance"
     },
     {
       "owner": "Governance reviewer",
@@ -132,7 +141,8 @@
       "slaTarget": 5,
       "slaActual": 8,
       "direction": "At most",
-      "unit": "working days"
+      "unit": "working days",
+      "domainSlug": "customer-assurance"
     },
     {
       "owner": "Governance reviewer",
@@ -148,7 +158,8 @@
       "testedCount": 2,
       "plannedHours": 8,
       "actualHours": 4,
-      "selectionMethod": "Risk-based sample"
+      "selectionMethod": "Risk-based sample",
+      "domainSlug": "internal-audit"
     },
     {
       "owner": "Governance reviewer",
@@ -164,7 +175,8 @@
       "threshold": 5,
       "direction": "At most",
       "unit": "working days",
-      "measuredDate": "2026-10-03"
+      "measuredDate": "2026-10-03",
+      "domainSlug": "governance-program"
     },
     {
       "owner": "Governance reviewer",
@@ -180,7 +192,8 @@
       "lawfulBasis": "Pending legal review",
       "dataCategories": "Support messages",
       "retentionDays": 30,
-      "transferMechanism": "Pending review"
+      "transferMechanism": "Pending review",
+      "domainSlug": "privacy-lifecycle"
     },
     {
       "owner": "Governance reviewer",
@@ -194,7 +207,8 @@
       "objective": "Close evidence gap",
       "budgetUSD": 1000,
       "spentUSD": 200,
-      "progressPercent": 20
+      "progressPercent": 20,
+      "domainSlug": "governance-program"
     },
     {
       "owner": "Governance reviewer",
@@ -207,7 +221,8 @@
       "dimension": "Evidence completeness",
       "currentLevel": 2,
       "targetLevel": 4,
-      "rationale": "Missing retention evidence and review completion"
+      "rationale": "Missing retention evidence and review completion",
+      "domainSlug": "governance-program"
     },
     {
       "owner": "Governance reviewer",
@@ -224,7 +239,8 @@
       "classification": "Unassessed",
       "evaluationTotal": 10,
       "evaluationFailed": 2,
-      "releaseDecision": "Hold"
+      "releaseDecision": "Hold",
+      "domainSlug": "ai-governance"
     }
   ],
   "updatedAt": "2026-10-03T00:00:00Z"

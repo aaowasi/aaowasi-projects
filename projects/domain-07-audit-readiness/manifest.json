@@ -1,0 +1,36 @@
+{
+  "project_id": "D07",
+  "name": "External audit & certification readiness",
+  "purpose": "Support a documented external audit & certification readiness decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "SOC 2 TSC",
+    "ISO/IEC 27001 clauses 9\u201310"
+  ],
+  "capabilities": [
+    "Reviewed tests and dated evidence",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized test records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "internal-audit",
+    "evidence-integrity",
+    "control-management"
+  ],
+  "downstream": [
+    "customer-assurance",
+    "ongoing-authorization"
+  ]
+}

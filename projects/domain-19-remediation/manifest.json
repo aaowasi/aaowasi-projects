@@ -1,0 +1,34 @@
+{
+  "project_id": "D19",
+  "name": "Incident governance & reporting",
+  "purpose": "Support a documented incident governance & reporting decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST IR",
+    "GDPR Articles 33\u201334"
+  ],
+  "capabilities": [
+    "Incident owner, escalation and corrective action",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized issue records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "threat-supply-chain",
+    "continuous-assurance"
+  ],
+  "downstream": [
+    "governance-program"
+  ]
+}

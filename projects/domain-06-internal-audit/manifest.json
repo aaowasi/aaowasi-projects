@@ -1,0 +1,35 @@
+{
+  "project_id": "D06",
+  "name": "Internal audit & independence",
+  "purpose": "Support a documented internal audit & independence decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "ISO/IEC 27001 clause 9",
+    "NIST CA"
+  ],
+  "capabilities": [
+    "Plan, finding and corrective action",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized audit records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "control-management",
+    "evidence-integrity"
+  ],
+  "downstream": [
+    "audit-readiness",
+    "financial-conduct"
+  ]
+}

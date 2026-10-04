@@ -1,0 +1,34 @@
+{
+  "project_id": "D21",
+  "name": "Financial, fraud & ethical conduct risk",
+  "purpose": "Support a documented financial, fraud & ethical conduct risk decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST PM, RA",
+    "organization-specific legal obligations"
+  ],
+  "capabilities": [
+    "Exposure and risk decisions; specialist assessment required",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized risk records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "governance-program",
+    "internal-audit"
+  ],
+  "downstream": [
+    "governance-program"
+  ]
+}

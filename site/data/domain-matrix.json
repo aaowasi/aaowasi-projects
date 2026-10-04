@@ -5,7 +5,26 @@
     "framework": "ISO/IEC 27001 clauses 4\u20136; NIST PM",
     "workflow": "/work/governance-program/",
     "output": "Named owners, decisions and review dates",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D01",
+    "slug": "governance-program",
+    "entity": "decision",
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "processor-governance",
+      "ai-transparency",
+      "shadow-ai",
+      "resilience",
+      "remediation",
+      "financial-conduct"
+    ],
+    "downstream": [
+      "executive-risk",
+      "policy-governance",
+      "ai-governance",
+      "financial-conduct"
+    ]
   },
   {
     "group": "enterprise",
@@ -13,7 +32,18 @@
     "framework": "NIST RA; ISO/IEC 27001 clause 6",
     "workflow": "/work/executive-risk/",
     "output": "Likelihood, impact, treatment and acceptance",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D02",
+    "slug": "executive-risk",
+    "entity": "risk",
+    "upstream": [
+      "governance-program",
+      "sector-assurance"
+    ],
+    "downstream": [
+      "governance-program",
+      "control-management"
+    ]
   },
   {
     "group": "enterprise",
@@ -21,7 +51,22 @@
     "framework": "GDPR; EU AI Act; NIST PL",
     "workflow": "/work/regulatory-obligations/",
     "output": "Jurisdiction, applicable requirement and effective date",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D03",
+    "slug": "regulatory-obligations",
+    "entity": "obligation",
+    "upstream": [
+      "sector-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program",
+      "policy-governance",
+      "control-management",
+      "privacy-lifecycle",
+      "ai-transparency",
+      "sector-assurance"
+    ]
   },
   {
     "group": "enterprise",
@@ -29,7 +74,20 @@
     "framework": "ISO/IEC 27001 clause 7; NIST PL",
     "workflow": "/work/policy-governance/",
     "output": "Version, ownership and attestation",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D04",
+    "slug": "policy-governance",
+    "entity": "policy",
+    "upstream": [
+      "governance-program",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "control-management",
+      "data-governance",
+      "shadow-ai",
+      "workforce-security"
+    ]
   },
   {
     "group": "enterprise",
@@ -37,7 +95,19 @@
     "framework": "NIST SP 800-53; ISO/IEC 27001 Annex A; SOC 2 TSC",
     "workflow": "/work/control-management/",
     "output": "Requirement \u2192 control \u2192 owner",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D05",
+    "slug": "control-management",
+    "entity": "control",
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "policy-governance"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness"
+    ]
   },
   {
     "group": "enterprise",
@@ -45,7 +115,18 @@
     "framework": "ISO/IEC 27001 clause 9; NIST CA",
     "workflow": "/work/internal-audit/",
     "output": "Plan, finding and corrective action",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D06",
+    "slug": "internal-audit",
+    "entity": "audit",
+    "upstream": [
+      "control-management",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "audit-readiness",
+      "financial-conduct"
+    ]
   },
   {
     "group": "enterprise",
@@ -53,7 +134,19 @@
     "framework": "SOC 2 TSC; ISO/IEC 27001 clauses 9\u201310",
     "workflow": "/work/audit-readiness/",
     "output": "Reviewed tests and dated evidence",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D07",
+    "slug": "audit-readiness",
+    "entity": "test",
+    "upstream": [
+      "internal-audit",
+      "evidence-integrity",
+      "control-management"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "ongoing-authorization"
+    ]
   },
   {
     "group": "enterprise",
@@ -61,7 +154,18 @@
     "framework": "NIST CA-7; SOC 2 CC4",
     "workflow": "/work/continuous-assurance/",
     "output": "Evidence expiry, failed tests and treatment",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D08",
+    "slug": "continuous-assurance",
+    "entity": "issue",
+    "upstream": [
+      "ongoing-authorization",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "remediation",
+      "ongoing-authorization"
+    ]
   },
   {
     "group": "enterprise",
@@ -69,7 +173,22 @@
     "framework": "NIST SR; ISO/IEC 27001 Annex A",
     "workflow": "/work/vendor-risk/",
     "output": "Tier, dependencies and exit conditions",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D09",
+    "slug": "vendor-risk",
+    "entity": "vendor",
+    "upstream": [
+      "customer-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "processor-governance",
+      "ai-governance",
+      "resilience",
+      "security-boundary",
+      "threat-supply-chain"
+    ]
   },
   {
     "group": "enterprise",
@@ -77,7 +196,18 @@
     "framework": "SOC 2 CC9; NIST SR",
     "workflow": "/work/customer-assurance/",
     "output": "Requirements and evidence-backed answers",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D10",
+    "slug": "customer-assurance",
+    "entity": "contract",
+    "upstream": [
+      "vendor-risk",
+      "audit-readiness"
+    ],
+    "downstream": [
+      "vendor-risk",
+      "sector-assurance"
+    ]
   },
   {
     "group": "enterprise",
@@ -85,7 +215,19 @@
     "framework": "GDPR Articles 5, 12\u201322, 25, 35",
     "workflow": "/work/privacy-lifecycle/",
     "output": "Purpose, retention and impact review",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D11",
+    "slug": "privacy-lifecycle",
+    "entity": "processing",
+    "upstream": [
+      "data-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "regulatory-obligations",
+      "vendor-risk",
+      "processor-governance"
+    ]
   },
   {
     "group": "enterprise",
@@ -93,15 +235,37 @@
     "framework": "GDPR Articles 28, 30, 44\u201349",
     "workflow": "/work/processor-governance/",
     "output": "DPA, subprocessors and transfer mechanism",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D12",
+    "slug": "processor-governance",
+    "entity": "contract",
+    "upstream": [
+      "vendor-risk",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
     "domain": "Data classification & retention",
     "framework": "GDPR Article 5; NIST MP, PT",
-    "workflow": "/work/privacy-lifecycle/",
+    "workflow": "/work/data-governance/",
     "output": "Data owner, classification and deletion review",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D13",
+    "slug": "data-governance",
+    "entity": "processing",
+    "upstream": [
+      "security-boundary",
+      "policy-governance"
+    ],
+    "downstream": [
+      "privacy-lifecycle",
+      "ai-governance",
+      "security-boundary"
+    ]
   },
   {
     "group": "enterprise",
@@ -109,15 +273,38 @@
     "framework": "NIST AI RMF; ISO/IEC 42001",
     "workflow": "/work/ai-governance/",
     "output": "Inventory, evaluation and deployment decision",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D14",
+    "slug": "ai-governance",
+    "entity": "ai",
+    "upstream": [
+      "vendor-risk",
+      "data-governance",
+      "governance-program"
+    ],
+    "downstream": [
+      "ai-safety",
+      "ai-transparency",
+      "agent-authorization"
+    ]
   },
   {
     "group": "enterprise",
     "domain": "AI fairness, safety & oversight",
     "framework": "NIST AI RMF MEASURE/MANAGE; ISO/IEC 42001",
-    "workflow": "/work/ai-governance/",
+    "workflow": "/work/ai-safety/",
     "output": "Evaluation findings and human review gates",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D15",
+    "slug": "ai-safety",
+    "entity": "ai",
+    "upstream": [
+      "ai-governance",
+      "threat-supply-chain"
+    ],
+    "downstream": [
+      "ongoing-authorization"
+    ]
   },
   {
     "group": "enterprise",
@@ -125,7 +312,17 @@
     "framework": "EU AI Act Article 50",
     "workflow": "/work/ai-transparency/",
     "output": "Disclosure decision and evidence",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D16",
+    "slug": "ai-transparency",
+    "entity": "ai",
+    "upstream": [
+      "ai-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
@@ -133,7 +330,17 @@
     "framework": "NIST AI RMF; ISO/IEC 27001 Annex A",
     "workflow": "/work/shadow-ai/",
     "output": "Use-case intake and egress review",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D17",
+    "slug": "shadow-ai",
+    "entity": "ai",
+    "upstream": [
+      "policy-governance",
+      "agent-authorization"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
@@ -141,7 +348,17 @@
     "framework": "NIST CP; ISO/IEC 27001 Annex A",
     "workflow": "/work/resilience/",
     "output": "Critical services, recovery objectives and exercise evidence",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D18",
+    "slug": "resilience",
+    "entity": "asset",
+    "upstream": [
+      "security-boundary",
+      "vendor-risk"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
@@ -149,86 +366,208 @@
     "framework": "NIST IR; GDPR Articles 33\u201334",
     "workflow": "/work/remediation/",
     "output": "Incident owner, escalation and corrective action",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D19",
+    "slug": "remediation",
+    "entity": "issue",
+    "upstream": [
+      "threat-supply-chain",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
     "domain": "Workforce, physical & organizational security",
     "framework": "NIST AT, PS, PE; ISO/IEC 27001 Annex A",
-    "workflow": "/work/governance-program/",
+    "workflow": "/work/workforce-security/",
     "output": "Control and review records; specialist assessment required",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D20",
+    "slug": "workforce-security",
+    "entity": "policy",
+    "upstream": [
+      "policy-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "identity-authorization"
+    ]
   },
   {
     "group": "enterprise",
     "domain": "Financial, fraud & ethical conduct risk",
     "framework": "NIST PM, RA; organization-specific legal obligations",
-    "workflow": "/work/executive-risk/",
+    "workflow": "/work/financial-conduct/",
     "output": "Exposure and risk decisions; specialist assessment required",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D21",
+    "slug": "financial-conduct",
+    "entity": "risk",
+    "upstream": [
+      "governance-program",
+      "internal-audit"
+    ],
+    "downstream": [
+      "governance-program"
+    ]
   },
   {
     "group": "enterprise",
     "domain": "Sector, market & contractual obligations",
     "framework": "Applicable sector rules; FedRAMP Rev5 when in scope",
-    "workflow": "/work/regulatory-obligations/",
+    "workflow": "/work/sector-assurance/",
     "output": "Applicability review; sector-specific controls require scoping",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D22",
+    "slug": "sector-assurance",
+    "entity": "obligation",
+    "upstream": [
+      "regulatory-obligations",
+      "customer-assurance"
+    ],
+    "downstream": [
+      "executive-risk",
+      "regulatory-obligations"
+    ]
   },
   {
     "group": "technical",
     "domain": "Security scope & authorization boundary",
     "framework": "NIST RMF; NIST PL-2, CA-3",
-    "workflow": "/work/cyber-controls/",
+    "workflow": "/work/security-boundary/",
     "output": "Asset scope and system boundary; deployment architecture review",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D23",
+    "slug": "security-boundary",
+    "entity": "asset",
+    "upstream": [
+      "vendor-risk",
+      "data-governance"
+    ],
+    "downstream": [
+      "data-governance",
+      "resilience",
+      "identity-authorization",
+      "cloud-change"
+    ]
   },
   {
     "group": "technical",
     "domain": "Identity, least privilege & segregation",
     "framework": "NIST AC, IA; SOC 2 CC6",
-    "workflow": "/work/cyber-controls/",
+    "workflow": "/work/identity-authorization/",
     "output": "IAM evidence and authorization policy source",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D24",
+    "slug": "identity-authorization",
+    "entity": "control",
+    "upstream": [
+      "security-boundary",
+      "workforce-security"
+    ],
+    "downstream": [
+      "workforce-security",
+      "cloud-change",
+      "evidence-integrity",
+      "agent-authorization"
+    ]
   },
   {
     "group": "technical",
     "domain": "Cloud configuration & change",
     "framework": "NIST CM; SOC 2 CC8",
-    "workflow": "/work/cyber-controls/",
+    "workflow": "/work/cloud-change/",
     "output": "Configuration events and control decisions",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D25",
+    "slug": "cloud-change",
+    "entity": "asset",
+    "upstream": [
+      "security-boundary",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "threat-supply-chain",
+      "evidence-integrity"
+    ]
   },
   {
     "group": "technical",
     "domain": "Threat, vulnerability & supply-chain assurance",
     "framework": "NIST RA-5, SI-2, SR",
-    "workflow": "/work/cyber-controls/",
+    "workflow": "/work/threat-supply-chain/",
     "output": "Alert normalization and remediation priorities",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D26",
+    "slug": "threat-supply-chain",
+    "entity": "asset",
+    "upstream": [
+      "vendor-risk",
+      "cloud-change"
+    ],
+    "downstream": [
+      "ai-safety",
+      "remediation"
+    ]
   },
   {
     "group": "technical",
     "domain": "Logging, evidence integrity & provenance",
     "framework": "NIST AU; SOC 2 CC7",
-    "workflow": "/work/continuous-assurance/",
+    "workflow": "/work/evidence-integrity/",
     "output": "Source timestamps and evidence validation",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D27",
+    "slug": "evidence-integrity",
+    "entity": "test",
+    "upstream": [
+      "cloud-change",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness",
+      "continuous-assurance"
+    ]
   },
   {
     "group": "technical",
     "domain": "Agent, tool & data authorization",
     "framework": "NIST AC; NIST AI RMF",
-    "workflow": "/work/ai-governance/",
+    "workflow": "/work/agent-authorization/",
     "output": "Agent/tool authorization policies and human escalation",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D28",
+    "slug": "agent-authorization",
+    "entity": "decision",
+    "upstream": [
+      "ai-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "shadow-ai"
+    ]
   },
   {
     "group": "technical",
     "domain": "Assessment, authorization & ongoing monitoring",
     "framework": "NIST CA-2, CA-6, CA-7; FedRAMP Rev5",
-    "workflow": "/work/audit-readiness/",
+    "workflow": "/work/ongoing-authorization/",
     "output": "Review packages; authorization remains with designated authority",
-    "status": "Inspectable workflow; client-specific mapping required"
+    "status": "Inspectable workflow; client-specific mapping required",
+    "id": "D29",
+    "slug": "ongoing-authorization",
+    "entity": "decision",
+    "upstream": [
+      "audit-readiness",
+      "ai-safety",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "continuous-assurance"
+    ]
   }
 ]

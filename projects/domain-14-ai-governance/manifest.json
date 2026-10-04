@@ -1,0 +1,37 @@
+{
+  "project_id": "D14",
+  "name": "AI inventory & lifecycle authorization",
+  "purpose": "Support a documented ai inventory & lifecycle authorization decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST AI RMF",
+    "ISO/IEC 42001"
+  ],
+  "capabilities": [
+    "Inventory, evaluation and deployment decision",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized ai records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "vendor-risk",
+    "data-governance",
+    "governance-program"
+  ],
+  "downstream": [
+    "ai-safety",
+    "ai-transparency",
+    "agent-authorization"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "project_id": "D29",
+  "name": "Assessment, authorization & ongoing monitoring",
+  "purpose": "Support a documented assessment, authorization & ongoing monitoring decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST CA-2, CA-6, CA-7",
+    "FedRAMP Rev5"
+  ],
+  "capabilities": [
+    "Review packages; authorization remains with designated authority",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized decision records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "audit-readiness",
+    "ai-safety",
+    "continuous-assurance"
+  ],
+  "downstream": [
+    "continuous-assurance"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "project_id": "D28",
+  "name": "Agent, tool & data authorization",
+  "purpose": "Support a documented agent, tool & data authorization decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "NIST AC",
+    "NIST AI RMF"
+  ],
+  "capabilities": [
+    "Agent/tool authorization policies and human escalation",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized decision records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "ai-governance",
+    "identity-authorization"
+  ],
+  "downstream": [
+    "shadow-ai"
+  ]
+}

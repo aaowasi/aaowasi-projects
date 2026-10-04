@@ -1,879 +1,1449 @@
 [
   {
-    "id": "P02",
-    "slug": "ai-governance",
-    "title": "AI governance",
-    "type": "Connected governance workflow",
-    "domain": "AI governance",
-    "summary": "Connect AI inventories, NIST AI RMF and Generative AI Profile mapping, evaluation evidence, human review gates and post-deployment drift/change review to release decisions.",
-    "outcome": "Govern AI use cases from discovery and classification through evaluation, deployment authorization, monitoring, and retirement.",
-    "featured": true,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "NIST-AI-RMF-1.0",
-      "NIST-AI-600-1",
-      "ISO-42001-2023",
-      "EU-AI-ACT",
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "AI inventory",
-      "Use-case and impact classification",
-      "Model and supplier provenance",
-      "Human oversight records",
-      "TEVV evidence",
-      "MCP tool authorization",
-      "Post-deployment monitoring & change/drift review"
-    ],
-    "outputs": [
-      "ai-system-card.json",
-      "risk-impact-assessment.json",
-      "deployment-decision.json",
-      "monitoring-plan.json"
-    ],
-    "guardrails": [
-      "AI may assist drafting but cannot approve its own deployment",
-      "Legal classification remains reviewable",
-      "Material model changes require reassessment"
-    ],
-    "sourcePath": "projects/02-ai-governance/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=ai-governance",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/02-ai-governance",
-    "featuredOrder": 0,
-    "tier": 1,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-governance/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P05",
-    "slug": "executive-risk",
-    "title": "Executive risk",
-    "type": "Connected governance workflow",
-    "domain": "Technology risk",
-    "summary": "Trace executive priorities through likelihood, impact, source flags and accountable treatment decisions.",
-    "outcome": "Convert traceable assurance signals into appetite breaches, KRI trends, treatment decisions, and board-ready accountability.",
-    "featured": true,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "COSO-ERM",
-      "NIST-CSF-2.0",
-      "ISO-27001-2022",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Risk aggregation",
-      "Appetite and tolerance tests",
-      "KRI trend and velocity",
-      "Scenario analysis",
-      "Decision and acceptance log",
-      "Drill-down to evidence"
-    ],
-    "outputs": [
-      "board-risk-pack.json",
-      "kri-series.json",
-      "appetite-breaches.json",
-      "decision-log.json"
-    ],
-    "guardrails": [
-      "No fake precision in risk scoring",
-      "Every metric links to a source and definition",
-      "Board decisions remain human-owned"
-    ],
-    "sourcePath": "projects/05-executive-risk/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=executive-risk",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/05-executive-risk",
-    "tier": 1,
-    "featuredOrder": 1,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/executive-risk/",
-    "relatedProjects": [
-      "kri-reporting",
-      "resilience",
-      "governance-program"
-    ]
-  },
-  {
-    "id": "P06",
-    "slug": "ai-transparency",
-    "title": "AI transparency",
-    "type": "Connected governance workflow",
-    "domain": "AI governance",
-    "summary": "Review EU AI Act Article 50 disclosure, synthetic-content marking and oversight evidence against explicit technical readiness gates and manual legal review.",
-    "outcome": "Operate product gates for AI-interaction disclosures, synthetic-output marking, deepfake disclosure, exceptions, and evidence retention.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "EU-AI-ACT",
-      "NIST-AI-RMF-1.0",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Applicability decision tree",
-      "Disclosure UI test",
-      "Machine-readable marking test",
-      "Detector interoperability test",
-      "Exception record",
-      "Release gate"
-    ],
-    "outputs": [
-      "article50-decision.json",
-      "transparency-test-results.json",
-      "release-gate.json",
-      "exception-review.json"
-    ],
-    "guardrails": [
-      "Applicability and exceptions require legal review",
-      "Technical marking must be tested, not asserted",
-      "Accessibility is part of disclosure effectiveness"
-    ],
-    "sourcePath": "projects/06-eu-ai-transparency/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=ai-transparency",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/06-eu-ai-transparency",
-    "tier": 1,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/ai-transparency/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P07",
-    "slug": "shadow-ai",
-    "title": "Shadow AI governance",
-    "type": "Connected governance workflow",
-    "domain": "AI governance",
-    "summary": "Triage AI destinations using approval and data-classification metadata with transparent policy candidates.",
-    "outcome": "Discover AI usage, classify destinations and prompt data, enforce egress policy, and manage justified exceptions.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "ISO-27001-2022",
-      "ISO-42001-2023",
-      "NIST-AI-RMF-1.0",
-      "GDPR"
-    ],
-    "capabilities": [
-      "AI destination discovery",
-      "Approved-tool registry",
-      "Prompt data classification",
-      "Allow-block-review decision",
-      "MCP audit correlation",
-      "Privacy-preserving event storage"
-    ],
-    "outputs": [
-      "ai-destination-inventory.json",
-      "egress-decisions.json",
-      "exception-queue.json",
-      "trend-series.json"
-    ],
-    "guardrails": [
-      "Do not retain raw prompts by default",
-      "Use data minimization and access controls",
-      "Employee monitoring requires privacy and labor-law review"
-    ],
-    "sourcePath": "projects/07-shadow-ai-dlp/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=shadow-ai",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/07-shadow-ai-dlp",
-    "tier": 1,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/shadow-ai/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P03",
-    "slug": "vendor-risk",
-    "title": "Third-party risk",
-    "type": "Connected governance workflow",
-    "domain": "Third-party risk",
-    "summary": "Vet SaaS, LLM and external AI vendors: connect intake, data-use and training/retention terms, subprocessors, upstream dependencies and assurance evidence to documented risk decisions.",
-    "outcome": "Select proportionate vendor due diligence from service, data, access, AI, location, criticality, and dependency context.",
-    "featured": true,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "ISO-27001-2022",
-      "SOC2",
-      "GDPR",
-      "DORA",
-      "NIS2",
-      "NIST-AI-RMF-1.0"
-    ],
-    "capabilities": [
-      "Inherent-risk tiering",
-      "Adaptive evidence request",
-      "Fourth-party concentration",
-      "AI supplier due diligence",
-      "Residual-risk decision",
-      "Continuous change monitoring"
-    ],
-    "outputs": [
-      "vendor-scope.json",
-      "evidence-request.json",
-      "risk-decision.json",
-      "monitoring-obligations.json"
-    ],
-    "guardrails": [
-      "No approval based only on an LLM summary",
-      "Evidence confidence must be explicit",
-      "Critical decisions require named human approval"
-    ],
-    "sourcePath": "projects/03-tprm-ai-subprocessors/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=vendor-risk",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/03-tprm-ai-subprocessors",
-    "featuredOrder": 2,
-    "tier": 2,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/vendor-risk/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P09",
-    "slug": "processor-governance",
-    "title": "Processor governance",
-    "type": "Connected governance workflow",
-    "domain": "Privacy",
-    "summary": "Surface processor DPA and transfer-review gaps alongside dependency records and human rationale.",
-    "outcome": "Model controller, processor, subprocessor, processing, transfer, obligation, evidence, and change events as a reviewable relationship graph.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "GDPR",
-      "ISO-27001-2022",
-      "DORA"
-    ],
-    "capabilities": [
-      "Role and processing graph",
-      "DPA clause evidence map",
-      "Subprocessor authorization workflow",
-      "Transfer-mechanism record",
-      "Change notice timer",
-      "Flow-down gap detection"
-    ],
-    "outputs": [
-      "processor-obligation-graph.json",
-      "dpa-gap-review.json",
-      "subprocessor-change-queue.json",
-      "transfer-register.json"
-    ],
-    "guardrails": [
-      "Contract interpretation remains legal review",
-      "Do not expose confidential agreements publicly",
-      "Record evidence and reviewer rationale for every conclusion"
-    ],
-    "sourcePath": "projects/09-dpa-subprocessor/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=processor-governance",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/09-dpa-subprocessor",
-    "tier": 2,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/processor-governance/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P04",
-    "slug": "audit-readiness",
-    "title": "Audit readiness",
-    "type": "Connected governance workflow",
-    "domain": "Assurance",
-    "summary": "Separate evidence availability, expiry and recorded control-test outcomes in one reviewable register.",
-    "outcome": "Execute repeatable test procedures and preserve observations, hashes, results, exceptions, and POA&M records in machine-readable form.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "SOC2",
-      "ISO-27001-2022",
-      "NIST-CSF-2.0",
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Control crosswalk",
-      "Test procedure registry",
-      "Collector binding",
-      "Design and operating effectiveness states",
-      "OSCAL assessment results",
-      "POA&M generation"
-    ],
-    "outputs": [
-      "assessment-plan.json",
-      "assessment-results.json",
-      "poam.json",
-      "evidence-manifest.json"
-    ],
-    "guardrails": [
-      "Automation does not replace the independent auditor",
-      "Failures and collection errors are distinct",
-      "Evidence custody and timestamps must be preserved"
-    ],
-    "sourcePath": "projects/04-audit-readiness/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=audit-readiness",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/04-audit-readiness",
-    "featuredOrder": 99,
-    "tier": 3,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/audit-readiness/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P10",
-    "slug": "continuous-assurance",
-    "title": "Continuous assurance",
-    "type": "Connected governance workflow",
-    "domain": "Assurance",
-    "summary": "Track control drift, evidence exceptions, expiry and retest ownership across the connected governance workspace.",
-    "outcome": "Orchestrate collectors, evidence normalization, policy decisions, drift, finding lifecycle, SLA, retest, and immutable snapshots across the other nine modules.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "NIST-CSF-2.0",
-      "SOC2",
-      "ISO-27001-2022",
-      "ISO-42001-2023",
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Scheduled collectors",
-      "Six-state decisions",
-      "Drift detection",
-      "Finding deduplication",
-      "Risk enrichment",
-      "Owner and SLA routing",
-      "Evidence-backed retest",
-      "Release snapshot"
-    ],
-    "outputs": [
-      "control-status.json",
-      "findings.json",
-      "remediation-sla.json",
-      "assessment-results.json",
-      "release-manifest.json"
-    ],
-    "guardrails": [
-      "ERROR is never treated as FAIL or PASS",
-      "Evidence is hashed before release",
-      "Public telemetry is sanitized",
-      "Automatic code rewriting is prohibited in production"
-    ],
-    "sourcePath": "projects/10-ccm-remediation/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=continuous-assurance",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/10-ccm-remediation",
-    "tier": 3,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/continuous-assurance/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P01",
-    "slug": "customer-assurance",
-    "title": "Customer assurance",
-    "type": "Connected governance workflow",
-    "domain": "Assurance",
-    "summary": "Connect customer claims to control IDs, dated evidence and named reviewers before drafting an assurance response.",
-    "outcome": "Turn customer claims into a traceable claim-control-evidence graph with freshness and exception states.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "SOC2",
-      "ISO-27001-2022",
-      "GDPR",
-      "ISO-42001-2023"
-    ],
-    "capabilities": [
-      "Context-aware assurance scope",
-      "Claim-to-control graph",
-      "Evidence freshness",
-      "Approved exception workflow",
-      "Evidence-backed response export"
-    ],
-    "outputs": [
-      "assurance-packet.json",
-      "trust-status.json",
-      "claim-evidence-graph.json",
-      "evidence-expiry-queue.json"
-    ],
-    "guardrails": [
-      "Never claim certification or an audit opinion",
-      "Redact confidential evidence from public outputs",
-      "Route contractual interpretation to MANUAL_REVIEW"
-    ],
-    "sourcePath": "projects/01-trust-assurance/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=customer-assurance",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/01-trust-assurance",
-    "tier": 3,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/customer-assurance/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P08",
-    "slug": "questionnaires",
-    "title": "Security questionnaires",
-    "type": "Connected governance workflow",
-    "domain": "Assurance",
-    "summary": "Pair editable procurement questions with bounded control-status drafts and evidence provenance.",
-    "outcome": "Normalize customer questions, retrieve current evidence, draft bounded answers, and route unsupported claims for approval.",
-    "featured": false,
-    "evidenceBasis": "Method, source records & decision outputs",
-    "frameworks": [
-      "SOC2",
-      "ISO-27001-2022",
-      "NIST-CSF-2.0",
-      "GDPR",
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Question intent normalization",
-      "Claim-control retrieval",
-      "Evidence freshness test",
-      "Confidence state",
-      "Human approval",
-      "Answer provenance"
-    ],
-    "outputs": [
-      "normalized-questions.json",
-      "draft-responses.json",
-      "unsupported-claims.json",
-      "approval-record.json"
-    ],
-    "guardrails": [
-      "Never fabricate a control or certification",
-      "NO_CURRENT_EVIDENCE is an acceptable result",
-      "Legal and contractual claims require approval"
-    ],
-    "sourcePath": "projects/08-questionnaire-procurement/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?module=questionnaires",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/08-questionnaire-procurement",
-    "tier": 3,
-    "featuredOrder": 99,
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/questionnaires/",
-    "relatedProjects": [
-      "control-management",
-      "regulatory-obligations",
-      "remediation"
-    ]
-  },
-  {
-    "id": "P11",
-    "slug": "regulatory-obligations",
-    "title": "Regulatory obligations & change",
-    "type": "Connected governance workflow",
-    "domain": "Compliance",
-    "summary": "Translate requirements into owned obligations, review dates, linked controls and change decisions.",
-    "outcome": "Translate requirements into owned obligations, review dates, linked controls and change decisions.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared obligation register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/11-regulatory-obligations/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-001",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/11-regulatory-obligations",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/regulatory-obligations/",
-    "relatedProjects": [
-      "audit-readiness",
-      "policy-governance",
-      "executive-risk"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P12",
-    "slug": "policy-governance",
-    "title": "Policy, authority & exceptions",
-    "type": "Connected governance workflow",
-    "domain": "Governance",
-    "summary": "Connect versioned policies, approval responsibilities, attestations and justified exceptions to accountable decisions.",
-    "outcome": "Connect versioned policies, approval responsibilities, attestations and justified exceptions to accountable decisions.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared policy register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/12-policy-governance/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-052",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/12-policy-governance",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/policy-governance/",
-    "relatedProjects": [
-      "regulatory-obligations",
-      "executive-risk",
-      "continuous-assurance"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P13",
-    "slug": "internal-audit",
-    "title": "Internal audit & assurance planning",
-    "type": "Connected governance workflow",
-    "domain": "Internal Audit",
-    "summary": "Plan risk-based audit scopes, document sampling and effort, and route observations to owned corrective actions.",
-    "outcome": "Plan risk-based audit scopes, document sampling and effort, and route observations to owned corrective actions.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared audit register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/13-internal-audit/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-064",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/13-internal-audit",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/internal-audit/",
-    "relatedProjects": [
-      "audit-readiness",
-      "remediation",
-      "executive-risk"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P14",
-    "slug": "remediation",
-    "title": "Issue, incident & remediation oversight",
-    "type": "Connected governance workflow",
-    "domain": "Incident & Issue Management",
-    "summary": "Connect findings to risks and controls, corrective actions, closure evidence and management review.",
-    "outcome": "Connect findings to risks and controls, corrective actions, closure evidence and management review.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared issue register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/14-remediation/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-007",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/14-remediation",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/remediation/",
-    "relatedProjects": [
-      "continuous-assurance",
-      "internal-audit",
-      "executive-risk"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P15",
-    "slug": "cyber-controls",
-    "title": "Cyber control & asset assurance",
-    "type": "Connected governance workflow",
-    "domain": "Cybersecurity GRC",
-    "summary": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews.",
-    "outcome": "Link critical assets, vulnerability and patch metadata to risk treatment and control-assurance reviews.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared asset register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/15-cyber-controls/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-017",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/15-cyber-controls",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/cyber-controls/",
-    "relatedProjects": [
-      "audit-readiness",
-      "vendor-risk",
-      "remediation"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P16",
-    "slug": "resilience",
-    "title": "Operational resilience & dependency risk",
-    "type": "Connected governance workflow",
-    "domain": "Technology risk",
-    "summary": "Review critical-service dependencies, disruption scenarios, appetite thresholds and accountable recovery actions.",
-    "outcome": "Review critical-service dependencies, disruption scenarios, appetite thresholds and accountable recovery actions.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared risk register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/16-resilience/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-020",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/16-resilience",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/resilience/",
-    "relatedProjects": [
-      "vendor-risk",
-      "cyber-controls",
-      "executive-risk"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P17",
-    "slug": "kri-reporting",
-    "title": "KRI, appetite & management reporting",
-    "type": "Connected governance workflow",
-    "domain": "KPI / KRI Management",
-    "summary": "Connect defined indicators, measurement dates and threshold direction to risk owners and escalation decisions.",
-    "outcome": "Connect defined indicators, measurement dates and threshold direction to risk owners and escalation decisions.",
-    "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
-    "frameworks": [
-      "CUSTOM"
-    ],
-    "capabilities": [
-      "Shared metric register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
-    ],
-    "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
-    ],
-    "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
-    ],
-    "sourcePath": "projects/17-kri-reporting/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-050",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/17-kri-reporting",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/kri-reporting/",
-    "relatedProjects": [
-      "executive-risk",
-      "continuous-assurance",
-      "remediation"
-    ],
-    "tier": 3,
-    "featuredOrder": 99
-  },
-  {
-    "id": "P18",
+    "id": "D01",
     "slug": "governance-program",
-    "title": "Governance program & maturity",
+    "title": "Corporate governance & accountability",
     "type": "Connected governance workflow",
-    "domain": "Program Management",
-    "summary": "Track objectives, budget, progress and maturity assessments against prioritized governance risks.",
-    "outcome": "Track objectives, budget, progress and maturity assessments against prioritized governance risks.",
+    "domain": "Corporate governance & accountability",
+    "group": "enterprise",
+    "summary": "Named owners, decisions and review dates. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented corporate governance & accountability decision with explicit evidence, ownership and review criteria.",
     "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "CUSTOM"
+      "ISO/IEC 27001 clauses 4\u20136",
+      "NIST PM"
     ],
     "capabilities": [
-      "Shared initiative register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
+      "Named owners, decisions and review dates",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
     ],
     "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
     ],
     "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
     ],
-    "sourcePath": "projects/18-governance-program/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-081",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/18-governance-program",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/governance-program/",
+    "sourcePath": "projects/domain-01-governance-program/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=governance-program",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-01-governance-program/manifest.json",
+    "relatedProjects": [
+      "regulatory-obligations",
+      "executive-risk",
+      "executive-risk",
+      "policy-governance",
+      "ai-governance",
+      "financial-conduct"
+    ],
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "processor-governance",
+      "ai-transparency",
+      "shadow-ai",
+      "resilience",
+      "remediation",
+      "financial-conduct"
+    ],
+    "downstream": [
+      "executive-risk",
+      "policy-governance",
+      "ai-governance",
+      "financial-conduct"
+    ],
+    "entity": "decision"
+  },
+  {
+    "id": "D02",
+    "slug": "executive-risk",
+    "title": "Enterprise risk & appetite",
+    "type": "Connected governance workflow",
+    "domain": "Enterprise risk & appetite",
+    "group": "enterprise",
+    "summary": "Likelihood, impact, treatment and acceptance. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented enterprise risk & appetite decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST RA",
+      "ISO/IEC 27001 clause 6"
+    ],
+    "capabilities": [
+      "Likelihood, impact, treatment and acceptance",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-02-executive-risk/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=executive-risk",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-02-executive-risk/manifest.json",
+    "relatedProjects": [
+      "governance-program",
+      "sector-assurance",
+      "governance-program",
+      "control-management"
+    ],
+    "upstream": [
+      "governance-program",
+      "sector-assurance"
+    ],
+    "downstream": [
+      "governance-program",
+      "control-management"
+    ],
+    "entity": "risk"
+  },
+  {
+    "id": "D03",
+    "slug": "regulatory-obligations",
+    "title": "Regulatory applicability & change",
+    "type": "Connected governance workflow",
+    "domain": "Regulatory applicability & change",
+    "group": "enterprise",
+    "summary": "Jurisdiction, applicable requirement and effective date. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented regulatory applicability & change decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "GDPR",
+      "EU AI Act",
+      "NIST PL"
+    ],
+    "capabilities": [
+      "Jurisdiction, applicable requirement and effective date",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-03-regulatory-obligations/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=regulatory-obligations",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-03-regulatory-obligations/manifest.json",
+    "relatedProjects": [
+      "sector-assurance",
+      "privacy-lifecycle",
+      "governance-program",
+      "policy-governance",
+      "control-management",
+      "privacy-lifecycle",
+      "ai-transparency",
+      "sector-assurance"
+    ],
+    "upstream": [
+      "sector-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program",
+      "policy-governance",
+      "control-management",
+      "privacy-lifecycle",
+      "ai-transparency",
+      "sector-assurance"
+    ],
+    "entity": "obligation"
+  },
+  {
+    "id": "D04",
+    "slug": "policy-governance",
+    "title": "Policy lifecycle",
+    "type": "Connected governance workflow",
+    "domain": "Policy lifecycle",
+    "group": "enterprise",
+    "summary": "Version, ownership and attestation. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented policy lifecycle decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "ISO/IEC 27001 clause 7",
+      "NIST PL"
+    ],
+    "capabilities": [
+      "Version, ownership and attestation",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-04-policy-governance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=policy-governance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-04-policy-governance/manifest.json",
+    "relatedProjects": [
+      "governance-program",
+      "regulatory-obligations",
+      "control-management",
+      "data-governance",
+      "shadow-ai",
+      "workforce-security"
+    ],
+    "upstream": [
+      "governance-program",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "control-management",
+      "data-governance",
+      "shadow-ai",
+      "workforce-security"
+    ],
+    "entity": "policy"
+  },
+  {
+    "id": "D05",
+    "slug": "control-management",
+    "title": "Control implementation & ownership",
+    "type": "Connected governance workflow",
+    "domain": "Control implementation & ownership",
+    "group": "enterprise",
+    "summary": "Requirement \u2192 control \u2192 owner. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented control implementation & ownership decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST SP 800-53",
+      "ISO/IEC 27001 Annex A",
+      "SOC 2 TSC"
+    ],
+    "capabilities": [
+      "Requirement \u2192 control \u2192 owner",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-05-control-management/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=control-management",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-05-control-management/manifest.json",
+    "relatedProjects": [
+      "regulatory-obligations",
+      "executive-risk",
+      "policy-governance",
+      "internal-audit",
+      "audit-readiness"
+    ],
+    "upstream": [
+      "regulatory-obligations",
+      "executive-risk",
+      "policy-governance"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness"
+    ],
+    "entity": "control"
+  },
+  {
+    "id": "D06",
+    "slug": "internal-audit",
+    "title": "Internal audit & independence",
+    "type": "Connected governance workflow",
+    "domain": "Internal audit & independence",
+    "group": "enterprise",
+    "summary": "Plan, finding and corrective action. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented internal audit & independence decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "ISO/IEC 27001 clause 9",
+      "NIST CA"
+    ],
+    "capabilities": [
+      "Plan, finding and corrective action",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-06-internal-audit/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=internal-audit",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-06-internal-audit/manifest.json",
+    "relatedProjects": [
+      "control-management",
+      "evidence-integrity",
+      "audit-readiness",
+      "financial-conduct"
+    ],
+    "upstream": [
+      "control-management",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "audit-readiness",
+      "financial-conduct"
+    ],
+    "entity": "audit"
+  },
+  {
+    "id": "D07",
+    "slug": "audit-readiness",
+    "title": "External audit & certification readiness",
+    "type": "Connected governance workflow",
+    "domain": "External audit & certification readiness",
+    "group": "enterprise",
+    "summary": "Reviewed tests and dated evidence. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented external audit & certification readiness decision with explicit evidence, ownership and review criteria.",
+    "featured": true,
+    "featuredOrder": 3,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "SOC 2 TSC",
+      "ISO/IEC 27001 clauses 9\u201310"
+    ],
+    "capabilities": [
+      "Reviewed tests and dated evidence",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-07-audit-readiness/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=audit-readiness",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-07-audit-readiness/manifest.json",
+    "relatedProjects": [
+      "internal-audit",
+      "evidence-integrity",
+      "control-management",
+      "customer-assurance",
+      "ongoing-authorization"
+    ],
+    "upstream": [
+      "internal-audit",
+      "evidence-integrity",
+      "control-management"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "ongoing-authorization"
+    ],
+    "entity": "test"
+  },
+  {
+    "id": "D08",
+    "slug": "continuous-assurance",
+    "title": "Continuous assurance & remediation",
+    "type": "Connected governance workflow",
+    "domain": "Continuous assurance & remediation",
+    "group": "enterprise",
+    "summary": "Evidence expiry, failed tests and treatment. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented continuous assurance & remediation decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST CA-7",
+      "SOC 2 CC4"
+    ],
+    "capabilities": [
+      "Evidence expiry, failed tests and treatment",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-08-continuous-assurance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=continuous-assurance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-08-continuous-assurance/manifest.json",
+    "relatedProjects": [
+      "ongoing-authorization",
+      "evidence-integrity",
+      "remediation",
+      "ongoing-authorization"
+    ],
+    "upstream": [
+      "ongoing-authorization",
+      "evidence-integrity"
+    ],
+    "downstream": [
+      "remediation",
+      "ongoing-authorization"
+    ],
+    "entity": "issue"
+  },
+  {
+    "id": "D09",
+    "slug": "vendor-risk",
+    "title": "Supplier lifecycle & concentration",
+    "type": "Connected governance workflow",
+    "domain": "Supplier lifecycle & concentration",
+    "group": "enterprise",
+    "summary": "Tier, dependencies and exit conditions. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented supplier lifecycle & concentration decision with explicit evidence, ownership and review criteria.",
+    "featured": true,
+    "featuredOrder": 2,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST SR",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "capabilities": [
+      "Tier, dependencies and exit conditions",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-09-vendor-risk/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=vendor-risk",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-09-vendor-risk/manifest.json",
+    "relatedProjects": [
+      "customer-assurance",
+      "privacy-lifecycle",
+      "customer-assurance",
+      "processor-governance",
+      "ai-governance",
+      "resilience",
+      "security-boundary",
+      "threat-supply-chain"
+    ],
+    "upstream": [
+      "customer-assurance",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "customer-assurance",
+      "processor-governance",
+      "ai-governance",
+      "resilience",
+      "security-boundary",
+      "threat-supply-chain"
+    ],
+    "entity": "vendor"
+  },
+  {
+    "id": "D10",
+    "slug": "customer-assurance",
+    "title": "Procurement & customer assurance",
+    "type": "Connected governance workflow",
+    "domain": "Procurement & customer assurance",
+    "group": "enterprise",
+    "summary": "Requirements and evidence-backed answers. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented procurement & customer assurance decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "SOC 2 CC9",
+      "NIST SR"
+    ],
+    "capabilities": [
+      "Requirements and evidence-backed answers",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-10-customer-assurance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=customer-assurance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-10-customer-assurance/manifest.json",
+    "relatedProjects": [
+      "vendor-risk",
+      "audit-readiness",
+      "vendor-risk",
+      "sector-assurance"
+    ],
+    "upstream": [
+      "vendor-risk",
+      "audit-readiness"
+    ],
+    "downstream": [
+      "vendor-risk",
+      "sector-assurance"
+    ],
+    "entity": "contract"
+  },
+  {
+    "id": "D11",
+    "slug": "privacy-lifecycle",
+    "title": "Privacy & individual rights",
+    "type": "Connected governance workflow",
+    "domain": "Privacy & individual rights",
+    "group": "enterprise",
+    "summary": "Purpose, retention and impact review. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented privacy & individual rights decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "GDPR Articles 5, 12\u201322, 25, 35"
+    ],
+    "capabilities": [
+      "Purpose, retention and impact review",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-11-privacy-lifecycle/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=privacy-lifecycle",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-11-privacy-lifecycle/manifest.json",
+    "relatedProjects": [
+      "data-governance",
+      "regulatory-obligations",
+      "regulatory-obligations",
+      "vendor-risk",
+      "processor-governance"
+    ],
+    "upstream": [
+      "data-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "regulatory-obligations",
+      "vendor-risk",
+      "processor-governance"
+    ],
+    "entity": "processing"
+  },
+  {
+    "id": "D12",
+    "slug": "processor-governance",
+    "title": "Processors & cross-border transfers",
+    "type": "Connected governance workflow",
+    "domain": "Processors & cross-border transfers",
+    "group": "enterprise",
+    "summary": "DPA, subprocessors and transfer mechanism. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented processors & cross-border transfers decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "GDPR Articles 28, 30, 44\u201349"
+    ],
+    "capabilities": [
+      "DPA, subprocessors and transfer mechanism",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-12-processor-governance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=processor-governance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-12-processor-governance/manifest.json",
+    "relatedProjects": [
+      "vendor-risk",
+      "privacy-lifecycle"
+    ],
+    "upstream": [
+      "vendor-risk",
+      "privacy-lifecycle"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "contract"
+  },
+  {
+    "id": "D13",
+    "slug": "data-governance",
+    "title": "Data classification & retention",
+    "type": "Connected governance workflow",
+    "domain": "Data classification & retention",
+    "group": "enterprise",
+    "summary": "Data owner, classification and deletion review. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented data classification & retention decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "GDPR Article 5",
+      "NIST MP, PT"
+    ],
+    "capabilities": [
+      "Data owner, classification and deletion review",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-13-data-governance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=data-governance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-13-data-governance/manifest.json",
+    "relatedProjects": [
+      "security-boundary",
+      "policy-governance",
+      "privacy-lifecycle",
+      "ai-governance",
+      "security-boundary"
+    ],
+    "upstream": [
+      "security-boundary",
+      "policy-governance"
+    ],
+    "downstream": [
+      "privacy-lifecycle",
+      "ai-governance",
+      "security-boundary"
+    ],
+    "entity": "processing"
+  },
+  {
+    "id": "D14",
+    "slug": "ai-governance",
+    "title": "AI inventory & lifecycle authorization",
+    "type": "Connected governance workflow",
+    "domain": "AI inventory & lifecycle authorization",
+    "group": "enterprise",
+    "summary": "Inventory, evaluation and deployment decision. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented ai inventory & lifecycle authorization decision with explicit evidence, ownership and review criteria.",
+    "featured": true,
+    "featuredOrder": 1,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AI RMF",
+      "ISO/IEC 42001"
+    ],
+    "capabilities": [
+      "Inventory, evaluation and deployment decision",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-14-ai-governance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=ai-governance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-14-ai-governance/manifest.json",
+    "relatedProjects": [
+      "vendor-risk",
+      "data-governance",
+      "governance-program",
+      "ai-safety",
+      "ai-transparency",
+      "agent-authorization"
+    ],
+    "upstream": [
+      "vendor-risk",
+      "data-governance",
+      "governance-program"
+    ],
+    "downstream": [
+      "ai-safety",
+      "ai-transparency",
+      "agent-authorization"
+    ],
+    "entity": "ai"
+  },
+  {
+    "id": "D15",
+    "slug": "ai-safety",
+    "title": "AI fairness, safety & oversight",
+    "type": "Connected governance workflow",
+    "domain": "AI fairness, safety & oversight",
+    "group": "enterprise",
+    "summary": "Evaluation findings and human review gates. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented ai fairness, safety & oversight decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AI RMF MEASURE/MANAGE",
+      "ISO/IEC 42001"
+    ],
+    "capabilities": [
+      "Evaluation findings and human review gates",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-15-ai-safety/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=ai-safety",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-15-ai-safety/manifest.json",
+    "relatedProjects": [
+      "ai-governance",
+      "threat-supply-chain",
+      "ongoing-authorization"
+    ],
+    "upstream": [
+      "ai-governance",
+      "threat-supply-chain"
+    ],
+    "downstream": [
+      "ongoing-authorization"
+    ],
+    "entity": "ai"
+  },
+  {
+    "id": "D16",
+    "slug": "ai-transparency",
+    "title": "AI transparency & content provenance",
+    "type": "Connected governance workflow",
+    "domain": "AI transparency & content provenance",
+    "group": "enterprise",
+    "summary": "Disclosure decision and evidence. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented ai transparency & content provenance decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "EU AI Act Article 50"
+    ],
+    "capabilities": [
+      "Disclosure decision and evidence",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-16-ai-transparency/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=ai-transparency",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-16-ai-transparency/manifest.json",
+    "relatedProjects": [
+      "ai-governance",
+      "regulatory-obligations"
+    ],
+    "upstream": [
+      "ai-governance",
+      "regulatory-obligations"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "ai"
+  },
+  {
+    "id": "D17",
+    "slug": "shadow-ai",
+    "title": "Shadow AI & acceptable use",
+    "type": "Connected governance workflow",
+    "domain": "Shadow AI & acceptable use",
+    "group": "enterprise",
+    "summary": "Use-case intake and egress review. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented shadow ai & acceptable use decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AI RMF",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "capabilities": [
+      "Use-case intake and egress review",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-17-shadow-ai/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=shadow-ai",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-17-shadow-ai/manifest.json",
     "relatedProjects": [
       "policy-governance",
-      "regulatory-obligations",
-      "executive-risk"
+      "agent-authorization"
     ],
-    "tier": 3,
-    "featuredOrder": 99
+    "upstream": [
+      "policy-governance",
+      "agent-authorization"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "ai"
   },
   {
-    "id": "P19",
-    "slug": "privacy-lifecycle",
-    "title": "Privacy lifecycle & processing oversight",
+    "id": "D18",
+    "slug": "resilience",
+    "title": "Continuity, recovery & crisis readiness",
     "type": "Connected governance workflow",
-    "domain": "Privacy",
-    "summary": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks.",
-    "outcome": "Record processing purposes, lawful-basis review, retention and transfer metadata alongside suppliers and risks.",
+    "domain": "Continuity, recovery & crisis readiness",
+    "group": "enterprise",
+    "summary": "Critical services, recovery objectives and exercise evidence. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented continuity, recovery & crisis readiness decision with explicit evidence, ownership and review criteria.",
     "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "CUSTOM"
+      "NIST CP",
+      "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
-      "Shared processing register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
+      "Critical services, recovery objectives and exercise evidence",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
     ],
     "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
     ],
     "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
     ],
-    "sourcePath": "projects/19-privacy-lifecycle/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-083",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/19-privacy-lifecycle",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/privacy-lifecycle/",
+    "sourcePath": "projects/domain-18-resilience/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=resilience",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-18-resilience/manifest.json",
     "relatedProjects": [
-      "processor-governance",
+      "security-boundary",
+      "vendor-risk"
+    ],
+    "upstream": [
+      "security-boundary",
+      "vendor-risk"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "asset"
+  },
+  {
+    "id": "D19",
+    "slug": "remediation",
+    "title": "Incident governance & reporting",
+    "type": "Connected governance workflow",
+    "domain": "Incident governance & reporting",
+    "group": "enterprise",
+    "summary": "Incident owner, escalation and corrective action. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented incident governance & reporting decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST IR",
+      "GDPR Articles 33\u201334"
+    ],
+    "capabilities": [
+      "Incident owner, escalation and corrective action",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-19-remediation/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=remediation",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-19-remediation/manifest.json",
+    "relatedProjects": [
+      "threat-supply-chain",
+      "continuous-assurance"
+    ],
+    "upstream": [
+      "threat-supply-chain",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "issue"
+  },
+  {
+    "id": "D20",
+    "slug": "workforce-security",
+    "title": "Workforce, physical & organizational security",
+    "type": "Connected governance workflow",
+    "domain": "Workforce, physical & organizational security",
+    "group": "enterprise",
+    "summary": "Control and review records; specialist assessment required. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented workforce, physical & organizational security decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AT, PS, PE",
+      "ISO/IEC 27001 Annex A"
+    ],
+    "capabilities": [
+      "Control and review records; specialist assessment required",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-20-workforce-security/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=workforce-security",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-20-workforce-security/manifest.json",
+    "relatedProjects": [
+      "policy-governance",
+      "identity-authorization",
+      "identity-authorization"
+    ],
+    "upstream": [
+      "policy-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "identity-authorization"
+    ],
+    "entity": "policy"
+  },
+  {
+    "id": "D21",
+    "slug": "financial-conduct",
+    "title": "Financial, fraud & ethical conduct risk",
+    "type": "Connected governance workflow",
+    "domain": "Financial, fraud & ethical conduct risk",
+    "group": "enterprise",
+    "summary": "Exposure and risk decisions; specialist assessment required. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented financial, fraud & ethical conduct risk decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST PM, RA",
+      "organization-specific legal obligations"
+    ],
+    "capabilities": [
+      "Exposure and risk decisions; specialist assessment required",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-21-financial-conduct/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=financial-conduct",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-21-financial-conduct/manifest.json",
+    "relatedProjects": [
+      "governance-program",
+      "internal-audit"
+    ],
+    "upstream": [
+      "governance-program",
+      "internal-audit"
+    ],
+    "downstream": [
+      "governance-program"
+    ],
+    "entity": "risk"
+  },
+  {
+    "id": "D22",
+    "slug": "sector-assurance",
+    "title": "Sector, market & contractual obligations",
+    "type": "Connected governance workflow",
+    "domain": "Sector, market & contractual obligations",
+    "group": "enterprise",
+    "summary": "Applicability review; sector-specific controls require scoping. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented sector, market & contractual obligations decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "Applicable sector rules",
+      "FedRAMP Rev5 when in scope"
+    ],
+    "capabilities": [
+      "Applicability review; sector-specific controls require scoping",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-22-sector-assurance/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=sector-assurance",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-22-sector-assurance/manifest.json",
+    "relatedProjects": [
+      "regulatory-obligations",
+      "customer-assurance",
+      "executive-risk",
+      "regulatory-obligations"
+    ],
+    "upstream": [
+      "regulatory-obligations",
+      "customer-assurance"
+    ],
+    "downstream": [
+      "executive-risk",
+      "regulatory-obligations"
+    ],
+    "entity": "obligation"
+  },
+  {
+    "id": "D23",
+    "slug": "security-boundary",
+    "title": "Security scope & authorization boundary",
+    "type": "Connected governance workflow",
+    "domain": "Security scope & authorization boundary",
+    "group": "technical",
+    "summary": "Asset scope and system boundary; deployment architecture review. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented security scope & authorization boundary decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST RMF",
+      "NIST PL-2, CA-3"
+    ],
+    "capabilities": [
+      "Asset scope and system boundary; deployment architecture review",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-23-security-boundary/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=security-boundary",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-23-security-boundary/manifest.json",
+    "relatedProjects": [
       "vendor-risk",
-      "ai-governance"
+      "data-governance",
+      "data-governance",
+      "resilience",
+      "identity-authorization",
+      "cloud-change"
     ],
-    "tier": 3,
-    "featuredOrder": 99
+    "upstream": [
+      "vendor-risk",
+      "data-governance"
+    ],
+    "downstream": [
+      "data-governance",
+      "resilience",
+      "identity-authorization",
+      "cloud-change"
+    ],
+    "entity": "asset"
   },
   {
-    "id": "P20",
-    "slug": "control-management",
-    "title": "Control design & effectiveness",
+    "id": "D24",
+    "slug": "identity-authorization",
+    "title": "Identity, least privilege & segregation",
     "type": "Connected governance workflow",
-    "domain": "Control Management",
-    "summary": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness.",
-    "outcome": "Join obligations, risks, control ownership and dated test results to review design and operating effectiveness.",
+    "domain": "Identity, least privilege & segregation",
+    "group": "technical",
+    "summary": "IAM evidence and authorization policy source. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented identity, least privilege & segregation decision with explicit evidence, ownership and review criteria.",
     "featured": false,
-    "evidenceBasis": "Linked records, review criteria & decision outputs",
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
     "frameworks": [
-      "CUSTOM"
+      "NIST AC, IA",
+      "SOC 2 CC6"
     ],
     "capabilities": [
-      "Shared control register",
-      "Named ownership and review dates",
-      "Linked source records",
-      "Review and decision trail"
+      "IAM evidence and authorization policy source",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
     ],
     "outputs": [
-      "grc-suite.json",
-      "Reviewed decision rationale in linked decision records"
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
     ],
     "guardrails": [
-      "Evidence and assumptions remain explicit",
-      "Material decisions require accountable review",
-      "Suite records are linked by IDs; no external collection is implied"
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
     ],
-    "sourcePath": "projects/20-control-management/manifest.json",
-    "liveUrl": "https://aaowasi-projects.pages.dev/suite/#view-011",
-    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/tree/main/projects/20-control-management",
-    "caseStudyUrl": "https://aaowasi-projects.pages.dev/work/control-management/",
+    "sourcePath": "projects/domain-24-identity-authorization/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=identity-authorization",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-24-identity-authorization/manifest.json",
     "relatedProjects": [
-      "regulatory-obligations",
+      "security-boundary",
+      "workforce-security",
+      "workforce-security",
+      "cloud-change",
+      "evidence-integrity",
+      "agent-authorization"
+    ],
+    "upstream": [
+      "security-boundary",
+      "workforce-security"
+    ],
+    "downstream": [
+      "workforce-security",
+      "cloud-change",
+      "evidence-integrity",
+      "agent-authorization"
+    ],
+    "entity": "control"
+  },
+  {
+    "id": "D25",
+    "slug": "cloud-change",
+    "title": "Cloud configuration & change",
+    "type": "Connected governance workflow",
+    "domain": "Cloud configuration & change",
+    "group": "technical",
+    "summary": "Configuration events and control decisions. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented cloud configuration & change decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST CM",
+      "SOC 2 CC8"
+    ],
+    "capabilities": [
+      "Configuration events and control decisions",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-25-cloud-change/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=cloud-change",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-25-cloud-change/manifest.json",
+    "relatedProjects": [
+      "security-boundary",
+      "identity-authorization",
+      "threat-supply-chain",
+      "evidence-integrity"
+    ],
+    "upstream": [
+      "security-boundary",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "threat-supply-chain",
+      "evidence-integrity"
+    ],
+    "entity": "asset"
+  },
+  {
+    "id": "D26",
+    "slug": "threat-supply-chain",
+    "title": "Threat, vulnerability & supply-chain assurance",
+    "type": "Connected governance workflow",
+    "domain": "Threat, vulnerability & supply-chain assurance",
+    "group": "technical",
+    "summary": "Alert normalization and remediation priorities. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented threat, vulnerability & supply-chain assurance decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST RA-5, SI-2, SR"
+    ],
+    "capabilities": [
+      "Alert normalization and remediation priorities",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-26-threat-supply-chain/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=threat-supply-chain",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-26-threat-supply-chain/manifest.json",
+    "relatedProjects": [
+      "vendor-risk",
+      "cloud-change",
+      "ai-safety",
+      "remediation"
+    ],
+    "upstream": [
+      "vendor-risk",
+      "cloud-change"
+    ],
+    "downstream": [
+      "ai-safety",
+      "remediation"
+    ],
+    "entity": "asset"
+  },
+  {
+    "id": "D27",
+    "slug": "evidence-integrity",
+    "title": "Logging, evidence integrity & provenance",
+    "type": "Connected governance workflow",
+    "domain": "Logging, evidence integrity & provenance",
+    "group": "technical",
+    "summary": "Source timestamps and evidence validation. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented logging, evidence integrity & provenance decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AU",
+      "SOC 2 CC7"
+    ],
+    "capabilities": [
+      "Source timestamps and evidence validation",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-27-evidence-integrity/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=evidence-integrity",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-27-evidence-integrity/manifest.json",
+    "relatedProjects": [
+      "cloud-change",
+      "identity-authorization",
+      "internal-audit",
       "audit-readiness",
       "continuous-assurance"
     ],
-    "tier": 3,
-    "featuredOrder": 99
+    "upstream": [
+      "cloud-change",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "internal-audit",
+      "audit-readiness",
+      "continuous-assurance"
+    ],
+    "entity": "test"
+  },
+  {
+    "id": "D28",
+    "slug": "agent-authorization",
+    "title": "Agent, tool & data authorization",
+    "type": "Connected governance workflow",
+    "domain": "Agent, tool & data authorization",
+    "group": "technical",
+    "summary": "Agent/tool authorization policies and human escalation. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented agent, tool & data authorization decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST AC",
+      "NIST AI RMF"
+    ],
+    "capabilities": [
+      "Agent/tool authorization policies and human escalation",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-28-agent-authorization/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=agent-authorization",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-28-agent-authorization/manifest.json",
+    "relatedProjects": [
+      "ai-governance",
+      "identity-authorization",
+      "shadow-ai"
+    ],
+    "upstream": [
+      "ai-governance",
+      "identity-authorization"
+    ],
+    "downstream": [
+      "shadow-ai"
+    ],
+    "entity": "decision"
+  },
+  {
+    "id": "D29",
+    "slug": "ongoing-authorization",
+    "title": "Assessment, authorization & ongoing monitoring",
+    "type": "Connected governance workflow",
+    "domain": "Assessment, authorization & ongoing monitoring",
+    "group": "technical",
+    "summary": "Review packages; authorization remains with designated authority. Connect scoped requirements, dated evidence and accountable treatment.",
+    "outcome": "Support a documented assessment, authorization & ongoing monitoring decision with explicit evidence, ownership and review criteria.",
+    "featured": false,
+    "featuredOrder": 99,
+    "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
+    "frameworks": [
+      "NIST CA-2, CA-6, CA-7",
+      "FedRAMP Rev5"
+    ],
+    "capabilities": [
+      "Review packages; authorization remains with designated authority",
+      "Linked upstream dependencies",
+      "Evidence freshness and treatment review"
+    ],
+    "outputs": [
+      "Domain-classified register records in the shared JSON export",
+      "Linked evidence, ownership and review decisions"
+    ],
+    "guardrails": [
+      "Framework applicability must be confirmed for the organization and jurisdiction",
+      "Control effectiveness and legal decisions require accountable human review",
+      "Public records run locally; production collection requires authorized integration"
+    ],
+    "sourcePath": "projects/domain-29-ongoing-authorization/manifest.json",
+    "liveUrl": "https://aaowasi-projects.pages.dev/workspace/?domain=ongoing-authorization",
+    "codeUrl": "https://github.com/aaowasi/aaowasi-projects/blob/main/projects/domain-29-ongoing-authorization/manifest.json",
+    "relatedProjects": [
+      "audit-readiness",
+      "ai-safety",
+      "continuous-assurance",
+      "continuous-assurance"
+    ],
+    "upstream": [
+      "audit-readiness",
+      "ai-safety",
+      "continuous-assurance"
+    ],
+    "downstream": [
+      "continuous-assurance"
+    ],
+    "entity": "decision"
   }
 ]

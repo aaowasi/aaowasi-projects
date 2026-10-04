@@ -22,8 +22,8 @@ for path in json_files:
     except Exception as exc:
         errors.append(f"invalid JSON {path.relative_to(ROOT)}: {exc}")
 
-manifests = sorted((ROOT / "projects").glob("*/manifest.json"))
 catalogue = json.loads((ROOT / "content/projects.json").read_text())
+manifests = [ROOT / p["sourcePath"] for p in catalogue]
 require(len(manifests) == len(catalogue), "manifest/catalogue count mismatch")
 ids = []
 for path in manifests:

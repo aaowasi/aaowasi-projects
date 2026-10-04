@@ -1,0 +1,35 @@
+{
+  "project_id": "D11",
+  "name": "Privacy & individual rights",
+  "purpose": "Support a documented privacy & individual rights decision with explicit evidence, ownership and review criteria.",
+  "framework_candidates": [
+    "GDPR Articles 5, 12\u201322, 25, 35"
+  ],
+  "capabilities": [
+    "Purpose, retention and impact review",
+    "Linked upstream dependencies",
+    "Evidence freshness and treatment review"
+  ],
+  "telemetry_sources": [
+    "Authorized processing records",
+    "Reviewed control tests and source evidence"
+  ],
+  "outputs": [
+    "Domain-classified register records in the shared JSON export",
+    "Linked evidence, ownership and review decisions"
+  ],
+  "guardrails": [
+    "Framework applicability must be confirmed for the organization and jurisdiction",
+    "Control effectiveness and legal decisions require accountable human review",
+    "Public records run locally; production collection requires authorized integration"
+  ],
+  "upstream": [
+    "data-governance",
+    "regulatory-obligations"
+  ],
+  "downstream": [
+    "regulatory-obligations",
+    "vendor-risk",
+    "processor-governance"
+  ]
+}
