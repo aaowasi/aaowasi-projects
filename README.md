@@ -39,8 +39,14 @@ Work across obligations, controls, suppliers, risks, evidence, incidents, privac
 ```bash
 npm run build
 npm test
+
+# macOS / Linux
 python3 -m unittest discover -s tests -v
 python3 -m http.server 8000 --directory site
+
+# Windows (Command Prompt / PowerShell)
+python -m unittest discover -s tests -v
+python -m http.server 8000 --directory site
 ```
 
 ## Evidence boundaries
