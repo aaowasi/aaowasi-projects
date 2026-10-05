@@ -37,11 +37,12 @@ Work across obligations, controls, suppliers, risks, evidence, incidents, privac
 ## Run locally
 
 ```bash
-# 1. Enter project folder & install dependencies
+# 1. Clone repository & enter directory
+git clone https://github.com/aaowasi/aaowasi-projects.git
 cd aaowasi-projects
-npm install
 
-# 2. Build project
+# 2. Install dependencies & build
+npm install
 npm run build
 npm test
 
