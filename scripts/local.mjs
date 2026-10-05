@@ -1,6 +1,6 @@
 import {spawnSync} from 'node:child_process';
 import {readdirSync} from 'node:fs';
-const candidates=process.platform==='win32'?[['py','-3'],['python'],['python3']]:[['python3'],['python']];
+const candidates=process.platform==='win32'?[['python'],['py','-3'],['python3']]:[['python3'],['python']];
 const py=candidates.find(([cmd,...args])=>{const r=spawnSync(cmd,[...args,'-c','import sys; assert sys.version_info >= (3,10)'],{stdio:'ignore'});return !r.error&&r.status===0;});
 if(!py){console.error('Install Python 3.10+ and add it to PATH.');process.exit(1);}
 function run(cmd,args){const r=spawnSync(cmd,args,{stdio:'inherit',env:{...process.env,PYTHONUTF8:'1'}});if(r.error){console.error(r.error.message);process.exit(1);}if(r.status!==0)process.exit(r.status||1);}
