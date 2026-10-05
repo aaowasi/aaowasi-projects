@@ -30,6 +30,8 @@ shutil.copyfile(ROOT/'content/domain-matrix.json',ROOT/'site/data/domain-matrix.
 # Keep all domain counts sourced from catalogue data.
 for page in (ROOT/'site').rglob('*.html'):
  page.write_text(page.read_text().replace('{{DOMAIN_COUNT}}',str(len(json.loads((ROOT/'content/projects.json').read_text())))))
+(ROOT/'site/enterprise').mkdir(exist_ok=True)
+shutil.copyfile(ROOT/'templates/enterprise.html',ROOT/'site/enterprise/index.html')
 from build_docs import generate
 generate(ROOT)
 from seo import apply_seo

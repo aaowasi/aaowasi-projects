@@ -15,7 +15,7 @@ An inspectable connected GRC operating workspace for AI governance, third-party 
 ## Start with the live systems
 
 ### Connected risk workspace
-Change AI inventory, SaaS/LLM vendor, privacy and evidence metadata once, then follow how the same facts affect risk priorities, drift/change signals, evidence coverage, review queues and decision outputs across ten modules.
+Change AI inventory, SaaS/LLM vendor, privacy and evidence metadata once, then follow how the same facts affect risk priorities, drift/change signals, evidence coverage, review queues and decision outputs across specialist review perspectives.
 
 [Open connected workspace →](https://aaowasi-projects.pages.dev/workspace/)
 
@@ -36,26 +36,17 @@ Work across obligations, controls, suppliers, risks, evidence, incidents, privac
 
 ## Run locally
 
+Prerequisites: Git, Node.js 22+ and Python 3.10+ on PATH. The static core requires no npm packages, API keys, cloud account or payment provider.
+
 ```bash
-# 1. Clone repository & enter directory
 git clone https://github.com/aaowasi/aaowasi-projects.git
 cd aaowasi-projects
-
-# 2. Install dependencies & build
-npm install
 npm run build
 npm test
-
-# 3. Run tests & local server
-
-# macOS / Linux:
-python3 -m unittest discover -s tests -v
-python3 -m http.server 8000 --directory site
-
-# Windows (Command Prompt / PowerShell):
-python -m unittest discover -s tests -v
-python -m http.server 8000 --directory site
+npm run serve
 ```
+
+Open http://localhost:8000/ . The same commands select `py -3`, `python` or `python3` as available on Windows, macOS and Linux. The test runner enumerates Node test files without a shell glob. Use `Ctrl+C` to stop the server. Optional Python connector services have separate requirements and are not required to inspect the static core. The operating-system CI matrix validates the local build/test path; it does not certify every device or enterprise integration.
 
 ## Evidence boundaries
 
@@ -65,13 +56,25 @@ The public interfaces use synthetic scenario data and browser-local records so t
 
 NIST AI RMF 1.0 · NIST AI 600-1 Generative AI Profile · ISO/IEC 42001:2023 · ISO/IEC 27001:2022 · SOC 2 · NIST CSF 2.0 · GDPR processor governance · EU AI Act transparency
 
+## Enterprise & Commercial Licensing
+
+The local operating core is open source under [AGPL-3.0](LICENSE). You may inspect, run, modify and use it commercially subject to that license. It is not limited to evaluation, and existing JSON/CSV exports and domain review logic remain part of the free core.
+
+**Paid engagements:** bounded AI governance readiness reviews, supplier assurance, control-to-evidence mapping, client-specific configuration, deployment, integration, training and scheduled assurance support. [Request an implementation scope](https://aaowasi.pages.dev/contact/) with your system/vendor population, available evidence and target decision date.
+
+**Managed enterprise delivery:** shared tenant storage, SSO/roles, operated connectors, scheduled monitoring and audit-package generation require an agreed implementation and acceptance scope. The optional organization evaluation API is configurable source; no live SaaS subscription, payment checkout or complete managed backend is represented by this repository.
+
+**Alternative license requests:** considered only where the necessary copyright, contributor and dependency rights are verified. Paid services do not replace the AGPL license or restrict rights already granted under it.
+
+[Commercialization strategy and pricing hypotheses](COMMERCIALIZATION.md) · [Enterprise service scope](https://aaowasi-projects.pages.dev/enterprise/) · [Deployment prerequisites](docs/ORGANIZATION-EVALUATIONS.md) · [Terms](TERMS_AND_CONDITIONS.md)
+
 ## For a scoped review
 
 If you have one AI use case, vendor set or assurance backlog, [send a decision brief](https://aaowasi.pages.dev/contact/) with the records in scope, evidence available and target date.
 
 ## Extended governance workflows
 
-Twenty catalogue workflows connect specialist decisions with shared suite registers. Each project has a complete project page, expandable technical details and onward links. Suite and specialist workspace datasets retain distinct schemas; transfer requires explicit reconciliation.
+The domain catalogue connects specialist decisions with shared suite registers. Each project has a complete project page, expandable technical details and onward links. Suite and specialist workspace datasets retain distinct schemas; transfer requires explicit reconciliation.
 
 ## Organization evaluation service
 

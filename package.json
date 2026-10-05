@@ -2,7 +2,11 @@
   "name": "aaowasi-projects",
   "private": true,
   "scripts": {
-    "build": "python3 scripts/build_site.py",
-    "test": "python3 scripts/check_site.py && python3 scripts/check_contract.py && node --test tests/browser/*.test.mjs"
+    "build": "node scripts/local.mjs build",
+    "test": "node scripts/local.mjs test",
+    "serve": "node scripts/local.mjs serve"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
