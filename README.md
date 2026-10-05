@@ -37,14 +37,21 @@ Work across obligations, controls, suppliers, risks, evidence, incidents, privac
 ## Run locally
 
 ```bash
+# 1. Enter project folder & install dependencies
+cd aaowasi-projects
+npm install
+
+# 2. Build project
 npm run build
 npm test
 
-# macOS / Linux
+# 3. Run tests & local server
+
+# macOS / Linux:
 python3 -m unittest discover -s tests -v
 python3 -m http.server 8000 --directory site
 
-# Windows (Command Prompt / PowerShell)
+# Windows (Command Prompt / PowerShell):
 python -m unittest discover -s tests -v
 python -m http.server 8000 --directory site
 ```
