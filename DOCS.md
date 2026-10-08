@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `3e2ed636b7fcac964af311e790a249d9239a25ec34db74088bf5be2b6886e70a`
+Source contract SHA-256: `f3aed7b46a1db149b472dfb1e66dd23dec6217be708c16eb42d5ba9930126003`
 
 ## System overview
 
@@ -3273,7 +3273,7 @@ Each project keeps shared evidence provenance and accountability while calculati
 | Agent, tool & data authorization | Agent tool and data permission contract | coverage | Agent tool actions requiring authorization; Actions with approved data and tool boundaries; Human approval and kill switch tested |
 | Assessment, authorization & ongoing monitoring | Reauthorization trigger and decision record | limit | Material changes without authorization review; Approved pending-change allowance; Authorization conditions and expiry checked |
 
-**Interaction contract:** selecting a domain rebuilds its input form and resets the previous values. Editing inputs recalculates the named deliverable, findings and structured JSON. Run review performs the same calculation explicitly. Load illustrative review inserts synthetic, expired evidence and incomplete domain inputs; it cannot be mistaken for a client outcome. Reset removes the current metadata. Export decision memo validates the form and downloads a Markdown delivery report with the scope, calculation, evidence references, findings and dependency handoffs. It remains labelled unverified and not authorized. Export review JSON validates the form and downloads a version-2 JSON review with domain assessment, source references and upstream/downstream links; it does not submit or approve a report. Do not send sensitive documents to this public browser form.
+**Interaction contract:** selecting a different domain rebuilds its input form and resets the previous values. Same-page section navigation preserves current review inputs. Domain decision inputs appear first; shared provenance follows. Editing inputs recalculates the named deliverable, findings and structured JSON. Run review performs the same calculation explicitly. Load illustrative review inserts synthetic, expired evidence and incomplete domain inputs; it cannot be mistaken for a client outcome. Reset removes the current metadata. Export decision memo validates the form and downloads a Markdown delivery report with the scope, calculation, evidence references, findings and dependency handoffs. It remains labelled unverified and not authorized. Export review JSON validates the form and downloads a version-2 JSON review with domain assessment, source references and upstream/downstream links; it does not submit or approve a report. Do not send sensitive documents to this public browser form.
 
 **Client demo:** choose the buyer’s decision, explain the input population and units, change an observed count or elapsed time, show the resulting exception and named deliverable, then identify the accountable reviewer. An AI evaluation threshold is specific to the declared sample and does not prove model safety. A supplier concentration ratio does not replace full due diligence. A privacy or incident deadline must be established for the actual trigger and jurisdiction.
 
