@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `340e6bc02a0dce9815ea25260709e9474eaa36056c8e1c1418c42a18ee41a1c0`
+Source contract SHA-256: `6b8085c9c277a310604e348858e2bc05aca01707d33fd6794c6ba55c698f5daa`
 
 ## System overview
 
@@ -95,8 +95,8 @@ The personal hub and portfolio alias have separate browser origins. Device stora
 ## State, validation and calculations
 
 - Typed suite: `version: 1`, `records`, `updatedAt`; up to 5,000 records and 20 MB. Each record has an entity type, stable ID and optional domainSlug. Unknown fields, duplicate IDs, invalid typed references and vendor dependency cycles are rejected before committing.
-- Inspector: one domain checklist per project, owner, boundary, reviewer, HTTPS evidence reference, validity date and qualitative likelihood/impact. Readiness = confirmed checks / checklist length. Any missing scope, owner, reviewer, invalid evidence reference, expired evidence or unconfirmed check holds the gate. Even a complete gate only means ready for accountable review.
-- Qualitative inspector risk = likelihood × impact (1–5 each), high ≥15, moderate ≥8. The typed suite high-risk threshold is ≥15. Decision Lab uses its documented separate policy: high ≥16 and moderate ≥9 after signal points and evidence credit. These are prioritization policies, not probabilities or interchangeable score scales.
+- Inspector: one domain checklist per project, owner, boundary, reviewer, HTTPS evidence reference, validity date and domain-specific decision inputs. Readiness = confirmed checks / checklist length. Any missing scope, owner, reviewer, invalid evidence reference, expired evidence or unconfirmed check holds the gate. Even a complete gate only means ready for accountable review.
+- Domain inspectors use coverage, declared tolerance, applicable deadline or recovery objective calculations. The separate typed suite high-risk threshold is ≥15. Decision Lab uses its documented separate policy: high ≥16 and moderate ≥9 after signal points and evidence credit. These are prioritization policies, not probabilities or interchangeable score scales.
 - Typed control coverage joins scoped controls to all linked tests, including tests assigned to another domain. Only passing tests within the reporting-date validity period count. A passing test requires evidence URL, named reviewer and test date.
 - Decision Lab: `schemaVersion: 1.0`; up to 250 records and 10 MB. A linked supplier/AI record carries evidence state, test result, reviewer, disclosure, oversight and processor metadata. Ten specialist views derive supplier, AI, evidence and questionnaire review signals. Import/export cannot silently interchange this model with the typed suite.
 - In-memory edits are lost on page reload unless explicitly exported (or saved via the typed suite device-save button). Readiness review JSON is a report, not a suite import. Saving a form is an assertion, not evidence-content verification.
@@ -109,7 +109,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D01: Corporate governance & accountability
 
-**What and how:** [Corporate governance & accountability](https://aaowasi-projects.pages.dev/work/governance-program/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Corporate governance & accountability](https://aaowasi-projects.pages.dev/work/governance-program/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Named owners, decisions and review dates. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -130,7 +130,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D02: Enterprise risk & appetite
 
-**What and how:** [Enterprise risk & appetite](https://aaowasi-projects.pages.dev/work/executive-risk/) uses the `risk` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Enterprise risk & appetite](https://aaowasi-projects.pages.dev/work/executive-risk/) uses the `risk` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Likelihood, impact, treatment and acceptance. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -151,7 +151,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D03: Regulatory applicability & change
 
-**What and how:** [Regulatory applicability & change](https://aaowasi-projects.pages.dev/work/regulatory-obligations/) uses the `obligation` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Regulatory applicability & change](https://aaowasi-projects.pages.dev/work/regulatory-obligations/) uses the `obligation` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Jurisdiction, applicable requirement and effective date. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -172,7 +172,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D04: Policy lifecycle
 
-**What and how:** [Policy lifecycle](https://aaowasi-projects.pages.dev/work/policy-governance/) uses the `policy` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Policy lifecycle](https://aaowasi-projects.pages.dev/work/policy-governance/) uses the `policy` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Version, ownership and attestation. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -193,7 +193,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D05: Control implementation & ownership
 
-**What and how:** [Control implementation & ownership](https://aaowasi-projects.pages.dev/work/control-management/) uses the `control` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Control implementation & ownership](https://aaowasi-projects.pages.dev/work/control-management/) uses the `control` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Requirement → control → owner. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -214,7 +214,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D06: Internal audit & independence
 
-**What and how:** [Internal audit & independence](https://aaowasi-projects.pages.dev/work/internal-audit/) uses the `audit` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Internal audit & independence](https://aaowasi-projects.pages.dev/work/internal-audit/) uses the `audit` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Plan, finding and corrective action. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -235,7 +235,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D07: External audit & certification readiness
 
-**What and how:** [External audit & certification readiness](https://aaowasi-projects.pages.dev/work/audit-readiness/) uses the `test` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [External audit & certification readiness](https://aaowasi-projects.pages.dev/work/audit-readiness/) uses the `test` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Reviewed tests and dated evidence. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -256,7 +256,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D08: Continuous assurance & remediation
 
-**What and how:** [Continuous assurance & remediation](https://aaowasi-projects.pages.dev/work/continuous-assurance/) uses the `issue` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Continuous assurance & remediation](https://aaowasi-projects.pages.dev/work/continuous-assurance/) uses the `issue` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Evidence expiry, failed tests and treatment. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -277,7 +277,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D09: Supplier lifecycle & concentration
 
-**What and how:** [Supplier lifecycle & concentration](https://aaowasi-projects.pages.dev/work/vendor-risk/) uses the `vendor` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Supplier lifecycle & concentration](https://aaowasi-projects.pages.dev/work/vendor-risk/) uses the `vendor` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Tier, dependencies and exit conditions. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -298,7 +298,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D10: Procurement & customer assurance
 
-**What and how:** [Procurement & customer assurance](https://aaowasi-projects.pages.dev/work/customer-assurance/) uses the `contract` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Procurement & customer assurance](https://aaowasi-projects.pages.dev/work/customer-assurance/) uses the `contract` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Requirements and evidence-backed answers. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -319,7 +319,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D11: Privacy & individual rights
 
-**What and how:** [Privacy & individual rights](https://aaowasi-projects.pages.dev/work/privacy-lifecycle/) uses the `processing` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Privacy & individual rights](https://aaowasi-projects.pages.dev/work/privacy-lifecycle/) uses the `processing` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Purpose, retention and impact review. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -340,7 +340,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D12: Processors & cross-border transfers
 
-**What and how:** [Processors & cross-border transfers](https://aaowasi-projects.pages.dev/work/processor-governance/) uses the `contract` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Processors & cross-border transfers](https://aaowasi-projects.pages.dev/work/processor-governance/) uses the `contract` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** DPA, subprocessors and transfer mechanism. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -361,7 +361,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D13: Data classification & retention
 
-**What and how:** [Data classification & retention](https://aaowasi-projects.pages.dev/work/data-governance/) uses the `processing` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Data classification & retention](https://aaowasi-projects.pages.dev/work/data-governance/) uses the `processing` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Data owner, classification and deletion review. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -382,7 +382,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D14: AI inventory & lifecycle authorization
 
-**What and how:** [AI inventory & lifecycle authorization](https://aaowasi-projects.pages.dev/work/ai-governance/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [AI inventory & lifecycle authorization](https://aaowasi-projects.pages.dev/work/ai-governance/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Inventory, evaluation and deployment decision. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -403,7 +403,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D15: AI fairness, safety & oversight
 
-**What and how:** [AI fairness, safety & oversight](https://aaowasi-projects.pages.dev/work/ai-safety/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [AI fairness, safety & oversight](https://aaowasi-projects.pages.dev/work/ai-safety/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Evaluation findings and human review gates. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -424,7 +424,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D16: AI transparency & content provenance
 
-**What and how:** [AI transparency & content provenance](https://aaowasi-projects.pages.dev/work/ai-transparency/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [AI transparency & content provenance](https://aaowasi-projects.pages.dev/work/ai-transparency/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Disclosure decision and evidence. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -445,7 +445,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D17: Shadow AI & acceptable use
 
-**What and how:** [Shadow AI & acceptable use](https://aaowasi-projects.pages.dev/work/shadow-ai/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Shadow AI & acceptable use](https://aaowasi-projects.pages.dev/work/shadow-ai/) uses the `ai` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Use-case intake and egress review. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -466,7 +466,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D18: Continuity, recovery & crisis readiness
 
-**What and how:** [Continuity, recovery & crisis readiness](https://aaowasi-projects.pages.dev/work/resilience/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Continuity, recovery & crisis readiness](https://aaowasi-projects.pages.dev/work/resilience/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Critical services, recovery objectives and exercise evidence. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -487,7 +487,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D19: Incident governance & reporting
 
-**What and how:** [Incident governance & reporting](https://aaowasi-projects.pages.dev/work/remediation/) uses the `issue` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Incident governance & reporting](https://aaowasi-projects.pages.dev/work/remediation/) uses the `issue` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Incident owner, escalation and corrective action. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -508,7 +508,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D20: Workforce, physical & organizational security
 
-**What and how:** [Workforce, physical & organizational security](https://aaowasi-projects.pages.dev/work/workforce-security/) uses the `policy` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Workforce, physical & organizational security](https://aaowasi-projects.pages.dev/work/workforce-security/) uses the `policy` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Control and review records; specialist assessment required. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -529,7 +529,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D21: Financial, fraud & ethical conduct risk
 
-**What and how:** [Financial, fraud & ethical conduct risk](https://aaowasi-projects.pages.dev/work/financial-conduct/) uses the `risk` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Financial, fraud & ethical conduct risk](https://aaowasi-projects.pages.dev/work/financial-conduct/) uses the `risk` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Exposure and risk decisions; specialist assessment required. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -550,7 +550,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D22: Sector, market & contractual obligations
 
-**What and how:** [Sector, market & contractual obligations](https://aaowasi-projects.pages.dev/work/sector-assurance/) uses the `obligation` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Sector, market & contractual obligations](https://aaowasi-projects.pages.dev/work/sector-assurance/) uses the `obligation` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Applicability review; sector-specific controls require scoping. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -571,7 +571,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D23: Security scope & authorization boundary
 
-**What and how:** [Security scope & authorization boundary](https://aaowasi-projects.pages.dev/work/security-boundary/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Security scope & authorization boundary](https://aaowasi-projects.pages.dev/work/security-boundary/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Asset scope and system boundary; deployment architecture review. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -592,7 +592,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D24: Identity, least privilege & segregation
 
-**What and how:** [Identity, least privilege & segregation](https://aaowasi-projects.pages.dev/work/identity-authorization/) uses the `control` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Identity, least privilege & segregation](https://aaowasi-projects.pages.dev/work/identity-authorization/) uses the `control` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** IAM evidence and authorization policy source. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -613,7 +613,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D25: Cloud configuration & change
 
-**What and how:** [Cloud configuration & change](https://aaowasi-projects.pages.dev/work/cloud-change/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Cloud configuration & change](https://aaowasi-projects.pages.dev/work/cloud-change/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Configuration events and control decisions. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -634,7 +634,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D26: Threat, vulnerability & supply-chain assurance
 
-**What and how:** [Threat, vulnerability & supply-chain assurance](https://aaowasi-projects.pages.dev/work/threat-supply-chain/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Threat, vulnerability & supply-chain assurance](https://aaowasi-projects.pages.dev/work/threat-supply-chain/) uses the `asset` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Alert normalization and remediation priorities. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -655,7 +655,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D27: Logging, evidence integrity & provenance
 
-**What and how:** [Logging, evidence integrity & provenance](https://aaowasi-projects.pages.dev/work/evidence-integrity/) uses the `test` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Logging, evidence integrity & provenance](https://aaowasi-projects.pages.dev/work/evidence-integrity/) uses the `test` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Source timestamps and evidence validation. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -676,7 +676,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D28: Agent, tool & data authorization
 
-**What and how:** [Agent, tool & data authorization](https://aaowasi-projects.pages.dev/work/agent-authorization/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Agent, tool & data authorization](https://aaowasi-projects.pages.dev/work/agent-authorization/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Agent/tool authorization policies and human escalation. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -697,7 +697,7 @@ Cloudflare Pages Functions expose `/api/status`, `/api/login`, `/api/account`, `
 
 ### D29: Assessment, authorization & ongoing monitoring
 
-**What and how:** [Assessment, authorization & ongoing monitoring](https://aaowasi-projects.pages.dev/work/ongoing-authorization/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a qualitative risk score and an exportable JSON review.
+**What and how:** [Assessment, authorization & ongoing monitoring](https://aaowasi-projects.pages.dev/work/ongoing-authorization/) uses the `decision` typed register and its domain-specific readiness checklist. Inputs produce dated evidence gaps, ownership requests, a domain-specific assessment and an exportable version-2 JSON review.
 
 **Why it exists:** Review packages; authorization remains with designated authority. Unowned or unsupported decisions create follow-up work and uncertain review boundaries.
 
@@ -1094,8 +1094,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1191,8 +1189,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1246,8 +1242,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1304,8 +1298,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1359,8 +1351,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1414,8 +1404,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1471,8 +1459,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1527,8 +1513,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1582,8 +1566,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1639,8 +1621,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1694,8 +1674,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1750,8 +1728,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1807,8 +1783,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1862,8 +1836,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1916,8 +1888,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -1978,8 +1948,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2035,8 +2003,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2091,8 +2057,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2146,8 +2110,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2204,8 +2166,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2260,8 +2220,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2315,8 +2273,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2373,8 +2329,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2428,8 +2382,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2483,8 +2435,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2538,8 +2488,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2595,8 +2543,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2650,8 +2596,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2706,8 +2650,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2765,8 +2707,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -2818,8 +2758,6 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Evidence valid until | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Human reviewer | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reporting date | Sets the snapshot used for overdue and evidence-validity calculations; future evidence does not count as current coverage. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Likelihood (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
-| Impact (1–5) | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Run readiness review | Validates required scope and scoring fields and recalculates evidence validity, confirmed checks, qualitative risk and outstanding actions. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Load illustrative review | Replaces only inspector form inputs with labeled example metadata and expired evidence to demonstrate a blocked gate. Does not change the shared register. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Reset review | Clears the inspector form, sets today as reporting date and leaves all domain assertions unconfirmed. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -3180,6 +3118,7 @@ Adding a domain requires a unique project manifest, matrix entry, typed register
 .github/workflows/policy.yml
 .github/workflows/site.yml
 COMMERCIALIZATION.md
+GO_TO_MARKET.md
 content/domain-matrix.json
 content/domain-reviews.json
 content/enterprise-plans.json
@@ -3235,6 +3174,7 @@ scripts/validate_repository.py
 services/evidence-ingestor/ccm.py
 services/mcp-server/server.py
 site/404.html
+site/assets/domain-assessment.mjs
 site/assets/domain-core.mjs
 site/assets/evaluate.mjs
 site/assets/review-core.mjs
@@ -3264,6 +3204,47 @@ templates/suite.html
 ## Licensing and terms
 
 Both repositories retain their existing AGPL-3.0 open-source LICENSE. TERMS_AND_CONDITIONS.md explains the public tool boundaries, acceptable use, data handling, service scope and distinction between code rights and advisory contracts. Required license and authorship notices are preserved. Referencing a framework does not imply affiliation or accreditation.
+
+
+## Domain-specific deliverables and decision logic
+
+Each project keeps shared evidence provenance and accountability while calculating its own business decision. There is no universal likelihood-times-impact gate. Numeric inputs are declared metadata, never measurements fetched from an API. Coverage rejects empty populations and completed counts above total; tolerance checks flag excess; deadline checks compare elapsed time with the supplied applicable deadline; recovery checks compare observed minutes with the approved objective. All attestations and domain checks require human verification. Thresholds are client inputs, not authoritative legal deadlines or framework pass marks.
+
+| Domain | Deliverable | Method | Decision inputs |
+|---|---|---|---|
+| Corporate governance & accountability | Delegation and accountability register | coverage | Decisions requiring delegated authority; Decisions with a documented mandate; Authority verified |
+| Enterprise risk & appetite | Risk appetite exception memo | limit | Residual exposure score (1–25); Approved appetite threshold (1–25); Treatment approved |
+| Regulatory applicability & change | Applicability and change impact register | coverage | Applicable obligations identified; Obligations mapped to an accountable control; Jurisdiction review complete |
+| Policy lifecycle | Policy release and acknowledgement pack | coverage | People requiring acknowledgement; Current policy acknowledgements; Policy version approved |
+| Control implementation & ownership | Control implementation gap register | coverage | Controls in the agreed scope; Controls implemented and tested; Test population approved |
+| Internal audit & independence | Audit independence and sampling plan | coverage | Planned audit procedures; Procedures supported by sufficient evidence; Auditor independence confirmed |
+| External audit & certification readiness | Audit request and evidence index | coverage | Evidence requests in the audit scope; Requests supported by reviewed evidence; Audit period confirmed |
+| Continuous assurance & remediation | Monitoring exception and treatment queue | limit | Unresolved monitoring exceptions; Approved exception tolerance; Collector coverage reviewed |
+| Supplier lifecycle & concentration | Supplier decision and concentration pack | limit | Critical service dependency on this supplier (%); Approved concentration tolerance (%); Data-use and exit terms reviewed |
+| Procurement & customer assurance | Evidence-backed questionnaire response pack | coverage | Customer questions in scope; Answers supported by current evidence; Disclosure approval obtained |
+| Privacy & individual rights | Individual rights response plan | deadline | Elapsed days since verified request; Applicable response deadline in days; Identity and exemptions reviewed |
+| Processors & cross-border transfers | Processor and transfer decision register | coverage | Processors and transfers requiring review; Relationships with reviewed terms and transfer basis; Legal transfer review complete |
+| Data classification & retention | Retention and disposal exception register | limit | Records beyond approved retention; Approved retention exception allowance; Classification and legal hold checked |
+| AI inventory & lifecycle authorization | AI use-case release review pack | coverage | AI systems in the agreed inventory; Systems with documented lifecycle and oversight; Use-case classification reviewed |
+| AI fairness, safety & oversight | AI evaluation and oversight report | limit | Observed failures in the declared evaluation sample; Maximum tolerated failures in that sample; Evaluation design and human oversight reviewed |
+| AI transparency & content provenance | AI disclosure and provenance checklist | coverage | Outputs requiring notice or provenance; Outputs with reviewed notice and provenance; Disclosure applicability confirmed |
+| Shadow AI & acceptable use | Unapproved AI use triage register | limit | Unapproved AI tools identified; Approved temporary exception allowance; Discovery population reviewed |
+| Continuity, recovery & crisis readiness | Recovery exercise and dependency report | recovery | Observed recovery time in minutes; Approved recovery time objective in minutes; Recovery-point evidence reviewed |
+| Incident governance & reporting | Incident notification and decision timeline | deadline | Elapsed hours since applicable awareness point; Applicable notification deadline in hours; Notification applicability reviewed |
+| Workforce, physical & organizational security | Joiner mover leaver control exception pack | coverage | Personnel changes requiring control actions; Changes with verified access and physical actions; HR and access reconciliation complete |
+| Financial, fraud & ethical conduct risk | Conduct exception and segregation review | limit | Transactions requiring unresolved exception review; Approved unresolved exception tolerance; Conflict and segregation review complete |
+| Sector, market & contractual obligations | Sector and contract obligation map | coverage | Sector and contract requirements in scope; Requirements mapped to verified controls; Sector applicability approved |
+| Security scope & authorization boundary | Authorization boundary and interface dossier | coverage | Interfaces crossing the system boundary; Interfaces with documented trust and data flows; Boundary owner review complete |
+| Identity, least privilege & segregation | Privilege and segregation exception register | limit | Unapproved privileged entitlements; Approved temporary exception allowance; Segregation and access review complete |
+| Cloud configuration & change | Cloud change drift and release record | limit | Configuration deviations from the approved baseline; Approved drift tolerance; Change approval and rollback reviewed |
+| Threat, vulnerability & supply-chain assurance | Vulnerability and dependency treatment plan | limit | Critical findings beyond agreed remediation SLA; Approved overdue critical finding allowance; Exploitability and dependency review complete |
+| Logging, evidence integrity & provenance | Evidence provenance and integrity manifest | coverage | Evidence objects in the review population; Objects with verified hash and provenance; Custody and timestamp review complete |
+| Agent, tool & data authorization | Agent tool and data permission contract | coverage | Agent tool actions requiring authorization; Actions with approved data and tool boundaries; Human approval and kill switch tested |
+| Assessment, authorization & ongoing monitoring | Reauthorization trigger and decision record | limit | Material changes without authorization review; Approved pending-change allowance; Authorization conditions and expiry checked |
+
+**Interaction contract:** selecting a domain rebuilds its input form and resets the previous values. Editing inputs recalculates the named deliverable, findings and structured JSON. Run review performs the same calculation explicitly. Load illustrative review inserts synthetic, expired evidence and incomplete domain inputs; it cannot be mistaken for a client outcome. Reset removes the current metadata. Export validates the form and downloads a version-2 JSON review with domain assessment, source references and upstream/downstream links; it does not submit or approve a report. Do not send sensitive documents to this public browser form.
+
+**Client demo:** choose the buyer’s decision, explain the input population and units, change an observed count or elapsed time, show the resulting exception and named deliverable, then identify the accountable reviewer. An AI evaluation threshold is specific to the declared sample and does not prove model safety. A supplier concentration ratio does not replace full due diligence. A privacy or incident deadline must be established for the actual trigger and jurisdiction.
 
 
 ## Open core and commercial delivery

@@ -81,6 +81,12 @@ The domain catalogue connects specialist decisions with shared suite registers. 
 An optional Cloudflare Pages Functions backend provides verified-member access and a two-run tenant allowance using D1. API/provider settings and data-processing terms must be configured before activation. No billing provider is connected. See [deployment requirements](docs/ORGANIZATION-EVALUATIONS.md).
 
 
+## Decision-specific delivery
+
+Start with an AI use-case review pack, supplier decision pack or control evidence readiness pack. Each dedicated domain uses its own inputs and calculations: coverage, tolerance, elapsed deadline or recovery objective. Shared evidence provenance connects the outputs; human reviewers retain decision authority.
+
+[Review enterprise delivery](https://aaowasi-projects.pages.dev/enterprise/) · [Inspect all domain workflows](https://aaowasi-projects.pages.dev/workspace/) · [Discuss a role](https://aaowasi.pages.dev/profile/)
+
 <!-- GENERATED-ARCHITECTURE:START -->
 
 ## Live architecture and route map
@@ -156,3 +162,5 @@ flowchart TD
 - D29 **Assessment, authorization & ongoing monitoring** → [project](https://aaowasi-projects.pages.dev/work/ongoing-authorization/) → [workspace](https://aaowasi-projects.pages.dev/workspace/?domain=ongoing-authorization)
 
 <!-- GENERATED-ARCHITECTURE:END -->
+
+[Commercialization and daily hiring execution guide](GO_TO_MARKET.md)

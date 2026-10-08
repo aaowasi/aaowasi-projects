@@ -28,7 +28,39 @@
       "policy-governance",
       "ai-governance",
       "financial-conduct"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Delegation and accountability register",
+      "action": "Confirm delegation and escalate uncovered decisions",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Decisions requiring delegated authority",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Decisions with a documented mandate",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Authority verified",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "executive-risk",
@@ -51,7 +83,39 @@
     "downstream": [
       "governance-program",
       "control-management"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Risk appetite exception memo",
+      "action": "Escalate exposure above the approved appetite",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Residual exposure score (1\u201325)",
+          "type": "number",
+          "min": 0,
+          "max": 25
+        },
+        {
+          "key": "baseline",
+          "label": "Approved appetite threshold (1\u201325)",
+          "type": "number",
+          "min": 0,
+          "max": 25
+        },
+        {
+          "key": "approval",
+          "label": "Treatment approved",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "regulatory-obligations",
@@ -79,7 +143,39 @@
       "privacy-lifecycle",
       "ai-transparency",
       "sector-assurance"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Applicability and change impact register",
+      "action": "Assign unmapped obligations before reliance",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Applicable obligations identified",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Obligations mapped to an accountable control",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Jurisdiction review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "policy-governance",
@@ -104,7 +200,39 @@
       "data-governance",
       "shadow-ai",
       "workforce-security"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Policy release and acknowledgement pack",
+      "action": "Close acknowledgement gaps before policy release",
+      "fields": [
+        {
+          "key": "population",
+          "label": "People requiring acknowledgement",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Current policy acknowledgements",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Policy version approved",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "control-management",
@@ -129,7 +257,39 @@
     "downstream": [
       "internal-audit",
       "audit-readiness"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Control implementation gap register",
+      "action": "Assign implementation and failed-test actions",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Controls in the agreed scope",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Controls implemented and tested",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Test population approved",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "internal-audit",
@@ -152,7 +312,39 @@
     "downstream": [
       "audit-readiness",
       "financial-conduct"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Audit independence and sampling plan",
+      "action": "Resolve independence and sampling gaps",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Planned audit procedures",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Procedures supported by sufficient evidence",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Auditor independence confirmed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "audit-readiness",
@@ -176,7 +368,39 @@
     "downstream": [
       "customer-assurance",
       "ongoing-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Audit request and evidence index",
+      "action": "Assign incomplete requests and reviewer follow-up",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Evidence requests in the audit scope",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Requests supported by reviewed evidence",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Audit period confirmed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "continuous-assurance",
@@ -199,7 +423,39 @@
     "downstream": [
       "remediation",
       "ongoing-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Monitoring exception and treatment queue",
+      "action": "Prioritize exceptions beyond tolerance",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Unresolved monitoring exceptions",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved exception tolerance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Collector coverage reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "vendor-risk",
@@ -226,7 +482,39 @@
       "resilience",
       "security-boundary",
       "threat-supply-chain"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Supplier decision and concentration pack",
+      "action": "Escalate concentration and contractual gaps",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Critical service dependency on this supplier (%)",
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "key": "baseline",
+          "label": "Approved concentration tolerance (%)",
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "key": "approval",
+          "label": "Data-use and exit terms reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "customer-assurance",
@@ -249,7 +537,39 @@
     "downstream": [
       "vendor-risk",
       "sector-assurance"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Evidence-backed questionnaire response pack",
+      "action": "Keep unsupported answers in the review queue",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Customer questions in scope",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Answers supported by current evidence",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Disclosure approval obtained",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "privacy-lifecycle",
@@ -272,7 +592,39 @@
       "regulatory-obligations",
       "vendor-risk",
       "processor-governance"
-    ]
+    ],
+    "assessment": {
+      "mode": "deadline",
+      "deliverable": "Individual rights response plan",
+      "action": "Escalate overdue requests and verify the applicable deadline",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Elapsed days since verified request",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Applicable response deadline in days",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Identity and exemptions reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "processor-governance",
@@ -293,7 +645,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Processor and transfer decision register",
+      "action": "Resolve missing agreements and transfer assessments",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Processors and transfers requiring review",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Relationships with reviewed terms and transfer basis",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Legal transfer review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "data-governance",
@@ -317,7 +701,39 @@
       "privacy-lifecycle",
       "ai-governance",
       "security-boundary"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Retention and disposal exception register",
+      "action": "Review overdue disposal against legal hold obligations",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Records beyond approved retention",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved retention exception allowance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Classification and legal hold checked",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "ai-governance",
@@ -342,7 +758,39 @@
       "ai-safety",
       "ai-transparency",
       "agent-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "AI use-case release review pack",
+      "action": "Resolve inventory and release prerequisites",
+      "fields": [
+        {
+          "key": "population",
+          "label": "AI systems in the agreed inventory",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Systems with documented lifecycle and oversight",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Use-case classification reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "ai-safety",
@@ -364,7 +812,39 @@
     ],
     "downstream": [
       "ongoing-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "AI evaluation and oversight report",
+      "action": "Review unsafe evaluation results before release",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Observed failures in the declared evaluation sample",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Maximum tolerated failures in that sample",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Evaluation design and human oversight reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "ai-transparency",
@@ -385,7 +865,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "AI disclosure and provenance checklist",
+      "action": "Close disclosure and provenance gaps",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Outputs requiring notice or provenance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Outputs with reviewed notice and provenance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Disclosure applicability confirmed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "shadow-ai",
@@ -407,7 +919,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Unapproved AI use triage register",
+      "action": "Contain unapproved use and assign an owner",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Unapproved AI tools identified",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved temporary exception allowance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Discovery population reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "resilience",
@@ -429,7 +973,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "recovery",
+      "deliverable": "Recovery exercise and dependency report",
+      "action": "Address recovery objective breaches and dependent services",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Observed recovery time in minutes",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved recovery time objective in minutes",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Recovery-point evidence reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "remediation",
@@ -451,7 +1027,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "deadline",
+      "deliverable": "Incident notification and decision timeline",
+      "action": "Escalate overdue notification review; verify trigger and jurisdiction",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Elapsed hours since applicable awareness point",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Applicable notification deadline in hours",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Notification applicability reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "workforce-security",
@@ -473,7 +1081,39 @@
     ],
     "downstream": [
       "identity-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Joiner mover leaver control exception pack",
+      "action": "Resolve missed personnel control actions",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Personnel changes requiring control actions",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Changes with verified access and physical actions",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "HR and access reconciliation complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "financial-conduct",
@@ -494,7 +1134,39 @@
     ],
     "downstream": [
       "governance-program"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Conduct exception and segregation review",
+      "action": "Escalate unresolved conduct exceptions",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Transactions requiring unresolved exception review",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved unresolved exception tolerance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Conflict and segregation review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "sector-assurance",
@@ -516,7 +1188,39 @@
     "downstream": [
       "executive-risk",
       "regulatory-obligations"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Sector and contract obligation map",
+      "action": "Assign unmapped sector or contract requirements",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Sector and contract requirements in scope",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Requirements mapped to verified controls",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Sector applicability approved",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "security-boundary",
@@ -541,7 +1245,39 @@
       "resilience",
       "identity-authorization",
       "cloud-change"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Authorization boundary and interface dossier",
+      "action": "Document uncovered interfaces before authorization review",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Interfaces crossing the system boundary",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Interfaces with documented trust and data flows",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Boundary owner review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "identity-authorization",
@@ -566,7 +1302,39 @@
       "cloud-change",
       "evidence-integrity",
       "agent-authorization"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Privilege and segregation exception register",
+      "action": "Revoke or formally review excess privilege",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Unapproved privileged entitlements",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved temporary exception allowance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Segregation and access review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "cloud-change",
@@ -589,7 +1357,39 @@
     "downstream": [
       "threat-supply-chain",
       "evidence-integrity"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Cloud change drift and release record",
+      "action": "Resolve baseline drift before release review",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Configuration deviations from the approved baseline",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved drift tolerance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Change approval and rollback reviewed",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "threat-supply-chain",
@@ -611,7 +1411,39 @@
     "downstream": [
       "ai-safety",
       "remediation"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Vulnerability and dependency treatment plan",
+      "action": "Assign overdue critical findings and validate treatment",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Critical findings beyond agreed remediation SLA",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved overdue critical finding allowance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Exploitability and dependency review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "evidence-integrity",
@@ -635,7 +1467,39 @@
       "internal-audit",
       "audit-readiness",
       "continuous-assurance"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Evidence provenance and integrity manifest",
+      "action": "Exclude unverified objects from the relied-on evidence set",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Evidence objects in the review population",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Objects with verified hash and provenance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Custody and timestamp review complete",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "agent-authorization",
@@ -657,7 +1521,39 @@
     ],
     "downstream": [
       "shadow-ai"
-    ]
+    ],
+    "assessment": {
+      "mode": "coverage",
+      "deliverable": "Agent tool and data permission contract",
+      "action": "Block unbounded actions pending permission review",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Agent tool actions requiring authorization",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Actions with approved data and tool boundaries",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Human approval and kill switch tested",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   },
   {
     "slug": "ongoing-authorization",
@@ -680,6 +1576,38 @@
     ],
     "downstream": [
       "continuous-assurance"
-    ]
+    ],
+    "assessment": {
+      "mode": "limit",
+      "deliverable": "Reauthorization trigger and decision record",
+      "action": "Route material changes to reauthorization review",
+      "fields": [
+        {
+          "key": "population",
+          "label": "Material changes without authorization review",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "baseline",
+          "label": "Approved pending-change allowance",
+          "type": "number",
+          "min": 0,
+          "max": 1000000
+        },
+        {
+          "key": "approval",
+          "label": "Authorization conditions and expiry checked",
+          "type": "select",
+          "options": [
+            "Pending review",
+            "Confirmed",
+            "Exception requires escalation"
+          ]
+        }
+      ],
+      "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+    }
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "340e6bc02a0dce9815ea25260709e9474eaa36056c8e1c1418c42a18ee41a1c0",
+  "sourceFingerprint": "6b8085c9c277a310604e348858e2bc05aca01707d33fd6794c6ba55c698f5daa",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -51,6 +51,7 @@
     ".github/workflows/policy.yml",
     ".github/workflows/site.yml",
     "COMMERCIALIZATION.md",
+    "GO_TO_MARKET.md",
     "content/domain-matrix.json",
     "content/domain-reviews.json",
     "content/enterprise-plans.json",
@@ -106,6 +107,7 @@
     "services/evidence-ingestor/ccm.py",
     "services/mcp-server/server.py",
     "site/404.html",
+    "site/assets/domain-assessment.mjs",
     "site/assets/domain-core.mjs",
     "site/assets/evaluate.mjs",
     "site/assets/review-core.mjs",
