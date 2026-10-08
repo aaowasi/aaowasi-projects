@@ -1,23 +1,24 @@
 {
   "project_id": "D19",
   "name": "Incident governance & reporting",
-  "purpose": "Support a documented incident governance & reporting decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a incident notification and decision timeline for the agreed population and human decision.",
   "framework_candidates": [
     "NIST IR",
     "GDPR Articles 33\u201334"
   ],
   "capabilities": [
-    "Incident owner, escalation and corrective action",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Elapsed hours since applicable awareness point",
+    "Applicable notification deadline in hours",
+    "Notification applicability reviewed"
   ],
   "telemetry_sources": [
     "Authorized issue records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Incident notification and decision timeline",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST SP 800-53 IR",
     "GDPR Articles 33\u201334"
-  ]
+  ],
+  "assessment": {
+    "mode": "deadline",
+    "deliverable": "Incident notification and decision timeline",
+    "action": "Escalate overdue notification review; verify trigger and jurisdiction",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Elapsed hours since applicable awareness point",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Applicable notification deadline in hours",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Notification applicability reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

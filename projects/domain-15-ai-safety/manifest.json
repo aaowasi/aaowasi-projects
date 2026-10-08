@@ -1,23 +1,24 @@
 {
   "project_id": "D15",
   "name": "AI fairness, safety & oversight",
-  "purpose": "Support a documented ai fairness, safety & oversight decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a ai evaluation and oversight report for the agreed population and human decision.",
   "framework_candidates": [
     "NIST AI RMF MEASURE/MANAGE",
     "ISO/IEC 42001"
   ],
   "capabilities": [
-    "Evaluation findings and human review gates",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Observed failures in the declared evaluation sample",
+    "Maximum tolerated failures in that sample",
+    "Evaluation design and human oversight reviewed"
   ],
   "telemetry_sources": [
     "Authorized ai records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "AI evaluation and oversight report",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST AI RMF MEASURE/MANAGE",
     "ISO/IEC 42001"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "AI evaluation and oversight report",
+    "action": "Review unsafe evaluation results before release",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Observed failures in the declared evaluation sample",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Maximum tolerated failures in that sample",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Evaluation design and human oversight reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

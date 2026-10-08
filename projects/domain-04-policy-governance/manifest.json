@@ -1,23 +1,24 @@
 {
   "project_id": "D04",
   "name": "Policy lifecycle",
-  "purpose": "Support a documented policy lifecycle decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a policy release and acknowledgement pack for the agreed population and human decision.",
   "framework_candidates": [
     "ISO/IEC 27001 clause 7",
     "NIST PL"
   ],
   "capabilities": [
-    "Version, ownership and attestation",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "People requiring acknowledgement",
+    "Current policy acknowledgements",
+    "Policy version approved"
   ],
   "telemetry_sources": [
     "Authorized policy records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Policy release and acknowledgement pack",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -37,5 +38,37 @@
   "frameworks": [
     "ISO/IEC 27001 clause 7",
     "NIST SP 800-53 PL"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Policy release and acknowledgement pack",
+    "action": "Close acknowledgement gaps before policy release",
+    "fields": [
+      {
+        "key": "population",
+        "label": "People requiring acknowledgement",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Current policy acknowledgements",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Policy version approved",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

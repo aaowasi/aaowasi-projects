@@ -1,23 +1,24 @@
 {
   "project_id": "D21",
   "name": "Financial, fraud & ethical conduct risk",
-  "purpose": "Support a documented financial, fraud & ethical conduct risk decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a conduct exception and segregation review for the agreed population and human decision.",
   "framework_candidates": [
     "NIST PM, RA",
     "organization-specific legal obligations"
   ],
   "capabilities": [
-    "Exposure and risk decisions; specialist assessment required",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Transactions requiring unresolved exception review",
+    "Approved unresolved exception tolerance",
+    "Conflict and segregation review complete"
   ],
   "telemetry_sources": [
     "Authorized risk records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Conduct exception and segregation review",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -33,5 +34,37 @@
   ],
   "frameworks": [
     "NIST SP 800-53 PM, RA"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Conduct exception and segregation review",
+    "action": "Escalate unresolved conduct exceptions",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Transactions requiring unresolved exception review",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved unresolved exception tolerance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Conflict and segregation review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

@@ -1,23 +1,24 @@
 {
   "project_id": "D27",
   "name": "Logging, evidence integrity & provenance",
-  "purpose": "Support a documented logging, evidence integrity & provenance decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a evidence provenance and integrity manifest for the agreed population and human decision.",
   "framework_candidates": [
     "NIST AU",
     "SOC 2 CC7"
   ],
   "capabilities": [
-    "Source timestamps and evidence validation",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Evidence objects in the review population",
+    "Objects with verified hash and provenance",
+    "Custody and timestamp review complete"
   ],
   "telemetry_sources": [
     "Authorized test records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Evidence provenance and integrity manifest",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -36,5 +37,37 @@
   "frameworks": [
     "NIST SP 800-53 AU",
     "SOC 2 CC7"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Evidence provenance and integrity manifest",
+    "action": "Exclude unverified objects from the relied-on evidence set",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Evidence objects in the review population",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Objects with verified hash and provenance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Custody and timestamp review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

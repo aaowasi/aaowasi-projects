@@ -6,8 +6,8 @@
     "type": "Connected governance workflow",
     "domain": "Corporate governance & accountability",
     "group": "enterprise",
-    "summary": "Named owners, decisions and review dates. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented corporate governance & accountability decision with explicit evidence, ownership and review criteria.",
+    "summary": "Delegation and accountability register. Confirm delegation and escalate uncovered decisions.",
+    "outcome": "Prepare a delegation and accountability register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -16,13 +16,14 @@
       "NIST SP 800-53 PM"
     ],
     "capabilities": [
-      "Named owners, decisions and review dates",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Decisions requiring delegated authority",
+      "Decisions with a documented mandate",
+      "Authority verified"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Delegation and accountability register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -65,8 +66,8 @@
     "type": "Connected governance workflow",
     "domain": "Enterprise risk & appetite",
     "group": "enterprise",
-    "summary": "Likelihood, impact, treatment and acceptance. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented enterprise risk & appetite decision with explicit evidence, ownership and review criteria.",
+    "summary": "Risk appetite exception memo. Escalate exposure above the approved appetite.",
+    "outcome": "Prepare a risk appetite exception memo for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -75,13 +76,14 @@
       "ISO/IEC 27001 clause 6"
     ],
     "capabilities": [
-      "Likelihood, impact, treatment and acceptance",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Residual exposure score (1\u201325)",
+      "Approved appetite threshold (1\u201325)",
+      "Treatment approved"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Risk appetite exception memo",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -114,8 +116,8 @@
     "type": "Connected governance workflow",
     "domain": "Regulatory applicability & change",
     "group": "enterprise",
-    "summary": "Jurisdiction, applicable requirement and effective date. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented regulatory applicability & change decision with explicit evidence, ownership and review criteria.",
+    "summary": "Applicability and change impact register. Assign unmapped obligations before reliance.",
+    "outcome": "Prepare a applicability and change impact register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -125,13 +127,14 @@
       "NIST SP 800-53 PL"
     ],
     "capabilities": [
-      "Jurisdiction, applicable requirement and effective date",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Applicable obligations identified",
+      "Obligations mapped to an accountable control",
+      "Jurisdiction review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Applicability and change impact register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -172,8 +175,8 @@
     "type": "Connected governance workflow",
     "domain": "Policy lifecycle",
     "group": "enterprise",
-    "summary": "Version, ownership and attestation. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented policy lifecycle decision with explicit evidence, ownership and review criteria.",
+    "summary": "Policy release and acknowledgement pack. Close acknowledgement gaps before policy release.",
+    "outcome": "Prepare a policy release and acknowledgement pack for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -182,13 +185,14 @@
       "NIST SP 800-53 PL"
     ],
     "capabilities": [
-      "Version, ownership and attestation",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "People requiring acknowledgement",
+      "Current policy acknowledgements",
+      "Policy version approved"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Policy release and acknowledgement pack",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -225,8 +229,8 @@
     "type": "Connected governance workflow",
     "domain": "Control implementation & ownership",
     "group": "enterprise",
-    "summary": "Requirement \u2192 control \u2192 owner. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented control implementation & ownership decision with explicit evidence, ownership and review criteria.",
+    "summary": "Control implementation gap register. Assign implementation and failed-test actions.",
+    "outcome": "Prepare a control implementation gap register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -236,13 +240,14 @@
       "SOC 2 TSC"
     ],
     "capabilities": [
-      "Requirement \u2192 control \u2192 owner",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Controls in the agreed scope",
+      "Controls implemented and tested",
+      "Test population approved"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Control implementation gap register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -277,8 +282,8 @@
     "type": "Connected governance workflow",
     "domain": "Internal audit & independence",
     "group": "enterprise",
-    "summary": "Plan, finding and corrective action. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented internal audit & independence decision with explicit evidence, ownership and review criteria.",
+    "summary": "Audit independence and sampling plan. Resolve independence and sampling gaps.",
+    "outcome": "Prepare a audit independence and sampling plan for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -287,13 +292,14 @@
       "NIST SP 800-53 CA"
     ],
     "capabilities": [
-      "Plan, finding and corrective action",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Planned audit procedures",
+      "Procedures supported by sufficient evidence",
+      "Auditor independence confirmed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Audit independence and sampling plan",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -326,8 +332,8 @@
     "type": "Connected governance workflow",
     "domain": "External audit & certification readiness",
     "group": "enterprise",
-    "summary": "Reviewed tests and dated evidence. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented external audit & certification readiness decision with explicit evidence, ownership and review criteria.",
+    "summary": "Audit request and evidence index. Assign incomplete requests and reviewer follow-up.",
+    "outcome": "Prepare a audit request and evidence index for the agreed population and human decision.",
     "featured": true,
     "featuredOrder": 3,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -336,13 +342,14 @@
       "ISO/IEC 27001 clauses 9\u201310"
     ],
     "capabilities": [
-      "Reviewed tests and dated evidence",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Evidence requests in the audit scope",
+      "Requests supported by reviewed evidence",
+      "Audit period confirmed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Audit request and evidence index",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -377,8 +384,8 @@
     "type": "Connected governance workflow",
     "domain": "Continuous assurance & remediation",
     "group": "enterprise",
-    "summary": "Evidence expiry, failed tests and treatment. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented continuous assurance & remediation decision with explicit evidence, ownership and review criteria.",
+    "summary": "Monitoring exception and treatment queue. Prioritize exceptions beyond tolerance.",
+    "outcome": "Prepare a monitoring exception and treatment queue for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -387,13 +394,14 @@
       "SOC 2 CC4"
     ],
     "capabilities": [
-      "Evidence expiry, failed tests and treatment",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Unresolved monitoring exceptions",
+      "Approved exception tolerance",
+      "Collector coverage reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Monitoring exception and treatment queue",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -426,8 +434,8 @@
     "type": "Connected governance workflow",
     "domain": "Supplier lifecycle & concentration",
     "group": "enterprise",
-    "summary": "Tier, dependencies and exit conditions. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented supplier lifecycle & concentration decision with explicit evidence, ownership and review criteria.",
+    "summary": "Supplier decision and concentration pack. Escalate concentration and contractual gaps.",
+    "outcome": "Prepare a supplier decision and concentration pack for the agreed population and human decision.",
     "featured": true,
     "featuredOrder": 2,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -436,13 +444,14 @@
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
-      "Tier, dependencies and exit conditions",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Critical service dependency on this supplier (%)",
+      "Approved concentration tolerance (%)",
+      "Data-use and exit terms reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Supplier decision and concentration pack",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -483,8 +492,8 @@
     "type": "Connected governance workflow",
     "domain": "Procurement & customer assurance",
     "group": "enterprise",
-    "summary": "Requirements and evidence-backed answers. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented procurement & customer assurance decision with explicit evidence, ownership and review criteria.",
+    "summary": "Evidence-backed questionnaire response pack. Keep unsupported answers in the review queue.",
+    "outcome": "Prepare a evidence-backed questionnaire response pack for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -493,13 +502,14 @@
       "NIST SP 800-53 SR"
     ],
     "capabilities": [
-      "Requirements and evidence-backed answers",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Customer questions in scope",
+      "Answers supported by current evidence",
+      "Disclosure approval obtained"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Evidence-backed questionnaire response pack",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -532,8 +542,8 @@
     "type": "Connected governance workflow",
     "domain": "Privacy & individual rights",
     "group": "enterprise",
-    "summary": "Purpose, retention and impact review. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented privacy & individual rights decision with explicit evidence, ownership and review criteria.",
+    "summary": "Individual rights response plan. Escalate overdue requests and verify the applicable deadline.",
+    "outcome": "Prepare a individual rights response plan for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -541,13 +551,14 @@
       "GDPR Articles 5, 12\u201322, 25, 35"
     ],
     "capabilities": [
-      "Purpose, retention and impact review",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Elapsed days since verified request",
+      "Applicable response deadline in days",
+      "Identity and exemptions reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Individual rights response plan",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -582,8 +593,8 @@
     "type": "Connected governance workflow",
     "domain": "Processors & cross-border transfers",
     "group": "enterprise",
-    "summary": "DPA, subprocessors and transfer mechanism. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented processors & cross-border transfers decision with explicit evidence, ownership and review criteria.",
+    "summary": "Processor and transfer decision register. Resolve missing agreements and transfer assessments.",
+    "outcome": "Prepare a processor and transfer decision register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -591,13 +602,14 @@
       "GDPR Articles 28, 30, 44\u201349"
     ],
     "capabilities": [
-      "DPA, subprocessors and transfer mechanism",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Processors and transfers requiring review",
+      "Relationships with reviewed terms and transfer basis",
+      "Legal transfer review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Processor and transfer decision register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -627,8 +639,8 @@
     "type": "Connected governance workflow",
     "domain": "Data classification & retention",
     "group": "enterprise",
-    "summary": "Data owner, classification and deletion review. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented data classification & retention decision with explicit evidence, ownership and review criteria.",
+    "summary": "Retention and disposal exception register. Review overdue disposal against legal hold obligations.",
+    "outcome": "Prepare a retention and disposal exception register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -637,13 +649,14 @@
       "NIST SP 800-53 MP, PT"
     ],
     "capabilities": [
-      "Data owner, classification and deletion review",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Records beyond approved retention",
+      "Approved retention exception allowance",
+      "Classification and legal hold checked"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Retention and disposal exception register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -678,8 +691,8 @@
     "type": "Connected governance workflow",
     "domain": "AI inventory & lifecycle authorization",
     "group": "enterprise",
-    "summary": "Inventory, evaluation and deployment decision. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented ai inventory & lifecycle authorization decision with explicit evidence, ownership and review criteria.",
+    "summary": "AI use-case release review pack. Resolve inventory and release prerequisites.",
+    "outcome": "Prepare a ai use-case release review pack for the agreed population and human decision.",
     "featured": true,
     "featuredOrder": 1,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -688,13 +701,14 @@
       "ISO/IEC 42001"
     ],
     "capabilities": [
-      "Inventory, evaluation and deployment decision",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "AI systems in the agreed inventory",
+      "Systems with documented lifecycle and oversight",
+      "Use-case classification reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "AI use-case release review pack",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -731,8 +745,8 @@
     "type": "Connected governance workflow",
     "domain": "AI fairness, safety & oversight",
     "group": "enterprise",
-    "summary": "Evaluation findings and human review gates. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented ai fairness, safety & oversight decision with explicit evidence, ownership and review criteria.",
+    "summary": "AI evaluation and oversight report. Review unsafe evaluation results before release.",
+    "outcome": "Prepare a ai evaluation and oversight report for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -741,13 +755,14 @@
       "ISO/IEC 42001"
     ],
     "capabilities": [
-      "Evaluation findings and human review gates",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Observed failures in the declared evaluation sample",
+      "Maximum tolerated failures in that sample",
+      "Evaluation design and human oversight reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "AI evaluation and oversight report",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -778,8 +793,8 @@
     "type": "Connected governance workflow",
     "domain": "AI transparency & content provenance",
     "group": "enterprise",
-    "summary": "Disclosure decision and evidence. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented ai transparency & content provenance decision with explicit evidence, ownership and review criteria.",
+    "summary": "AI disclosure and provenance checklist. Close disclosure and provenance gaps.",
+    "outcome": "Prepare a ai disclosure and provenance checklist for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -787,13 +802,14 @@
       "EU AI Act Article 50"
     ],
     "capabilities": [
-      "Disclosure decision and evidence",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Outputs requiring notice or provenance",
+      "Outputs with reviewed notice and provenance",
+      "Disclosure applicability confirmed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "AI disclosure and provenance checklist",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -823,8 +839,8 @@
     "type": "Connected governance workflow",
     "domain": "Shadow AI & acceptable use",
     "group": "enterprise",
-    "summary": "Use-case intake and egress review. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented shadow ai & acceptable use decision with explicit evidence, ownership and review criteria.",
+    "summary": "Unapproved AI use triage register. Contain unapproved use and assign an owner.",
+    "outcome": "Prepare a unapproved ai use triage register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -833,13 +849,14 @@
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
-      "Use-case intake and egress review",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Unapproved AI tools identified",
+      "Approved temporary exception allowance",
+      "Discovery population reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Unapproved AI use triage register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -869,8 +886,8 @@
     "type": "Connected governance workflow",
     "domain": "Continuity, recovery & crisis readiness",
     "group": "enterprise",
-    "summary": "Critical services, recovery objectives and exercise evidence. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented continuity, recovery & crisis readiness decision with explicit evidence, ownership and review criteria.",
+    "summary": "Recovery exercise and dependency report. Address recovery objective breaches and dependent services.",
+    "outcome": "Prepare a recovery exercise and dependency report for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -879,13 +896,14 @@
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
-      "Critical services, recovery objectives and exercise evidence",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Observed recovery time in minutes",
+      "Approved recovery time objective in minutes",
+      "Recovery-point evidence reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Recovery exercise and dependency report",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -915,8 +933,8 @@
     "type": "Connected governance workflow",
     "domain": "Incident governance & reporting",
     "group": "enterprise",
-    "summary": "Incident owner, escalation and corrective action. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented incident governance & reporting decision with explicit evidence, ownership and review criteria.",
+    "summary": "Incident notification and decision timeline. Escalate overdue notification review; verify trigger and jurisdiction.",
+    "outcome": "Prepare a incident notification and decision timeline for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -925,13 +943,14 @@
       "GDPR Articles 33\u201334"
     ],
     "capabilities": [
-      "Incident owner, escalation and corrective action",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Elapsed hours since applicable awareness point",
+      "Applicable notification deadline in hours",
+      "Notification applicability reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Incident notification and decision timeline",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -961,8 +980,8 @@
     "type": "Connected governance workflow",
     "domain": "Workforce, physical & organizational security",
     "group": "enterprise",
-    "summary": "Control and review records; specialist assessment required. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented workforce, physical & organizational security decision with explicit evidence, ownership and review criteria.",
+    "summary": "Joiner mover leaver control exception pack. Resolve missed personnel control actions.",
+    "outcome": "Prepare a joiner mover leaver control exception pack for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -971,13 +990,14 @@
       "ISO/IEC 27001 Annex A"
     ],
     "capabilities": [
-      "Control and review records; specialist assessment required",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Personnel changes requiring control actions",
+      "Changes with verified access and physical actions",
+      "HR and access reconciliation complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Joiner mover leaver control exception pack",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1008,8 +1028,8 @@
     "type": "Connected governance workflow",
     "domain": "Financial, fraud & ethical conduct risk",
     "group": "enterprise",
-    "summary": "Exposure and risk decisions; specialist assessment required. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented financial, fraud & ethical conduct risk decision with explicit evidence, ownership and review criteria.",
+    "summary": "Conduct exception and segregation review. Escalate unresolved conduct exceptions.",
+    "outcome": "Prepare a conduct exception and segregation review for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1017,13 +1037,14 @@
       "NIST SP 800-53 PM, RA"
     ],
     "capabilities": [
-      "Exposure and risk decisions; specialist assessment required",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Transactions requiring unresolved exception review",
+      "Approved unresolved exception tolerance",
+      "Conflict and segregation review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Conduct exception and segregation review",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1053,8 +1074,8 @@
     "type": "Connected governance workflow",
     "domain": "Sector, market & contractual obligations",
     "group": "enterprise",
-    "summary": "Applicability review; sector-specific controls require scoping. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented sector, market & contractual obligations decision with explicit evidence, ownership and review criteria.",
+    "summary": "Sector and contract obligation map. Assign unmapped sector or contract requirements.",
+    "outcome": "Prepare a sector and contract obligation map for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1062,13 +1083,14 @@
       "FedRAMP Rev5 when in scope"
     ],
     "capabilities": [
-      "Applicability review; sector-specific controls require scoping",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Sector and contract requirements in scope",
+      "Requirements mapped to verified controls",
+      "Sector applicability approved"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Sector and contract obligation map",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1101,8 +1123,8 @@
     "type": "Connected governance workflow",
     "domain": "Security scope & authorization boundary",
     "group": "technical",
-    "summary": "Asset scope and system boundary; deployment architecture review. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented security scope & authorization boundary decision with explicit evidence, ownership and review criteria.",
+    "summary": "Authorization boundary and interface dossier. Document uncovered interfaces before authorization review.",
+    "outcome": "Prepare a authorization boundary and interface dossier for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1111,13 +1133,14 @@
       "NIST SP 800-53 PL-2, CA-3"
     ],
     "capabilities": [
-      "Asset scope and system boundary; deployment architecture review",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Interfaces crossing the system boundary",
+      "Interfaces with documented trust and data flows",
+      "Boundary owner review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Authorization boundary and interface dossier",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1154,8 +1177,8 @@
     "type": "Connected governance workflow",
     "domain": "Identity, least privilege & segregation",
     "group": "technical",
-    "summary": "IAM evidence and authorization policy source. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented identity, least privilege & segregation decision with explicit evidence, ownership and review criteria.",
+    "summary": "Privilege and segregation exception register. Revoke or formally review excess privilege.",
+    "outcome": "Prepare a privilege and segregation exception register for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1164,13 +1187,14 @@
       "SOC 2 CC6"
     ],
     "capabilities": [
-      "IAM evidence and authorization policy source",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Unapproved privileged entitlements",
+      "Approved temporary exception allowance",
+      "Segregation and access review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Privilege and segregation exception register",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1207,8 +1231,8 @@
     "type": "Connected governance workflow",
     "domain": "Cloud configuration & change",
     "group": "technical",
-    "summary": "Configuration events and control decisions. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented cloud configuration & change decision with explicit evidence, ownership and review criteria.",
+    "summary": "Cloud change drift and release record. Resolve baseline drift before release review.",
+    "outcome": "Prepare a cloud change drift and release record for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1217,13 +1241,14 @@
       "SOC 2 CC8"
     ],
     "capabilities": [
-      "Configuration events and control decisions",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Configuration deviations from the approved baseline",
+      "Approved drift tolerance",
+      "Change approval and rollback reviewed"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Cloud change drift and release record",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1256,8 +1281,8 @@
     "type": "Connected governance workflow",
     "domain": "Threat, vulnerability & supply-chain assurance",
     "group": "technical",
-    "summary": "Alert normalization and remediation priorities. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented threat, vulnerability & supply-chain assurance decision with explicit evidence, ownership and review criteria.",
+    "summary": "Vulnerability and dependency treatment plan. Assign overdue critical findings and validate treatment.",
+    "outcome": "Prepare a vulnerability and dependency treatment plan for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1265,13 +1290,14 @@
       "NIST SP 800-53 RA-5, SI-2, SR"
     ],
     "capabilities": [
-      "Alert normalization and remediation priorities",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Critical findings beyond agreed remediation SLA",
+      "Approved overdue critical finding allowance",
+      "Exploitability and dependency review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Vulnerability and dependency treatment plan",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1304,8 +1330,8 @@
     "type": "Connected governance workflow",
     "domain": "Logging, evidence integrity & provenance",
     "group": "technical",
-    "summary": "Source timestamps and evidence validation. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented logging, evidence integrity & provenance decision with explicit evidence, ownership and review criteria.",
+    "summary": "Evidence provenance and integrity manifest. Exclude unverified objects from the relied-on evidence set.",
+    "outcome": "Prepare a evidence provenance and integrity manifest for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1314,13 +1340,14 @@
       "SOC 2 CC7"
     ],
     "capabilities": [
-      "Source timestamps and evidence validation",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Evidence objects in the review population",
+      "Objects with verified hash and provenance",
+      "Custody and timestamp review complete"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Evidence provenance and integrity manifest",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1355,8 +1382,8 @@
     "type": "Connected governance workflow",
     "domain": "Agent, tool & data authorization",
     "group": "technical",
-    "summary": "Agent/tool authorization policies and human escalation. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented agent, tool & data authorization decision with explicit evidence, ownership and review criteria.",
+    "summary": "Agent tool and data permission contract. Block unbounded actions pending permission review.",
+    "outcome": "Prepare a agent tool and data permission contract for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1365,13 +1392,14 @@
       "NIST AI RMF"
     ],
     "capabilities": [
-      "Agent/tool authorization policies and human escalation",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Agent tool actions requiring authorization",
+      "Actions with approved data and tool boundaries",
+      "Human approval and kill switch tested"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Agent tool and data permission contract",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -1402,8 +1430,8 @@
     "type": "Connected governance workflow",
     "domain": "Assessment, authorization & ongoing monitoring",
     "group": "technical",
-    "summary": "Review packages; authorization remains with designated authority. Connect scoped requirements, dated evidence and accountable treatment.",
-    "outcome": "Support a documented assessment, authorization & ongoing monitoring decision with explicit evidence, ownership and review criteria.",
+    "summary": "Reauthorization trigger and decision record. Route material changes to reauthorization review.",
+    "outcome": "Prepare a reauthorization trigger and decision record for the agreed population and human decision.",
     "featured": false,
     "featuredOrder": 99,
     "evidenceBasis": "Source records \u00b7 review logic \u00b7 decision outputs",
@@ -1412,13 +1440,14 @@
       "FedRAMP Rev5"
     ],
     "capabilities": [
-      "Review packages; authorization remains with designated authority",
-      "Linked upstream dependencies",
-      "Evidence freshness and treatment review"
+      "Material changes without authorization review",
+      "Approved pending-change allowance",
+      "Authorization conditions and expiry checked"
     ],
     "outputs": [
-      "Domain-classified register records in the shared JSON export",
-      "Linked evidence, ownership and review decisions"
+      "Reauthorization trigger and decision record",
+      "Domain-specific calculations and exception actions",
+      "Linked evidence, ownership and review dependencies"
     ],
     "guardrails": [
       "Framework applicability must be confirmed for the organization and jurisdiction",

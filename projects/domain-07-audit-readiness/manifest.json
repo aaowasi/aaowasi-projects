@@ -1,23 +1,24 @@
 {
   "project_id": "D07",
   "name": "External audit & certification readiness",
-  "purpose": "Support a documented external audit & certification readiness decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a audit request and evidence index for the agreed population and human decision.",
   "framework_candidates": [
     "SOC 2 TSC",
     "ISO/IEC 27001 clauses 9\u201310"
   ],
   "capabilities": [
-    "Reviewed tests and dated evidence",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Evidence requests in the audit scope",
+    "Requests supported by reviewed evidence",
+    "Audit period confirmed"
   ],
   "telemetry_sources": [
     "Authorized test records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Audit request and evidence index",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -36,5 +37,37 @@
   "frameworks": [
     "SOC 2 TSC",
     "ISO/IEC 27001 clauses 9\u201310"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Audit request and evidence index",
+    "action": "Assign incomplete requests and reviewer follow-up",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Evidence requests in the audit scope",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Requests supported by reviewed evidence",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Audit period confirmed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

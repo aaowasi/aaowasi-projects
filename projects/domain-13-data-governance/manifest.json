@@ -1,23 +1,24 @@
 {
   "project_id": "D13",
   "name": "Data classification & retention",
-  "purpose": "Support a documented data classification & retention decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a retention and disposal exception register for the agreed population and human decision.",
   "framework_candidates": [
     "GDPR Article 5",
     "NIST MP, PT"
   ],
   "capabilities": [
-    "Data owner, classification and deletion review",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Records beyond approved retention",
+    "Approved retention exception allowance",
+    "Classification and legal hold checked"
   ],
   "telemetry_sources": [
     "Authorized processing records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Retention and disposal exception register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -36,5 +37,37 @@
   "frameworks": [
     "GDPR Article 5",
     "NIST SP 800-53 MP, PT"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Retention and disposal exception register",
+    "action": "Review overdue disposal against legal hold obligations",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Records beyond approved retention",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved retention exception allowance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Classification and legal hold checked",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

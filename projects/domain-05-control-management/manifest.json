@@ -1,24 +1,25 @@
 {
   "project_id": "D05",
   "name": "Control implementation & ownership",
-  "purpose": "Support a documented control implementation & ownership decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a control implementation gap register for the agreed population and human decision.",
   "framework_candidates": [
     "NIST SP 800-53",
     "ISO/IEC 27001 Annex A",
     "SOC 2 TSC"
   ],
   "capabilities": [
-    "Requirement \u2192 control \u2192 owner",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Controls in the agreed scope",
+    "Controls implemented and tested",
+    "Test population approved"
   ],
   "telemetry_sources": [
     "Authorized control records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Control implementation gap register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -38,5 +39,37 @@
     "NIST SP 800-53",
     "ISO/IEC 27001 Annex A",
     "SOC 2 TSC"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Control implementation gap register",
+    "action": "Assign implementation and failed-test actions",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Controls in the agreed scope",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Controls implemented and tested",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Test population approved",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

@@ -1,22 +1,23 @@
 {
   "project_id": "D11",
   "name": "Privacy & individual rights",
-  "purpose": "Support a documented privacy & individual rights decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a individual rights response plan for the agreed population and human decision.",
   "framework_candidates": [
     "GDPR Articles 5, 12\u201322, 25, 35"
   ],
   "capabilities": [
-    "Purpose, retention and impact review",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Elapsed days since verified request",
+    "Applicable response deadline in days",
+    "Identity and exemptions reviewed"
   ],
   "telemetry_sources": [
     "Authorized processing records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Individual rights response plan",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   ],
   "frameworks": [
     "GDPR Articles 5, 12\u201322, 25, 35"
-  ]
+  ],
+  "assessment": {
+    "mode": "deadline",
+    "deliverable": "Individual rights response plan",
+    "action": "Escalate overdue requests and verify the applicable deadline",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Elapsed days since verified request",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Applicable response deadline in days",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Identity and exemptions reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

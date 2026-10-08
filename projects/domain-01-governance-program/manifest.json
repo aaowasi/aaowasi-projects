@@ -1,23 +1,24 @@
 {
   "project_id": "D01",
   "name": "Corporate governance & accountability",
-  "purpose": "Support a documented corporate governance & accountability decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a delegation and accountability register for the agreed population and human decision.",
   "framework_candidates": [
     "ISO/IEC 27001 clauses 4\u20136",
     "NIST PM"
   ],
   "capabilities": [
-    "Named owners, decisions and review dates",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Decisions requiring delegated authority",
+    "Decisions with a documented mandate",
+    "Authority verified"
   ],
   "telemetry_sources": [
     "Authorized decision records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Delegation and accountability register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -43,5 +44,37 @@
   "frameworks": [
     "ISO/IEC 27001 clauses 4\u20136",
     "NIST SP 800-53 PM"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Delegation and accountability register",
+    "action": "Confirm delegation and escalate uncovered decisions",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Decisions requiring delegated authority",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Decisions with a documented mandate",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Authority verified",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

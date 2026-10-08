@@ -1,23 +1,24 @@
 {
   "project_id": "D22",
   "name": "Sector, market & contractual obligations",
-  "purpose": "Support a documented sector, market & contractual obligations decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a sector and contract obligation map for the agreed population and human decision.",
   "framework_candidates": [
     "Applicable sector rules",
     "FedRAMP Rev5 when in scope"
   ],
   "capabilities": [
-    "Applicability review; sector-specific controls require scoping",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Sector and contract requirements in scope",
+    "Requirements mapped to verified controls",
+    "Sector applicability approved"
   ],
   "telemetry_sources": [
     "Authorized obligation records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Sector and contract obligation map",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   ],
   "frameworks": [
     "FedRAMP Rev5 when in scope"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Sector and contract obligation map",
+    "action": "Assign unmapped sector or contract requirements",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Sector and contract requirements in scope",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Requirements mapped to verified controls",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Sector applicability approved",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

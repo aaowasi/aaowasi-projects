@@ -1,23 +1,24 @@
 {
   "project_id": "D28",
   "name": "Agent, tool & data authorization",
-  "purpose": "Support a documented agent, tool & data authorization decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a agent tool and data permission contract for the agreed population and human decision.",
   "framework_candidates": [
     "NIST AC",
     "NIST AI RMF"
   ],
   "capabilities": [
-    "Agent/tool authorization policies and human escalation",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Agent tool actions requiring authorization",
+    "Actions with approved data and tool boundaries",
+    "Human approval and kill switch tested"
   ],
   "telemetry_sources": [
     "Authorized decision records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Agent tool and data permission contract",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST SP 800-53 AC",
     "NIST AI RMF"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Agent tool and data permission contract",
+    "action": "Block unbounded actions pending permission review",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Agent tool actions requiring authorization",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Actions with approved data and tool boundaries",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Human approval and kill switch tested",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

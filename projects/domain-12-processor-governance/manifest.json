@@ -1,22 +1,23 @@
 {
   "project_id": "D12",
   "name": "Processors & cross-border transfers",
-  "purpose": "Support a documented processors & cross-border transfers decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a processor and transfer decision register for the agreed population and human decision.",
   "framework_candidates": [
     "GDPR Articles 28, 30, 44\u201349"
   ],
   "capabilities": [
-    "DPA, subprocessors and transfer mechanism",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Processors and transfers requiring review",
+    "Relationships with reviewed terms and transfer basis",
+    "Legal transfer review complete"
   ],
   "telemetry_sources": [
     "Authorized contract records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Processor and transfer decision register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -32,5 +33,37 @@
   ],
   "frameworks": [
     "GDPR Articles 28, 30, 44\u201349"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Processor and transfer decision register",
+    "action": "Resolve missing agreements and transfer assessments",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Processors and transfers requiring review",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Relationships with reviewed terms and transfer basis",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Legal transfer review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

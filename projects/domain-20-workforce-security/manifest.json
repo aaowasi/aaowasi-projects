@@ -1,23 +1,24 @@
 {
   "project_id": "D20",
   "name": "Workforce, physical & organizational security",
-  "purpose": "Support a documented workforce, physical & organizational security decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a joiner mover leaver control exception pack for the agreed population and human decision.",
   "framework_candidates": [
     "NIST AT, PS, PE",
     "ISO/IEC 27001 Annex A"
   ],
   "capabilities": [
-    "Control and review records; specialist assessment required",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Personnel changes requiring control actions",
+    "Changes with verified access and physical actions",
+    "HR and access reconciliation complete"
   ],
   "telemetry_sources": [
     "Authorized policy records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Joiner mover leaver control exception pack",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST SP 800-53 AT, PS, PE",
     "ISO/IEC 27001 Annex A"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Joiner mover leaver control exception pack",
+    "action": "Resolve missed personnel control actions",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Personnel changes requiring control actions",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Changes with verified access and physical actions",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "HR and access reconciliation complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

@@ -1,23 +1,24 @@
 {
   "project_id": "D25",
   "name": "Cloud configuration & change",
-  "purpose": "Support a documented cloud configuration & change decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a cloud change drift and release record for the agreed population and human decision.",
   "framework_candidates": [
     "NIST CM",
     "SOC 2 CC8"
   ],
   "capabilities": [
-    "Configuration events and control decisions",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Configuration deviations from the approved baseline",
+    "Approved drift tolerance",
+    "Change approval and rollback reviewed"
   ],
   "telemetry_sources": [
     "Authorized asset records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Cloud change drift and release record",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -35,5 +36,37 @@
   "frameworks": [
     "NIST SP 800-53 CM",
     "SOC 2 CC8"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Cloud change drift and release record",
+    "action": "Resolve baseline drift before release review",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Configuration deviations from the approved baseline",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved drift tolerance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Change approval and rollback reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

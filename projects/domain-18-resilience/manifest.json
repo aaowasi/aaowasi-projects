@@ -1,23 +1,24 @@
 {
   "project_id": "D18",
   "name": "Continuity, recovery & crisis readiness",
-  "purpose": "Support a documented continuity, recovery & crisis readiness decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a recovery exercise and dependency report for the agreed population and human decision.",
   "framework_candidates": [
     "NIST CP",
     "ISO/IEC 27001 Annex A"
   ],
   "capabilities": [
-    "Critical services, recovery objectives and exercise evidence",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Observed recovery time in minutes",
+    "Approved recovery time objective in minutes",
+    "Recovery-point evidence reviewed"
   ],
   "telemetry_sources": [
     "Authorized asset records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Recovery exercise and dependency report",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST SP 800-53 CP",
     "ISO/IEC 27001 Annex A"
-  ]
+  ],
+  "assessment": {
+    "mode": "recovery",
+    "deliverable": "Recovery exercise and dependency report",
+    "action": "Address recovery objective breaches and dependent services",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Observed recovery time in minutes",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved recovery time objective in minutes",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Recovery-point evidence reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

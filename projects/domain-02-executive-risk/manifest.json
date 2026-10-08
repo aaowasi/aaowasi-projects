@@ -1,23 +1,24 @@
 {
   "project_id": "D02",
   "name": "Enterprise risk & appetite",
-  "purpose": "Support a documented enterprise risk & appetite decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a risk appetite exception memo for the agreed population and human decision.",
   "framework_candidates": [
     "NIST RA",
     "ISO/IEC 27001 clause 6"
   ],
   "capabilities": [
-    "Likelihood, impact, treatment and acceptance",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Residual exposure score (1\u201325)",
+    "Approved appetite threshold (1\u201325)",
+    "Treatment approved"
   ],
   "telemetry_sources": [
     "Authorized risk records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Risk appetite exception memo",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -35,5 +36,37 @@
   "frameworks": [
     "NIST SP 800-53 RA",
     "ISO/IEC 27001 clause 6"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Risk appetite exception memo",
+    "action": "Escalate exposure above the approved appetite",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Residual exposure score (1\u201325)",
+        "type": "number",
+        "min": 0,
+        "max": 25
+      },
+      {
+        "key": "baseline",
+        "label": "Approved appetite threshold (1\u201325)",
+        "type": "number",
+        "min": 0,
+        "max": 25
+      },
+      {
+        "key": "approval",
+        "label": "Treatment approved",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

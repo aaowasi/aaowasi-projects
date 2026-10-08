@@ -1,23 +1,24 @@
 {
   "project_id": "D08",
   "name": "Continuous assurance & remediation",
-  "purpose": "Support a documented continuous assurance & remediation decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a monitoring exception and treatment queue for the agreed population and human decision.",
   "framework_candidates": [
     "NIST CA-7",
     "SOC 2 CC4"
   ],
   "capabilities": [
-    "Evidence expiry, failed tests and treatment",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Unresolved monitoring exceptions",
+    "Approved exception tolerance",
+    "Collector coverage reviewed"
   ],
   "telemetry_sources": [
     "Authorized issue records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Monitoring exception and treatment queue",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -35,5 +36,37 @@
   "frameworks": [
     "NIST SP 800-53 CA-7",
     "SOC 2 CC4"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Monitoring exception and treatment queue",
+    "action": "Prioritize exceptions beyond tolerance",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Unresolved monitoring exceptions",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved exception tolerance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Collector coverage reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

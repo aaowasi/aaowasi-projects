@@ -1,23 +1,24 @@
 {
   "project_id": "D09",
   "name": "Supplier lifecycle & concentration",
-  "purpose": "Support a documented supplier lifecycle & concentration decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a supplier decision and concentration pack for the agreed population and human decision.",
   "framework_candidates": [
     "NIST SR",
     "ISO/IEC 27001 Annex A"
   ],
   "capabilities": [
-    "Tier, dependencies and exit conditions",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Critical service dependency on this supplier (%)",
+    "Approved concentration tolerance (%)",
+    "Data-use and exit terms reviewed"
   ],
   "telemetry_sources": [
     "Authorized vendor records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Supplier decision and concentration pack",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -39,5 +40,37 @@
   "frameworks": [
     "NIST SP 800-53 SR",
     "ISO/IEC 27001 Annex A"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Supplier decision and concentration pack",
+    "action": "Escalate concentration and contractual gaps",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Critical service dependency on this supplier (%)",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "key": "baseline",
+        "label": "Approved concentration tolerance (%)",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "key": "approval",
+        "label": "Data-use and exit terms reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

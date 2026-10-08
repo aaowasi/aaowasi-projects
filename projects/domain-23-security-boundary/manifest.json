@@ -1,23 +1,24 @@
 {
   "project_id": "D23",
   "name": "Security scope & authorization boundary",
-  "purpose": "Support a documented security scope & authorization boundary decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a authorization boundary and interface dossier for the agreed population and human decision.",
   "framework_candidates": [
     "NIST RMF",
     "NIST PL-2, CA-3"
   ],
   "capabilities": [
-    "Asset scope and system boundary; deployment architecture review",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Interfaces crossing the system boundary",
+    "Interfaces with documented trust and data flows",
+    "Boundary owner review complete"
   ],
   "telemetry_sources": [
     "Authorized asset records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Authorization boundary and interface dossier",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -37,5 +38,37 @@
   "frameworks": [
     "NIST RMF",
     "NIST SP 800-53 PL-2, CA-3"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Authorization boundary and interface dossier",
+    "action": "Document uncovered interfaces before authorization review",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Interfaces crossing the system boundary",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Interfaces with documented trust and data flows",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Boundary owner review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

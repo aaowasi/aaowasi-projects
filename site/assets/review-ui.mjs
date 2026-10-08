@@ -1,3 +1,4 @@
+import {deliveryMemo} from './domain-assessment.mjs';
 import {review} from './review-core.mjs';
 const root=document.querySelector('[data-review-inspector]');
 if(root){
@@ -9,5 +10,6 @@ if(root){
  root.querySelector('[data-review-example]').onclick=()=>{form.reset();Object.entries({scope:'Illustrative customer-support service',owner:'Example service owner',reviewer:'Example risk reviewer',evidenceURL:'https://example.com/evidence/review',asOf:'2026-10-04',expires:'2026-09-30'}).forEach(([k,v])=>form.elements[k].value=v);for(const f of config.assessment.fields)form.elements['domain-'+f.key].value=f.type==='select'?'Pending review':f.key==='population'?'10':'5';form.querySelector('[data-domain-check]').checked=true;update();status.textContent='Illustrative metadata loaded. '+status.textContent;};
  root.querySelector('[data-review-reset]').onclick=select;
  root.querySelector('[data-review-export]').onclick=()=>{update();if(!form.reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=config.slug+'-review.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent+=' · JSON export prepared.';};
+ root.querySelector('[data-review-memo]').onclick=()=>{update();if(!form.reportValidity())return;const url=URL.createObjectURL(new Blob([deliveryMemo(result)],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=config.slug+'-decision-memo.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent+=' · Decision memo prepared.';};
  try{const res=await fetch('/data/domain-reviews.json');if(!res.ok)throw Error();configs=await res.json();select();document.querySelector('#domain-perspective')?.addEventListener('change',select);addEventListener('popstate',()=>queueMicrotask(select));}catch{status.textContent='Review definitions could not load. Reload to retry or open the operating guide.';}
 }

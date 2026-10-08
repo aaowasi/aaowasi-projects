@@ -1,24 +1,25 @@
 {
   "project_id": "D03",
   "name": "Regulatory applicability & change",
-  "purpose": "Support a documented regulatory applicability & change decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a applicability and change impact register for the agreed population and human decision.",
   "framework_candidates": [
     "GDPR",
     "EU AI Act",
     "NIST PL"
   ],
   "capabilities": [
-    "Jurisdiction, applicable requirement and effective date",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Applicable obligations identified",
+    "Obligations mapped to an accountable control",
+    "Jurisdiction review complete"
   ],
   "telemetry_sources": [
     "Authorized obligation records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Applicability and change impact register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -41,5 +42,37 @@
     "GDPR",
     "EU AI Act",
     "NIST SP 800-53 PL"
-  ]
+  ],
+  "assessment": {
+    "mode": "coverage",
+    "deliverable": "Applicability and change impact register",
+    "action": "Assign unmapped obligations before reliance",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Applicable obligations identified",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Obligations mapped to an accountable control",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Jurisdiction review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

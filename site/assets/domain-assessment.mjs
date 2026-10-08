@@ -16,3 +16,8 @@ export function assess(config, values = {}) {
  }
  return {deliverable:a.deliverable,method:a.mode,inputs:Object.fromEntries(a.fields.map(f=>[f.key,values[f.key]??null])),metric,acceptance:a.acceptance,findings};
 }
+export function deliveryMemo(result) {
+ const clean=v=>String(v??'Not recorded').replace(/[\r\n]+/g,' ');
+ const a=result.assessment;
+ return ['# '+clean(a.deliverable),'','Status: '+clean(result.readiness.gate),'Scope: '+clean(result.scope),'Owner: '+clean(result.owner),'Reviewer: '+clean(result.reviewer),'Reporting date: '+clean(result.reportingDate),'','## Domain assessment','Method: '+clean(a.method),...Object.entries(a.inputs).map(([k,v])=>k+': '+clean(v)),'Calculation: '+JSON.stringify(a.metric),'','## Evidence reference',clean(result.evidence.url),'Valid until: '+clean(result.evidence.validUntil),'Content verification: pending accountable reviewer','', '## Findings and actions',...result.findings.map(f=>'- '+clean(f.finding)+'; '+clean(f.nextAction)),'','## Dependency handoffs','Upstream: '+result.upstream.join(', '),'Downstream: '+result.downstream.join(', '),'','## Acceptance',clean(a.acceptance),'Not authorized; this metadata report is not a certification or audit opinion.'].join('\n');
+}

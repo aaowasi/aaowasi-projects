@@ -1,23 +1,24 @@
 {
   "project_id": "D29",
   "name": "Assessment, authorization & ongoing monitoring",
-  "purpose": "Support a documented assessment, authorization & ongoing monitoring decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a reauthorization trigger and decision record for the agreed population and human decision.",
   "framework_candidates": [
     "NIST CA-2, CA-6, CA-7",
     "FedRAMP Rev5"
   ],
   "capabilities": [
-    "Review packages; authorization remains with designated authority",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Material changes without authorization review",
+    "Approved pending-change allowance",
+    "Authorization conditions and expiry checked"
   ],
   "telemetry_sources": [
     "Authorized decision records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Reauthorization trigger and decision record",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -35,5 +36,37 @@
   "frameworks": [
     "NIST SP 800-53 CA-2, CA-6, CA-7",
     "FedRAMP Rev5"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Reauthorization trigger and decision record",
+    "action": "Route material changes to reauthorization review",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Material changes without authorization review",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved pending-change allowance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Authorization conditions and expiry checked",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

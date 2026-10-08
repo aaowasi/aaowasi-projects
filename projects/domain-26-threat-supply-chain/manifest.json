@@ -1,22 +1,23 @@
 {
   "project_id": "D26",
   "name": "Threat, vulnerability & supply-chain assurance",
-  "purpose": "Support a documented threat, vulnerability & supply-chain assurance decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a vulnerability and dependency treatment plan for the agreed population and human decision.",
   "framework_candidates": [
     "NIST RA-5, SI-2, SR"
   ],
   "capabilities": [
-    "Alert normalization and remediation priorities",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Critical findings beyond agreed remediation SLA",
+    "Approved overdue critical finding allowance",
+    "Exploitability and dependency review complete"
   ],
   "telemetry_sources": [
     "Authorized asset records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Vulnerability and dependency treatment plan",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -33,5 +34,37 @@
   ],
   "frameworks": [
     "NIST SP 800-53 RA-5, SI-2, SR"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Vulnerability and dependency treatment plan",
+    "action": "Assign overdue critical findings and validate treatment",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Critical findings beyond agreed remediation SLA",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved overdue critical finding allowance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Exploitability and dependency review complete",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }

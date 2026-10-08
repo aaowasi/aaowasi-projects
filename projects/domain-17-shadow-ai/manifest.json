@@ -1,23 +1,24 @@
 {
   "project_id": "D17",
   "name": "Shadow AI & acceptable use",
-  "purpose": "Support a documented shadow ai & acceptable use decision with explicit evidence, ownership and review criteria.",
+  "purpose": "Prepare a unapproved ai use triage register for the agreed population and human decision.",
   "framework_candidates": [
     "NIST AI RMF",
     "ISO/IEC 27001 Annex A"
   ],
   "capabilities": [
-    "Use-case intake and egress review",
-    "Linked upstream dependencies",
-    "Evidence freshness and treatment review"
+    "Unapproved AI tools identified",
+    "Approved temporary exception allowance",
+    "Discovery population reviewed"
   ],
   "telemetry_sources": [
     "Authorized ai records",
     "Reviewed control tests and source evidence"
   ],
   "outputs": [
-    "Domain-classified register records in the shared JSON export",
-    "Linked evidence, ownership and review decisions"
+    "Unapproved AI use triage register",
+    "Domain-specific calculations and exception actions",
+    "Linked evidence, ownership and review dependencies"
   ],
   "guardrails": [
     "Framework applicability must be confirmed for the organization and jurisdiction",
@@ -34,5 +35,37 @@
   "frameworks": [
     "NIST AI RMF",
     "ISO/IEC 27001 Annex A"
-  ]
+  ],
+  "assessment": {
+    "mode": "limit",
+    "deliverable": "Unapproved AI use triage register",
+    "action": "Contain unapproved use and assign an owner",
+    "fields": [
+      {
+        "key": "population",
+        "label": "Unapproved AI tools identified",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "baseline",
+        "label": "Approved temporary exception allowance",
+        "type": "number",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "key": "approval",
+        "label": "Discovery population reviewed",
+        "type": "select",
+        "options": [
+          "Pending review",
+          "Confirmed",
+          "Exception requires escalation"
+        ]
+      }
+    ],
+    "acceptance": "Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization."
+  }
 }
