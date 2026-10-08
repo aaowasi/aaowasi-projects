@@ -1,6 +1,6 @@
 # Connected Governance Workspace
 
-An inspectable connected GRC operating workspace for AI governance, third-party AI/LLM risk, audit readiness and continuous assurance.
+AI use-case review packs, supplier decision packs and control evidence readiness — defined inputs, traceable findings, accountable actions and an editable handover. Inspect the domain-specific calculations and source before scoping an engagement or discussing role fit.
 
 [Live workspace](https://aaowasi-projects.pages.dev/workspace/) · [Recorded delivery evidence](https://aaowasi-projects.pages.dev/results/) · [Decision brief](https://aaowasi.pages.dev/contact/) · [Continuous GRC suite](https://aaowasi-projects.pages.dev/suite/)
 
