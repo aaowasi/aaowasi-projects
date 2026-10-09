@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `2ef441ca85e97451ae7b4e8bd1d65ce8c65fc35301bb06b2d466774546b1c46a`
+Source contract SHA-256: `b2fc98a222b287c2f29d16931bfbb7c2e785b42aff9163e1276c91e91615de68`
 
 ## System overview
 
@@ -3462,6 +3462,15 @@ Run https://aaowasi-projects.pages.dev/outcomes/ to inspect three reusable examp
 Walkthrough: download JSON → open /workspace/ or /decision-lab/ → import same original scenario JSON (not the V2 export) → inspect review gates → export V2 decision pack and Markdown memo from the outcome demo. Scenario packs combine typed Workspace version 1 with Decision Lab schemaVersion 1.0; the V2 artifact is a read-only decision output, not an import source. The same scenario evaluator is used in the browser and authenticated /api/evaluate. /api/status, /api/login and /api/account keep their scoped authentication and configuration contracts unchanged. None of these scenarios require an AI inference service, claim actual client ROI, or automatically sign off a regulatory finding. The open core is AGPL-3.0.
 
 Control and framework anchors: NIST AI RMF, ISO/IEC 42001, ISO/IEC 27001, SOC 2 TSC and the GDPR/EU AI Act are mapping references, not independent compliance determinations. NIST/ISO/control specifics depend on actual inventory, scope, risk ownership, evidence and reporting period. Confirm jurisdiction and latest law text against authoritative official sources before using client-facing conclusions.
+
+
+## Scheduled curated primary-source observation (human review required)
+
+The repo runs .github/workflows/regulatory-watch.yml daily around 04:17 UTC and when authorized manually, with a first-run trigger after the initial main-branch rollout. The stdlib watcher scripts/monitor_regulations.py retrieves only explicitly allowlisted HTTPS regulator/standards pages from content/regulatory-sources.json. It reduces the visible HTML text to a SHA-256 content fingerprint, then stores dated technical source observations in content/regulatory-observations.json and publicly mirrors them in site/data/regulatory-observations.json. This is a page-text change signal, not a semantic legal amendment detector. Dynamic page content, blocking, availability and errors can cause false alerts or unavailable checks.
+
+On first successful fetch a baseline is recorded; subsequent changed fingerprints receive change_pending_review status that persists across stable later polls and network failures until a qualified person documents a review. The process must never set a domain gate, legal applicability, effective date, client evidence completeness, law-enforcement status or human approval by itself. Monitoring is best-effort GitHub Actions scheduled execution and is limited to the curated sources. On any failed fetch it explicitly records unavailable, retaining the previous successful observation. The daily job rebuilds DOCS.md, README.md, site snapshots and docs-sync.json before publishing the source status; no secret tokens or personal records are stored.
+
+The /outcomes/#regulatory-references selector shows primary URL, mapped domain links, last attempted/successful observation, and any human review queue. Changing an obligation must be a separately authorized, source-verified domain-specific mapping decision; no international compliance conclusion follows from a content hash. See official article versions before using the information for clients.
 
 
 ## Executable scenarios
