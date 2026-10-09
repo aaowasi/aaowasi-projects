@@ -71,4 +71,32 @@ $('outcome-upload').addEventListener('change',async event=>{
 });
 $('outcome-export-json').onclick=()=>pack&&download(JSON.stringify(pack,null,2),pack.scenarioId+'-decision-pack-v2.json','application/json');
 $('outcome-export-memo').onclick=()=>pack&&download(scenarioMemo(pack),pack.scenarioId+'-decision-memo.md','text/markdown;charset=utf-8');
+async function renderJurisdictions(){
+ const response=await fetch('/data/regulatory-sources.json');
+ if(!response.ok)throw Error('Reference register unavailable.');
+ const data=await response.json();
+ if(data.version!==1||!Array.isArray(data.sources))throw Error('Unexpected regulatory reference contract.');
+ const selector=$('regulatory-region'),target=$('regulatory-reference-items');
+ const jurisdictions=[...new Set(data.sources.map(x=>x.jurisdiction))];
+ for(const name of jurisdictions){const option=document.createElement('option');option.value=name;option.textContent=name;selector.append(option);}
+ function update(){
+  target.replaceChildren();
+  const selected=data.sources.filter(x=>!selector.value||x.jurisdiction===selector.value);
+  for(const item of selected){
+   const card=document.createElement('article'),tag=document.createElement('p'),h=document.createElement('h3'),detail=document.createElement('p'),a=document.createElement('a'),links=document.createElement('p');
+   card.className='outcome-source';
+   tag.className='eyebrow';tag.textContent=item.jurisdiction+' / '+item.topic;
+   h.textContent=item.title;detail.textContent=item.nature;
+   a.href=item.url;a.textContent='Open primary source ↗';a.target='_blank';a.rel='noopener noreferrer';
+   links.className='small';links.textContent='Mapped review perspectives: ';
+   for(const slug of item.domainSlugs){
+    const link=document.createElement('a');link.href='/work/'+slug+'/';link.textContent=slug.replaceAll('-',' ');links.append(link,document.createTextNode(' · '));
+   }
+   card.append(tag,h,detail,a,links);target.append(card);
+  }
+  $('regulatory-update-note').textContent=selected.length+' curated primary references · metadata reviewed '+data.reviewedOn+' · no automatic legal applicability or source refresh.';
+ }
+ selector.onchange=update;update();
+}
+renderJurisdictions().catch(e=>{$('regulatory-update-note').textContent='Reference register unavailable; use the official links below. '+e.message;});
 init().catch(e=>message('Unable to start the demonstration: '+e.message,true));
