@@ -23,6 +23,11 @@ jobs:
       - run: python scripts/check_contract.py
       - run: node --check site/assets/site.js
       - run: node --check site/assets/outcomes.mjs
+      - run: node --check site/assets/scenario-ui.mjs
+      - run: node --check site/assets/dashboard-core.mjs
+      - run: node --check site/assets/dashboard-ui.mjs
+      - run: node --check site/assets/control-center.mjs
+      - run: node --check site/assets/suite.mjs
       - run: node --test tests/browser/*.test.mjs
       - name: Synchronize generated public site
         if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
