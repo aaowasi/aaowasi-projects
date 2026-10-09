@@ -1,6 +1,98 @@
 {
   "version": 1,
-  "generatedAt": null,
+  "generatedAt": "2026-10-09T18:06:55Z",
   "scope": "Curated official-source page-change indicators only; no automated legal interpretation",
-  "entries": []
+  "entries": [
+    {
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "jurisdiction": "European Union",
+      "title": "EU AI Act — Article 50",
+      "domainSlugs": [
+        "ai-transparency",
+        "ai-governance"
+      ],
+      "fingerprint": "8d8bbfa9ab467c02e8e287c47acf9f74be5d03e74ccc34a9e583e76aa3b7f7ac",
+      "previousFingerprint": null,
+      "firstSeenAt": "2026-10-09T18:06:55Z",
+      "lastSuccessfulAt": "2026-10-09T18:06:55Z",
+      "lastCheckedAt": "2026-10-09T18:06:55Z",
+      "changeDetectedAt": null,
+      "reviewState": "baseline",
+      "fetchStatus": "observed",
+      "detail": null
+    },
+    {
+      "url": "https://www.edpb.europa.eu/topics/security-data-breaches/personal-data-breaches_en",
+      "jurisdiction": "European Union",
+      "title": "EDPB — Personal data breach notification",
+      "domainSlugs": [
+        "privacy-lifecycle",
+        "processor-governance",
+        "remediation"
+      ],
+      "fingerprint": "d6f60ab123f4facce7a3251a545f199fc93592edc85e566ac3fcc646f2ea7255",
+      "previousFingerprint": null,
+      "firstSeenAt": "2026-10-09T18:06:55Z",
+      "lastSuccessfulAt": "2026-10-09T18:06:55Z",
+      "lastCheckedAt": "2026-10-09T18:06:55Z",
+      "changeDetectedAt": null,
+      "reviewState": "baseline",
+      "fetchStatus": "observed",
+      "detail": null
+    },
+    {
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/",
+      "jurisdiction": "United Kingdom",
+      "title": "ICO — AI and data protection guidance",
+      "domainSlugs": [
+        "ai-governance",
+        "privacy-lifecycle"
+      ],
+      "fingerprint": "393e10403959073e914686a63429face5c52398a4811c2b0b7afb7f689ca2f32",
+      "previousFingerprint": null,
+      "firstSeenAt": "2026-10-09T18:06:55Z",
+      "lastSuccessfulAt": "2026-10-09T18:06:55Z",
+      "lastCheckedAt": "2026-10-09T18:06:55Z",
+      "changeDetectedAt": null,
+      "reviewState": "baseline",
+      "fetchStatus": "observed",
+      "detail": null
+    },
+    {
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "jurisdiction": "United States",
+      "title": "NIST — AI Risk Management Framework 1.0",
+      "domainSlugs": [
+        "ai-governance",
+        "executive-risk"
+      ],
+      "fingerprint": "a6e7882611f9a21da387592fd121447e916ca1bd1f0d5fdd5e2454f4584d07bc",
+      "previousFingerprint": null,
+      "firstSeenAt": "2026-10-09T18:06:55Z",
+      "lastSuccessfulAt": "2026-10-09T18:06:55Z",
+      "lastCheckedAt": "2026-10-09T18:06:55Z",
+      "changeDetectedAt": null,
+      "reviewState": "baseline",
+      "fetchStatus": "observed",
+      "detail": null
+    },
+    {
+      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/gen-ai-and-digital-foss-ai-governance-playbook",
+      "jurisdiction": "Singapore",
+      "title": "IMDA — Model AI Governance Framework for GenAI",
+      "domainSlugs": [
+        "ai-governance",
+        "ai-safety"
+      ],
+      "fingerprint": null,
+      "previousFingerprint": null,
+      "firstSeenAt": null,
+      "lastSuccessfulAt": null,
+      "lastCheckedAt": "2026-10-09T18:06:55Z",
+      "changeDetectedAt": null,
+      "reviewState": "not_checked",
+      "fetchStatus": "unavailable",
+      "detail": "ValueError: unable to verify source content"
+    }
+  ]
 }
