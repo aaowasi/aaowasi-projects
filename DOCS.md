@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `b1ac723ba77c8a18a45ed06f7e26faeffb2d835d270ca1b321246f81d5c507ca`
+Source contract SHA-256: `d9e57f378ad5a12e375b12ee7887cb3852ded61ef285104db074208287a9dcf7`
 
 ## System overview
 
@@ -3352,6 +3352,7 @@ scripts/check_site.py
 scripts/domain_build.py
 scripts/index_legacy_evidence.py
 scripts/local.mjs
+scripts/monitor_regulations.py
 scripts/package_evidence.py
 scripts/page_sections.py
 scripts/refresh_delivery.py
