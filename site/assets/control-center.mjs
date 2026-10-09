@@ -1,6 +1,7 @@
 import {evaluateScenario,scenarioMemo,SCENARIO_LIMIT} from './scenario-core.mjs';
 import {validate as validateSuite} from './suite-core.mjs';
 import {renderExecutiveDashboard,executiveMemo} from './dashboard-ui.mjs';
+import {projectScenarioRisks} from './dashboard-core.mjs';
 const $=id=>document.getElementById(id);
 const download=(content,filename,type='application/json')=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 const examples=[
@@ -12,7 +13,7 @@ let config,catalog,pack,state={version:1,records:[],updatedAt:null},asOf=new Dat
 const status=(value,error=false)=>{$('cc-status').textContent=value;$('cc-status').dataset.error=String(error);};
 function snapshot(){
  const perspective=$('cc-domain').value,appetite=Number($('cc-appetite').value);
- const result=renderExecutiveDashboard($('cc-dashboard'),state.records,asOf,{domain:perspective,appetite});
+ const result=renderExecutiveDashboard($('cc-dashboard'),state.records,asOf,{domain:perspective,appetite,projectedRisk:projectScenarioRisks(pack)});
  return result;
 }
 let lastSummary=null;
@@ -21,7 +22,7 @@ function evaluate(raw){
  if(raw?.scenarioVersion===1){
   const p=evaluateScenario(raw,config,catalog);
   pack=p;state=p.workspace;asOf=p.domainReview.reportingDate;
-  $('cc-domain').value=p.domain;
+  $('cc-domain').value='';
   $('cc-gate').textContent=p.scenarioId+' · '+p.domainReview.readiness.gate+' · '+p.decisionLabMetrics.high+' high-priority supplier signals · Version-2 decision export ready.';
   return 'Scenario '+p.scenarioId+' validated. All dashboard components recalculated in the browser.';
  }
