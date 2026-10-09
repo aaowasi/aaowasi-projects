@@ -20,7 +20,7 @@ export function renderExecutiveDashboard(host,records,asOf,options={}){
  header.append(intro);host.append(header);
  const grid=element('div',undefined,'cc-kpi-grid');
  const kpis=[
-  ['Top exposure',summary.highResidual+' high residual','≥16 of 25; missing residual: '+summary.unassessedResidual],
+  ['Top exposure',summary.highInherent+' high inherent','≥16 of 25; high residual: '+summary.highResidual+'; unassessed residual: '+summary.unassessedResidual],
   ['Risk appetite',summary.appetiteStatus,'Declared illustrative threshold: ≥'+summary.appetite],
   ['Control effectiveness',summary.controlCoverage===null?'N/A':summary.controlCoverage+'%',summary.controlPass+'/'+summary.controlTotal+' recorded current passes'],
   ['Incidents & losses',summary.openIncidents+' flagged', 'Incident-classified issues; financial losses not inferred'],
