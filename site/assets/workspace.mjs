@@ -60,6 +60,6 @@ function renderCharts(d){$('risk-charts').hidden=module.id!=='P05';$('evidence-c
 
 $('record-form').addEventListener('input',()=>{editorDirty=true;});
 
-$('load-lab-scenario').addEventListener('click',()=>{if(state.records.length&&!confirm('Replace current records with synthetic scenario data? Export first to keep them.'))return;checkpoint();state=sample();draft=null;selected=state.records[0]?.id;render();syncAssumptions();announce('Synthetic supplier / AI scenario loaded. Change recorded evidence or approval to inspect the resulting gates.');});
+$('load-lab-scenario').addEventListener('click',()=>{checkpoint();state=sample();draft=null;selected=state.records[0]?.id;render();syncAssumptions();announce('Synthetic supplier / AI scenario loaded. Change recorded evidence or approval to inspect the resulting gates.');});
 
-document.addEventListener('scenario-apply',e=>{checkpoint();draft=null;state=e.detail.decisionLab;selected=state.records[0]?.id;render();syncAssumptions();announce('Scenario supplier records imported. Export to retain this snapshot.');});
+document.addEventListener('scenario-apply',e=>{checkpoint();draft=null;state=e.detail.decisionLab;selected=state.records[0]?.id;render();syncAssumptions();announce('✓ Scenario '+e.detail.scenarioId+' loaded; all 10 connected lab perspectives recalculated in this browser. Undo is available.');});

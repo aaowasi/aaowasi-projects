@@ -42,6 +42,8 @@ for page in (ROOT/'site').rglob('*.html'):
  text=page.read_text()
  if ('data-review-inspector' in text or '/assets/workspace.mjs' in text) and '/assets/scenario-ui.mjs' not in text:
   page.write_text(text.replace('</body>','<script type="module" src="/assets/scenario-ui.mjs"></script></body>'))
+(ROOT/'site/control-center').mkdir(exist_ok=True)
+shutil.copyfile(ROOT/'templates/control-center.html',ROOT/'site/control-center/index.html')
 from build_docs import generate
 generate(ROOT)
 from seo import apply_seo
