@@ -50,12 +50,13 @@
     },
     {
       "jurisdiction": "Singapore",
-      "title": "IMDA — Model AI Governance Framework for GenAI",
-      "topic": "Generative AI governance, assurance and oversight",
-      "nature": "Nonbinding governance framework reference",
-      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/gen-ai-and-digital-foss-ai-governance-playbook",
+      "title": "IMDA — Model AI Governance Framework for Agentic AI (2026)",
+      "topic": "Agentic AI risk boundaries, human oversight and accountable authorization",
+      "nature": "Official IMDA framework announcement; voluntary guidance, not a compliance certification",
+      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai",
       "domainSlugs": [
         "ai-governance",
+        "agent-authorization",
         "ai-safety"
       ]
     }
