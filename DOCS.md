@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `0fbb7e0b3436d6da23f495578b7a134bf2cea497109b825957bc3359dcc1d128`
+Source contract SHA-256: `788b975aa31992687e0bb77174f2757e7fd3bbe6ff175d1963cd8aa3883393d1`
 
 ## System overview
 
@@ -54,6 +54,7 @@ flowchart TD
 | [/enterprise/](https://aaowasi-projects.pages.dev/enterprise/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
 | [/evaluate/](https://aaowasi-projects.pages.dev/evaluate/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
 | [//](https://aaowasi-projects.pages.dev//) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
+| [/outcomes/](https://aaowasi-projects.pages.dev/outcomes/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
 | [/privacy/](https://aaowasi-projects.pages.dev/privacy/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
 | [/results/](https://aaowasi-projects.pages.dev/results/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
 | [/samples/](https://aaowasi-projects.pages.dev/samples/) | Named page, controls and destinations enumerated below | Inspect scope, evidence and next action |
@@ -1024,6 +1025,39 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Agent, tool & data authorization | Opens the named dedicated project with review scope, readiness inputs, evidence needs and dependency links. Destination: `/work/agent-authorization/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Assessment, authorization & ongoing monitoring | Opens the named dedicated project with review scope, readiness inputs, evidence needs and dependency links. Destination: `/work/ongoing-authorization/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Clear filters | Invokes the labeled page action; records remain unchanged unless a validated save, import or clear action completes. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Personal hub ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Project workspace ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi-projects.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| GitHub ↗ | Opens owned source or documentation in GitHub for technical inspection. Destination: `https://github.com/aaowasi`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Enterprise services | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/enterprise/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Operating guide | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/docs/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Terms | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/terms/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Privacy | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/privacy/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Back to top ↑ | Uses browser history where available; falls back to the gallery. Destination: `#main`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+### /outcomes/
+
+| Element | Operational logic | Business / demo use |
+|---|---|---|
+| Skip to content | Moves to the matching page section; project details expand on hash navigation. No records are changed. Destination: `#main`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| ABDULLAH AL OWASI | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| GRC system | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi-projects.pages.dev/architecture/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Work | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Evidence | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/results/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Contact ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/contact/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Try a review → | Moves to the matching page section; project details expand on hash navigation. No records are changed. Destination: `#scenarios`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Scope a finished review pack ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/contact/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Run scenario → | Invokes the labeled page action; records remain unchanged unless a validated save, import or clear action completes. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Download JSON ↓ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/samples/ai-governance/1.json`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Inspect the version-2 decision payload | Expands or collapses this explanation without changing data. Keyboard Enter/Space activates it. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Export Decision Pack v2 ↓ | Invokes the labeled page action; records remain unchanged unless a validated save, import or clear action completes. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Export memo ↓ | Invokes the labeled page action; records remain unchanged unless a validated save, import or clear action completes. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Open 29-domain Workspace → | Opens the typed operating workspace; query parameters choose a domain. Preserve current in-memory data through export before leaving. Destination: `/workspace/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Open Decision Lab → | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/decision-lab/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Or import a scenario JSON file to review locally | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| EU AI Act Article 50 ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| EDPB breach notification ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://www.edpb.europa.eu/topics/security-data-breaches/personal-data-breaches_en`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Sequoia’s outcome-based service thesis ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://sequoiacap.com/article/services-the-new-software`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Explore all 87 synthetic domain fixtures → | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/samples/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Operating documentation → | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/docs/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Personal hub ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Project workspace ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi-projects.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | GitHub ↗ | Opens owned source or documentation in GitHub for technical inspection. Destination: `https://github.com/aaowasi`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
@@ -3272,6 +3306,8 @@ site/404.html
 site/assets/domain-assessment.mjs
 site/assets/domain-core.mjs
 site/assets/evaluate.mjs
+site/assets/outcomes.css
+site/assets/outcomes.mjs
 site/assets/review-core.mjs
 site/assets/review-ui.mjs
 site/assets/risk-core.mjs

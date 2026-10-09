@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "0fbb7e0b3436d6da23f495578b7a134bf2cea497109b825957bc3359dcc1d128",
+  "sourceFingerprint": "788b975aa31992687e0bb77174f2757e7fd3bbe6ff175d1963cd8aa3883393d1",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -9,6 +9,7 @@
     "/enterprise/",
     "/evaluate/",
     "//",
+    "/outcomes/",
     "/privacy/",
     "/results/",
     "/samples/",
@@ -119,6 +120,8 @@
     "site/assets/domain-assessment.mjs",
     "site/assets/domain-core.mjs",
     "site/assets/evaluate.mjs",
+    "site/assets/outcomes.css",
+    "site/assets/outcomes.mjs",
     "site/assets/review-core.mjs",
     "site/assets/review-ui.mjs",
     "site/assets/risk-core.mjs",
