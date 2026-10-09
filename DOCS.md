@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `5ccf55f8e4c4cf37d2fe868f959669590968147f35184c8ab08be7052be8dc17`
+Source contract SHA-256: `977dff0b631c2bc24679bc1c9252a2b676da2720a36ab8040475bc7ba6b1b4e5`
 
 ## System overview
 
@@ -3304,6 +3304,7 @@ content/domain-reviews.json
 content/enterprise-plans.json
 content/legacy-section-redirects.json
 content/projects.json
+content/regulatory-sources.json
 content/scenarios-index.json
 content/suite-catalog.json
 content/verified-delivery.json
