@@ -21,7 +21,7 @@ function show(p){
  $('outcome-gate').textContent=gate;
  $('outcome-gate').dataset.gate=gate.startsWith('READY')?'ready':'hold';
  $('outcome-readiness').textContent=review.readiness.percent+'%';
- $('outcome-coverage').textContent=controls.coverage.toFixed(0)+'%';
+ $('outcome-coverage').textContent=controls.coverage===null?'N/A':controls.coverage.toFixed(0)+'%';
  $('outcome-high').textContent=String(counts.high);
  $('outcome-deadline').textContent=p.notification?.deadlineAt||'Not declared';
  $('outcome-basis').textContent='Snapshot '+review.reportingDate+' · synthetic input assertions. Valid HTTPS-shaped references are not fetched, authenticated, or content-verified. '+(p.notification?.applicability||'No reporting clock in this case.');
