@@ -17,6 +17,7 @@ def apply_seo(root):
         '/contact/':'Prepare a bounded AI, supplier-risk or assurance review brief: decision needed, available evidence, target date and agreed outputs.',
         '/results/':'Recorded GitHub Actions observations with exact commits, timestamps and source runs for the AAO governance portfolio. Inspect what the checks prove and what they do not.',
         '/workspace/':'Change AI, supplier, privacy and evidence metadata across connected governance modules; inspect risk priorities, reviewer gates and decision exports.',
+        '/control-center/':'Interactive 29-domain risk and GRC executive control center with 5 by 5 risk matrix, live in-browser scenario uploads, control testing coverage and downloadable decision packs.',
         '/work/':'Explore connected AI governance, third-party risk, technology-risk and assurance projects with implementation mechanics, primary sources and human review boundaries.'
     }
     urls=[]
