@@ -1,0 +1,116 @@
+{
+  "scenarioVersion": 1,
+  "id": "D03-2",
+  "domain": "regulatory-obligations",
+  "title": "Recorded audit readiness \u2014 Regulatory applicability & change",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic Regulatory applicability & change review",
+    "owner": "Example obligation owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D03-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 10,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D03-2-OB",
+        "title": "Regulatory applicability & change applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "GDPR; EU AI Act; NIST SP 800-53 PL",
+        "requirement": "Jurisdiction and applicability determined"
+      },
+      {
+        "type": "control",
+        "id": "D03-2-CT",
+        "title": "Applicability and change impact register",
+        "domainSlug": "regulatory-obligations",
+        "owner": "Example obligation owner",
+        "obligationId": "D03-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D03-2-TS",
+        "title": "Synthetic Regulatory applicability & change evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D03-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D03-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D03-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D03-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D03-2-CT",
+        "evidenceRef": "https://example.com/evidence/D03-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Jurisdiction and applicability determined",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}

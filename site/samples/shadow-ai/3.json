@@ -1,0 +1,149 @@
+{
+  "scenarioVersion": 1,
+  "id": "D17-3",
+  "domain": "shadow-ai",
+  "title": "Cross-border AI incident \u2014 Shadow AI & acceptable use",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Contain unapproved use and assign an owner",
+  "reviewInputs": {
+    "scope": "Synthetic Shadow AI & acceptable use review",
+    "owner": "Example ai owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D17-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 12,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D17-3-OB",
+        "title": "Shadow AI & acceptable use applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST AI RMF; ISO/IEC 27001 Annex A",
+        "requirement": "Approved tools and acceptable use policy recorded"
+      },
+      {
+        "type": "control",
+        "id": "D17-3-CT",
+        "title": "Unapproved AI use triage register",
+        "domainSlug": "shadow-ai",
+        "owner": "Example ai owner",
+        "obligationId": "D17-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D17-3-TS",
+        "title": "Synthetic Shadow AI & acceptable use evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D17-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D17-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "ai",
+        "id": "D17-3-DM",
+        "title": "Unapproved AI use triage register source record",
+        "domainSlug": "shadow-ai",
+        "owner": "Example ai owner",
+        "notes": "Synthetic domain-specific inputs",
+        "purpose": "Customer support assistant",
+        "vendorId": "D17-3-VD",
+        "oversightOwner": "Example AI reviewer",
+        "classification": "Transparency review",
+        "evaluationTotal": 20,
+        "evaluationFailed": 3,
+        "releaseDecision": "Hold",
+        "transparencyEvidence": ""
+      },
+      {
+        "type": "issue",
+        "id": "D17-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D17-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Contain unapproved use and assign an owner"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D17-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D17-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Approved tools and acceptable use policy recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

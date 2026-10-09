@@ -1,0 +1,129 @@
+{
+  "scenarioVersion": 1,
+  "id": "D01-2",
+  "domain": "governance-program",
+  "title": "Recorded audit readiness \u2014 Corporate governance & accountability",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic Corporate governance & accountability review",
+    "owner": "Example decision owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D01-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 10,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D01-2-OB",
+        "title": "Corporate governance & accountability applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "ISO/IEC 27001 clauses 4\u20136; NIST SP 800-53 PM",
+        "requirement": "Board mandate and delegated authority recorded"
+      },
+      {
+        "type": "control",
+        "id": "D01-2-CT",
+        "title": "Delegation and accountability register",
+        "domainSlug": "governance-program",
+        "owner": "Example decision owner",
+        "obligationId": "D01-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D01-2-TS",
+        "title": "Synthetic Corporate governance & accountability evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D01-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D01-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D01-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      },
+      {
+        "type": "decision",
+        "id": "D01-2-DM",
+        "title": "Delegation and accountability register source record",
+        "domainSlug": "governance-program",
+        "owner": "Example decision owner",
+        "notes": "Synthetic domain-specific inputs",
+        "accountable": "Example decision owner",
+        "responsible": "Example accountable reviewer",
+        "consulted": "Example privacy and security reviewers",
+        "informed": "Example audit lead",
+        "rationale": "Confirm delegation and escalate uncovered decisions"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D01-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D01-2-CT",
+        "evidenceRef": "https://example.com/evidence/D01-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Board mandate and delegated authority recorded",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}

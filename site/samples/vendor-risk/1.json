@@ -1,0 +1,128 @@
+{
+  "scenarioVersion": 1,
+  "id": "D09-1",
+  "domain": "vendor-risk",
+  "title": "AI supplier onboarding \u2014 Supplier lifecycle & concentration",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate concentration and contractual gaps",
+  "reviewInputs": {
+    "scope": "Synthetic Supplier lifecycle & concentration review",
+    "owner": "Example vendor owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D09-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 8,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D09-1-OB",
+        "title": "Supplier lifecycle & concentration applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 SR; ISO/IEC 27001 Annex A",
+        "requirement": "Supplier criticality and concentration assessed"
+      },
+      {
+        "type": "control",
+        "id": "D09-1-CT",
+        "title": "Supplier decision and concentration pack",
+        "domainSlug": "vendor-risk",
+        "owner": "Example vendor owner",
+        "obligationId": "D09-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D09-1-TS",
+        "title": "Synthetic Supplier lifecycle & concentration evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D09-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D09-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "issue",
+        "id": "D09-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D09-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Escalate concentration and contractual gaps"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D09-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D09-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Supplier criticality and concentration assessed",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

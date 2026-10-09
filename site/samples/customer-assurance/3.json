@@ -1,0 +1,147 @@
+{
+  "scenarioVersion": 1,
+  "id": "D10-3",
+  "domain": "customer-assurance",
+  "title": "Cross-border AI incident \u2014 Procurement & customer assurance",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Keep unsupported answers in the review queue",
+  "reviewInputs": {
+    "scope": "Synthetic Procurement & customer assurance review",
+    "owner": "Example contract owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D10-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 7,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D10-3-OB",
+        "title": "Procurement & customer assurance applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "SOC 2 CC9; NIST SP 800-53 SR",
+        "requirement": "Customer requirement and disclosure scope agreed"
+      },
+      {
+        "type": "control",
+        "id": "D10-3-CT",
+        "title": "Evidence-backed questionnaire response pack",
+        "domainSlug": "customer-assurance",
+        "owner": "Example contract owner",
+        "obligationId": "D10-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D10-3-TS",
+        "title": "Synthetic Procurement & customer assurance evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D10-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D10-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "contract",
+        "id": "D10-3-DM",
+        "title": "Evidence-backed questionnaire response pack source record",
+        "domainSlug": "customer-assurance",
+        "owner": "Example contract owner",
+        "notes": "Synthetic domain-specific inputs",
+        "vendorId": "D10-3-VD",
+        "clause": "Customer requirement and disclosure scope agreed",
+        "slaActual": 10,
+        "slaTarget": 7,
+        "direction": "At most",
+        "unit": "Declared domain unit"
+      },
+      {
+        "type": "issue",
+        "id": "D10-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D10-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Keep unsupported answers in the review queue"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D10-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D10-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Customer requirement and disclosure scope agreed",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

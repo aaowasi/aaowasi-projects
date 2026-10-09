@@ -1,0 +1,132 @@
+{
+  "scenarioVersion": 1,
+  "id": "D15-2",
+  "domain": "ai-safety",
+  "title": "Recorded audit readiness \u2014 AI fairness, safety & oversight",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic AI fairness, safety & oversight review",
+    "owner": "Example ai owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D15-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 0,
+      "baseline": 5,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D15-2-OB",
+        "title": "AI fairness, safety & oversight applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST AI RMF MEASURE/MANAGE; ISO/IEC 42001",
+        "requirement": "Evaluation methodology and test population recorded"
+      },
+      {
+        "type": "control",
+        "id": "D15-2-CT",
+        "title": "AI evaluation and oversight report",
+        "domainSlug": "ai-safety",
+        "owner": "Example ai owner",
+        "obligationId": "D15-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D15-2-TS",
+        "title": "Synthetic AI fairness, safety & oversight evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D15-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D15-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D15-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      },
+      {
+        "type": "ai",
+        "id": "D15-2-DM",
+        "title": "AI evaluation and oversight report source record",
+        "domainSlug": "ai-safety",
+        "owner": "Example ai owner",
+        "notes": "Synthetic domain-specific inputs",
+        "purpose": "Customer support assistant",
+        "vendorId": "D15-2-VD",
+        "oversightOwner": "Example AI reviewer",
+        "classification": "Transparency review",
+        "evaluationTotal": 20,
+        "evaluationFailed": 0,
+        "releaseDecision": "Review",
+        "transparencyEvidence": "https://example.com/evidence/D15-2"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D15-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D15-2-CT",
+        "evidenceRef": "https://example.com/evidence/D15-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Evaluation methodology and test population recorded",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}

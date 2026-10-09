@@ -1,3 +1,4 @@
+import {evaluateScenario} from './scenario-core.mjs';
 import {FIELDS,ENUMS,BOOLS,empty,sample,validate,parseInput,toCSV,derive,memo,MAX_BYTES} from './risk-core.mjs';
 const modules=[
  {id:'P02',slug:'ai-governance',title:'AI governance',tier:1,focus:'System inventory & human oversight',purpose:'Inspect AI systems, assign oversight and route unresolved supplier or transparency signals for review.',filter:r=>r.ai,columns:['name','techniqueId','aiEvalTotal','aiEvalFailed','evalFailureRate','oversight','aiReview'],metric:'AI reviews'},
@@ -43,7 +44,7 @@ $('delete-record').addEventListener('click',()=>{if(state.records.some(r=>r.pare
 $('clear-workspace').addEventListener('click',()=>{checkpoint();draft=null;state=empty();selected=null;document.querySelector('[data-lab-count]').textContent=String(modules.length);
 render();syncAssumptions();announce('Workspace cleared. Add a record or import your metadata.');});
 $('record-search').addEventListener('input',e=>{query=e.target.value.toLowerCase();render();});
-$('import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(!/\.(json|csv)$/i.test(file.name))throw Error('Choose a .json or .csv file.');if(file.size>MAX_BYTES)throw Error('File exceeds 10 MB.');announce('Validating import…');const next=parseInput(await file.text(),file.name);checkpoint();draft=null;state=next;selected=state.records[0]?.id;render();syncAssumptions();announce(`Imported ${state.records.length} records. Previous session replaced; all modules updated.`);}catch(err){announce('Import rejected; existing state unchanged. '+err.message,true);}finally{e.target.value='';}});
+$('import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(!/\.(json|csv)$/i.test(file.name))throw Error('Choose a .json or .csv file.');if(file.size>MAX_BYTES)throw Error('File exceeds 10 MB.');announce('Validating import…');const text=await file.text();const raw=file.name.toLowerCase().endsWith('.csv')?null:JSON.parse(text);const scenario=raw?.scenarioVersion===1?evaluateScenario(raw,await(await fetch('/data/domain-reviews.json')).json(),await(await fetch('/data/suite-catalog.json')).json()):null;const next=scenario?scenario.decisionLab:parseInput(text,file.name);checkpoint();draft=null;state=next;selected=state.records[0]?.id;render();syncAssumptions();announce(`Imported ${state.records.length} records. Previous session replaced; all modules updated.`);if(scenario){document.dispatchEvent(new CustomEvent('scenario-evaluated',{detail:scenario}));}}catch(err){announce('Import rejected; existing state unchanged. '+err.message,true);}finally{e.target.value='';}});
 $('export-json').addEventListener('click',()=>download(JSON.stringify(state,null,2),'aao-workspace-v1.json','application/json'));
 $('export-csv').addEventListener('click',()=>download(toCSV(state.records),'aao-records.csv','text/csv'));
 $('export-memo').addEventListener('click',()=>download(memo(state,module.title),'aao-decision-memo.txt','text/plain'));
@@ -60,3 +61,5 @@ function renderCharts(d){$('risk-charts').hidden=module.id!=='P05';$('evidence-c
 $('record-form').addEventListener('input',()=>{editorDirty=true;});
 
 $('load-lab-scenario').addEventListener('click',()=>{if(state.records.length&&!confirm('Replace current records with synthetic scenario data? Export first to keep them.'))return;checkpoint();state=sample();draft=null;selected=state.records[0]?.id;render();syncAssumptions();announce('Synthetic supplier / AI scenario loaded. Change recorded evidence or approval to inspect the resulting gates.');});
+
+document.addEventListener('scenario-apply',e=>{checkpoint();draft=null;state=e.detail.decisionLab;selected=state.records[0]?.id;render();syncAssumptions();announce('Scenario supplier records imported. Export to retain this snapshot.');});

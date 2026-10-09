@@ -1,0 +1,128 @@
+{
+  "scenarioVersion": 1,
+  "id": "D22-1",
+  "domain": "sector-assurance",
+  "title": "AI supplier onboarding \u2014 Sector, market & contractual obligations",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign unmapped sector or contract requirements",
+  "reviewInputs": {
+    "scope": "Synthetic Sector, market & contractual obligations review",
+    "owner": "Example obligation owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D22-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 4,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D22-1-OB",
+        "title": "Sector, market & contractual obligations applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "FedRAMP Rev5 when in scope",
+        "requirement": "Sector and contractual applicability recorded"
+      },
+      {
+        "type": "control",
+        "id": "D22-1-CT",
+        "title": "Sector and contract obligation map",
+        "domainSlug": "sector-assurance",
+        "owner": "Example obligation owner",
+        "obligationId": "D22-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D22-1-TS",
+        "title": "Synthetic Sector, market & contractual obligations evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D22-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D22-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "issue",
+        "id": "D22-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D22-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Assign unmapped sector or contract requirements"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D22-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D22-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Sector and contractual applicability recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

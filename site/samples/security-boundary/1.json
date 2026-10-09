@@ -1,0 +1,140 @@
+{
+  "scenarioVersion": 1,
+  "id": "D23-1",
+  "domain": "security-boundary",
+  "title": "AI supplier onboarding \u2014 Security scope & authorization boundary",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Document uncovered interfaces before authorization review",
+  "reviewInputs": {
+    "scope": "Synthetic Security scope & authorization boundary review",
+    "owner": "Example asset owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D23-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 4,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D23-1-OB",
+        "title": "Security scope & authorization boundary applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST RMF; NIST SP 800-53 PL-2, CA-3",
+        "requirement": "System assets data flows and interfaces inventoried"
+      },
+      {
+        "type": "control",
+        "id": "D23-1-CT",
+        "title": "Authorization boundary and interface dossier",
+        "domainSlug": "security-boundary",
+        "owner": "Example asset owner",
+        "obligationId": "D23-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D23-1-TS",
+        "title": "Synthetic Security scope & authorization boundary evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D23-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D23-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "asset",
+        "id": "D23-1-DM",
+        "title": "Authorization boundary and interface dossier source record",
+        "domainSlug": "security-boundary",
+        "owner": "Example asset owner",
+        "notes": "Synthetic domain-specific inputs",
+        "criticality": 4,
+        "vendorId": "D23-1-VD",
+        "vulnerability": "Declared baseline exception",
+        "patchStatus": "Pending"
+      },
+      {
+        "type": "issue",
+        "id": "D23-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D23-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Document uncovered interfaces before authorization review"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D23-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D23-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "System assets data flows and interfaces inventoried",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "scenarioVersion": 1,
+  "id": "D02-1",
+  "domain": "executive-risk",
+  "title": "AI supplier onboarding \u2014 Enterprise risk & appetite",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate exposure above the approved appetite",
+  "reviewInputs": {
+    "scope": "Synthetic Enterprise risk & appetite review",
+    "owner": "Example risk owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D02-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 8,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D02-1-OB",
+        "title": "Enterprise risk & appetite applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 RA; ISO/IEC 27001 clause 6",
+        "requirement": "Risk appetite and tolerance documented"
+      },
+      {
+        "type": "control",
+        "id": "D02-1-CT",
+        "title": "Risk appetite exception memo",
+        "domainSlug": "executive-risk",
+        "owner": "Example risk owner",
+        "obligationId": "D02-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D02-1-TS",
+        "title": "Synthetic Enterprise risk & appetite evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D02-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D02-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "risk",
+        "id": "D02-1-DM",
+        "title": "Risk appetite exception memo source record",
+        "domainSlug": "executive-risk",
+        "owner": "Example risk owner",
+        "notes": "Synthetic domain-specific inputs",
+        "category": "Enterprise risk & appetite",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "Reduce",
+        "vendorId": "D02-1-VD"
+      },
+      {
+        "type": "issue",
+        "id": "D02-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D02-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Escalate exposure above the approved appetite"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D02-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D02-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Risk appetite and tolerance documented",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

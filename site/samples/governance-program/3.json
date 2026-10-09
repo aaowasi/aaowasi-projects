@@ -1,0 +1,146 @@
+{
+  "scenarioVersion": 1,
+  "id": "D01-3",
+  "domain": "governance-program",
+  "title": "Cross-border AI incident \u2014 Corporate governance & accountability",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Confirm delegation and escalate uncovered decisions",
+  "reviewInputs": {
+    "scope": "Synthetic Corporate governance & accountability review",
+    "owner": "Example decision owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D01-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 7,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D01-3-OB",
+        "title": "Corporate governance & accountability applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "ISO/IEC 27001 clauses 4\u20136; NIST SP 800-53 PM",
+        "requirement": "Board mandate and delegated authority recorded"
+      },
+      {
+        "type": "control",
+        "id": "D01-3-CT",
+        "title": "Delegation and accountability register",
+        "domainSlug": "governance-program",
+        "owner": "Example decision owner",
+        "obligationId": "D01-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D01-3-TS",
+        "title": "Synthetic Corporate governance & accountability evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D01-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D01-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "decision",
+        "id": "D01-3-DM",
+        "title": "Delegation and accountability register source record",
+        "domainSlug": "governance-program",
+        "owner": "Example decision owner",
+        "notes": "Synthetic domain-specific inputs",
+        "accountable": "Example decision owner",
+        "responsible": "Example accountable reviewer",
+        "consulted": "Example privacy and security reviewers",
+        "informed": "Example audit lead",
+        "rationale": "Confirm delegation and escalate uncovered decisions"
+      },
+      {
+        "type": "issue",
+        "id": "D01-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D01-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Confirm delegation and escalate uncovered decisions"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D01-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D01-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Board mandate and delegated authority recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

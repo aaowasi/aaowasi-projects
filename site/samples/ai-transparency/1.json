@@ -1,0 +1,144 @@
+{
+  "scenarioVersion": 1,
+  "id": "D16-1",
+  "domain": "ai-transparency",
+  "title": "AI supplier onboarding \u2014 AI transparency & content provenance",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Close disclosure and provenance gaps",
+  "reviewInputs": {
+    "scope": "Synthetic AI transparency & content provenance review",
+    "owner": "Example ai owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D16-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 4,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D16-1-OB",
+        "title": "AI transparency & content provenance applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "EU AI Act Article 50",
+        "requirement": "AI transparency applicability determined"
+      },
+      {
+        "type": "control",
+        "id": "D16-1-CT",
+        "title": "AI disclosure and provenance checklist",
+        "domainSlug": "ai-transparency",
+        "owner": "Example ai owner",
+        "obligationId": "D16-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D16-1-TS",
+        "title": "Synthetic AI transparency & content provenance evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D16-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D16-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "ai",
+        "id": "D16-1-DM",
+        "title": "AI disclosure and provenance checklist source record",
+        "domainSlug": "ai-transparency",
+        "owner": "Example ai owner",
+        "notes": "Synthetic domain-specific inputs",
+        "purpose": "Customer support assistant",
+        "vendorId": "D16-1-VD",
+        "oversightOwner": "Example AI reviewer",
+        "classification": "Transparency review",
+        "evaluationTotal": 20,
+        "evaluationFailed": 3,
+        "releaseDecision": "Hold",
+        "transparencyEvidence": ""
+      },
+      {
+        "type": "issue",
+        "id": "D16-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D16-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Close disclosure and provenance gaps"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D16-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D16-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "AI transparency applicability determined",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

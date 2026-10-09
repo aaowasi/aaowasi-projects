@@ -1,0 +1,140 @@
+{
+  "scenarioVersion": 1,
+  "id": "D25-1",
+  "domain": "cloud-change",
+  "title": "AI supplier onboarding \u2014 Cloud configuration & change",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve baseline drift before release review",
+  "reviewInputs": {
+    "scope": "Synthetic Cloud configuration & change review",
+    "owner": "Example asset owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D25-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 8,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D25-1-OB",
+        "title": "Cloud configuration & change applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 CM; SOC 2 CC8",
+        "requirement": "Configuration baseline and change owner recorded"
+      },
+      {
+        "type": "control",
+        "id": "D25-1-CT",
+        "title": "Cloud change drift and release record",
+        "domainSlug": "cloud-change",
+        "owner": "Example asset owner",
+        "obligationId": "D25-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D25-1-TS",
+        "title": "Synthetic Cloud configuration & change evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D25-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D25-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "asset",
+        "id": "D25-1-DM",
+        "title": "Cloud change drift and release record source record",
+        "domainSlug": "cloud-change",
+        "owner": "Example asset owner",
+        "notes": "Synthetic domain-specific inputs",
+        "criticality": 4,
+        "vendorId": "D25-1-VD",
+        "vulnerability": "Declared baseline exception",
+        "patchStatus": "Pending"
+      },
+      {
+        "type": "issue",
+        "id": "D25-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D25-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Resolve baseline drift before release review"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D25-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D25-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Configuration baseline and change owner recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

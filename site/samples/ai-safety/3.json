@@ -1,0 +1,149 @@
+{
+  "scenarioVersion": 1,
+  "id": "D15-3",
+  "domain": "ai-safety",
+  "title": "Cross-border AI incident \u2014 AI fairness, safety & oversight",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Review unsafe evaluation results before release",
+  "reviewInputs": {
+    "scope": "Synthetic AI fairness, safety & oversight review",
+    "owner": "Example ai owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D15-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 12,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D15-3-OB",
+        "title": "AI fairness, safety & oversight applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST AI RMF MEASURE/MANAGE; ISO/IEC 42001",
+        "requirement": "Evaluation methodology and test population recorded"
+      },
+      {
+        "type": "control",
+        "id": "D15-3-CT",
+        "title": "AI evaluation and oversight report",
+        "domainSlug": "ai-safety",
+        "owner": "Example ai owner",
+        "obligationId": "D15-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D15-3-TS",
+        "title": "Synthetic AI fairness, safety & oversight evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D15-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D15-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "ai",
+        "id": "D15-3-DM",
+        "title": "AI evaluation and oversight report source record",
+        "domainSlug": "ai-safety",
+        "owner": "Example ai owner",
+        "notes": "Synthetic domain-specific inputs",
+        "purpose": "Customer support assistant",
+        "vendorId": "D15-3-VD",
+        "oversightOwner": "Example AI reviewer",
+        "classification": "Transparency review",
+        "evaluationTotal": 20,
+        "evaluationFailed": 3,
+        "releaseDecision": "Hold",
+        "transparencyEvidence": ""
+      },
+      {
+        "type": "issue",
+        "id": "D15-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D15-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Review unsafe evaluation results before release"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D15-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D15-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Evaluation methodology and test population recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

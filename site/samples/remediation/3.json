@@ -1,0 +1,147 @@
+{
+  "scenarioVersion": 1,
+  "id": "D19-3",
+  "domain": "remediation",
+  "title": "Cross-border AI incident \u2014 Incident governance & reporting",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate overdue notification review; verify trigger and jurisdiction",
+  "reviewInputs": {
+    "scope": "Synthetic Incident governance & reporting review",
+    "owner": "Example issue owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D19-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 96,
+      "baseline": 72,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D19-3-OB",
+        "title": "Incident governance & reporting applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 IR; GDPR Articles 33\u201334",
+        "requirement": "Incident classification and escalation documented"
+      },
+      {
+        "type": "control",
+        "id": "D19-3-CT",
+        "title": "Incident notification and decision timeline",
+        "domainSlug": "remediation",
+        "owner": "Example issue owner",
+        "obligationId": "D19-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D19-3-TS",
+        "title": "Synthetic Incident governance & reporting evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D19-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D19-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "issue",
+        "id": "D19-3-DM",
+        "title": "Incident notification and decision timeline source record",
+        "domainSlug": "remediation",
+        "owner": "Example issue owner",
+        "notes": "Synthetic domain-specific inputs",
+        "category": "Incident governance & reporting",
+        "severity": "High",
+        "status": "Open",
+        "controlId": "D19-3-CT",
+        "openedDate": "2026-10-09",
+        "correctiveAction": "Escalate overdue notification review; verify trigger and jurisdiction"
+      },
+      {
+        "type": "issue",
+        "id": "D19-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D19-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Escalate overdue notification review; verify trigger and jurisdiction"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D19-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D19-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Incident classification and escalation documented",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

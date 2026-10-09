@@ -1,0 +1,147 @@
+{
+  "scenarioVersion": 1,
+  "id": "D12-3",
+  "domain": "processor-governance",
+  "title": "Cross-border AI incident \u2014 Processors & cross-border transfers",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve missing agreements and transfer assessments",
+  "reviewInputs": {
+    "scope": "Synthetic Processors & cross-border transfers review",
+    "owner": "Example contract owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D12-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 7,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D12-3-OB",
+        "title": "Processors & cross-border transfers applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "GDPR Articles 28, 30, 44\u201349",
+        "requirement": "Processor agreement and subprocessors reviewed"
+      },
+      {
+        "type": "control",
+        "id": "D12-3-CT",
+        "title": "Processor and transfer decision register",
+        "domainSlug": "processor-governance",
+        "owner": "Example contract owner",
+        "obligationId": "D12-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D12-3-TS",
+        "title": "Synthetic Processors & cross-border transfers evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D12-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D12-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "contract",
+        "id": "D12-3-DM",
+        "title": "Processor and transfer decision register source record",
+        "domainSlug": "processor-governance",
+        "owner": "Example contract owner",
+        "notes": "Synthetic domain-specific inputs",
+        "vendorId": "D12-3-VD",
+        "clause": "Processor agreement and subprocessors reviewed",
+        "slaActual": 10,
+        "slaTarget": 7,
+        "direction": "At most",
+        "unit": "Declared domain unit"
+      },
+      {
+        "type": "issue",
+        "id": "D12-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D12-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Resolve missing agreements and transfer assessments"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D12-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D12-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Processor agreement and subprocessors reviewed",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

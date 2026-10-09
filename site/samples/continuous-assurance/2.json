@@ -1,0 +1,130 @@
+{
+  "scenarioVersion": 1,
+  "id": "D08-2",
+  "domain": "continuous-assurance",
+  "title": "Recorded audit readiness \u2014 Continuous assurance & remediation",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic Continuous assurance & remediation review",
+    "owner": "Example issue owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D08-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 0,
+      "baseline": 5,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D08-2-OB",
+        "title": "Continuous assurance & remediation applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 CA-7; SOC 2 CC4",
+        "requirement": "Monitoring criteria and frequency defined"
+      },
+      {
+        "type": "control",
+        "id": "D08-2-CT",
+        "title": "Monitoring exception and treatment queue",
+        "domainSlug": "continuous-assurance",
+        "owner": "Example issue owner",
+        "obligationId": "D08-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D08-2-TS",
+        "title": "Synthetic Continuous assurance & remediation evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D08-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D08-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D08-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      },
+      {
+        "type": "issue",
+        "id": "D08-2-DM",
+        "title": "Monitoring exception and treatment queue source record",
+        "domainSlug": "continuous-assurance",
+        "owner": "Example issue owner",
+        "notes": "Synthetic domain-specific inputs",
+        "category": "Continuous assurance & remediation",
+        "severity": "Low",
+        "status": "Closed",
+        "controlId": "D08-2-CT",
+        "openedDate": "2026-10-09",
+        "correctiveAction": "Prioritize exceptions beyond tolerance"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D08-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D08-2-CT",
+        "evidenceRef": "https://example.com/evidence/D08-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Monitoring criteria and frequency defined",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}

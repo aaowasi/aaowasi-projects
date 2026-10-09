@@ -1,0 +1,140 @@
+{
+  "scenarioVersion": 1,
+  "id": "D06-1",
+  "domain": "internal-audit",
+  "title": "AI supplier onboarding \u2014 Internal audit & independence",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve independence and sampling gaps",
+  "reviewInputs": {
+    "scope": "Synthetic Internal audit & independence review",
+    "owner": "Example audit owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D06-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 4,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D06-1-OB",
+        "title": "Internal audit & independence applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "ISO/IEC 27001 clause 9; NIST SP 800-53 CA",
+        "requirement": "Audit independence and mandate documented"
+      },
+      {
+        "type": "control",
+        "id": "D06-1-CT",
+        "title": "Audit independence and sampling plan",
+        "domainSlug": "internal-audit",
+        "owner": "Example audit owner",
+        "obligationId": "D06-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D06-1-TS",
+        "title": "Synthetic Internal audit & independence evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D06-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D06-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "audit",
+        "id": "D06-1-DM",
+        "title": "Audit independence and sampling plan source record",
+        "domainSlug": "internal-audit",
+        "owner": "Example audit owner",
+        "notes": "Synthetic domain-specific inputs",
+        "scope": "Synthetic Internal audit & independence review",
+        "populationSize": 10,
+        "testedCount": 4,
+        "selectionMethod": "Declared synthetic sample"
+      },
+      {
+        "type": "issue",
+        "id": "D06-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D06-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Resolve independence and sampling gaps"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D06-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D06-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Audit independence and mandate documented",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

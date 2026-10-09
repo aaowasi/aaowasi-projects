@@ -1,0 +1,4821 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AAO executable domain scenario v1",
+  "type": "object",
+  "required": [
+    "scenarioVersion",
+    "id",
+    "domain",
+    "title",
+    "context",
+    "reviewInputs",
+    "workspace",
+    "decisionLab"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scenarioVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^D[0-9]{2}-[123]$"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "reviewInputs": {
+      "type": "object",
+      "required": [
+        "scope",
+        "owner",
+        "reviewer",
+        "evidenceURL",
+        "expires",
+        "asOf",
+        "checks",
+        "domainInputs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "owner": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "reviewer": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "evidenceURL": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "expires": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "asOf": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "domainInputs": {
+          "type": "object"
+        }
+      }
+    },
+    "workspace": {
+      "type": "object",
+      "required": [
+        "version",
+        "records",
+        "updatedAt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "updatedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "records": {
+          "type": "array",
+          "maxItems": 5000,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "obligation"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "framework": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "requirement": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "effectiveDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "control"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "obligationId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "classification": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "effectiveness": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Untested",
+                          "Effective",
+                          "Partial",
+                          "Ineffective",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "risk"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "category": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "likelihood": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "impact": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "residualLikelihood": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "residualImpact": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "velocityDays": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "exposureUSD": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "dependencyId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "aiId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "treatment": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Avoid",
+                          "Reduce",
+                          "Transfer",
+                          "Accept",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "decisionId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "issue"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "category": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "severity": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Low",
+                          "Medium",
+                          "High",
+                          "Critical",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "controlId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "openedDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "closedDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "correctiveAction": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "test"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "controlId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "result": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Not tested",
+                          "Pass",
+                          "Fail",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "evidenceURL": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "testedDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "expiresDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewer": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "asset"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "criticality": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vulnerability": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "patchStatus": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Unknown",
+                          "Pending",
+                          "Applied",
+                          "Exception",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "vendor"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "service": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "criticality": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "parentVendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "usesAI": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewOutcome": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Pending",
+                          "Approve",
+                          "Conditional",
+                          "Reject",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "decision"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "accountable": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "responsible": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "consulted": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "informed": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "authorityLimitUSD": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "rationale": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "policy"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "version": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "approver": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "approvalDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "attested": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "requiredAttestations": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "exceptionRationale": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "contract"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "clause": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "slaTarget": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "slaActual": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "direction": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "At least",
+                          "At most",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "audit"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "scope": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "plannedHours": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "actualHours": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "populationSize": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "testedCount": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "selectionMethod": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "metric"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "definition": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "value": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "threshold": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "direction": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "At least",
+                          "At most",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "measuredDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "processing"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "purpose": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "lawfulBasis": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "dataCategories": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "retentionDays": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "transferMechanism": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "initiative"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "objective": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "budgetUSD": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "spentUSD": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "progressPercent": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "assessment"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "dimension": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "currentLevel": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "targetLevel": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "rationale": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id",
+                  "title"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "const": "ai"
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "owner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "status": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Open",
+                          "In review",
+                          "Approved",
+                          "Closed",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "reviewDate": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "format": "date"
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "purpose": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "vendorId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "riskId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "oversightOwner": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "classification": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Unassessed",
+                          "Prohibited concern",
+                          "High risk concern",
+                          "Transparency review",
+                          "Other",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "evaluationTotal": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "evaluationFailed": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "releaseDecision": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "Hold",
+                          "Review",
+                          "Approve",
+                          "",
+                          null
+                        ]
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "transparencyEvidence": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  },
+                  "domainSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 4000
+                      },
+                      {
+                        "enum": [
+                          "",
+                          null
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "decisionLab": {
+      "title": "AAO browser-local workspace v1.0",
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "asOf",
+        "records"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0"
+        },
+        "provenance": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "assumptions": {
+          "type": "object",
+          "required": [
+            "manualMinutes",
+            "assistedMinutes",
+            "hourlyCost",
+            "setupCost"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "manualMinutes": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "assistedMinutes": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "hourlyCost": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "setupCost": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10000000
+            }
+          }
+        },
+        "records": {
+          "type": "array",
+          "maxItems": 250,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "name",
+              "owner",
+              "service",
+              "criticality",
+              "dataSensitivity",
+              "ai",
+              "approved",
+              "processor",
+              "region",
+              "dpa",
+              "transfer",
+              "disclosure",
+              "oversight",
+              "evidence",
+              "likelihood",
+              "impact",
+              "treatment",
+              "reviewer",
+              "rationale",
+              "parentVendorId",
+              "controlId",
+              "evidenceRef",
+              "testOutcome",
+              "evidenceReviewedAt",
+              "evidenceExpiresAt",
+              "question",
+              "aiEvalTotal",
+              "aiEvalFailed",
+              "techniqueId"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,40}$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 300,
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "maxLength": 300,
+                "minLength": 1
+              },
+              "service": {
+                "type": "string",
+                "maxLength": 300,
+                "minLength": 1
+              },
+              "criticality": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "dataSensitivity": {
+                "type": "string",
+                "enum": [
+                  "public",
+                  "internal",
+                  "personal",
+                  "sensitive"
+                ]
+              },
+              "ai": {
+                "type": "boolean"
+              },
+              "approved": {
+                "type": "boolean"
+              },
+              "processor": {
+                "type": "boolean"
+              },
+              "region": {
+                "type": "string",
+                "enum": [
+                  "EEA",
+                  "UK",
+                  "US",
+                  "Other"
+                ]
+              },
+              "dpa": {
+                "type": "boolean"
+              },
+              "transfer": {
+                "type": "boolean"
+              },
+              "disclosure": {
+                "type": "string",
+                "enum": [
+                  "unreviewed",
+                  "tested",
+                  "gap"
+                ]
+              },
+              "oversight": {
+                "type": "string",
+                "enum": [
+                  "unreviewed",
+                  "assigned",
+                  "tested"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "enum": [
+                  "missing",
+                  "current",
+                  "stale",
+                  "failed",
+                  "error"
+                ]
+              },
+              "likelihood": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "impact": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "treatment": {
+                "type": "string",
+                "enum": [
+                  "unreviewed",
+                  "mitigate",
+                  "accept",
+                  "avoid"
+                ]
+              },
+              "reviewer": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "rationale": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "parentVendorId": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "controlId": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "evidenceRef": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "testOutcome": {
+                "type": "string",
+                "enum": [
+                  "not-tested",
+                  "pass",
+                  "fail",
+                  "error"
+                ]
+              },
+              "evidenceReviewedAt": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "evidenceExpiresAt": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "question": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "aiEvalTotal": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "aiEvalFailed": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "techniqueId": {
+                "enum": [
+                  "",
+                  "AML.T0051",
+                  "AML.T0051.000",
+                  "AML.T0051.001",
+                  "AML.T0054",
+                  "AML.T0020"
+                ]
+              }
+            }
+          }
+        },
+        "asOf": {
+          "type": "string",
+          "format": "date",
+          "description": "Explicit snapshot date, used for evidence expiry. Must be real YYYY-MM-DD."
+        }
+      },
+      "$comment": "Runtime additionally validates unique IDs, real dates, dependency acyclicity and references, failures <= total, acceptance rationale and current-evidence metadata requirements. USD is the fixed scenario currency."
+    },
+    "incident": {
+      "type": "object",
+      "required": [
+        "awareAt",
+        "deadlineHours",
+        "reportingRequired"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "awareAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadlineHours": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8760
+        },
+        "reportingRequired": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "domain": {
+          "const": "governance-program"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "executive-risk"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 25
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 25
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "regulatory-obligations"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "policy-governance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "control-management"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "internal-audit"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "audit-readiness"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "continuous-assurance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "vendor-risk"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "customer-assurance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "privacy-lifecycle"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "processor-governance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "data-governance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "ai-governance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "ai-safety"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "ai-transparency"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "shadow-ai"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "resilience"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "remediation"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "workforce-security"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "financial-conduct"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "sector-assurance"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "security-boundary"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "identity-authorization"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "cloud-change"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "threat-supply-chain"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "evidence-integrity"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "agent-authorization"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "domain": {
+          "const": "ongoing-authorization"
+        },
+        "reviewInputs": {
+          "properties": {
+            "domainInputs": {
+              "type": "object",
+              "required": [
+                "population",
+                "baseline",
+                "approval"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "population": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "baseline": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "approval": {
+                  "enum": [
+                    "Pending review",
+                    "Confirmed",
+                    "Exception requires escalation"
+                  ]
+                }
+              }
+            },
+            "checks": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

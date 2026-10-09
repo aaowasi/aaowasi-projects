@@ -1,0 +1,142 @@
+{
+  "scenarioVersion": 1,
+  "id": "D08-1",
+  "domain": "continuous-assurance",
+  "title": "AI supplier onboarding \u2014 Continuous assurance & remediation",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Prioritize exceptions beyond tolerance",
+  "reviewInputs": {
+    "scope": "Synthetic Continuous assurance & remediation review",
+    "owner": "Example issue owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D08-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 8,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D08-1-OB",
+        "title": "Continuous assurance & remediation applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 CA-7; SOC 2 CC4",
+        "requirement": "Monitoring criteria and frequency defined"
+      },
+      {
+        "type": "control",
+        "id": "D08-1-CT",
+        "title": "Monitoring exception and treatment queue",
+        "domainSlug": "continuous-assurance",
+        "owner": "Example issue owner",
+        "obligationId": "D08-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D08-1-TS",
+        "title": "Synthetic Continuous assurance & remediation evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D08-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D08-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "issue",
+        "id": "D08-1-DM",
+        "title": "Monitoring exception and treatment queue source record",
+        "domainSlug": "continuous-assurance",
+        "owner": "Example issue owner",
+        "notes": "Synthetic domain-specific inputs",
+        "category": "Continuous assurance & remediation",
+        "severity": "High",
+        "status": "Open",
+        "controlId": "D08-1-CT",
+        "openedDate": "2026-10-09",
+        "correctiveAction": "Prioritize exceptions beyond tolerance"
+      },
+      {
+        "type": "issue",
+        "id": "D08-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D08-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Prioritize exceptions beyond tolerance"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D08-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D08-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Monitoring criteria and frequency defined",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

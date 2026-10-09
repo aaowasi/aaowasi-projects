@@ -1,0 +1,145 @@
+{
+  "scenarioVersion": 1,
+  "id": "D26-3",
+  "domain": "threat-supply-chain",
+  "title": "Cross-border AI incident \u2014 Threat, vulnerability & supply-chain assurance",
+  "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign overdue critical findings and validate treatment",
+  "reviewInputs": {
+    "scope": "Synthetic Threat, vulnerability & supply-chain assurance review",
+    "owner": "Example asset owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D26-3",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 12,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D26-3-OB",
+        "title": "Threat, vulnerability & supply-chain assurance applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 RA-5, SI-2, SR",
+        "requirement": "Threat and vulnerability inventory recorded"
+      },
+      {
+        "type": "control",
+        "id": "D26-3-CT",
+        "title": "Vulnerability and dependency treatment plan",
+        "domainSlug": "threat-supply-chain",
+        "owner": "Example asset owner",
+        "obligationId": "D26-3-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D26-3-TS",
+        "title": "Synthetic Threat, vulnerability & supply-chain assurance evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D26-3-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D26-3-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "asset",
+        "id": "D26-3-DM",
+        "title": "Vulnerability and dependency treatment plan source record",
+        "domainSlug": "threat-supply-chain",
+        "owner": "Example asset owner",
+        "notes": "Synthetic domain-specific inputs",
+        "criticality": 4,
+        "vendorId": "D26-3-VD",
+        "vulnerability": "Declared baseline exception",
+        "patchStatus": "Pending"
+      },
+      {
+        "type": "issue",
+        "id": "D26-3-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D26-3-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Assign overdue critical findings and validate treatment"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D26-3-AI",
+        "name": "Example shadow AI service",
+        "owner": "Example service owner",
+        "service": "Cross-border PII processing",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 3,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D26-3-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Threat and vulnerability inventory recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  },
+  "incident": {
+    "awareAt": "2026-10-09T09:00:00Z",
+    "deadlineHours": 72,
+    "reportingRequired": true
+  }
+}

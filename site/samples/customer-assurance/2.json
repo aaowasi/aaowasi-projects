@@ -1,0 +1,130 @@
+{
+  "scenarioVersion": 1,
+  "id": "D10-2",
+  "domain": "customer-assurance",
+  "title": "Recorded audit readiness \u2014 Procurement & customer assurance",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic Procurement & customer assurance review",
+    "owner": "Example contract owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D10-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 10,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D10-2-OB",
+        "title": "Procurement & customer assurance applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "SOC 2 CC9; NIST SP 800-53 SR",
+        "requirement": "Customer requirement and disclosure scope agreed"
+      },
+      {
+        "type": "control",
+        "id": "D10-2-CT",
+        "title": "Evidence-backed questionnaire response pack",
+        "domainSlug": "customer-assurance",
+        "owner": "Example contract owner",
+        "obligationId": "D10-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D10-2-TS",
+        "title": "Synthetic Procurement & customer assurance evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D10-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D10-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D10-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      },
+      {
+        "type": "contract",
+        "id": "D10-2-DM",
+        "title": "Evidence-backed questionnaire response pack source record",
+        "domainSlug": "customer-assurance",
+        "owner": "Example contract owner",
+        "notes": "Synthetic domain-specific inputs",
+        "vendorId": "D10-2-VD",
+        "clause": "Customer requirement and disclosure scope agreed",
+        "slaActual": 10,
+        "slaTarget": 10,
+        "direction": "At most",
+        "unit": "Declared domain unit"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D10-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D10-2-CT",
+        "evidenceRef": "https://example.com/evidence/D10-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Customer requirement and disclosure scope agreed",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}

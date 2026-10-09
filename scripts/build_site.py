@@ -32,6 +32,16 @@ for page in (ROOT/'site').rglob('*.html'):
  page.write_text(page.read_text().replace('{{DOMAIN_COUNT}}',str(len(json.loads((ROOT/'content/projects.json').read_text())))))
 (ROOT/'site/enterprise').mkdir(exist_ok=True)
 shutil.copyfile(ROOT/'templates/enterprise.html',ROOT/'site/enterprise/index.html')
+from build_scenario_schema import generate as generate_scenario_schema
+generate_scenario_schema(ROOT)
+from build_scenarios import generate as generate_scenarios
+generate_scenarios(ROOT)
+shutil.copyfile(ROOT/'site/data/scenarios.json',ROOT/'content/scenarios-index.json')
+# Scenario controls share the same validator across domain reviews and both native registers.
+for page in (ROOT/'site').rglob('*.html'):
+ text=page.read_text()
+ if ('data-review-inspector' in text or '/assets/workspace.mjs' in text) and '/assets/scenario-ui.mjs' not in text:
+  page.write_text(text.replace('</body>','<script type="module" src="/assets/scenario-ui.mjs"></script></body>'))
 from build_docs import generate
 generate(ROOT)
 from seo import apply_seo

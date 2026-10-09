@@ -1,0 +1,140 @@
+{
+  "scenarioVersion": 1,
+  "id": "D04-1",
+  "domain": "policy-governance",
+  "title": "AI supplier onboarding \u2014 Policy lifecycle",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Close acknowledgement gaps before policy release",
+  "reviewInputs": {
+    "scope": "Synthetic Policy lifecycle review",
+    "owner": "Example policy owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D04-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 4,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D04-1-OB",
+        "title": "Policy lifecycle applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "ISO/IEC 27001 clause 7; NIST SP 800-53 PL",
+        "requirement": "Policy scope and approval owner recorded"
+      },
+      {
+        "type": "control",
+        "id": "D04-1-CT",
+        "title": "Policy release and acknowledgement pack",
+        "domainSlug": "policy-governance",
+        "owner": "Example policy owner",
+        "obligationId": "D04-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D04-1-TS",
+        "title": "Synthetic Policy lifecycle evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D04-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D04-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "policy",
+        "id": "D04-1-DM",
+        "title": "Policy release and acknowledgement pack source record",
+        "domainSlug": "policy-governance",
+        "owner": "Example policy owner",
+        "notes": "Synthetic domain-specific inputs",
+        "version": "1.0",
+        "approver": "Example policy reviewer",
+        "attested": 4,
+        "requiredAttestations": 10
+      },
+      {
+        "type": "issue",
+        "id": "D04-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D04-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Close acknowledgement gaps before policy release"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D04-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D04-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Policy scope and approval owner recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

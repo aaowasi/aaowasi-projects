@@ -127,6 +127,19 @@ flowchart TD
  API --> PR["Configured processing provider"]
 ```
 
+[Executable domain scenario library](https://aaowasi-projects.pages.dev/samples/) — three reproducible delivery scenarios per domain.
+
+```mermaid
+flowchart TD
+  Sample["Scenario JSON"] --> Validate["Shared validator"]
+  Validate --> Domain["Domain review"]
+  Validate --> Typed["Typed workspace"]
+  Validate --> Lab["Decision Lab"]
+  Domain --> Pack["Decision package"]
+  Typed --> Pack
+  Lab --> Pack
+```
+
 [Complete operating and client guide](DOCS.md) · [Terms and conditions](TERMS_AND_CONDITIONS.md) · [License](LICENSE)
 
 ### Domain project hierarchy

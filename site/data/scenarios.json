@@ -1,0 +1,872 @@
+[
+  {
+    "id": "D01-1",
+    "domain": "governance-program",
+    "title": "AI supplier onboarding \u2014 Corporate governance & accountability",
+    "url": "/samples/governance-program/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Confirm delegation and escalate uncovered decisions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Delegation and accountability register",
+    "method": "coverage"
+  },
+  {
+    "id": "D01-2",
+    "domain": "governance-program",
+    "title": "Recorded audit readiness \u2014 Corporate governance & accountability",
+    "url": "/samples/governance-program/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Delegation and accountability register",
+    "method": "coverage"
+  },
+  {
+    "id": "D01-3",
+    "domain": "governance-program",
+    "title": "Cross-border AI incident \u2014 Corporate governance & accountability",
+    "url": "/samples/governance-program/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Confirm delegation and escalate uncovered decisions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Delegation and accountability register",
+    "method": "coverage"
+  },
+  {
+    "id": "D02-1",
+    "domain": "executive-risk",
+    "title": "AI supplier onboarding \u2014 Enterprise risk & appetite",
+    "url": "/samples/executive-risk/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate exposure above the approved appetite",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Risk appetite exception memo",
+    "method": "limit"
+  },
+  {
+    "id": "D02-2",
+    "domain": "executive-risk",
+    "title": "Recorded audit readiness \u2014 Enterprise risk & appetite",
+    "url": "/samples/executive-risk/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Risk appetite exception memo",
+    "method": "limit"
+  },
+  {
+    "id": "D02-3",
+    "domain": "executive-risk",
+    "title": "Cross-border AI incident \u2014 Enterprise risk & appetite",
+    "url": "/samples/executive-risk/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate exposure above the approved appetite",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Risk appetite exception memo",
+    "method": "limit"
+  },
+  {
+    "id": "D03-1",
+    "domain": "regulatory-obligations",
+    "title": "AI supplier onboarding \u2014 Regulatory applicability & change",
+    "url": "/samples/regulatory-obligations/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign unmapped obligations before reliance",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Applicability and change impact register",
+    "method": "coverage"
+  },
+  {
+    "id": "D03-2",
+    "domain": "regulatory-obligations",
+    "title": "Recorded audit readiness \u2014 Regulatory applicability & change",
+    "url": "/samples/regulatory-obligations/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Applicability and change impact register",
+    "method": "coverage"
+  },
+  {
+    "id": "D03-3",
+    "domain": "regulatory-obligations",
+    "title": "Cross-border AI incident \u2014 Regulatory applicability & change",
+    "url": "/samples/regulatory-obligations/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign unmapped obligations before reliance",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Applicability and change impact register",
+    "method": "coverage"
+  },
+  {
+    "id": "D04-1",
+    "domain": "policy-governance",
+    "title": "AI supplier onboarding \u2014 Policy lifecycle",
+    "url": "/samples/policy-governance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Close acknowledgement gaps before policy release",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Policy release and acknowledgement pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D04-2",
+    "domain": "policy-governance",
+    "title": "Recorded audit readiness \u2014 Policy lifecycle",
+    "url": "/samples/policy-governance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Policy release and acknowledgement pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D04-3",
+    "domain": "policy-governance",
+    "title": "Cross-border AI incident \u2014 Policy lifecycle",
+    "url": "/samples/policy-governance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Close acknowledgement gaps before policy release",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Policy release and acknowledgement pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D05-1",
+    "domain": "control-management",
+    "title": "AI supplier onboarding \u2014 Control implementation & ownership",
+    "url": "/samples/control-management/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign implementation and failed-test actions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Control implementation gap register",
+    "method": "coverage"
+  },
+  {
+    "id": "D05-2",
+    "domain": "control-management",
+    "title": "Recorded audit readiness \u2014 Control implementation & ownership",
+    "url": "/samples/control-management/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Control implementation gap register",
+    "method": "coverage"
+  },
+  {
+    "id": "D05-3",
+    "domain": "control-management",
+    "title": "Cross-border AI incident \u2014 Control implementation & ownership",
+    "url": "/samples/control-management/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign implementation and failed-test actions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Control implementation gap register",
+    "method": "coverage"
+  },
+  {
+    "id": "D06-1",
+    "domain": "internal-audit",
+    "title": "AI supplier onboarding \u2014 Internal audit & independence",
+    "url": "/samples/internal-audit/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve independence and sampling gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Audit independence and sampling plan",
+    "method": "coverage"
+  },
+  {
+    "id": "D06-2",
+    "domain": "internal-audit",
+    "title": "Recorded audit readiness \u2014 Internal audit & independence",
+    "url": "/samples/internal-audit/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Audit independence and sampling plan",
+    "method": "coverage"
+  },
+  {
+    "id": "D06-3",
+    "domain": "internal-audit",
+    "title": "Cross-border AI incident \u2014 Internal audit & independence",
+    "url": "/samples/internal-audit/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve independence and sampling gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Audit independence and sampling plan",
+    "method": "coverage"
+  },
+  {
+    "id": "D07-1",
+    "domain": "audit-readiness",
+    "title": "AI supplier onboarding \u2014 External audit & certification readiness",
+    "url": "/samples/audit-readiness/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign incomplete requests and reviewer follow-up",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Audit request and evidence index",
+    "method": "coverage"
+  },
+  {
+    "id": "D07-2",
+    "domain": "audit-readiness",
+    "title": "Recorded audit readiness \u2014 External audit & certification readiness",
+    "url": "/samples/audit-readiness/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Audit request and evidence index",
+    "method": "coverage"
+  },
+  {
+    "id": "D07-3",
+    "domain": "audit-readiness",
+    "title": "Cross-border AI incident \u2014 External audit & certification readiness",
+    "url": "/samples/audit-readiness/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign incomplete requests and reviewer follow-up",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Audit request and evidence index",
+    "method": "coverage"
+  },
+  {
+    "id": "D08-1",
+    "domain": "continuous-assurance",
+    "title": "AI supplier onboarding \u2014 Continuous assurance & remediation",
+    "url": "/samples/continuous-assurance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Prioritize exceptions beyond tolerance",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Monitoring exception and treatment queue",
+    "method": "limit"
+  },
+  {
+    "id": "D08-2",
+    "domain": "continuous-assurance",
+    "title": "Recorded audit readiness \u2014 Continuous assurance & remediation",
+    "url": "/samples/continuous-assurance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Monitoring exception and treatment queue",
+    "method": "limit"
+  },
+  {
+    "id": "D08-3",
+    "domain": "continuous-assurance",
+    "title": "Cross-border AI incident \u2014 Continuous assurance & remediation",
+    "url": "/samples/continuous-assurance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Prioritize exceptions beyond tolerance",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Monitoring exception and treatment queue",
+    "method": "limit"
+  },
+  {
+    "id": "D09-1",
+    "domain": "vendor-risk",
+    "title": "AI supplier onboarding \u2014 Supplier lifecycle & concentration",
+    "url": "/samples/vendor-risk/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate concentration and contractual gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Supplier decision and concentration pack",
+    "method": "limit"
+  },
+  {
+    "id": "D09-2",
+    "domain": "vendor-risk",
+    "title": "Recorded audit readiness \u2014 Supplier lifecycle & concentration",
+    "url": "/samples/vendor-risk/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Supplier decision and concentration pack",
+    "method": "limit"
+  },
+  {
+    "id": "D09-3",
+    "domain": "vendor-risk",
+    "title": "Cross-border AI incident \u2014 Supplier lifecycle & concentration",
+    "url": "/samples/vendor-risk/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate concentration and contractual gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Supplier decision and concentration pack",
+    "method": "limit"
+  },
+  {
+    "id": "D10-1",
+    "domain": "customer-assurance",
+    "title": "AI supplier onboarding \u2014 Procurement & customer assurance",
+    "url": "/samples/customer-assurance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Keep unsupported answers in the review queue",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Evidence-backed questionnaire response pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D10-2",
+    "domain": "customer-assurance",
+    "title": "Recorded audit readiness \u2014 Procurement & customer assurance",
+    "url": "/samples/customer-assurance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Evidence-backed questionnaire response pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D10-3",
+    "domain": "customer-assurance",
+    "title": "Cross-border AI incident \u2014 Procurement & customer assurance",
+    "url": "/samples/customer-assurance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Keep unsupported answers in the review queue",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Evidence-backed questionnaire response pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D11-1",
+    "domain": "privacy-lifecycle",
+    "title": "AI supplier onboarding \u2014 Privacy & individual rights",
+    "url": "/samples/privacy-lifecycle/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate overdue requests and verify the applicable deadline",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Individual rights response plan",
+    "method": "deadline"
+  },
+  {
+    "id": "D11-2",
+    "domain": "privacy-lifecycle",
+    "title": "Recorded audit readiness \u2014 Privacy & individual rights",
+    "url": "/samples/privacy-lifecycle/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Individual rights response plan",
+    "method": "deadline"
+  },
+  {
+    "id": "D11-3",
+    "domain": "privacy-lifecycle",
+    "title": "Cross-border AI incident \u2014 Privacy & individual rights",
+    "url": "/samples/privacy-lifecycle/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate overdue requests and verify the applicable deadline",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Individual rights response plan",
+    "method": "deadline"
+  },
+  {
+    "id": "D12-1",
+    "domain": "processor-governance",
+    "title": "AI supplier onboarding \u2014 Processors & cross-border transfers",
+    "url": "/samples/processor-governance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve missing agreements and transfer assessments",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Processor and transfer decision register",
+    "method": "coverage"
+  },
+  {
+    "id": "D12-2",
+    "domain": "processor-governance",
+    "title": "Recorded audit readiness \u2014 Processors & cross-border transfers",
+    "url": "/samples/processor-governance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Processor and transfer decision register",
+    "method": "coverage"
+  },
+  {
+    "id": "D12-3",
+    "domain": "processor-governance",
+    "title": "Cross-border AI incident \u2014 Processors & cross-border transfers",
+    "url": "/samples/processor-governance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve missing agreements and transfer assessments",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Processor and transfer decision register",
+    "method": "coverage"
+  },
+  {
+    "id": "D13-1",
+    "domain": "data-governance",
+    "title": "AI supplier onboarding \u2014 Data classification & retention",
+    "url": "/samples/data-governance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Review overdue disposal against legal hold obligations",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Retention and disposal exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D13-2",
+    "domain": "data-governance",
+    "title": "Recorded audit readiness \u2014 Data classification & retention",
+    "url": "/samples/data-governance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Retention and disposal exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D13-3",
+    "domain": "data-governance",
+    "title": "Cross-border AI incident \u2014 Data classification & retention",
+    "url": "/samples/data-governance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Review overdue disposal against legal hold obligations",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Retention and disposal exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D14-1",
+    "domain": "ai-governance",
+    "title": "AI supplier onboarding \u2014 AI inventory & lifecycle authorization",
+    "url": "/samples/ai-governance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve inventory and release prerequisites",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI use-case release review pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D14-2",
+    "domain": "ai-governance",
+    "title": "Recorded audit readiness \u2014 AI inventory & lifecycle authorization",
+    "url": "/samples/ai-governance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "AI use-case release review pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D14-3",
+    "domain": "ai-governance",
+    "title": "Cross-border AI incident \u2014 AI inventory & lifecycle authorization",
+    "url": "/samples/ai-governance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve inventory and release prerequisites",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI use-case release review pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D15-1",
+    "domain": "ai-safety",
+    "title": "AI supplier onboarding \u2014 AI fairness, safety & oversight",
+    "url": "/samples/ai-safety/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Review unsafe evaluation results before release",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI evaluation and oversight report",
+    "method": "limit"
+  },
+  {
+    "id": "D15-2",
+    "domain": "ai-safety",
+    "title": "Recorded audit readiness \u2014 AI fairness, safety & oversight",
+    "url": "/samples/ai-safety/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "AI evaluation and oversight report",
+    "method": "limit"
+  },
+  {
+    "id": "D15-3",
+    "domain": "ai-safety",
+    "title": "Cross-border AI incident \u2014 AI fairness, safety & oversight",
+    "url": "/samples/ai-safety/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Review unsafe evaluation results before release",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI evaluation and oversight report",
+    "method": "limit"
+  },
+  {
+    "id": "D16-1",
+    "domain": "ai-transparency",
+    "title": "AI supplier onboarding \u2014 AI transparency & content provenance",
+    "url": "/samples/ai-transparency/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Close disclosure and provenance gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI disclosure and provenance checklist",
+    "method": "coverage"
+  },
+  {
+    "id": "D16-2",
+    "domain": "ai-transparency",
+    "title": "Recorded audit readiness \u2014 AI transparency & content provenance",
+    "url": "/samples/ai-transparency/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "AI disclosure and provenance checklist",
+    "method": "coverage"
+  },
+  {
+    "id": "D16-3",
+    "domain": "ai-transparency",
+    "title": "Cross-border AI incident \u2014 AI transparency & content provenance",
+    "url": "/samples/ai-transparency/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Close disclosure and provenance gaps",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "AI disclosure and provenance checklist",
+    "method": "coverage"
+  },
+  {
+    "id": "D17-1",
+    "domain": "shadow-ai",
+    "title": "AI supplier onboarding \u2014 Shadow AI & acceptable use",
+    "url": "/samples/shadow-ai/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Contain unapproved use and assign an owner",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Unapproved AI use triage register",
+    "method": "limit"
+  },
+  {
+    "id": "D17-2",
+    "domain": "shadow-ai",
+    "title": "Recorded audit readiness \u2014 Shadow AI & acceptable use",
+    "url": "/samples/shadow-ai/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Unapproved AI use triage register",
+    "method": "limit"
+  },
+  {
+    "id": "D17-3",
+    "domain": "shadow-ai",
+    "title": "Cross-border AI incident \u2014 Shadow AI & acceptable use",
+    "url": "/samples/shadow-ai/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Contain unapproved use and assign an owner",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Unapproved AI use triage register",
+    "method": "limit"
+  },
+  {
+    "id": "D18-1",
+    "domain": "resilience",
+    "title": "AI supplier onboarding \u2014 Continuity, recovery & crisis readiness",
+    "url": "/samples/resilience/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Address recovery objective breaches and dependent services",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Recovery exercise and dependency report",
+    "method": "recovery"
+  },
+  {
+    "id": "D18-2",
+    "domain": "resilience",
+    "title": "Recorded audit readiness \u2014 Continuity, recovery & crisis readiness",
+    "url": "/samples/resilience/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Recovery exercise and dependency report",
+    "method": "recovery"
+  },
+  {
+    "id": "D18-3",
+    "domain": "resilience",
+    "title": "Cross-border AI incident \u2014 Continuity, recovery & crisis readiness",
+    "url": "/samples/resilience/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Address recovery objective breaches and dependent services",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Recovery exercise and dependency report",
+    "method": "recovery"
+  },
+  {
+    "id": "D19-1",
+    "domain": "remediation",
+    "title": "AI supplier onboarding \u2014 Incident governance & reporting",
+    "url": "/samples/remediation/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate overdue notification review; verify trigger and jurisdiction",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Incident notification and decision timeline",
+    "method": "deadline"
+  },
+  {
+    "id": "D19-2",
+    "domain": "remediation",
+    "title": "Recorded audit readiness \u2014 Incident governance & reporting",
+    "url": "/samples/remediation/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Incident notification and decision timeline",
+    "method": "deadline"
+  },
+  {
+    "id": "D19-3",
+    "domain": "remediation",
+    "title": "Cross-border AI incident \u2014 Incident governance & reporting",
+    "url": "/samples/remediation/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate overdue notification review; verify trigger and jurisdiction",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Incident notification and decision timeline",
+    "method": "deadline"
+  },
+  {
+    "id": "D20-1",
+    "domain": "workforce-security",
+    "title": "AI supplier onboarding \u2014 Workforce, physical & organizational security",
+    "url": "/samples/workforce-security/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve missed personnel control actions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Joiner mover leaver control exception pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D20-2",
+    "domain": "workforce-security",
+    "title": "Recorded audit readiness \u2014 Workforce, physical & organizational security",
+    "url": "/samples/workforce-security/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Joiner mover leaver control exception pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D20-3",
+    "domain": "workforce-security",
+    "title": "Cross-border AI incident \u2014 Workforce, physical & organizational security",
+    "url": "/samples/workforce-security/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve missed personnel control actions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Joiner mover leaver control exception pack",
+    "method": "coverage"
+  },
+  {
+    "id": "D21-1",
+    "domain": "financial-conduct",
+    "title": "AI supplier onboarding \u2014 Financial, fraud & ethical conduct risk",
+    "url": "/samples/financial-conduct/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Escalate unresolved conduct exceptions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Conduct exception and segregation review",
+    "method": "limit"
+  },
+  {
+    "id": "D21-2",
+    "domain": "financial-conduct",
+    "title": "Recorded audit readiness \u2014 Financial, fraud & ethical conduct risk",
+    "url": "/samples/financial-conduct/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Conduct exception and segregation review",
+    "method": "limit"
+  },
+  {
+    "id": "D21-3",
+    "domain": "financial-conduct",
+    "title": "Cross-border AI incident \u2014 Financial, fraud & ethical conduct risk",
+    "url": "/samples/financial-conduct/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Escalate unresolved conduct exceptions",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Conduct exception and segregation review",
+    "method": "limit"
+  },
+  {
+    "id": "D22-1",
+    "domain": "sector-assurance",
+    "title": "AI supplier onboarding \u2014 Sector, market & contractual obligations",
+    "url": "/samples/sector-assurance/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign unmapped sector or contract requirements",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Sector and contract obligation map",
+    "method": "coverage"
+  },
+  {
+    "id": "D22-2",
+    "domain": "sector-assurance",
+    "title": "Recorded audit readiness \u2014 Sector, market & contractual obligations",
+    "url": "/samples/sector-assurance/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Sector and contract obligation map",
+    "method": "coverage"
+  },
+  {
+    "id": "D22-3",
+    "domain": "sector-assurance",
+    "title": "Cross-border AI incident \u2014 Sector, market & contractual obligations",
+    "url": "/samples/sector-assurance/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign unmapped sector or contract requirements",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Sector and contract obligation map",
+    "method": "coverage"
+  },
+  {
+    "id": "D23-1",
+    "domain": "security-boundary",
+    "title": "AI supplier onboarding \u2014 Security scope & authorization boundary",
+    "url": "/samples/security-boundary/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Document uncovered interfaces before authorization review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Authorization boundary and interface dossier",
+    "method": "coverage"
+  },
+  {
+    "id": "D23-2",
+    "domain": "security-boundary",
+    "title": "Recorded audit readiness \u2014 Security scope & authorization boundary",
+    "url": "/samples/security-boundary/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Authorization boundary and interface dossier",
+    "method": "coverage"
+  },
+  {
+    "id": "D23-3",
+    "domain": "security-boundary",
+    "title": "Cross-border AI incident \u2014 Security scope & authorization boundary",
+    "url": "/samples/security-boundary/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Document uncovered interfaces before authorization review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Authorization boundary and interface dossier",
+    "method": "coverage"
+  },
+  {
+    "id": "D24-1",
+    "domain": "identity-authorization",
+    "title": "AI supplier onboarding \u2014 Identity, least privilege & segregation",
+    "url": "/samples/identity-authorization/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Revoke or formally review excess privilege",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Privilege and segregation exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D24-2",
+    "domain": "identity-authorization",
+    "title": "Recorded audit readiness \u2014 Identity, least privilege & segregation",
+    "url": "/samples/identity-authorization/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Privilege and segregation exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D24-3",
+    "domain": "identity-authorization",
+    "title": "Cross-border AI incident \u2014 Identity, least privilege & segregation",
+    "url": "/samples/identity-authorization/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Revoke or formally review excess privilege",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Privilege and segregation exception register",
+    "method": "limit"
+  },
+  {
+    "id": "D25-1",
+    "domain": "cloud-change",
+    "title": "AI supplier onboarding \u2014 Cloud configuration & change",
+    "url": "/samples/cloud-change/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Resolve baseline drift before release review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Cloud change drift and release record",
+    "method": "limit"
+  },
+  {
+    "id": "D25-2",
+    "domain": "cloud-change",
+    "title": "Recorded audit readiness \u2014 Cloud configuration & change",
+    "url": "/samples/cloud-change/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Cloud change drift and release record",
+    "method": "limit"
+  },
+  {
+    "id": "D25-3",
+    "domain": "cloud-change",
+    "title": "Cross-border AI incident \u2014 Cloud configuration & change",
+    "url": "/samples/cloud-change/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Resolve baseline drift before release review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Cloud change drift and release record",
+    "method": "limit"
+  },
+  {
+    "id": "D26-1",
+    "domain": "threat-supply-chain",
+    "title": "AI supplier onboarding \u2014 Threat, vulnerability & supply-chain assurance",
+    "url": "/samples/threat-supply-chain/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Assign overdue critical findings and validate treatment",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Vulnerability and dependency treatment plan",
+    "method": "limit"
+  },
+  {
+    "id": "D26-2",
+    "domain": "threat-supply-chain",
+    "title": "Recorded audit readiness \u2014 Threat, vulnerability & supply-chain assurance",
+    "url": "/samples/threat-supply-chain/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Vulnerability and dependency treatment plan",
+    "method": "limit"
+  },
+  {
+    "id": "D26-3",
+    "domain": "threat-supply-chain",
+    "title": "Cross-border AI incident \u2014 Threat, vulnerability & supply-chain assurance",
+    "url": "/samples/threat-supply-chain/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Assign overdue critical findings and validate treatment",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Vulnerability and dependency treatment plan",
+    "method": "limit"
+  },
+  {
+    "id": "D27-1",
+    "domain": "evidence-integrity",
+    "title": "AI supplier onboarding \u2014 Logging, evidence integrity & provenance",
+    "url": "/samples/evidence-integrity/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Exclude unverified objects from the relied-on evidence set",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Evidence provenance and integrity manifest",
+    "method": "coverage"
+  },
+  {
+    "id": "D27-2",
+    "domain": "evidence-integrity",
+    "title": "Recorded audit readiness \u2014 Logging, evidence integrity & provenance",
+    "url": "/samples/evidence-integrity/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Evidence provenance and integrity manifest",
+    "method": "coverage"
+  },
+  {
+    "id": "D27-3",
+    "domain": "evidence-integrity",
+    "title": "Cross-border AI incident \u2014 Logging, evidence integrity & provenance",
+    "url": "/samples/evidence-integrity/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Exclude unverified objects from the relied-on evidence set",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Evidence provenance and integrity manifest",
+    "method": "coverage"
+  },
+  {
+    "id": "D28-1",
+    "domain": "agent-authorization",
+    "title": "AI supplier onboarding \u2014 Agent, tool & data authorization",
+    "url": "/samples/agent-authorization/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Block unbounded actions pending permission review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Agent tool and data permission contract",
+    "method": "coverage"
+  },
+  {
+    "id": "D28-2",
+    "domain": "agent-authorization",
+    "title": "Recorded audit readiness \u2014 Agent, tool & data authorization",
+    "url": "/samples/agent-authorization/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Agent tool and data permission contract",
+    "method": "coverage"
+  },
+  {
+    "id": "D28-3",
+    "domain": "agent-authorization",
+    "title": "Cross-border AI incident \u2014 Agent, tool & data authorization",
+    "url": "/samples/agent-authorization/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Block unbounded actions pending permission review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Agent tool and data permission contract",
+    "method": "coverage"
+  },
+  {
+    "id": "D29-1",
+    "domain": "ongoing-authorization",
+    "title": "AI supplier onboarding \u2014 Assessment, authorization & ongoing monitoring",
+    "url": "/samples/ongoing-authorization/1.json",
+    "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Route material changes to reauthorization review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Reauthorization trigger and decision record",
+    "method": "limit"
+  },
+  {
+    "id": "D29-2",
+    "domain": "ongoing-authorization",
+    "title": "Recorded audit readiness \u2014 Assessment, authorization & ongoing monitoring",
+    "url": "/samples/ongoing-authorization/2.json",
+    "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+    "expectedGate": "Ready for accountable review",
+    "deliverable": "Reauthorization trigger and decision record",
+    "method": "limit"
+  },
+  {
+    "id": "D29-3",
+    "domain": "ongoing-authorization",
+    "title": "Cross-border AI incident \u2014 Assessment, authorization & ongoing monitoring",
+    "url": "/samples/ongoing-authorization/3.json",
+    "context": "Unapproved generative AI handles customer PII across borders: map flows, establish transfer safeguards and assign corrective actions. Route material changes to reauthorization review",
+    "expectedGate": "Hold pending evidence and review",
+    "deliverable": "Reauthorization trigger and decision record",
+    "method": "limit"
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "scenarioVersion": 1,
+  "id": "D29-1",
+  "domain": "ongoing-authorization",
+  "title": "AI supplier onboarding \u2014 Assessment, authorization & ongoing monitoring",
+  "context": "AI supplier onboarding: unverified subprocessors, missing DPIA review and unclear retention. Route material changes to reauthorization review",
+  "reviewInputs": {
+    "scope": "Synthetic Assessment, authorization & ongoing monitoring review",
+    "owner": "Example decision owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D29-1",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      false,
+      false,
+      false
+    ],
+    "domainInputs": {
+      "population": 8,
+      "baseline": 5,
+      "approval": "Pending review"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D29-1-OB",
+        "title": "Assessment, authorization & ongoing monitoring applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "NIST SP 800-53 CA-2, CA-6, CA-7; FedRAMP Rev5",
+        "requirement": "Assessment scope and authorization package recorded"
+      },
+      {
+        "type": "control",
+        "id": "D29-1-CT",
+        "title": "Reauthorization trigger and decision record",
+        "domainSlug": "ongoing-authorization",
+        "owner": "Example decision owner",
+        "obligationId": "D29-1-OB",
+        "effectiveness": "Untested"
+      },
+      {
+        "type": "test",
+        "id": "D29-1-TS",
+        "title": "Synthetic Assessment, authorization & ongoing monitoring evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D29-1-CT",
+        "result": "Not tested",
+        "evidenceURL": "",
+        "reviewer": "",
+        "testedDate": "",
+        "expiresDate": ""
+      },
+      {
+        "type": "vendor",
+        "id": "D29-1-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": true,
+        "reviewOutcome": "Pending",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors unverified; retention unclear"
+      },
+      {
+        "type": "decision",
+        "id": "D29-1-DM",
+        "title": "Reauthorization trigger and decision record source record",
+        "domainSlug": "ongoing-authorization",
+        "owner": "Example decision owner",
+        "notes": "Synthetic domain-specific inputs",
+        "accountable": "Example decision owner",
+        "responsible": "Example accountable reviewer",
+        "consulted": "Example privacy and security reviewers",
+        "informed": "Example audit lead",
+        "rationale": "Route material changes to reauthorization review"
+      },
+      {
+        "type": "issue",
+        "id": "D29-1-AC",
+        "title": "Review prerequisites before release",
+        "domainSlug": "remediation",
+        "owner": "Example accountable reviewer",
+        "status": "Open",
+        "controlId": "D29-1-CT",
+        "openedDate": "2026-10-09",
+        "severity": "High",
+        "correctiveAction": "Route material changes to reauthorization review"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D29-1-AI",
+        "name": "Example LLM support supplier",
+        "owner": "Example service owner",
+        "service": "Customer support",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": true,
+        "approved": false,
+        "processor": true,
+        "region": "US",
+        "dpa": false,
+        "transfer": false,
+        "disclosure": "gap",
+        "oversight": "assigned",
+        "evidence": "missing",
+        "likelihood": 4,
+        "impact": 4,
+        "treatment": "mitigate",
+        "reviewer": "",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D29-1-CT",
+        "evidenceRef": "",
+        "testOutcome": "not-tested",
+        "evidenceReviewedAt": "",
+        "evidenceExpiresAt": "",
+        "question": "Assessment scope and authorization package recorded",
+        "aiEvalTotal": 20,
+        "aiEvalFailed": 3,
+        "techniqueId": "AML.T0051"
+      }
+    ]
+  }
+}

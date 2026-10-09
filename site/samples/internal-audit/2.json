@@ -1,0 +1,128 @@
+{
+  "scenarioVersion": 1,
+  "id": "D06-2",
+  "domain": "internal-audit",
+  "title": "Recorded audit readiness \u2014 Internal audit & independence",
+  "context": "Annual cloud assurance preparation: scoped controls and recorded passing tests are complete. Complete the domain checks, resolve calculation exceptions, and obtain documented reviewer acceptance. Metadata readiness is not certification or authorization.",
+  "reviewInputs": {
+    "scope": "Synthetic Internal audit & independence review",
+    "owner": "Example audit owner",
+    "reviewer": "Example accountable reviewer",
+    "evidenceURL": "https://example.com/evidence/D06-2",
+    "expires": "2027-01-31",
+    "asOf": "2026-10-09",
+    "checks": [
+      true,
+      true,
+      true
+    ],
+    "domainInputs": {
+      "population": 10,
+      "baseline": 10,
+      "approval": "Confirmed"
+    }
+  },
+  "workspace": {
+    "version": 1,
+    "records": [
+      {
+        "type": "obligation",
+        "id": "D06-2-OB",
+        "title": "Internal audit & independence applicability review",
+        "domainSlug": "regulatory-obligations",
+        "framework": "ISO/IEC 27001 clause 9; NIST SP 800-53 CA",
+        "requirement": "Audit independence and mandate documented"
+      },
+      {
+        "type": "control",
+        "id": "D06-2-CT",
+        "title": "Audit independence and sampling plan",
+        "domainSlug": "internal-audit",
+        "owner": "Example audit owner",
+        "obligationId": "D06-2-OB",
+        "effectiveness": "Effective"
+      },
+      {
+        "type": "test",
+        "id": "D06-2-TS",
+        "title": "Synthetic Internal audit & independence evidence test",
+        "domainSlug": "audit-readiness",
+        "controlId": "D06-2-CT",
+        "result": "Pass",
+        "evidenceURL": "https://example.com/evidence/D06-2",
+        "reviewer": "Example accountable reviewer",
+        "testedDate": "2026-10-09",
+        "expiresDate": "2027-01-31"
+      },
+      {
+        "type": "vendor",
+        "id": "D06-2-VD",
+        "title": "Example AI supplier",
+        "domainSlug": "vendor-risk",
+        "service": "LLM support processing",
+        "usesAI": false,
+        "reviewOutcome": "Approve",
+        "owner": "Example supplier reviewer",
+        "notes": "Synthetic: subprocessors reviewed"
+      },
+      {
+        "type": "audit",
+        "id": "D06-2-DM",
+        "title": "Audit independence and sampling plan source record",
+        "domainSlug": "internal-audit",
+        "owner": "Example audit owner",
+        "notes": "Synthetic domain-specific inputs",
+        "scope": "Synthetic Internal audit & independence review",
+        "populationSize": 10,
+        "testedCount": 10,
+        "selectionMethod": "Declared synthetic sample"
+      }
+    ],
+    "updatedAt": null
+  },
+  "decisionLab": {
+    "schemaVersion": "1.0",
+    "asOf": "2026-10-09",
+    "provenance": "Synthetic scenario; evidence and passing tests are illustrative assertions",
+    "assumptions": {
+      "manualMinutes": 0,
+      "assistedMinutes": 0,
+      "hourlyCost": 0,
+      "setupCost": 0
+    },
+    "records": [
+      {
+        "id": "D06-2-AI",
+        "name": "Example cloud assurance service",
+        "owner": "Example service owner",
+        "service": "Cloud assurance",
+        "criticality": "high",
+        "dataSensitivity": "personal",
+        "ai": false,
+        "approved": true,
+        "processor": true,
+        "region": "EEA",
+        "dpa": true,
+        "transfer": true,
+        "disclosure": "tested",
+        "oversight": "tested",
+        "evidence": "current",
+        "likelihood": 2,
+        "impact": 2,
+        "treatment": "mitigate",
+        "reviewer": "Example accountable reviewer",
+        "rationale": "Synthetic metadata only",
+        "parentVendorId": "",
+        "controlId": "D06-2-CT",
+        "evidenceRef": "https://example.com/evidence/D06-2",
+        "testOutcome": "pass",
+        "evidenceReviewedAt": "2026-10-09",
+        "evidenceExpiresAt": "2027-01-31",
+        "question": "Audit independence and mandate documented",
+        "aiEvalTotal": 0,
+        "aiEvalFailed": 0,
+        "techniqueId": ""
+      }
+    ]
+  }
+}
