@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "d9e57f378ad5a12e375b12ee7887cb3852ded61ef285104db074208287a9dcf7",
+  "sourceFingerprint": "858044d536587b082607ae74e896e0be7060e0edd935377850f59ab869587393",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -59,6 +59,7 @@
     "content/enterprise-plans.json",
     "content/legacy-section-redirects.json",
     "content/projects.json",
+    "content/regulatory-observations.json",
     "content/regulatory-sources.json",
     "content/scenarios-index.json",
     "content/suite-catalog.json",
