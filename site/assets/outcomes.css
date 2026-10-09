@@ -28,3 +28,11 @@
 .outcome-card a,.outcome-console a{text-underline-offset:.25em}
 @media(max-width:860px){.outcomes-flow,.outcome-grid{grid-template-columns:1fr}.outcome-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-console-head{flex-direction:column}}
 @media(max-width:460px){.outcome-stats{grid-template-columns:1fr}.outcome-console{padding:1rem}}
+
+.outcome-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
+.outcome-source{border:1px solid color-mix(in srgb,currentColor 15%,transparent);border-radius:14px;padding:1.3rem}
+.outcome-source h3{line-height:1.2;margin:.5rem 0}
+.outcome-source a{text-decoration:underline;text-underline-offset:.2em}
+.outcome-source .small a{margin-right:.2rem}
+#regulatory-region{display:block;margin:.5rem 0 1rem;max-width:100%;padding:.7rem;min-width:230px}
+@media(max-width:760px){.outcome-reference-grid{grid-template-columns:1fr}}
