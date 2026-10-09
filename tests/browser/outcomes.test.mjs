@@ -34,3 +34,17 @@ test('client outcome walkthrough links to reproducible fixtures and does not ass
  for(const url of ['/samples/ai-governance/1.json','/samples/audit-readiness/2.json','/samples/processor-governance/3.json','/assets/outcomes.mjs'])assert.ok(html.includes(url));
  assert.match(html,/not fetched|not assert/i);
 });
+
+test('curated jurisdiction references are source-bound and domain-linked rather than fake live coverage',()=>{
+ const registry=read('site/data/regulatory-sources.json');
+ assert.equal(registry.version,1);
+ assert.match(registry.updateMode,/human review/);
+ const known=new Set(config.map(x=>x.slug));
+ for(const source of registry.sources){
+  assert.match(source.url,/^https:\/\//);
+  assert.ok(source.domainSlugs.length>0);
+  assert.ok(source.domainSlugs.every(slug=>known.has(slug)));
+  assert.ok(['European Union','United Kingdom','United States','Singapore'].includes(source.jurisdiction));
+ }
+ assert.equal(new Set(registry.sources.map(x=>x.jurisdiction)).size,4);
+});
