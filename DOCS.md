@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `cccc01917c4fba24789ae7acc48a4bbc791657f4b377af2fef99d87db65f7387`
+Source contract SHA-256: `f782797b13d5d2b3d114a698e0997fb9de282e4086c1dab87add90105e39cc96`
 
 ## System overview
 
@@ -3393,6 +3393,7 @@ site/decision-lab/index.html
 site/privacy/index.html
 site/tools/vendor-review/index.html
 templates/architecture.html
+templates/control-center.html
 templates/domain-workspace.html
 templates/enterprise.html
 templates/evaluate.html
