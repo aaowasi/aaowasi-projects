@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "0fbb7e0b3436d6da23f495578b7a134bf2cea497109b825957bc3359dcc1d128",
+  "sourceFingerprint": "b1ac723ba77c8a18a45ed06f7e26faeffb2d835d270ca1b321246f81d5c507ca",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -9,6 +9,7 @@
     "/enterprise/",
     "/evaluate/",
     "//",
+    "/outcomes/",
     "/privacy/",
     "/results/",
     "/samples/",
@@ -58,6 +59,7 @@
     "content/enterprise-plans.json",
     "content/legacy-section-redirects.json",
     "content/projects.json",
+    "content/regulatory-sources.json",
     "content/scenarios-index.json",
     "content/suite-catalog.json",
     "content/verified-delivery.json",
@@ -119,6 +121,8 @@
     "site/assets/domain-assessment.mjs",
     "site/assets/domain-core.mjs",
     "site/assets/evaluate.mjs",
+    "site/assets/outcomes.css",
+    "site/assets/outcomes.mjs",
     "site/assets/review-core.mjs",
     "site/assets/review-ui.mjs",
     "site/assets/risk-core.mjs",
