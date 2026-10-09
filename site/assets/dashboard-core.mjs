@@ -14,7 +14,8 @@ export function executiveMetrics(records,asOf,options={}){
  if(!Number.isInteger(appetite)||appetite<1||appetite>25)throw Error('Risk appetite must be between 1 and 25.');
  const domain=options.domain||'';
  const scoped=domain?records.filter(r=>r.domainSlug===domain):records;
- const risks=scoped.filter(r=>r.type==='risk').map(r=>{
+ const projected=Array.isArray(options.projectedRisk)?options.projectedRisk.filter(r=>!domain||r.domainSlug===domain):[];
+ const risks=[...scoped.filter(r=>r.type==='risk'),...projected].map(r=>{
   const inherent=score(r.likelihood,r.impact),residual=score(r.residualLikelihood,r.residualImpact);
   return {id:r.id,title:r.title,owner:r.owner||'Unassigned',domain:r.domainSlug||'Unclassified',inherent,residual,inherentBand:band(inherent),residualBand:band(residual),likelihood:r.likelihood,impact:r.impact,exposureUSD:Number.isFinite(r.exposureUSD)?r.exposureUSD:null,aboveAppetite:residual!==null?residual>=appetite:null};
  });
@@ -77,4 +78,18 @@ export function executiveMemo(m){
  '## Framework-linked obligations (not statutory compliance scores)',...m.frameworks.map(x=>`- ${x.name}: ${x.tested}/${x.obligations} obligations with mapped controls and recorded passing tests`),'',
  '## Evidence boundary','Risk and test calculations use the imported metadata, not real-time system telemetry. Evidence URLs are not fetched or verified. A human reviewer must confirm legal applicability, completeness, scope and release authorization.',''];
  return lines.join('\n');
+}
+
+/**
+ * UI-only join. Scenario Decision Lab scores must be visible in the executive
+ * heatmap without manufacturing typed risk records in an editable V1 export.
+ * These projections have no residual assessment and are NEVER auto-approved.
+ */
+export function projectScenarioRisks(pack){
+ if(!pack||pack.schemaVersion!==2||!Array.isArray(pack.decisionLab?.records))return [];
+ return pack.decisionLab.records.map(r=>({
+  type:'risk',id:'LAB-'+r.id,title:r.name+' · synthetic Decision Lab',
+  owner:r.owner||'Example reviewer unassigned',domainSlug:pack.domain,
+  likelihood:r.likelihood,impact:r.impact
+ }));
 }
