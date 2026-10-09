@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {executiveMetrics,executiveMemo,RISK_HIGH,RISK_MODERATE} from '../../site/assets/dashboard-core.mjs';
+import {executiveMetrics,executiveMemo,projectScenarioRisks,RISK_HIGH,RISK_MODERATE} from '../../site/assets/dashboard-core.mjs';
 import {evaluateScenario} from '../../site/assets/scenario-core.mjs';
 const read=path=>JSON.parse(fs.readFileSync(new URL('../../'+path,import.meta.url)));
 const configs=read('content/domain-reviews.json'),catalog=read('content/suite-catalog.json');
@@ -43,11 +43,12 @@ test('control freshness, expired tests, cross-domain evidence and framework mapp
 test('all three bundled demos produce distinct in-browser summary values',()=>{
  const vendor=scenario('ai-governance/1.json'),audit=scenario('audit-readiness/2.json'),incident=scenario('processor-governance/3.json');
  for(const p of [vendor,audit,incident]){
-  const m=executiveMetrics(p.workspace.records,p.domainReview.reportingDate);
+  const m=executiveMetrics(p.workspace.records,p.domainReview.reportingDate,{projectedRisk:projectScenarioRisks(p)});
   assert.equal(m.records,p.workspace.records.length);
   assert.equal(m.controlCoverage,p.workspaceMetrics.coverage);
-  assert.ok(m.heat.length===25);
+  assert.ok(m.heat.length===25);assert.ok(m.risks>=1);
  }
+ assert.equal(executiveMetrics(vendor.workspace.records,vendor.domainReview.reportingDate,{projectedRisk:projectScenarioRisks(vendor)}).highInherent,1);
  assert.equal(vendor.decisionLabMetrics.rows[0].priority,24);
  assert.equal(audit.domainReview.readiness.percent,100);
  assert.equal(incident.notification.deadlineAt,'2026-10-12T09:00:00.000Z');
