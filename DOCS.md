@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `726d3bf0529e29a30f667ace68cf11e02f8a27497ffefbf5139205bdbafb9b8b`
+Source contract SHA-256: `0fbb7e0b3436d6da23f495578b7a134bf2cea497109b825957bc3359dcc1d128`
 
 ## System overview
 
@@ -3264,6 +3264,7 @@ scripts/scenario_docs.py
 scripts/seo.py
 scripts/validate_repository.py
 server/evaluation-runtime.mjs
+server/scenario-definitions.mjs
 server/scenario-runtime.mjs
 services/evidence-ingestor/ccm.py
 services/mcp-server/server.py

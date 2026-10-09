@@ -6,6 +6,7 @@ def generate(root):
  configs=json.loads((root/'content/domain-reviews.json').read_text())
  catalog=json.loads((root/'content/suite-catalog.json').read_text())
  example=json.loads((root/'site/data/connected-scenario.json').read_text())
+ (root/'server/scenario-definitions.mjs').write_text('// Generated from the canonical domain and record catalogs.\nexport const configs='+json.dumps(configs)+';\nexport const catalog='+json.dumps(catalog)+';\n')
  cards=[];index=[]
  for n,c in enumerate(configs,1):
   for variant in range(1,4):
