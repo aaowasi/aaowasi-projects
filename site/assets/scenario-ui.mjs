@@ -61,7 +61,7 @@ if(host){
    if(!f.name.toLowerCase().endsWith('.json'))throw Error('Choose a JSON file.');
    const raw=JSON.parse(await f.text());
    applyScenario(raw);
-   status.scrollIntoView({behavior:'instant',block:'nearest'});
+   status.scrollIntoView({behavior:'auto',block:'nearest'});
   }catch(err){announce('Could not load this scenario. Previous review preserved. '+err.message,true);}
   finally{input.value='';}
  };
