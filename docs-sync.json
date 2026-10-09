@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "b1ac723ba77c8a18a45ed06f7e26faeffb2d835d270ca1b321246f81d5c507ca",
+  "sourceFingerprint": "b2fc98a222b287c2f29d16931bfbb7c2e785b42aff9163e1276c91e91615de68",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -51,6 +51,7 @@
     ".github/workflows/ccm.yml",
     ".github/workflows/local-core.yml",
     ".github/workflows/policy.yml",
+    ".github/workflows/regulatory-watch.yml",
     ".github/workflows/site.yml",
     "COMMERCIALIZATION.md",
     "GO_TO_MARKET.md",
@@ -59,6 +60,7 @@
     "content/enterprise-plans.json",
     "content/legacy-section-redirects.json",
     "content/projects.json",
+    "content/regulatory-observations.json",
     "content/regulatory-sources.json",
     "content/scenarios-index.json",
     "content/suite-catalog.json",
@@ -106,6 +108,7 @@
     "scripts/domain_build.py",
     "scripts/index_legacy_evidence.py",
     "scripts/local.mjs",
+    "scripts/monitor_regulations.py",
     "scripts/package_evidence.py",
     "scripts/page_sections.py",
     "scripts/refresh_delivery.py",

@@ -1,0 +1,67 @@
+name: Curated regulatory page change watch
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/regulatory-sources.json'
+      - 'scripts/monitor_regulations.py'
+      - '.github/workflows/regulatory-watch.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: curated-regulatory-watch-main
+  cancel-in-progress: false
+
+jobs:
+  observe-and-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Confirm observer invariants without live network
+        run: python -m unittest discover -s tests -p 'test_regulatory_watch.py' -v
+      - name: Observe curated authoritative web pages
+        run: python scripts/monitor_regulations.py
+      - name: Rebuild website, docs, source contracts
+        run: python scripts/build_site.py
+      - name: Verify site and cross-domain documentation
+        run: |
+          python scripts/check_site.py
+          python scripts/check_contract.py
+          node --check site/assets/outcomes.mjs
+          node --test tests/browser/*.test.mjs
+      - name: Publish dated observation states if changed
+        run: |
+          if git diff --quiet -- content/regulatory-observations.json site DOCS.md README.md docs-sync.json; then
+            echo "No new observation or site output."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/regulatory-observations.json site DOCS.md README.md docs-sync.json
+          git commit -m "chore: record dated curated regulatory source observations"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              echo "Published dated observation metadata; no legal changes auto-approved."
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Regulatory watch commit could not be published; no overwrite attempted." >&2
+          exit 1
