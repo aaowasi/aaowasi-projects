@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `7259ff2ab8009df951057f3cf23d8f38ff0e6d1f3c3f9f7bc39d7c0b8199c0e0`
+Source contract SHA-256: `b241875622169aab085bb461dce2ed285e93eda62f33ea772236aebdf88fcce6`
 
 ## System overview
 
@@ -3573,6 +3573,35 @@ The repo runs .github/workflows/regulatory-watch.yml daily around 04:17 UTC and 
 On first successful fetch a baseline is recorded; subsequent changed fingerprints receive change_pending_review status that persists across stable later polls and network failures until a qualified person documents a review. The process must never set a domain gate, legal applicability, effective date, client evidence completeness, law-enforcement status or human approval by itself. Monitoring is best-effort GitHub Actions scheduled execution and is limited to the curated sources. On any failed fetch it explicitly records unavailable, retaining the previous successful observation. The daily job rebuilds DOCS.md, README.md, site snapshots and docs-sync.json before publishing the source status; no secret tokens or personal records are stored.
 
 The /outcomes/#regulatory-references selector shows primary URL, mapped domain links, last attempted/successful observation, and any human review queue. Changing an obligation must be a separately authorized, source-verified domain-specific mapping decision; no international compliance conclusion follows from a content hash. See official article versions before using the information for clients.
+
+
+## Executive GRC Control Center — interactive 29-domain metrics and import contract
+
+The /control-center/ route is produced by templates/control-center.html and scripts/build_site.py, and is reused inside /suite/ and /workspace/ via dashboard-ui.mjs. All 29 domain projects link to it. Files are read with the browser File API, parsed with JSON.parse, validated against canonical suite-core/scenario-core contracts and then evaluated in JS with no device installation, model API call or confidential data transmission. Typed version 1 JSON or complete scenarioVersion 1 JSON are supported. Version-2 Decision Packs are **output artifacts**, not valid source import data; CSV exports are risk-register summaries and the Decision Lab handles its own supported CSV format.
+
+### Risk scoring and mathematical rules
+
+- **Inherent risk** = likelihood × impact, both integers 1–5. **Residual risk** = independently assessed residual likelihood × residual impact. No inferred residual reduction. High risk is **16–25**, Moderate **9–15**, Low **1–8**. Unassessed inputs remain unassessed. A 5×5 inherent heatmap shows likelihood rows 5→1 and impact columns 1→5; clicking a cell filters its source risks.
+- **Risk appetite** uses an **illustrative editable threshold of 9/25** and is NOT a verified organization policy. A residual risk at/above the chosen threshold is flagged as above illustrative appetite. Report both observed exceedances and missing residual assessments. Do not convert an absent score to zero risk.
+- **Tested control coverage (%)** = controls with at least one recorded Pass, named reviewer, HTTPS-formatted evidence URL, test date ≤ explicit asOf, and expiresDate ≥ asOf ÷ controls in selected scope × 100. Cross-domain test evidence links are resolved using all supplied typed records even when the display filters to one domain. Zero denominator yields **N/A**, not 100%. The browser never dereferences the URL or independently verifies test results.
+- **Evidence freshness** counts linked control records with the most recent dated completed test older than **90 / 180 calendar days** relative to asOf. The age indicator is separate from explicit evidence expiry; it does not automatically indicate noncompliance.
+- **Overdue actions** are records whose reviewDate is before the asOf date and whose status is not Closed. **Open incidents** counts open issue records explicitly classified with incident category; it is not independently confirmed breach/loss telemetry. **Open issues** are issue records not Closed.
+- **Framework hotspots** count typed obligation records by their framework field. A fully tested mapped obligation requires linked scoped controls with passing dated evidence tests. The resulting ratios are evidence coverage **within the imported population**, not regulatory compliance percentages, certification conclusions or a world-wide legal map.
+
+### End-to-end synthetic demonstrations
+
+1. Select /control-center/ scenario AI vendor onboarding (D14-1), cloud audit pass (D07-2), or cross-border shadow AI (D12-3). Or visit the 29 domain /work/ pages and download their domain-specific /samples/{slug}/{variant}.json fixtures.
+2. Download JSON (or use the prepared scenario selector), select the JSON in the Import input, and see the in-page confirmation **Scenario loaded successfully** without a blocking confirm() modal. Existing in-memory demo state is replaced only after full validation; manual stored data is not modified. The Decision Lab retains a one-step Undo for scenario application.
+3. Inspect the recalculated review status, 5×5 heatmap, accountable issues, control evidence coverage, conditional incident reporting hypothesis and framework mappings. The 29-domain suite view scopes registers by shared domainSlug but allows tests to reference controls in other domains.
+4. Export a version 2 JSON Decision Pack and the Markdown executive memo for canonical scenario fixtures, or a version 1 editable suite JSON and a UTF-8 CSV risk summary for manual typed datasets. The memo includes assumptions and evidence verification boundaries.
+
+### Browser/event synchronization and backend boundaries
+
+scenario-ui.mjs dispatches **scenario-apply** only after synchronous canonical validation. review-ui.mjs updates the domain-specific evidence form; suite.mjs switches to the imported domain perspective, rebuilds its executive dashboard and typed record table; workspace.mjs refreshes the Decision Lab and preserves its one-step Undo. Native imports emit scenario-evaluated to refresh the downloadable pack preview; unsupported files preserve the previous state and show a visible inline error. Synthetic scenario uploads do not require a blocking confirmation because the action itself is an explicit demo import. Real organizational datasets still require an explicit confirmation when replacing non-demo typed suite records.
+
+Cloudflare /api/status, /api/login and /api/account retain their configured authentication contracts. /api/evaluate already uses the same canonical scenario runtime and does **not** run when a visitor imports JSON into the public browser-only Control Center. No server-side account operation is necessary for these demonstrations. Keep production authorization, versioned policy metadata, tenant isolation and human release sign-off separate from this public portfolio.
+
+See site/assets/dashboard-core.mjs and tests/browser/dashboard.test.mjs for calculation code and deterministic fixtures. The NIST AI RMF functions Govern/Map/Measure/Manage are assessment perspectives, not software certification criteria. Check current standards and legal rules with their issuing authorities before drawing client conclusions.
 
 
 ## Executable scenarios
