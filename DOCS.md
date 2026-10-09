@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `c617f9a067dfb9151513e61acc921c7bdfc911307925250d5852942c28723814`
+Source contract SHA-256: `2ef441ca85e97451ae7b4e8bd1d65ce8c65fc35301bb06b2d466774546b1c46a`
 
 ## System overview
 
@@ -3297,6 +3297,7 @@ Adding a domain requires a unique project manifest, matrix entry, typed register
 .github/workflows/ccm.yml
 .github/workflows/local-core.yml
 .github/workflows/policy.yml
+.github/workflows/regulatory-watch.yml
 .github/workflows/site.yml
 COMMERCIALIZATION.md
 GO_TO_MARKET.md
