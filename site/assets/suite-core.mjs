@@ -33,7 +33,7 @@ export function metrics(records,asOf,linkedRecords=records){
  const risk=records.filter(x=>x.type==='risk'),controls=records.filter(x=>x.type==='control');
  const currentPass=linkedRecords.filter(x=>x.type==='test'&&x.result==='Pass'&&x.testedDate<=asOf&&x.expiresDate&&x.expiresDate>=asOf);
  const covered=controls.filter(c=>currentPass.some(t=>t.controlId===c.id)).length;
- return {total:records.length,overdue:records.filter(x=>x.reviewDate&&x.reviewDate<asOf&&x.status!=='Closed').length,openIssues:records.filter(x=>x.type==='issue'&&x.status!=='Closed').length,coverage:controls.length?Math.round(100*covered/controls.length):null,covered,controls:controls.length,highRisk:risk.filter(x=>x.likelihood*x.impact>=15).length,heat:Array.from({length:25},(_,i)=>risk.filter(x=>x.likelihood===Math.floor(i/5)+1&&x.impact===i%5+1).length)};
+ return {total:records.length,overdue:records.filter(x=>x.reviewDate&&x.reviewDate<asOf&&x.status!=='Closed').length,openIssues:records.filter(x=>x.type==='issue'&&x.status!=='Closed').length,coverage:controls.length?Math.round(100*covered/controls.length):null,covered,controls:controls.length,highRisk:risk.filter(x=>x.likelihood*x.impact>=16).length,heat:Array.from({length:25},(_,i)=>risk.filter(x=>x.likelihood===Math.floor(i/5)+1&&x.impact===i%5+1).length)};
 }
 export function score(r){return r.type==='risk'&&r.likelihood&&r.impact?r.likelihood*r.impact:null;}
 export function related(records,id){return records.filter(r=>r.id!==id&&Object.entries(r).some(([k,v])=>k.endsWith('Id')&&v===id));}
