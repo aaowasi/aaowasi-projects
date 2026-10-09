@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `c25ac0153040c00caa2542a80fc9230c9cf16e85fdc73c07d18b7ba6a99882c8`
+Source contract SHA-256: `7259ff2ab8009df951057f3cf23d8f38ff0e6d1f3c3f9f7bc39d7c0b8199c0e0`
 
 ## System overview
 
@@ -910,6 +910,7 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | ABDULLAH AL OWASI | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | GRC system | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi-projects.pages.dev/architecture/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Work | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Control center | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/control-center/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Evidence | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/results/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Contact ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://aaowasi.pages.dev/contact/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Read the complete guide and diagrams on GitHub ↗ | Opens owned source or documentation in GitHub for technical inspection. Destination: `https://github.com/aaowasi/aaowasi-projects/blob/main/DOCS.md`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
