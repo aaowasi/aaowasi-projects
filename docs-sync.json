@@ -1,9 +1,10 @@
 {
-  "sourceFingerprint": "f782797b13d5d2b3d114a698e0997fb9de282e4086c1dab87add90105e39cc96",
+  "sourceFingerprint": "ea8c1eb147ad4ed569ab779ab321c2ad6d94ecb93a20bfbfdb457d84f549937c",
   "projectCount": 29,
   "routes": [
     "/architecture/",
     "/assurance/",
+    "/control-center/",
     "/decision-lab/",
     "/docs/",
     "/enterprise/",
