@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `ec40f6ab2e160b8ec529f562cfe56eadb3fe22d6b1fe7ddb27abb80dc4e4fa23`
+Source contract SHA-256: `837fdefa4fdeec995cabd3c47e83bc7350ee4d89b13360e2cf71f9d4a088c221`
 
 ## System overview
 
@@ -3368,6 +3368,7 @@ services/evidence-ingestor/ccm.py
 services/mcp-server/server.py
 site/404.html
 site/assets/dashboard-core.mjs
+site/assets/dashboard-ui.mjs
 site/assets/domain-assessment.mjs
 site/assets/domain-core.mjs
 site/assets/evaluate.mjs
