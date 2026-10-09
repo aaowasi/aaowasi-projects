@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `0e4ddbfa9fb55ac9991a3f5b7ae25d8f7d253210c9e36bd0df6c235f1b11c3f9`
+Source contract SHA-256: `1a24d77148c9a63e9ebcec7428b0f0662139c2d5f4f38e230be3e6f1c0f47b00`
 
 ## System overview
 
@@ -3376,6 +3376,7 @@ site/assets/review-core.mjs
 site/assets/review-ui.mjs
 site/assets/risk-core.mjs
 site/assets/scenario-core.mjs
+site/assets/scenario-ui.css
 site/assets/scenario-ui.mjs
 site/assets/site.css
 site/assets/site.js

@@ -1,5 +1,5 @@
 {
-  "sourceFingerprint": "0e4ddbfa9fb55ac9991a3f5b7ae25d8f7d253210c9e36bd0df6c235f1b11c3f9",
+  "sourceFingerprint": "1a24d77148c9a63e9ebcec7428b0f0662139c2d5f4f38e230be3e6f1c0f47b00",
   "projectCount": 29,
   "routes": [
     "/architecture/",
@@ -130,6 +130,7 @@
     "site/assets/review-ui.mjs",
     "site/assets/risk-core.mjs",
     "site/assets/scenario-core.mjs",
+    "site/assets/scenario-ui.css",
     "site/assets/scenario-ui.mjs",
     "site/assets/site.css",
     "site/assets/site.js",
