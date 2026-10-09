@@ -72,10 +72,26 @@ $('outcome-upload').addEventListener('change',async event=>{
 $('outcome-export-json').onclick=()=>pack&&download(JSON.stringify(pack,null,2),pack.scenarioId+'-decision-pack-v2.json','application/json');
 $('outcome-export-memo').onclick=()=>pack&&download(scenarioMemo(pack),pack.scenarioId+'-decision-memo.md','text/markdown;charset=utf-8');
 async function renderJurisdictions(){
- const response=await fetch('/data/regulatory-sources.json');
- if(!response.ok)throw Error('Reference register unavailable.');
- const data=await response.json();
+ const [sourcesResponse,observationsResponse]=await Promise.all([
+  fetch('/data/regulatory-sources.json'),fetch('/data/regulatory-observations.json')
+ ]);
+ if(!sourcesResponse.ok)throw Error('Reference register unavailable.');
+ const data=await sourcesResponse.json();
  if(data.version!==1||!Array.isArray(data.sources))throw Error('Unexpected regulatory reference contract.');
+ let observations={version:1,generatedAt:null,entries:[]};
+ if(observationsResponse.ok){
+  try{
+   const raw=await observationsResponse.json();
+   if(raw.version===1&&Array.isArray(raw.entries))observations=raw;
+  }catch{}
+ }
+ const byUrl=new Map(observations.entries.map(x=>[x.url,x]));
+ const pending=observations.entries.filter(x=>x.reviewState==='change_pending_review').length;
+ const unavailable=observations.entries.filter(x=>x.fetchStatus!=='observed').length;
+ const monitor=$('regulatory-monitor-status');
+ monitor.textContent=observations.generatedAt
+  ? 'Last automatic source observation: '+observations.generatedAt+' · '+pending+' source changes awaiting HUMAN REVIEW · '+unavailable+' sources unavailable at last check. Neither a source change nor a successful fetch establishes legal applicability.'
+  : 'Source polling has not completed yet. All references below are curated, not live-verified.';
  const selector=$('regulatory-region'),target=$('regulatory-reference-items');
  const jurisdictions=[...new Set(data.sources.map(x=>x.jurisdiction))];
  for(const name of jurisdictions){const option=document.createElement('option');option.value=name;option.textContent=name;selector.append(option);}
@@ -83,7 +99,7 @@ async function renderJurisdictions(){
   target.replaceChildren();
   const selected=data.sources.filter(x=>!selector.value||x.jurisdiction===selector.value);
   for(const item of selected){
-   const card=document.createElement('article'),tag=document.createElement('p'),h=document.createElement('h3'),detail=document.createElement('p'),a=document.createElement('a'),links=document.createElement('p');
+   const card=document.createElement('article'),tag=document.createElement('p'),h=document.createElement('h3'),detail=document.createElement('p'),a=document.createElement('a'),links=document.createElement('p'),stamp=document.createElement('p');
    card.className='outcome-source';
    tag.className='eyebrow';tag.textContent=item.jurisdiction+' / '+item.topic;
    h.textContent=item.title;detail.textContent=item.nature;
@@ -92,9 +108,15 @@ async function renderJurisdictions(){
    for(const slug of item.domainSlugs){
     const link=document.createElement('a');link.href='/work/'+slug+'/';link.textContent=slug.replaceAll('-',' ');links.append(link,document.createTextNode(' · '));
    }
-   card.append(tag,h,detail,a,links);target.append(card);
+   const observed=byUrl.get(item.url);
+   stamp.className='small';
+   stamp.textContent=!observed?'Not yet polled; no verified page observations.'
+     :(observed.reviewState==='change_pending_review'?'PAGE CHANGED / human legal review pending; ':observed.reviewState==='baseline'?'Baseline content fingerprint recorded; ':'No baseline yet; ')+
+      (observed.fetchStatus==='observed'?'source fetched successfully; ':'most recent fetch unavailable; ')+
+      'last successful observation: '+(observed.lastSuccessfulAt||'none')+'.';
+   card.append(tag,h,detail,a,stamp,links);target.append(card);
   }
-  $('regulatory-update-note').textContent=selected.length+' curated primary references · metadata reviewed '+data.reviewedOn+' · no automatic legal applicability or source refresh.';
+  $('regulatory-update-note').textContent=selected.length+' curated primary references · metadata reviewed '+data.reviewedOn+' · no automatic legal applicability.';
  }
  selector.onchange=update;update();
 }
