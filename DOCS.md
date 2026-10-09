@@ -2,7 +2,7 @@
 
 Generated from 29 active domain projects, 16 record types and 132 register/reporting views.
 
-Source contract SHA-256: `977dff0b631c2bc24679bc1c9252a2b676da2720a36ab8040475bc7ba6b1b4e5`
+Source contract SHA-256: `6e90aa6d5181eef9343759bc791651798cb45f72f1e02a3864c2f8d79f2eb6de`
 
 ## System overview
 
@@ -1054,6 +1054,7 @@ This inventory is generated from the shipped HTML. Repeated controls appear once
 | Open 29-domain Workspace → | Opens the typed operating workspace; query parameters choose a domain. Preserve current in-memory data through export before leaving. Destination: `/workspace/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Open Decision Lab → | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `/decision-lab/`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Or import a scenario JSON file to review locally | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
+| Jurisdiction All reviewed jurisdictions | Accepts the explicitly labeled input; see the associated review or record schema below. Editing is local until the stated save action. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | EU AI Act Article 50 ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | EDPB breach notification ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://www.edpb.europa.eu/topics/security-data-breaches/personal-data-breaches_en`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
 | Sequoia’s outcome-based service thesis ↗ | Navigates to the displayed destination. This action does not submit a form or alter a record. Destination: `https://sequoiacap.com/article/services-the-new-software`. | Show the input, destination or evidence state; describe the next accountable action rather than promising automatic compliance. |
