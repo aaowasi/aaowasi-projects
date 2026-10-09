@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-10",
+  "updateMode": "curated-primary-sources; change detection and legal applicability require human review",
+  "sources": [
+    {
+      "jurisdiction": "European Union",
+      "title": "EU AI Act — Article 50",
+      "topic": "AI interaction and synthetic-content transparency",
+      "nature": "EU regulation; obligations depend on role, timing, system and use case",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "domainSlugs": [
+        "ai-transparency",
+        "ai-governance"
+      ]
+    },
+    {
+      "jurisdiction": "European Union",
+      "title": "EDPB — Personal data breach notification",
+      "topic": "GDPR Article 33/34 qualifying breach assessment",
+      "nature": "Official supervisory guidance; 72-hour controller clock is conditional",
+      "url": "https://www.edpb.europa.eu/topics/security-data-breaches/personal-data-breaches_en",
+      "domainSlugs": [
+        "privacy-lifecycle",
+        "processor-governance",
+        "remediation"
+      ]
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "title": "ICO — AI and data protection guidance",
+      "topic": "Privacy and DPIA review for AI processing",
+      "nature": "Regulator guidance; check updates to UK data protection law",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/",
+      "domainSlugs": [
+        "ai-governance",
+        "privacy-lifecycle"
+      ]
+    },
+    {
+      "jurisdiction": "United States",
+      "title": "NIST — AI Risk Management Framework 1.0",
+      "topic": "Govern, Map, Measure, Manage AI risks",
+      "nature": "Voluntary risk-management framework, not a US legal requirement",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "domainSlugs": [
+        "ai-governance",
+        "executive-risk"
+      ]
+    },
+    {
+      "jurisdiction": "Singapore",
+      "title": "IMDA — Model AI Governance Framework for GenAI",
+      "topic": "Generative AI governance, assurance and oversight",
+      "nature": "Nonbinding governance framework reference",
+      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/gen-ai-and-digital-foss-ai-governance-playbook",
+      "domainSlugs": [
+        "ai-governance",
+        "ai-safety"
+      ]
+    }
+  ]
+}
