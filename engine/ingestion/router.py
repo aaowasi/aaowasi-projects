@@ -42,9 +42,12 @@ def _safe_zip_members(archive: zipfile.ZipFile) -> list[zipfile.ZipInfo]:
 
 def _approved_url(url: str, allowed: set[str]) -> None:
     parsed = urllib.parse.urlsplit(url)
+    sensitive_keys = {"access_token", "accesstoken", "id_token", "idtoken", "api_key", "apikey", "password", "secret", "signature", "sig"}
+    query_keys = {key.lower() for key, _ in urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)}
     if (parsed.scheme != "https" or not parsed.hostname or parsed.hostname not in allowed
-            or parsed.username is not None or parsed.password is not None):
-        raise PermissionError("URL ingestion requires an approved HTTPS host without embedded credentials.")
+            or parsed.username is not None or parsed.password is not None
+            or bool(query_keys & sensitive_keys)):
+        raise PermissionError("URL ingestion requires an approved HTTPS host without embedded credentials or tokens.")
 
 
 class _AllowlistedRedirect(urllib.request.HTTPRedirectHandler):
