@@ -8,7 +8,8 @@ from pathlib import Path
 from engine.core.assessment import run_assessment
 from engine.collectors.aws_iam import analyze_iam_export
 from engine.core.registry import select_frameworks
-from engine.ingestion.router import ingest
+from engine.ingestion.router import ingest, _approved_url, _AllowlistedRedirect
+from urllib.request import Request
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -41,6 +42,23 @@ class EngineTests(unittest.TestCase):
         del evidence["iam"]["admin_mfa_coverage"]
         results = {item["control_id"]: item for item in run_assessment(self.context, evidence)["results"]}
         self.assertEqual(results["IAM-001"]["state"], "NOT_CONFIGURED")
+
+    def test_url_ingestion_rejects_redirect_outside_allowlist(self) -> None:
+        approved = {'evidence.example.org'}
+        _approved_url('https://evidence.example.org/evidence', approved)
+        for rejected in ('http://evidence.example.org/evidence',
+                         'https://elsewhere.example.org/evidence',
+                         'https://user:password@evidence.example.org/evidence'):
+            with self.assertRaises(PermissionError):
+                _approved_url(rejected, approved)
+        handler = _AllowlistedRedirect(approved)
+        request = Request('https://evidence.example.org/file')
+        with self.assertRaises(PermissionError):
+            handler.redirect_request(request, None, 302, 'Found', {}, 'https://127.0.0.1/internal')
+        with self.assertRaises(PermissionError):
+            handler.redirect_request(request, None, 302, 'Found', {}, 'http://evidence.example.org/file')
+        redirected = handler.redirect_request(request, None, 302, 'Found', {}, '/next')
+        self.assertEqual(redirected.full_url, 'https://evidence.example.org/next')
 
     def test_json_ingestion_hashes_and_parses(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
