@@ -4,7 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -29,8 +29,21 @@ jobs:
       - run: node --check site/assets/control-center.mjs
       - run: node --check site/assets/suite.mjs
       - run: node --test tests/browser/*.test.mjs
+  sync:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/build_site.py
       - name: Synchronize generated public site
-        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
         run: |
           if git diff --quiet -- site README.md DOCS.md docs-sync.json; then
             echo "Generated site is already synchronized."
