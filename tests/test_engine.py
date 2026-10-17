@@ -48,7 +48,8 @@ class EngineTests(unittest.TestCase):
         _approved_url('https://evidence.example.org/evidence', approved)
         for rejected in ('http://evidence.example.org/evidence',
                          'https://elsewhere.example.org/evidence',
-                         'https://user:password@evidence.example.org/evidence'):
+                         'https://user:password@evidence.example.org/evidence',
+                         'https://evidence.example.org/evidence?access_token=private'):
             with self.assertRaises(PermissionError):
                 _approved_url(rejected, approved)
         handler = _AllowlistedRedirect(approved)
