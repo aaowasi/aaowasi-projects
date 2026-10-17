@@ -40,13 +40,31 @@ def _safe_zip_members(archive: zipfile.ZipFile) -> list[zipfile.ZipInfo]:
     return safe
 
 
+def _approved_url(url: str, allowed: set[str]) -> None:
+    parsed = urllib.parse.urlsplit(url)
+    if (parsed.scheme != "https" or not parsed.hostname or parsed.hostname not in allowed
+            or parsed.username is not None or parsed.password is not None):
+        raise PermissionError("URL ingestion requires an approved HTTPS host without embedded credentials.")
+
+
+class _AllowlistedRedirect(urllib.request.HTTPRedirectHandler):
+    def __init__(self, allowed: set[str]):
+        super().__init__()
+        self.allowed = allowed
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        # urllib follows redirects automatically; the original host allowlist must
+        # also apply to every redirect destination before making a new request.
+        _approved_url(urllib.parse.urljoin(req.full_url, newurl), self.allowed)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
 def _read_url(url: str) -> tuple[bytes, str]:
-    parsed = urllib.parse.urlparse(url)
     allowed = {host.strip() for host in os.environ.get("GRC_URL_ALLOWLIST", "").split(",") if host.strip()}
-    if parsed.scheme != "https" or not parsed.hostname or parsed.hostname not in allowed:
-        raise PermissionError("URL ingestion is fail-closed. Add the exact HTTPS hostname to GRC_URL_ALLOWLIST after authorization.")
+    _approved_url(url, allowed)
     request = urllib.request.Request(url, headers={"User-Agent": "grc-assurance-engine/2.0"})
-    with urllib.request.urlopen(request, timeout=20) as response:
+    opener = urllib.request.build_opener(_AllowlistedRedirect(allowed))
+    with opener.open(request, timeout=20) as response:
         data = response.read(MAX_BYTES + 1)
         if len(data) > MAX_BYTES:
             raise ValueError("Remote payload exceeds the configured safety limit")
