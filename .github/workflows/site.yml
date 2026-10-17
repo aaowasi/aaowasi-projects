@@ -30,7 +30,7 @@ jobs:
       - run: node --check site/assets/suite.mjs
       - run: node --test tests/browser/*.test.mjs
   sync:
-    if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
     needs: validate
     runs-on: ubuntu-latest
     permissions:
