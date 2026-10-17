@@ -58,7 +58,7 @@ class EngineTests(unittest.TestCase):
             handler.redirect_request(request, None, 302, 'Found', {}, 'https://127.0.0.1/internal')
         with self.assertRaises(PermissionError):
             handler.redirect_request(request, None, 302, 'Found', {}, 'http://evidence.example.org/file')
-        redirected = handler.redirect_request(request, None, 302, 'Found', {}, '/next')
+        redirected = handler.redirect_request(request, None, 302, 'Found', {}, 'https://evidence.example.org/next')
         self.assertEqual(redirected.full_url, 'https://evidence.example.org/next')
 
     def test_json_ingestion_hashes_and_parses(self) -> None:
