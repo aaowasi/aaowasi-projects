@@ -12,6 +12,21 @@ AI use-case review packs, supplier decision packs and control evidence readiness
 - Exportable decision memos, JSON round trips and CSV source records.
 - Versioned manifests, schemas, tests, workflow validation and recorded delivery checks.
 
+## Agentic GRC and accountable assurance
+
+AI agents can now gather evidence, draft registers, compare documents and prepare audit work. This repository therefore makes the higher-value boundary explicit: **evidence validity, control effectiveness, authorization, exceptions, residual risk, treatment and accountable sign-off**.
+
+- **GRC setup review and prioritization:** inventory the operating model, rank high-value review workflows, surface broken or missing components and create a bounded action plan.
+- **Role-based review modes:** separate implementation, assurance/audit and strategic-governance viewpoints.
+- **Evidence and readiness preparation:** normalize requests, freshness, gaps, exceptions and reviewer rationale before a conclusion is relied on.
+- **Change-to-control impact:** connect system/process changes to authorization, logging, privacy, retention, vendor and governance consequences.
+- **Agent security and authorization:** treat prompt injection, credential handling, destructive actions, source provenance, privilege escalation and tool/data permissions as governance boundaries.
+- **Continuous monitoring:** route material change, evidence expiry and unresolved exceptions back into accountable review.
+
+External benchmark: [grcskills.com](https://grcskills.com/) publishes 60 open GRC agent skills across 10 categories. It is linked as a public automation reference; the library is not bundled or represented as this repository's authored methods.
+
+[Inspect the full agentic assurance model](https://aaowasi-projects.pages.dev/agentic-assurance/) · [D27 evidence integrity](https://aaowasi-projects.pages.dev/work/evidence-integrity/) · [D28 agent authorization](https://aaowasi-projects.pages.dev/work/agent-authorization/) · [D29 ongoing authorization](https://aaowasi-projects.pages.dev/work/ongoing-authorization/)
+
 ## Start with the live systems
 
 ### Connected risk workspace

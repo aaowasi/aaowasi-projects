@@ -32,6 +32,8 @@ for page in (ROOT/'site').rglob('*.html'):
  page.write_text(page.read_text().replace('{{DOMAIN_COUNT}}',str(len(json.loads((ROOT/'content/projects.json').read_text())))))
 (ROOT/'site/enterprise').mkdir(exist_ok=True)
 shutil.copyfile(ROOT/'templates/enterprise.html',ROOT/'site/enterprise/index.html')
+(ROOT/'site/agentic-assurance').mkdir(exist_ok=True)
+shutil.copyfile(ROOT/'templates/agentic-assurance.html',ROOT/'site/agentic-assurance/index.html')
 from build_scenario_schema import generate as generate_scenario_schema
 generate_scenario_schema(ROOT)
 from build_scenarios import generate as generate_scenarios
