@@ -4,7 +4,7 @@ Updated 9 October 2026 (Asia/Kuala_Lumpur). Prices, timing and funnel targets be
 
 ## Positioning
 
-**I turn AI, supplier and control evidence into review packs with clear decision prerequisites, accountable actions and an editable handover.**
+**I operate at the assurance layer above GRC automation: agents can prepare evidence, registers and cross-checks; I focus the review on evidence validity, control effectiveness, authorization, exceptions, residual risk and accountable decisions.**
 
 Buyer entry points are three deliverables; all 29 dedicated domain projects remain available as technical depth. Each has its own operational inputs and output. Shared ownership and evidence provenance connect the work without imposing one risk score on unrelated decisions.
 
@@ -21,7 +21,9 @@ Sequoia's Julien Bek published **Services: The New Software** on 5 March 2026: h
 
 Vanta's questionnaire product presents evidence-backed preparation with human review/approval: https://www.vanta.com/products/questionnaire-automation . LinkedIn's skills-based hiring guidance supports demonstrating applicable skills: https://business.linkedin.com/hire/resources/talent-acquisition/adopting-skills-based-hiring . Neither source identifies a universally fastest hiring tactic or proves that cold outreach outperforms applications.
 
-**Inference for this suite:** make one review pack understandable and inspectable, demonstrate one real calculation, and show the human acceptance boundary. Pair targeted applications with relevant, individually researched outreach. Keep clients, certifications, employment history and outcomes factual.
+**Inference for this suite:** do not compete on manual evidence collection or generic policy drafting. Demonstrate one inspectable review where automation prepares the work and a human decision boundary determines evidence sufficiency, effectiveness, exception handling and acceptance. Pair targeted applications with relevant, individually researched outreach. Keep clients, certifications, employment history and outcomes factual.
+
+External market benchmark: https://grcskills.com/ publishes 60 open GRC agent skills for preparation work. Use it as a visible reference for what is becoming automatable; position the portfolio around the assurance and decision layer above it.
 
 ## Scope and pricing experiment
 
@@ -52,9 +54,9 @@ Days 1–2: finalize three sanitized example packs and acceptance templates, tai
 
 ## Profile copy
 
-Headline: **GRC & AI Governance | Third-Party Risk · Technology Risk · Audit Readiness | Evidence, Controls & Decision Workflows**
+Headline: **GRC & Controls Assurance | Security Compliance · TPRM · AI & Agent Governance | Evidence, Controls & Accountable Decisions**
 
-About opening: **I connect AI systems, supplier risk and control evidence into practical review workflows. My work focuses on the decision a team needs to make, the evidence supporting it, the gaps to resolve and the person accountable for the next action.**
+About opening: **I build decision-grade GRC and assurance workflows across controls, suppliers and AI systems. Automation handles preparation where appropriate; evidence validity, control effectiveness, exceptions, residual-risk decisions and sign-off stay explicitly accountable.**
 
 Featured order: supplier decision workflow; AI use-case review; control evidence readiness; verified delivery checks. Use the professional profile/resume for employment and credentials. Do not imply client engagements, seniority, credentials or measured ROI not supported by actual history.
 
