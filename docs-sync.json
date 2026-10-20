@@ -1,7 +1,8 @@
 {
-  "sourceFingerprint": "773861529190cd411ef55b501d2c5e4e2bd86015e59bf2902831fab167e16e13",
+  "sourceFingerprint": "d202a5ef55ebcb84a80c5e06f13e3b2f3b9e19a18a6208d0fee90cd740089bc0",
   "projectCount": 29,
   "routes": [
+    "/agentic-assurance/",
     "/architecture/",
     "/assurance/",
     "/control-center/",
@@ -147,6 +148,7 @@
     "site/decision-lab/index.html",
     "site/privacy/index.html",
     "site/tools/vendor-review/index.html",
+    "templates/agentic-assurance.html",
     "templates/architecture.html",
     "templates/control-center.html",
     "templates/domain-workspace.html",
